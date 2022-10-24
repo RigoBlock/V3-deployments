@@ -1,6 +1,11 @@
 # default contracts addresses on networks:
 ```
-1 (mainnet), 5 (goerli), 56 (bsc), 10 (optimism), 137 (polygon), 42161 (arbitrum) 
+1: mainnet, 
+5: goerli,
+56: bsc,
+10: optimism,
+137: polygon,
+42161: arbitrum 
 ```
 ## deps
 ```
