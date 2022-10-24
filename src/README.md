@@ -16,4 +16,17 @@ RigoblockPoolProxyFactory 0x8DE8895ddD702d9a216E640966A98e08c9228f24
 ```
 EUpgrade 0x0
 EWhitelist 0x0
+AMulticall 0x0
+AUniswap 0x0
+```
+## mainnet-only, goerli-only
+### mainnet
+```
+AStaking 0x0
+ASelfCustody 0x0
+```
+### goerli
+```
+AStaking 0x0
+ASelfCustody 0x0
 ```
