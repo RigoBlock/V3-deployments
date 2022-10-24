@@ -1,4 +1,7 @@
-## base contracts addresses
+## default contracts addresses on networks:
+```
+1 (mainnet), 5 (goerli), 56 (bsc), 10 (optimism), 137 (polygon), 42161 (arbitrum) 
+```
 ```
 Authority 0xe35129A1E0BdB913CF6Fd8332E9d3533b5F41472
 
