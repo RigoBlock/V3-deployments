@@ -2,7 +2,6 @@
 ```
 1: mainnet, 
 5: goerli,
-56: bsc,
 10: optimism,
 137: polygon,
 42161: arbitrum 
@@ -35,3 +34,18 @@ ASelfCustody 0x0
 AStaking 0x0
 ASelfCustody 0x0
 ```
+## bsc
+```
+56: bsc
+```
+### deps
+```
+Authority 0x3B3b08ACf713C06073D86107345E90AF9eE36569
+PoolRegistry 0xA36204A59f93388B8076aB3ba40C5f15650e7359
+```
+### core
+```
+RigoblockV3Pool 0x297C433ba14bd50F4F2e56BAC979E0791008c648
+RigoblockPoolProxyFactory 0x62fcda78196Ab8a57ecdef3b99465E711a68d293
+```
+
