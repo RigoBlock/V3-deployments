@@ -1,0 +1,371 @@
+{
+  "address": "0x8DE8895ddD702d9a216E640966A98e08c9228f24",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newImplementation",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "registry",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "poolAddress",
+          "type": "address"
+        }
+      ],
+      "name": "PoolCreated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "registry",
+          "type": "address"
+        }
+      ],
+      "name": "RegistryUpgraded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "Upgraded",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "baseToken",
+          "type": "address"
+        }
+      ],
+      "name": "createPool",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "newPoolAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "poolId",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getRegistry",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "parameters",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "bytes8",
+              "name": "symbol",
+              "type": "bytes8"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "baseToken",
+              "type": "address"
+            }
+          ],
+          "internalType": "struct IRigoblockPoolProxyFactory.Parameters",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newImplementation",
+          "type": "address"
+        }
+      ],
+      "name": "setImplementation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newRegistry",
+          "type": "address"
+        }
+      ],
+      "name": "setRegistry",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x1ee385ad9d551093239dfcacaa1a14955561fb8234d278398725334c146b66d2",
+  "receipt": {
+    "to": "0x914d7Fec6aaC8cd542e72Bca78B30650d45643d7",
+    "from": "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "contractAddress": null,
+    "transactionIndex": 223,
+    "gasUsed": "1136683",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x4b0229c6db96c0bd98586ee5108b46246de163006b4bea590a06909909a5f948",
+    "transactionHash": "0x1ee385ad9d551093239dfcacaa1a14955561fb8234d278398725334c146b66d2",
+    "logs": [],
+    "blockNumber": 15817831,
+    "cumulativeGasUsed": "19520342",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xeb0c08Ad44af89BcBB5Ed6dD28caD452311B8516",
+    "0x06767e8090bA5c4Eca89ED00C3A719909D503ED6"
+  ],
+  "solcInputHash": "d4b54f99081d42612f5f3a501b8bf888",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"registry\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"poolAddress\",\"type\":\"address\"}],\"name\":\"PoolCreated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"registry\",\"type\":\"address\"}],\"name\":\"RegistryUpgraded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"symbol\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"}],\"name\":\"createPool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"newPoolAddress\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"poolId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRegistry\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"parameters\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"bytes8\",\"name\":\"symbol\",\"type\":\"bytes8\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"baseToken\",\"type\":\"address\"}],\"internalType\":\"struct IRigoblockPoolProxyFactory.Parameters\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"}],\"name\":\"setImplementation\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newRegistry\",\"type\":\"address\"}],\"name\":\"setRegistry\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Gabriele Rigo - <gab@rigoblock.com>\",\"kind\":\"dev\",\"methods\":{\"createPool(string,string,address)\":{\"params\":{\"baseToken\":\"Address of the base token.\",\"name\":\"String of the name.\",\"symbol\":\"String of the symbol.\"},\"returns\":{\"newPoolAddress\":\"Address of the new pool.\",\"poolId\":\"Id of the new pool.\"}},\"getRegistry()\":{\"returns\":{\"_0\":\"Address of the registry.\"}},\"parameters()\":{\"returns\":{\"_0\":\"Tuple of the pool parameters.\"}},\"setImplementation(address)\":{\"params\":{\"newImplementation\":\"Address of the new implementation contract.\"}},\"setRegistry(address)\":{\"params\":{\"newRegistry\":\"Address of the new registry.\"}}},\"stateVariables\":{\"implementation\":{\"return\":\"Address of the implementation.\",\"returns\":{\"_0\":\"Address of the implementation.\"}}},\"title\":\"Rigoblock Pool Proxy Factory contract - allows creation of new Rigoblock pools.\",\"version\":1},\"userdoc\":{\"events\":{\"PoolCreated(address)\":{\"notice\":\"Emitted when a new pool is created.\"},\"RegistryUpgraded(address)\":{\"notice\":\"Emitted when registry address is upgraded by the Rigoblock Dao.\"},\"Upgraded(address)\":{\"notice\":\"Emitted when a new implementation is set by the Rigoblock Dao.\"}},\"kind\":\"user\",\"methods\":{\"createPool(string,string,address)\":{\"notice\":\"Creates a new Rigoblock pool.\"},\"getRegistry()\":{\"notice\":\"Returns the address of the pool registry.\"},\"implementation()\":{\"notice\":\"Returns the implementation address for the pool proxies.\"},\"parameters()\":{\"notice\":\"Returns the pool initialization parameters at proxy deploy.\"},\"setImplementation(address)\":{\"notice\":\"Allows Rigoblock Dao to update factory pool implementation.\"},\"setRegistry(address)\":{\"notice\":\"Allows owner to update the registry.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/protocol/proxies/RigoblockPoolProxyFactory.sol\":\"RigoblockPoolProxyFactory\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/protocol/interfaces/IPoolRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2017-2022 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.7.0 <0.9.0;\\n\\n/// @title Pool Registry Interface - Allows external interaction with pool registry.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IPoolRegistry {\\n    /// @notice Mapping of pool meta by pool key.\\n    /// @param meta Mapping of bytes32 key to bytes32 meta.\\n    struct PoolMeta {\\n        mapping(bytes32 => bytes32) meta;\\n    }\\n\\n    /// @notice Emitted when Rigoblock Dao updates authority address.\\n    /// @param authority Address of the new authority contract.\\n    event AuthorityChanged(address indexed authority);\\n\\n    /// @notice Emitted when pool owner updates meta data for its pool.\\n    /// @param pool Address of the pool.\\n    /// @param key Bytes32 key for indexing.\\n    /// @param value Bytes32 of the value associated with the key.\\n    event MetaChanged(address indexed pool, bytes32 indexed key, bytes32 value);\\n\\n    /// @notice Emitted when a new pool is registered in registry.\\n    /// @param group Address of the pool factory.\\n    /// @param pool Address of the registered pool.\\n    /// @param name String name of the pool.\\n    /// @param symbol String name of the pool.\\n    /// @param id Bytes32 id of the pool.\\n    event Registered(\\n        address indexed group,\\n        address pool,\\n        bytes32 indexed name, // client can prune sybil pools\\n        bytes32 indexed symbol,\\n        bytes32 id\\n    );\\n\\n    /// @notice Emitted when rigoblock Dao address is updated.\\n    /// @param rigoblockDao New Dao address.\\n    event RigoblockDaoChanged(address indexed rigoblockDao);\\n\\n    /// @notice Returns the address of the Rigoblock authority contract.\\n    /// @return Address of the authority contract.\\n    function authority() external view returns (address);\\n\\n    /// @notice Returns the address of the Rigoblock Dao.\\n    /// @return Address of the Rigoblock Dao.\\n    function rigoblockDao() external view returns (address);\\n\\n    /// @notice Allows a factory which is an authority to register a pool.\\n    /// @param pool Address of the pool.\\n    /// @param name String name of the pool (31 characters/bytes or less).\\n    /// @param symbol String symbol of the pool (3 to 5 characters/bytes).\\n    /// @param poolId Bytes32 of the pool id.\\n    function register(\\n        address pool,\\n        string calldata name,\\n        string calldata symbol,\\n        bytes32 poolId\\n    ) external;\\n\\n    /// @notice Allows Rigoblock governance to update authority.\\n    /// @param authority Address of the authority contract.\\n    function setAuthority(address authority) external;\\n\\n    /// @notice Allows pool owner to set metadata for a pool.\\n    /// @param pool Address of the pool.\\n    /// @param key Bytes32 of the key.\\n    /// @param value Bytes32 of the value.\\n    function setMeta(\\n        address pool,\\n        bytes32 key,\\n        bytes32 value\\n    ) external;\\n\\n    /// @notice Allows Rigoblock Dao to update its address.\\n    /// @dev Creates internal record.\\n    /// @param newRigoblockDao Address of the Rigoblock Dao.\\n    function setRigoblockDao(address newRigoblockDao) external;\\n\\n    /// @notice Returns metadata for a given pool.\\n    /// @param pool Address of the pool.\\n    /// @param key Bytes32 key.\\n    /// @return poolMeta Meta by key.\\n    function getMeta(address pool, bytes32 key) external view returns (bytes32 poolMeta);\\n\\n    /// @notice Returns the id of a pool from its address.\\n    /// @param pool Address of the pool.\\n    /// @return poolId bytes32 id of the pool.\\n    function getPoolIdFromAddress(address pool) external view returns (bytes32 poolId);\\n}\\n\",\"keccak256\":\"0x0da90f76eb6898effb3ed0409b3cd0c4153762a1ceff2731c536a8bfa19f2290\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/IRigoblockPoolProxy.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface IRigoblockPoolProxy {\\n    /// @notice Emitted when implementation written to proxy storage.\\n    /// @dev Emitted also at first variable initialization.\\n    /// @param newImplementation Address of the new implementation.\\n    event Upgraded(address indexed newImplementation);\\n}\\n\",\"keccak256\":\"0x07b9f6262233bbed8996756842245810757ddc3040848f4fad3fdc801334a6a9\",\"license\":\"Apache-2.0-or-later\"},\"contracts/protocol/interfaces/IRigoblockPoolProxyFactory.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\n/*\\n\\n Copyright 2017-2022 RigoBlock, Rigo Investment Sagl, Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Pool Proxy Factory Interface - Allows external interaction with Pool Proxy Factory.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IRigoblockPoolProxyFactory {\\n    /// @notice Emitted when a new pool is created.\\n    /// @param poolAddress Address of the new pool.\\n    event PoolCreated(address poolAddress);\\n\\n    /// @notice Emitted when a new implementation is set by the Rigoblock Dao.\\n    /// @param implementation Address of the new implementation.\\n    event Upgraded(address indexed implementation);\\n\\n    /// @notice Emitted when registry address is upgraded by the Rigoblock Dao.\\n    /// @param registry Address of the new registry.\\n    event RegistryUpgraded(address indexed registry);\\n\\n    /// @notice Returns the implementation address for the pool proxies.\\n    /// @return Address of the implementation.\\n    function implementation() external view returns (address);\\n\\n    /// @notice Creates a new Rigoblock pool.\\n    /// @param name String of the name.\\n    /// @param symbol String of the symbol.\\n    /// @param baseToken Address of the base token.\\n    /// @return newPoolAddress Address of the new pool.\\n    /// @return poolId Id of the new pool.\\n    function createPool(\\n        string calldata name,\\n        string calldata symbol,\\n        address baseToken\\n    ) external returns (address newPoolAddress, bytes32 poolId);\\n\\n    /// @notice Allows Rigoblock Dao to update factory pool implementation.\\n    /// @param newImplementation Address of the new implementation contract.\\n    function setImplementation(address newImplementation) external;\\n\\n    /// @notice Allows owner to update the registry.\\n    /// @param newRegistry Address of the new registry.\\n    function setRegistry(address newRegistry) external;\\n\\n    /// @notice Returns the address of the pool registry.\\n    /// @return Address of the registry.\\n    function getRegistry() external view returns (address);\\n\\n    /// @notice Pool initialization parameters.\\n    /// @params name String of the name (max 31 characters).\\n    /// @params symbol bytes8 symbol.\\n    /// @params owner Address of the owner.\\n    /// @params baseToken Address of the base token.\\n    struct Parameters {\\n        string name;\\n        bytes8 symbol;\\n        address owner;\\n        address baseToken;\\n    }\\n\\n    /// @notice Returns the pool initialization parameters at proxy deploy.\\n    /// @return Tuple of the pool parameters.\\n    function parameters() external view returns (Parameters memory);\\n}\\n\",\"keccak256\":\"0x2b6dd6e20084094bf470798200415c5195cfbf9d2d744e318d2bd08bfb071a1a\",\"license\":\"Apache-2.0-or-later\"},\"contracts/protocol/proxies/RigoblockPoolProxy.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../interfaces/IRigoblockPoolProxy.sol\\\";\\nimport \\\"../interfaces/IRigoblockPoolProxyFactory.sol\\\";\\n\\n/// @title RigoblockPoolProxy - Proxy contract forwards calls to the implementation address returned by the admin.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ncontract RigoblockPoolProxy is IRigoblockPoolProxy {\\n    // implementation slot is used to store implementation address, a contract which implements the pool logic.\\n    // Reduced deployment cost by using internal variable.\\n    bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;\\n\\n    /// @notice Sets address of implementation contract.\\n    constructor() payable {\\n        // store implementation address in implementation slot value\\n        assert(_IMPLEMENTATION_SLOT == bytes32(uint256(keccak256(\\\"eip1967.proxy.implementation\\\")) - 1));\\n        address implementation = IRigoblockPoolProxyFactory(msg.sender).implementation();\\n        getImplementation().implementation = implementation;\\n        emit Upgraded(implementation);\\n\\n        // initialize pool\\n        // abi.encodeWithSelector(IRigoblockPool.initializePool.selector)\\n        (, bytes memory returnData) = implementation.delegatecall(abi.encodeWithSelector(0x250e6de0));\\n\\n        // we must assert initialization didn't fail, otherwise it could fail silently and still deploy the pool.\\n        require(returnData.length == 0, \\\"POOL_INITIALIZATION_FAILED_ERROR\\\");\\n    }\\n\\n    /* solhint-disable no-complex-fallback */\\n    /// @notice Fallback function forwards all transactions and returns all received return data.\\n    fallback() external payable {\\n        address implementation = getImplementation().implementation;\\n        // solhint-disable-next-line no-inline-assembly\\n        assembly {\\n            calldatacopy(0, 0, calldatasize())\\n            let success := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0)\\n            returndatacopy(0, 0, returndatasize())\\n            if eq(success, 0) {\\n                revert(0, returndatasize())\\n            }\\n            return(0, returndatasize())\\n        }\\n    }\\n\\n    /* solhint-enable no-complex-fallback */\\n\\n    /// @notice Implementation slot is accessed directly.\\n    /// @dev Saves gas compared to using storage slot library.\\n    /// @param implementation Address of the implementation.\\n    struct ImplementationSlot {\\n        address implementation;\\n    }\\n\\n    /// @notice Method to read/write from/to implementation slot.\\n    /// @return s Storage slot of the pool implementation.\\n    function getImplementation() private pure returns (ImplementationSlot storage s) {\\n        assembly {\\n            s.slot := _IMPLEMENTATION_SLOT\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x945fa529879c706c24ec8606d43e185a212c807c6f11151023919184042096c5\",\"license\":\"Apache-2.0-or-later\"},\"contracts/protocol/proxies/RigoblockPoolProxyFactory.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport \\\"./RigoblockPoolProxy.sol\\\";\\nimport {IPoolRegistry as PoolRegistry} from \\\"../interfaces/IPoolRegistry.sol\\\";\\nimport \\\"../interfaces/IRigoblockPoolProxyFactory.sol\\\";\\n\\n/// @title Rigoblock Pool Proxy Factory contract - allows creation of new Rigoblock pools.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ncontract RigoblockPoolProxyFactory is IRigoblockPoolProxyFactory {\\n    /// @inheritdoc IRigoblockPoolProxyFactory\\n    address public override implementation;\\n\\n    address private _registry;\\n\\n    Parameters private _parameters;\\n\\n    modifier onlyRigoblockDao() {\\n        require(PoolRegistry(getRegistry()).rigoblockDao() == msg.sender, \\\"FACTORY_CALLER_NOT_DAO_ERROR\\\");\\n        _;\\n    }\\n\\n    constructor(address newImplementation, address registry) {\\n        implementation = newImplementation;\\n        _registry = registry;\\n    }\\n\\n    /*\\n     * PUBLIC FUNCTIONS\\n     */\\n    /// @inheritdoc IRigoblockPoolProxyFactory\\n    function createPool(\\n        string calldata name,\\n        string calldata symbol,\\n        address baseToken\\n    ) external override returns (address newPoolAddress, bytes32 poolId) {\\n        (bytes32 newPoolId, RigoblockPoolProxy proxy) = _createPool(name, symbol, baseToken);\\n        newPoolAddress = address(proxy);\\n        poolId = newPoolId;\\n        try PoolRegistry(getRegistry()).register(newPoolAddress, name, symbol, poolId) {\\n            emit PoolCreated(newPoolAddress);\\n        } catch Error(string memory reason) {\\n            revert(reason);\\n        } catch (bytes memory returnData) {\\n            revert(string(returnData));\\n        }\\n    }\\n\\n    /// @inheritdoc IRigoblockPoolProxyFactory\\n    function setImplementation(address newImplementation) external override onlyRigoblockDao {\\n        require(newImplementation != implementation, \\\"FACTORY_SAME_INPUT_ADDRESS_ERROR\\\");\\n        require(_isContract(newImplementation), \\\"FACTORY_NEW_IMPLEMENTATION_NOT_CONTRACT_ERROR\\\");\\n        implementation = newImplementation;\\n        emit Upgraded(newImplementation);\\n    }\\n\\n    /// @inheritdoc IRigoblockPoolProxyFactory\\n    function setRegistry(address newRegistry) external override onlyRigoblockDao {\\n        require(newRegistry != getRegistry(), \\\"FACTORY_SAME_INPUT_ADDRESS_ERROR\\\");\\n        require(_isContract(newRegistry), \\\"FACTORY_NEW_REGISTRY_NOT_CONTRACT_ERROR\\\");\\n        _registry = newRegistry;\\n        emit RegistryUpgraded(newRegistry);\\n    }\\n\\n    /// @notice Returns the pool initialization parameters at proxy deploy.\\n    /// @return Tuple of the pool parameters.\\n    function parameters() external view override returns (Parameters memory) {\\n        return _parameters;\\n    }\\n\\n    /*\\n     * CONSTANT PUBLIC FUNCTIONS\\n     */\\n    /// @inheritdoc IRigoblockPoolProxyFactory\\n    function getRegistry() public view override returns (address) {\\n        return _registry;\\n    }\\n\\n    /*\\n     * INTERNAL FUNCTIONS\\n     */\\n    /// @dev Creates a pool and routes to eventful.\\n    /// @param name String of the name.\\n    /// @param  symbol String of the symbol.\\n    /// @param  baseToken Address of the base token.\\n    function _createPool(\\n        string calldata name,\\n        string calldata symbol,\\n        address baseToken\\n    ) internal returns (bytes32 salt, RigoblockPoolProxy newProxy) {\\n        // we omit the encoding params in the constructor in order to guarantee same address for name and owner\\n        salt = keccak256(abi.encode(name, msg.sender));\\n\\n        // we write to storage to allow proxy to read initialization parameters\\n        _parameters = Parameters({name: name, symbol: bytes8(bytes(symbol)), owner: msg.sender, baseToken: baseToken});\\n\\n        // constructor is null to guarantee same create2 deployed address\\n        try new RigoblockPoolProxy{salt: salt}() returns (RigoblockPoolProxy proxy) {\\n            newProxy = proxy;\\n        } catch Error(string memory revertReason) {\\n            revert(revertReason);\\n        } catch (bytes memory) {\\n            revert(\\\"FACTORY_CREATE2_FAILED_ERROR\\\");\\n        }\\n\\n        delete _parameters;\\n    }\\n\\n    /// @dev Returns whether an address is a contract.\\n    /// @return Bool target address has code.\\n    function _isContract(address target) private view returns (bool) {\\n        return target.code.length > 0;\\n    }\\n}\\n\",\"keccak256\":\"0xe546427d143db20b6ea651366cfe6cbd0092e9271e65c6fcc8828530ccfa6dd0\",\"license\":\"Apache-2.0-or-later\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161137a38038061137a83398101604081905261002f9161007c565b600080546001600160a01b039384166001600160a01b031991821617909155600180549290931691161790556100af565b80516001600160a01b038116811461007757600080fd5b919050565b6000806040838503121561008f57600080fd5b61009883610060565b91506100a660208401610060565b90509250929050565b6112bc806100be6000396000f3fe60806040523480156200001157600080fd5b50600436106200006a5760003560e01c80631d7d13cc146200006f5780635ab1bd5314620000aa5780635c60da1b14620000d05780638903573014620000e4578063a91ee0dc14620000fd578063d784d4261462000116575b600080fd5b620000866200008036600462000a8f565b6200012d565b604080516001600160a01b0390931683526020830191909152015b60405180910390f35b6001546001600160a01b03165b6040516001600160a01b039091168152602001620000a1565b600054620000b7906001600160a01b031681565b620000ee620002b3565b604051620000a1919062000b64565b620001146200010e36600462000bc8565b620003c1565b005b620001146200012736600462000bc8565b620005b2565b60008060008062000142898989898962000799565b915091508093508192506200015f6001546001600160a01b031690565b6001600160a01b0316633f47734b858b8b8b8b896040518763ffffffff1660e01b8152600401620001969695949392919062000c18565b600060405180830381600087803b158015620001b157600080fd5b505af1925050508015620001c3575060015b6200026b57620001d262000c68565b806308c379a0036200021b5750620001e962000ccb565b80620001f657506200021d565b8060405162461bcd60e51b815260040162000212919062000d5b565b60405180910390fd5b505b3d80801562000249576040519150601f19603f3d011682016040523d82523d6000602084013e6200024e565b606091505b508060405162461bcd60e51b815260040162000212919062000d5b565b6040516001600160a01b03851681527f83a48fbcfc991335314e74d0496aab6a1987e992ddc85dddbcc4d6dd6ef2e9fc9060200160405180910390a150509550959350505050565b6040805160808101825260608082526000602083018190529282018390528101919091526002604051806080016040529081600082018054620002f69062000d70565b80601f0160208091040260200160405190810160405280929190818152602001828054620003249062000d70565b8015620003755780601f10620003495761010080835404028352916020019162000375565b820191906000526020600020905b8154815290600101906020018083116200035757829003601f168201915b505050918352505060018201546001600160c01b031960c082901b1660208301526001600160a01b03600160401b90910481166040830152600290920154909116606090910152919050565b33620003d56001546001600160a01b031690565b6001600160a01b0316633edd80c36040518163ffffffff1660e01b8152600401602060405180830381865afa15801562000413573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019062000439919062000dac565b6001600160a01b031614620004915760405162461bcd60e51b815260206004820152601c60248201527f464143544f52595f43414c4c45525f4e4f545f44414f5f4552524f5200000000604482015260640162000212565b6001546001600160a01b03166001600160a01b0316816001600160a01b031603620004ff5760405162461bcd60e51b815260206004820181905260248201527f464143544f52595f53414d455f494e5055545f414444524553535f4552524f52604482015260640162000212565b6001600160a01b0381163b620005685760405162461bcd60e51b815260206004820152602760248201527f464143544f52595f4e45575f52454749535452595f4e4f545f434f4e545241436044820152662a2fa2a92927a960c91b606482015260840162000212565b600180546001600160a01b0319166001600160a01b0383169081179091556040517fdbcbf29e459c8e6b09f8c283c975e06dbb85d68408225dcb45d6cff0f9a8706e90600090a250565b33620005c66001546001600160a01b031690565b6001600160a01b0316633edd80c36040518163ffffffff1660e01b8152600401602060405180830381865afa15801562000604573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906200062a919062000dac565b6001600160a01b031614620006825760405162461bcd60e51b815260206004820152601c60248201527f464143544f52595f43414c4c45525f4e4f545f44414f5f4552524f5200000000604482015260640162000212565b6000546001600160a01b0390811690821603620006e25760405162461bcd60e51b815260206004820181905260248201527f464143544f52595f53414d455f494e5055545f414444524553535f4552524f52604482015260640162000212565b6001600160a01b0381163b620007515760405162461bcd60e51b815260206004820152602d60248201527f464143544f52595f4e45575f494d504c454d454e544154494f4e5f4e4f545f4360448201526c27a72a2920a1aa2fa2a92927a960991b606482015260840162000212565b600080546001600160a01b0319166001600160a01b038316908117825560405190917fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b91a250565b600080868633604051602001620007b39392919062000dcc565b60408051601f19818403018152828252805160209182012060a0601f8b0183900490920284018201909252608083018981529194508291908a908a908190850183828082843760009201919091525050509082525060200162000817868862000dfa565b6001600160c01b03191681523360208201526001600160a01b038516604090910152805160029081906200084c908262000e7e565b50602082015160018201805460408086015160c09490941c6001600160e01b031990921691909117600160401b6001600160a01b039485160217909155606090930151600290920180546001600160a01b03191692909116919091179055518290620008b890620009c2565b8190604051809103906000f590508015620008d05760015b6200098057620008df62000c68565b806308c379a003620009035750620008f662000ccb565b80620001f6575062000905565b505b3d80801562000931576040519150601f19603f3d011682016040523d82523d6000602084013e62000936565b606091505b5060405162461bcd60e51b815260206004820152601c60248201527f464143544f52595f435245415445325f4641494c45445f4552524f5200000000604482015260640162000212565b905060026000620009928282620009d0565b506001810180546001600160e01b031916905560020180546001600160a01b031916905590969095509350505050565b61033b8062000f4c83390190565b508054620009de9062000d70565b6000825580601f10620009ef575050565b601f01602090049060005260206000209081019062000a0f919062000a12565b50565b5b8082111562000a29576000815560010162000a13565b5090565b60008083601f84011262000a4057600080fd5b50813567ffffffffffffffff81111562000a5957600080fd5b60208301915083602082850101111562000a7257600080fd5b9250929050565b6001600160a01b038116811462000a0f57600080fd5b60008060008060006060868803121562000aa857600080fd5b853567ffffffffffffffff8082111562000ac157600080fd5b62000acf89838a0162000a2d565b9097509550602088013591508082111562000ae957600080fd5b5062000af88882890162000a2d565b909450925050604086013562000b0e8162000a79565b809150509295509295909350565b6000815180845260005b8181101562000b445760208185018101518683018201520162000b26565b506000602082860101526020601f19601f83011685010191505092915050565b60208152600082516080602084015262000b8260a084018262000b1c565b60208501516001600160c01b0319166040858101919091528501516001600160a01b03908116606080870191909152909501519094166080909301929092525090919050565b60006020828403121562000bdb57600080fd5b813562000be88162000a79565b9392505050565b81835281816020850137506000828201602090810191909152601f909101601f19169091010190565b6001600160a01b038716815260806020820181905260009062000c3f908301878962000bef565b828103604084015262000c5481868862000bef565b915050826060830152979650505050505050565b600060033d111562000c825760046000803e5060005160e01c5b90565b634e487b7160e01b600052604160045260246000fd5b601f8201601f1916810167ffffffffffffffff8111828210171562000cc45762000cc462000c85565b6040525050565b600060443d101562000cda5790565b6040516003193d81016004833e81513d67ffffffffffffffff816024840111818411171562000d0b57505050505090565b828501915081518181111562000d245750505050505090565b843d870101602082850101111562000d3f5750505050505090565b62000d506020828601018762000c9b565b509095945050505050565b60208152600062000be8602083018462000b1c565b600181811c9082168062000d8557607f821691505b60208210810362000da657634e487b7160e01b600052602260045260246000fd5b50919050565b60006020828403121562000dbf57600080fd5b815162000be88162000a79565b60408152600062000de260408301858762000bef565b905060018060a01b0383166020830152949350505050565b6001600160c01b0319813581811691600885101562000e235780818660080360031b1b83161692505b505092915050565b601f82111562000e7957600081815260208120601f850160051c8101602086101562000e545750805b601f850160051c820191505b8181101562000e755782815560010162000e60565b5050505b505050565b815167ffffffffffffffff81111562000e9b5762000e9b62000c85565b62000eb38162000eac845462000d70565b8462000e2b565b602080601f83116001811462000eeb576000841562000ed25750858301515b600019600386901b1c1916600185901b17855562000e75565b600085815260208120601f198616915b8281101562000f1c5788860151825594840194600190910190840162000efb565b508582101562000f3b5787850151600019600388901b60f8161c191681555b5050505050600190811b0190555056fe608060405261002f60017f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbd6101ea565b60008051602061031b8339815191521461004b5761004b610211565b6000336001600160a01b0316635c60da1b6040518163ffffffff1660e01b8152600401602060405180830381865afa15801561008b573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100af9190610227565b90508060008051602061031b83398151915280546001600160a01b0319166001600160a01b03928316179055604051908216907fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a260408051600481526024810182526020810180516001600160e01b0316630128736f60e51b17905290516000916001600160a01b0384169161014a9190610257565b600060405180830381855af49150503d8060008114610185576040519150601f19603f3d011682016040523d82523d6000602084013e61018a565b606091505b5091505080516000146101e35760405162461bcd60e51b815260206004820181905260248201527f504f4f4c5f494e495449414c495a4154494f4e5f4641494c45445f4552524f52604482015260640160405180910390fd5b5050610286565b8181038181111561020b57634e487b7160e01b600052601160045260246000fd5b92915050565b634e487b7160e01b600052600160045260246000fd5b60006020828403121561023957600080fd5b81516001600160a01b038116811461025057600080fd5b9392505050565b6000825160005b81811015610278576020818601810151858301520161025e565b506000920191825250919050565b6087806102946000396000f3fe60806040527f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b03163660008037600080366000845af43d6000803e80604b573d6000fd5b503d6000f3fea26469706673582212200f74c83651b80afff3529310debe8504f073a23e59eec106c535ef5765dd152e64736f6c63430008110033360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbca2646970667358221220a95e49aca36f8844744cd5771c3e48d1cb425e3a6c4c8d2864fee086cff653b164736f6c63430008110033",
+  "deployedBytecode": "0x60806040523480156200001157600080fd5b50600436106200006a5760003560e01c80631d7d13cc146200006f5780635ab1bd5314620000aa5780635c60da1b14620000d05780638903573014620000e4578063a91ee0dc14620000fd578063d784d4261462000116575b600080fd5b620000866200008036600462000a8f565b6200012d565b604080516001600160a01b0390931683526020830191909152015b60405180910390f35b6001546001600160a01b03165b6040516001600160a01b039091168152602001620000a1565b600054620000b7906001600160a01b031681565b620000ee620002b3565b604051620000a1919062000b64565b620001146200010e36600462000bc8565b620003c1565b005b620001146200012736600462000bc8565b620005b2565b60008060008062000142898989898962000799565b915091508093508192506200015f6001546001600160a01b031690565b6001600160a01b0316633f47734b858b8b8b8b896040518763ffffffff1660e01b8152600401620001969695949392919062000c18565b600060405180830381600087803b158015620001b157600080fd5b505af1925050508015620001c3575060015b6200026b57620001d262000c68565b806308c379a0036200021b5750620001e962000ccb565b80620001f657506200021d565b8060405162461bcd60e51b815260040162000212919062000d5b565b60405180910390fd5b505b3d80801562000249576040519150601f19603f3d011682016040523d82523d6000602084013e6200024e565b606091505b508060405162461bcd60e51b815260040162000212919062000d5b565b6040516001600160a01b03851681527f83a48fbcfc991335314e74d0496aab6a1987e992ddc85dddbcc4d6dd6ef2e9fc9060200160405180910390a150509550959350505050565b6040805160808101825260608082526000602083018190529282018390528101919091526002604051806080016040529081600082018054620002f69062000d70565b80601f0160208091040260200160405190810160405280929190818152602001828054620003249062000d70565b8015620003755780601f10620003495761010080835404028352916020019162000375565b820191906000526020600020905b8154815290600101906020018083116200035757829003601f168201915b505050918352505060018201546001600160c01b031960c082901b1660208301526001600160a01b03600160401b90910481166040830152600290920154909116606090910152919050565b33620003d56001546001600160a01b031690565b6001600160a01b0316633edd80c36040518163ffffffff1660e01b8152600401602060405180830381865afa15801562000413573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019062000439919062000dac565b6001600160a01b031614620004915760405162461bcd60e51b815260206004820152601c60248201527f464143544f52595f43414c4c45525f4e4f545f44414f5f4552524f5200000000604482015260640162000212565b6001546001600160a01b03166001600160a01b0316816001600160a01b031603620004ff5760405162461bcd60e51b815260206004820181905260248201527f464143544f52595f53414d455f494e5055545f414444524553535f4552524f52604482015260640162000212565b6001600160a01b0381163b620005685760405162461bcd60e51b815260206004820152602760248201527f464143544f52595f4e45575f52454749535452595f4e4f545f434f4e545241436044820152662a2fa2a92927a960c91b606482015260840162000212565b600180546001600160a01b0319166001600160a01b0383169081179091556040517fdbcbf29e459c8e6b09f8c283c975e06dbb85d68408225dcb45d6cff0f9a8706e90600090a250565b33620005c66001546001600160a01b031690565b6001600160a01b0316633edd80c36040518163ffffffff1660e01b8152600401602060405180830381865afa15801562000604573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906200062a919062000dac565b6001600160a01b031614620006825760405162461bcd60e51b815260206004820152601c60248201527f464143544f52595f43414c4c45525f4e4f545f44414f5f4552524f5200000000604482015260640162000212565b6000546001600160a01b0390811690821603620006e25760405162461bcd60e51b815260206004820181905260248201527f464143544f52595f53414d455f494e5055545f414444524553535f4552524f52604482015260640162000212565b6001600160a01b0381163b620007515760405162461bcd60e51b815260206004820152602d60248201527f464143544f52595f4e45575f494d504c454d454e544154494f4e5f4e4f545f4360448201526c27a72a2920a1aa2fa2a92927a960991b606482015260840162000212565b600080546001600160a01b0319166001600160a01b038316908117825560405190917fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b91a250565b600080868633604051602001620007b39392919062000dcc565b60408051601f19818403018152828252805160209182012060a0601f8b0183900490920284018201909252608083018981529194508291908a908a908190850183828082843760009201919091525050509082525060200162000817868862000dfa565b6001600160c01b03191681523360208201526001600160a01b038516604090910152805160029081906200084c908262000e7e565b50602082015160018201805460408086015160c09490941c6001600160e01b031990921691909117600160401b6001600160a01b039485160217909155606090930151600290920180546001600160a01b03191692909116919091179055518290620008b890620009c2565b8190604051809103906000f590508015620008d05760015b6200098057620008df62000c68565b806308c379a003620009035750620008f662000ccb565b80620001f6575062000905565b505b3d80801562000931576040519150601f19603f3d011682016040523d82523d6000602084013e62000936565b606091505b5060405162461bcd60e51b815260206004820152601c60248201527f464143544f52595f435245415445325f4641494c45445f4552524f5200000000604482015260640162000212565b905060026000620009928282620009d0565b506001810180546001600160e01b031916905560020180546001600160a01b031916905590969095509350505050565b61033b8062000f4c83390190565b508054620009de9062000d70565b6000825580601f10620009ef575050565b601f01602090049060005260206000209081019062000a0f919062000a12565b50565b5b8082111562000a29576000815560010162000a13565b5090565b60008083601f84011262000a4057600080fd5b50813567ffffffffffffffff81111562000a5957600080fd5b60208301915083602082850101111562000a7257600080fd5b9250929050565b6001600160a01b038116811462000a0f57600080fd5b60008060008060006060868803121562000aa857600080fd5b853567ffffffffffffffff8082111562000ac157600080fd5b62000acf89838a0162000a2d565b9097509550602088013591508082111562000ae957600080fd5b5062000af88882890162000a2d565b909450925050604086013562000b0e8162000a79565b809150509295509295909350565b6000815180845260005b8181101562000b445760208185018101518683018201520162000b26565b506000602082860101526020601f19601f83011685010191505092915050565b60208152600082516080602084015262000b8260a084018262000b1c565b60208501516001600160c01b0319166040858101919091528501516001600160a01b03908116606080870191909152909501519094166080909301929092525090919050565b60006020828403121562000bdb57600080fd5b813562000be88162000a79565b9392505050565b81835281816020850137506000828201602090810191909152601f909101601f19169091010190565b6001600160a01b038716815260806020820181905260009062000c3f908301878962000bef565b828103604084015262000c5481868862000bef565b915050826060830152979650505050505050565b600060033d111562000c825760046000803e5060005160e01c5b90565b634e487b7160e01b600052604160045260246000fd5b601f8201601f1916810167ffffffffffffffff8111828210171562000cc45762000cc462000c85565b6040525050565b600060443d101562000cda5790565b6040516003193d81016004833e81513d67ffffffffffffffff816024840111818411171562000d0b57505050505090565b828501915081518181111562000d245750505050505090565b843d870101602082850101111562000d3f5750505050505090565b62000d506020828601018762000c9b565b509095945050505050565b60208152600062000be8602083018462000b1c565b600181811c9082168062000d8557607f821691505b60208210810362000da657634e487b7160e01b600052602260045260246000fd5b50919050565b60006020828403121562000dbf57600080fd5b815162000be88162000a79565b60408152600062000de260408301858762000bef565b905060018060a01b0383166020830152949350505050565b6001600160c01b0319813581811691600885101562000e235780818660080360031b1b83161692505b505092915050565b601f82111562000e7957600081815260208120601f850160051c8101602086101562000e545750805b601f850160051c820191505b8181101562000e755782815560010162000e60565b5050505b505050565b815167ffffffffffffffff81111562000e9b5762000e9b62000c85565b62000eb38162000eac845462000d70565b8462000e2b565b602080601f83116001811462000eeb576000841562000ed25750858301515b600019600386901b1c1916600185901b17855562000e75565b600085815260208120601f198616915b8281101562000f1c5788860151825594840194600190910190840162000efb565b508582101562000f3b5787850151600019600388901b60f8161c191681555b5050505050600190811b0190555056fe608060405261002f60017f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbd6101ea565b60008051602061031b8339815191521461004b5761004b610211565b6000336001600160a01b0316635c60da1b6040518163ffffffff1660e01b8152600401602060405180830381865afa15801561008b573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100af9190610227565b90508060008051602061031b83398151915280546001600160a01b0319166001600160a01b03928316179055604051908216907fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a260408051600481526024810182526020810180516001600160e01b0316630128736f60e51b17905290516000916001600160a01b0384169161014a9190610257565b600060405180830381855af49150503d8060008114610185576040519150601f19603f3d011682016040523d82523d6000602084013e61018a565b606091505b5091505080516000146101e35760405162461bcd60e51b815260206004820181905260248201527f504f4f4c5f494e495449414c495a4154494f4e5f4641494c45445f4552524f52604482015260640160405180910390fd5b5050610286565b8181038181111561020b57634e487b7160e01b600052601160045260246000fd5b92915050565b634e487b7160e01b600052600160045260246000fd5b60006020828403121561023957600080fd5b81516001600160a01b038116811461025057600080fd5b9392505050565b6000825160005b81811015610278576020818601810151858301520161025e565b506000920191825250919050565b6087806102946000396000f3fe60806040527f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b03163660008037600080366000845af43d6000803e80604b573d6000fd5b503d6000f3fea26469706673582212200f74c83651b80afff3529310debe8504f073a23e59eec106c535ef5765dd152e64736f6c63430008110033360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbca2646970667358221220a95e49aca36f8844744cd5771c3e48d1cb425e3a6c4c8d2864fee086cff653b164736f6c63430008110033",
+  "devdoc": {
+    "author": "Gabriele Rigo - <gab@rigoblock.com>",
+    "kind": "dev",
+    "methods": {
+      "createPool(string,string,address)": {
+        "params": {
+          "baseToken": "Address of the base token.",
+          "name": "String of the name.",
+          "symbol": "String of the symbol."
+        },
+        "returns": {
+          "newPoolAddress": "Address of the new pool.",
+          "poolId": "Id of the new pool."
+        }
+      },
+      "getRegistry()": {
+        "returns": {
+          "_0": "Address of the registry."
+        }
+      },
+      "parameters()": {
+        "returns": {
+          "_0": "Tuple of the pool parameters."
+        }
+      },
+      "setImplementation(address)": {
+        "params": {
+          "newImplementation": "Address of the new implementation contract."
+        }
+      },
+      "setRegistry(address)": {
+        "params": {
+          "newRegistry": "Address of the new registry."
+        }
+      }
+    },
+    "stateVariables": {
+      "implementation": {
+        "return": "Address of the implementation.",
+        "returns": {
+          "_0": "Address of the implementation."
+        }
+      }
+    },
+    "title": "Rigoblock Pool Proxy Factory contract - allows creation of new Rigoblock pools.",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "PoolCreated(address)": {
+        "notice": "Emitted when a new pool is created."
+      },
+      "RegistryUpgraded(address)": {
+        "notice": "Emitted when registry address is upgraded by the Rigoblock Dao."
+      },
+      "Upgraded(address)": {
+        "notice": "Emitted when a new implementation is set by the Rigoblock Dao."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "createPool(string,string,address)": {
+        "notice": "Creates a new Rigoblock pool."
+      },
+      "getRegistry()": {
+        "notice": "Returns the address of the pool registry."
+      },
+      "implementation()": {
+        "notice": "Returns the implementation address for the pool proxies."
+      },
+      "parameters()": {
+        "notice": "Returns the pool initialization parameters at proxy deploy."
+      },
+      "setImplementation(address)": {
+        "notice": "Allows Rigoblock Dao to update factory pool implementation."
+      },
+      "setRegistry(address)": {
+        "notice": "Allows owner to update the registry."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 6697,
+        "contract": "contracts/protocol/proxies/RigoblockPoolProxyFactory.sol:RigoblockPoolProxyFactory",
+        "label": "implementation",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 6699,
+        "contract": "contracts/protocol/proxies/RigoblockPoolProxyFactory.sol:RigoblockPoolProxyFactory",
+        "label": "_registry",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 6702,
+        "contract": "contracts/protocol/proxies/RigoblockPoolProxyFactory.sol:RigoblockPoolProxyFactory",
+        "label": "_parameters",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_struct(Parameters)6260_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bytes8": {
+        "encoding": "inplace",
+        "label": "bytes8",
+        "numberOfBytes": "8"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Parameters)6260_storage": {
+        "encoding": "inplace",
+        "label": "struct IRigoblockPoolProxyFactory.Parameters",
+        "members": [
+          {
+            "astId": 6253,
+            "contract": "contracts/protocol/proxies/RigoblockPoolProxyFactory.sol:RigoblockPoolProxyFactory",
+            "label": "name",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 6255,
+            "contract": "contracts/protocol/proxies/RigoblockPoolProxyFactory.sol:RigoblockPoolProxyFactory",
+            "label": "symbol",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bytes8"
+          },
+          {
+            "astId": 6257,
+            "contract": "contracts/protocol/proxies/RigoblockPoolProxyFactory.sol:RigoblockPoolProxyFactory",
+            "label": "owner",
+            "offset": 8,
+            "slot": "1",
+            "type": "t_address"
+          },
+          {
+            "astId": 6259,
+            "contract": "contracts/protocol/proxies/RigoblockPoolProxyFactory.sol:RigoblockPoolProxyFactory",
+            "label": "baseToken",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_address"
+          }
+        ],
+        "numberOfBytes": "96"
+      }
+    }
+  }
+}
