@@ -18,10 +18,10 @@ RigoblockPoolProxyFactory 0x8DE8895ddD702d9a216E640966A98e08c9228f24
 ```
 ## extensions
 ```
-EUpgrade 0x0
-EWhitelist 0x0
-AMulticall 0x0
-AUniswap 0x0
+EUpgrade 0x64BcA3673c8990B11225E9f49E6da554180690fc
+EWhitelist 0xB43baD2638696F8bC82247B92bD56B8DF37d89aB
+AMulticall 0x9cD3CB7CF9392182890d0b5Fe7d92BFD7539afFC
+AUniswap 0xC1ad7e8ea82f2f5129428a46Eb968D08CD40cb92
 ```
 ## mainnet-only, goerli-only
 ### mainnet
