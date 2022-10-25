@@ -34,7 +34,7 @@ ASelfCustody 0x0
 AStaking 0x0
 ASelfCustody 0x0
 ```
-## bsc
+## bsc (diff. deterministic deployment factory results in diff. addresses)
 ```
 56: bsc
 ```
@@ -47,5 +47,12 @@ PoolRegistry 0xA36204A59f93388B8076aB3ba40C5f15650e7359
 ```
 RigoblockV3Pool 0x297C433ba14bd50F4F2e56BAC979E0791008c648
 RigoblockPoolProxyFactory 0x62fcda78196Ab8a57ecdef3b99465E711a68d293
+```
+### extensions
+```
+EUpgrade 0xdCabDDf637d9a0d67634F4b2D22419d954b0c87a
+EWhitelist 0x2221f6D9Fe993B3B308bFC90aC7cddC50Fcdf7A8
+AMulticall 0x3bBdbE026F53500dA7d64fe8cf856cf28755D6Cb
+AUniswap NA (uniswap does not support bsc)
 ```
 
