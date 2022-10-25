@@ -1,0 +1,148 @@
+{
+  "address": "0x9cD3CB7CF9392182890d0b5Fe7d92BFD7539afFC",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "previousBlockhash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes[]",
+          "name": "data",
+          "type": "bytes[]"
+        }
+      ],
+      "name": "multicall",
+      "outputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "",
+          "type": "bytes[]"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "deadline",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes[]",
+          "name": "data",
+          "type": "bytes[]"
+        }
+      ],
+      "name": "multicall",
+      "outputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "",
+          "type": "bytes[]"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "data",
+          "type": "bytes[]"
+        }
+      ],
+      "name": "multicall",
+      "outputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "results",
+          "type": "bytes[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xfe845b4bf1cd39d4eeb0bfff57432304c7c4b0547655f55cfb9148748cfe1a2e",
+  "receipt": {
+    "to": "0x914d7Fec6aaC8cd542e72Bca78B30650d45643d7",
+    "from": "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "contractAddress": null,
+    "transactionIndex": 80,
+    "gasUsed": "387482",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xd107859a6beb150ba42ceca8c89401e7a0f633086e664063f5349bd0a978a3c3",
+    "transactionHash": "0xfe845b4bf1cd39d4eeb0bfff57432304c7c4b0547655f55cfb9148748cfe1a2e",
+    "logs": [],
+    "blockNumber": 7831368,
+    "cumulativeGasUsed": "12081648",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "260a482a406623a6d1eb57f718d3c1af",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"previousBlockhash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes[]\",\"name\":\"data\",\"type\":\"bytes[]\"}],\"name\":\"multicall\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"\",\"type\":\"bytes[]\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"},{\"internalType\":\"bytes[]\",\"name\":\"data\",\"type\":\"bytes[]\"}],\"name\":\"multicall\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"\",\"type\":\"bytes[]\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"data\",\"type\":\"bytes[]\"}],\"name\":\"multicall\",\"outputs\":[{\"internalType\":\"bytes[]\",\"name\":\"results\",\"type\":\"bytes[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"multicall(bytes32,bytes[])\":{\"details\":\"The `msg.value` should not be trusted for any method callable from multicall.\",\"params\":{\"data\":\"The encoded function data for each of the calls to make to this contract\",\"previousBlockhash\":\"The expected parent blockHash\"},\"returns\":{\"_0\":\"The results from each of the calls passed in via data\"}},\"multicall(bytes[])\":{\"params\":{\"data\":\"Array of encoded calls.\"},\"returns\":{\"results\":\"Array of call responses.\"}},\"multicall(uint256,bytes[])\":{\"details\":\"The `msg.value` should not be trusted for any method callable from multicall.\",\"params\":{\"data\":\"The encoded function data for each of the calls to make to this contract\",\"deadline\":\"The time by which this function must be called before failing\"},\"returns\":{\"_0\":\"The results from each of the calls passed in via data\"}}},\"title\":\"AMulticall - Allows sending mulple transactions to the pool.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"multicall(bytes32,bytes[])\":{\"notice\":\"Call multiple functions in the current contract and return the data from all of them if they all succeed\"},\"multicall(bytes[])\":{\"notice\":\"Enables calling multiple methods in a single call to the contract\"},\"multicall(uint256,bytes[])\":{\"notice\":\"Call multiple functions in the current contract and return the data from all of them if they all succeed\"}},\"notice\":\"As per https://github.com/Uniswap/swap-router-contracts/blob/main/contracts/base/MulticallExtended.sol\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/protocol/extensions/adapters/AMulticall.sol\":\"AMulticall\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/protocol/extensions/adapters/AMulticall.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\n\\n// solhint-disable-next-line\\npragma solidity 0.8.17;\\n\\nimport \\\"./interfaces/IAMulticall.sol\\\";\\n\\n/// @title AMulticall - Allows sending mulple transactions to the pool.\\n/// @notice As per https://github.com/Uniswap/swap-router-contracts/blob/main/contracts/base/MulticallExtended.sol\\ncontract AMulticall is IAMulticall {\\n    modifier checkDeadline(uint256 deadline) {\\n        require(_blockTimestamp() <= deadline, 'AMULTICALL_DEADLINE_PAST_ERROR');\\n        _;\\n    }\\n\\n    modifier checkPreviousBlockhash(bytes32 previousBlockhash) {\\n        require(blockhash(block.number - 1) == previousBlockhash, 'AMULTICALL_BLOCKHASH_ERROR');\\n        _;\\n    }\\n\\n    /// @inheritdoc IAMulticall\\n    function multicall(bytes[] calldata data) public override returns (bytes[] memory results) {\\n        results = new bytes[](data.length);\\n        for (uint256 i = 0; i < data.length; i++) {\\n            (bool success, bytes memory result) = address(this).delegatecall(data[i]);\\n\\n            if (!success) {\\n                // Next 5 lines from https://ethereum.stackexchange.com/a/83577\\n                if (result.length < 68) revert();\\n                assembly {\\n                    result := add(result, 0x04)\\n                }\\n                revert(abi.decode(result, (string)));\\n            }\\n\\n            results[i] = result;\\n        }\\n    }\\n\\n    /// @inheritdoc IAMulticall\\n    function multicall(uint256 deadline, bytes[] calldata data)\\n        external\\n        payable\\n        override\\n        checkDeadline(deadline)\\n        returns (bytes[] memory)\\n    {\\n        return multicall(data);\\n    }\\n\\n    /// @inheritdoc IAMulticall\\n    function multicall(bytes32 previousBlockhash, bytes[] calldata data)\\n        external\\n        payable\\n        override\\n        checkPreviousBlockhash(previousBlockhash)\\n        returns (bytes[] memory)\\n    {\\n        return multicall(data);\\n    }\\n\\n    /// @dev Method that exists purely to be overridden for tests\\n    /// @return The current block timestamp\\n    function _blockTimestamp() internal view virtual returns (uint256) {\\n        return block.timestamp;\\n    }\\n}\\n\",\"keccak256\":\"0xcb52906c1de668a75e5b0d219cde4cbb585248a8bcb2f597efa1e5af9e309731\",\"license\":\"GPL-2.0-or-later\"},\"contracts/protocol/extensions/adapters/interfaces/IAMulticall.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @notice As per https://github.com/Uniswap/swap-router-contracts/blob/main/contracts/interfaces/IMulticallExtended.sol\\ninterface IAMulticall {\\n    /// @notice Enables calling multiple methods in a single call to the contract\\n    /// @param data Array of encoded calls.\\n    /// @return results Array of call responses.\\n    function multicall(bytes[] calldata data) external returns (bytes[] memory results);\\n\\n    /// @notice Call multiple functions in the current contract and return the data from all of them if they all succeed\\n    /// @dev The `msg.value` should not be trusted for any method callable from multicall.\\n    /// @param deadline The time by which this function must be called before failing\\n    /// @param data The encoded function data for each of the calls to make to this contract\\n    /// @return results The results from each of the calls passed in via data\\n    function multicall(uint256 deadline, bytes[] calldata data) external payable returns (bytes[] memory results);\\n\\n    /// @notice Call multiple functions in the current contract and return the data from all of them if they all succeed\\n    /// @dev The `msg.value` should not be trusted for any method callable from multicall.\\n    /// @param previousBlockhash The expected parent blockHash\\n    /// @param data The encoded function data for each of the calls to make to this contract\\n    /// @return results The results from each of the calls passed in via data\\n    function multicall(bytes32 previousBlockhash, bytes[] calldata data)\\n        external\\n        payable\\n        returns (bytes[] memory results);\\n}\\n\",\"keccak256\":\"0xd08745afdecafaf546c5100b4335b071a26c5a34e8ad1a6c08511e59b0f6e34a\",\"license\":\"GPL-2.0-or-later\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610609806100206000396000f3fe6080604052600436106100345760003560e01c80631f0464d1146100395780635ae401dc14610062578063ac9650d814610075575b600080fd5b61004c610047366004610301565b610095565b604051610059919061039d565b60405180910390f35b61004c610070366004610301565b61010a565b34801561008157600080fd5b5061004c6100903660046103ff565b61015d565b606083806100a4600143610457565b40146100f75760405162461bcd60e51b815260206004820152601a60248201527f414d554c544943414c4c5f424c4f434b484153485f4552524f5200000000000060448201526064015b60405180910390fd5b610101848461015d565b95945050505050565b606083804211156100f75760405162461bcd60e51b815260206004820152601e60248201527f414d554c544943414c4c5f444541444c494e455f504153545f4552524f52000060448201526064016100ee565b60608167ffffffffffffffff81111561017857610178610470565b6040519080825280602002602001820160405280156101ab57816020015b60608152602001906001900390816101965790505b50905060005b828110156102ae57600080308686858181106101cf576101cf610486565b90506020028101906101e1919061049c565b6040516101ef9291906104e3565b600060405180830381855af49150503d806000811461022a576040519150601f19603f3d011682016040523d82523d6000602084013e61022f565b606091505b50915091508161027b5760448151101561024857600080fd5b6004810190508080602001905181019061026291906104f3565b60405162461bcd60e51b81526004016100ee91906105a0565b8084848151811061028e5761028e610486565b6020026020010181905250505080806102a6906105ba565b9150506101b1565b5092915050565b60008083601f8401126102c757600080fd5b50813567ffffffffffffffff8111156102df57600080fd5b6020830191508360208260051b85010111156102fa57600080fd5b9250929050565b60008060006040848603121561031657600080fd5b83359250602084013567ffffffffffffffff81111561033457600080fd5b610340868287016102b5565b9497909650939450505050565b60005b83811015610368578181015183820152602001610350565b50506000910152565b6000815180845261038981602086016020860161034d565b601f01601f19169290920160200192915050565b6000602080830181845280855180835260408601915060408160051b870101925083870160005b828110156103f257603f198886030184526103e0858351610371565b945092850192908501906001016103c4565b5092979650505050505050565b6000806020838503121561041257600080fd5b823567ffffffffffffffff81111561042957600080fd5b610435858286016102b5565b90969095509350505050565b634e487b7160e01b600052601160045260246000fd5b8181038181111561046a5761046a610441565b92915050565b634e487b7160e01b600052604160045260246000fd5b634e487b7160e01b600052603260045260246000fd5b6000808335601e198436030181126104b357600080fd5b83018035915067ffffffffffffffff8211156104ce57600080fd5b6020019150368190038213156102fa57600080fd5b8183823760009101908152919050565b60006020828403121561050557600080fd5b815167ffffffffffffffff8082111561051d57600080fd5b818401915084601f83011261053157600080fd5b81518181111561054357610543610470565b604051601f8201601f19908116603f0116810190838211818310171561056b5761056b610470565b8160405282815287602084870101111561058457600080fd5b61059583602083016020880161034d565b979650505050505050565b6020815260006105b36020830184610371565b9392505050565b6000600182016105cc576105cc610441565b506001019056fea264697066735822122053c479a91a899bbfefdc280ca15b41fd044a8253bd04623b2ea8c79c4e9d20fb64736f6c63430008110033",
+  "deployedBytecode": "0x6080604052600436106100345760003560e01c80631f0464d1146100395780635ae401dc14610062578063ac9650d814610075575b600080fd5b61004c610047366004610301565b610095565b604051610059919061039d565b60405180910390f35b61004c610070366004610301565b61010a565b34801561008157600080fd5b5061004c6100903660046103ff565b61015d565b606083806100a4600143610457565b40146100f75760405162461bcd60e51b815260206004820152601a60248201527f414d554c544943414c4c5f424c4f434b484153485f4552524f5200000000000060448201526064015b60405180910390fd5b610101848461015d565b95945050505050565b606083804211156100f75760405162461bcd60e51b815260206004820152601e60248201527f414d554c544943414c4c5f444541444c494e455f504153545f4552524f52000060448201526064016100ee565b60608167ffffffffffffffff81111561017857610178610470565b6040519080825280602002602001820160405280156101ab57816020015b60608152602001906001900390816101965790505b50905060005b828110156102ae57600080308686858181106101cf576101cf610486565b90506020028101906101e1919061049c565b6040516101ef9291906104e3565b600060405180830381855af49150503d806000811461022a576040519150601f19603f3d011682016040523d82523d6000602084013e61022f565b606091505b50915091508161027b5760448151101561024857600080fd5b6004810190508080602001905181019061026291906104f3565b60405162461bcd60e51b81526004016100ee91906105a0565b8084848151811061028e5761028e610486565b6020026020010181905250505080806102a6906105ba565b9150506101b1565b5092915050565b60008083601f8401126102c757600080fd5b50813567ffffffffffffffff8111156102df57600080fd5b6020830191508360208260051b85010111156102fa57600080fd5b9250929050565b60008060006040848603121561031657600080fd5b83359250602084013567ffffffffffffffff81111561033457600080fd5b610340868287016102b5565b9497909650939450505050565b60005b83811015610368578181015183820152602001610350565b50506000910152565b6000815180845261038981602086016020860161034d565b601f01601f19169290920160200192915050565b6000602080830181845280855180835260408601915060408160051b870101925083870160005b828110156103f257603f198886030184526103e0858351610371565b945092850192908501906001016103c4565b5092979650505050505050565b6000806020838503121561041257600080fd5b823567ffffffffffffffff81111561042957600080fd5b610435858286016102b5565b90969095509350505050565b634e487b7160e01b600052601160045260246000fd5b8181038181111561046a5761046a610441565b92915050565b634e487b7160e01b600052604160045260246000fd5b634e487b7160e01b600052603260045260246000fd5b6000808335601e198436030181126104b357600080fd5b83018035915067ffffffffffffffff8211156104ce57600080fd5b6020019150368190038213156102fa57600080fd5b8183823760009101908152919050565b60006020828403121561050557600080fd5b815167ffffffffffffffff8082111561051d57600080fd5b818401915084601f83011261053157600080fd5b81518181111561054357610543610470565b604051601f8201601f19908116603f0116810190838211818310171561056b5761056b610470565b8160405282815287602084870101111561058457600080fd5b61059583602083016020880161034d565b979650505050505050565b6020815260006105b36020830184610371565b9392505050565b6000600182016105cc576105cc610441565b506001019056fea264697066735822122053c479a91a899bbfefdc280ca15b41fd044a8253bd04623b2ea8c79c4e9d20fb64736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "multicall(bytes32,bytes[])": {
+        "details": "The `msg.value` should not be trusted for any method callable from multicall.",
+        "params": {
+          "data": "The encoded function data for each of the calls to make to this contract",
+          "previousBlockhash": "The expected parent blockHash"
+        },
+        "returns": {
+          "_0": "The results from each of the calls passed in via data"
+        }
+      },
+      "multicall(bytes[])": {
+        "params": {
+          "data": "Array of encoded calls."
+        },
+        "returns": {
+          "results": "Array of call responses."
+        }
+      },
+      "multicall(uint256,bytes[])": {
+        "details": "The `msg.value` should not be trusted for any method callable from multicall.",
+        "params": {
+          "data": "The encoded function data for each of the calls to make to this contract",
+          "deadline": "The time by which this function must be called before failing"
+        },
+        "returns": {
+          "_0": "The results from each of the calls passed in via data"
+        }
+      }
+    },
+    "title": "AMulticall - Allows sending mulple transactions to the pool.",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "multicall(bytes32,bytes[])": {
+        "notice": "Call multiple functions in the current contract and return the data from all of them if they all succeed"
+      },
+      "multicall(bytes[])": {
+        "notice": "Enables calling multiple methods in a single call to the contract"
+      },
+      "multicall(uint256,bytes[])": {
+        "notice": "Call multiple functions in the current contract and return the data from all of them if they all succeed"
+      }
+    },
+    "notice": "As per https://github.com/Uniswap/swap-router-contracts/blob/main/contracts/base/MulticallExtended.sol",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
