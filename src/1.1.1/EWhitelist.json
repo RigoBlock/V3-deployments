@@ -1,0 +1,186 @@
+{
+  "address": "0xB43baD2638696F8bC82247B92bD56B8DF37d89aB",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAuthority",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "isWhitelisted",
+          "type": "bool"
+        }
+      ],
+      "name": "Whitelisted",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "tokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "whitelisted",
+          "type": "bool[]"
+        }
+      ],
+      "name": "batchUpdateTokens",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAuthority",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "isWhitelistedToken",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "removeToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "whitelistToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "args": [
+    "0xe35129A1E0BdB913CF6Fd8332E9d3533b5F41472"
+  ],
+  "solcInputHash": "b558e216ac68bfdc765602d7590789b5",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAuthority\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isWhitelisted\",\"type\":\"bool\"}],\"name\":\"Whitelisted\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"tokens\",\"type\":\"address[]\"},{\"internalType\":\"bool[]\",\"name\":\"whitelisted\",\"type\":\"bool[]\"}],\"name\":\"batchUpdateTokens\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAuthority\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"isWhitelistedToken\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"removeToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"whitelistToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Gabriele Rigo - <gab@rigoblock.com>\",\"kind\":\"dev\",\"methods\":{\"batchUpdateTokens(address[],bool[])\":{\"params\":{\"tokens\":\"Address array to tokens.\",\"whitelisted\":\"Bollean array the token is to be whitelisted or removed.\"}},\"getAuthority()\":{\"returns\":{\"_0\":\"Address of the authority contract.\"}},\"isWhitelistedToken(address)\":{\"params\":{\"token\":\"Address of the target token.\"},\"returns\":{\"_0\":\"Boolean the token is whitelisted.\"}},\"removeToken(address)\":{\"params\":{\"token\":\"Address of the target token.\"}},\"whitelistToken(address)\":{\"params\":{\"token\":\"Address of the target token.\"}}},\"title\":\"EWhitelist - Allows whitelisting of tokens.\",\"version\":1},\"userdoc\":{\"events\":{\"Whitelisted(address,bool)\":{\"notice\":\"Emitted when a token is whitelisted or removed.\"}},\"kind\":\"user\",\"methods\":{\"batchUpdateTokens(address[],bool[])\":{\"notice\":\"Allows a whitelister to whitelist/remove a list of tokens.\"},\"getAuthority()\":{\"notice\":\"Returns the address of the authority contract.\"},\"isWhitelistedToken(address)\":{\"notice\":\"Returns whether a token has been whitelisted.\"},\"removeToken(address)\":{\"notice\":\"Allows a whitelister to remove a token.\"},\"whitelistToken(address)\":{\"notice\":\"Allows a whitelister to whitelist a token.\"}},\"notice\":\"This contract has its own storage, which could potentially clash with pool storage if the allocated slot were already used by the implementation. Warning: careful with upgrades as pool only accesses isWhitelistedToken view method. Other methods are locked and should never be approved by governance.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/protocol/extensions/EWhitelist.sol\":\"EWhitelist\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/protocol/extensions/EWhitelist.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport \\\"./adapters/interfaces/IEWhitelist.sol\\\";\\nimport \\\"../interfaces/IAuthority.sol\\\";\\nimport \\\"../../utils/storageSlot/StorageSlot.sol\\\";\\n\\n/// @title EWhitelist - Allows whitelisting of tokens.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n/// @notice This contract has its own storage, which could potentially clash with pool storage if the allocated slot were already used by the implementation.\\n/// Warning: careful with upgrades as pool only accesses isWhitelistedToken view method. Other methods are locked and should never be approved by governance.\\ncontract EWhitelist is IEWhitelist {\\n    bytes32 internal constant _EWHITELIST_TOKEN_WHITELIST_SLOT =\\n        0x03de6a299bc35b64db5b38a8b5dbbc4bab6e4b5a493067f0fbe40d83350a610f;\\n\\n    address private immutable authority;\\n\\n    struct WhitelistSlot {\\n        mapping(address => bool) isWhitelisted;\\n    }\\n\\n    modifier onlyAuthorized() {\\n        _assertCallerIsAuthorized();\\n        _;\\n    }\\n\\n    constructor(address newAuthority) {\\n        assert(_EWHITELIST_TOKEN_WHITELIST_SLOT == bytes32(uint256(keccak256(\\\"ewhitelist.token.whitelist\\\")) - 1));\\n        authority = newAuthority;\\n    }\\n\\n    /// @inheritdoc IEWhitelist\\n    function whitelistToken(address token) public override onlyAuthorized {\\n        require(_isContract(token), \\\"EWHITELIST_INPUT_NOT_CONTRACT_ERROR\\\");\\n        require(!_getWhitelistSlot().isWhitelisted[token], \\\"EWHITELIST_TOKEN_ALREADY_WHITELISTED_ERROR\\\");\\n        _getWhitelistSlot().isWhitelisted[token] = true;\\n        emit Whitelisted(token, true);\\n    }\\n\\n    /// @inheritdoc IEWhitelist\\n    function removeToken(address token) public override onlyAuthorized {\\n        require(_getWhitelistSlot().isWhitelisted[token], \\\"EWHITELIST_TOKEN_ALREADY_REMOVED_ERROR\\\");\\n        delete (_getWhitelistSlot().isWhitelisted[token]);\\n        emit Whitelisted(token, false);\\n    }\\n\\n    /// @inheritdoc IEWhitelist\\n    function batchUpdateTokens(address[] calldata tokens, bool[] memory whitelisted) external override {\\n        for (uint256 i = 0; i < tokens.length; i++) {\\n            // if upgrading (to i.e. using an internal method), always assert only authority can call batch method\\n            whitelisted[i] == true ? whitelistToken(tokens[i]) : removeToken(tokens[i]);\\n        }\\n    }\\n\\n    /// @inheritdoc IEWhitelist\\n    function isWhitelistedToken(address token) external view override returns (bool) {\\n        return _getWhitelistSlot().isWhitelisted[token];\\n    }\\n\\n    /// @inheritdoc IEWhitelist\\n    function getAuthority() public view override returns (address) {\\n        return authority;\\n    }\\n\\n    function _getWhitelistSlot() internal pure returns (WhitelistSlot storage s) {\\n        assembly {\\n            s.slot := _EWHITELIST_TOKEN_WHITELIST_SLOT\\n        }\\n    }\\n\\n    function _assertCallerIsAuthorized() private view {\\n        require(IAuthority(getAuthority()).isWhitelister(msg.sender), \\\"EWHITELIST_CALLER_NOT_WHITELISTER_ERROR\\\");\\n    }\\n\\n    function _isContract(address target) private view returns (bool) {\\n        return target.code.length > 0;\\n    }\\n}\\n\",\"keccak256\":\"0x308aa66a542bc309ed170652abaf4a3667ef9ac0cd9069c6d9ee5ccbcc15fa1b\",\"license\":\"Apache 2.0\"},\"contracts/protocol/extensions/adapters/interfaces/IEWhitelist.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title EWhitelist Interface - Allows interaction with the whitelist extension contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IEWhitelist {\\n    /// @notice Emitted when a token is whitelisted or removed.\\n    /// @param token Address pf the target token.\\n    /// @param isWhitelisted Boolean the token is added or removed.\\n    event Whitelisted(address indexed token, bool isWhitelisted);\\n\\n    /// @notice Allows a whitelister to whitelist a token.\\n    /// @param token Address of the target token.\\n    function whitelistToken(address token) external;\\n\\n    /// @notice Allows a whitelister to remove a token.\\n    /// @param token Address of the target token.\\n    function removeToken(address token) external;\\n\\n    /// @notice Allows a whitelister to whitelist/remove a list of tokens.\\n    /// @param tokens Address array to tokens.\\n    /// @param whitelisted Bollean array the token is to be whitelisted or removed.\\n    function batchUpdateTokens(address[] calldata tokens, bool[] memory whitelisted) external;\\n\\n    /// @notice Returns whether a token has been whitelisted.\\n    /// @param token Address of the target token.\\n    /// @return Boolean the token is whitelisted.\\n    function isWhitelistedToken(address token) external view returns (bool);\\n\\n    /// @notice Returns the address of the authority contract.\\n    /// @return Address of the authority contract.\\n    function getAuthority() external view returns (address);\\n}\\n\",\"keccak256\":\"0xa3a10f3e82f01143c11b673efe8ef0c7dd2b6c45a7fafb9ef5097fcd341b0092\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/IAuthority.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2017-2018 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.7.0 <0.9.0;\\n\\n/// @title Authority Interface - Allows interaction with the Authority contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IAuthority {\\n    /// @notice Adds a permission for a role.\\n    /// @dev Possible roles are Role.ADAPTER, Role.FACTORY, Role.WHITELISTER\\n    /// @param from Address of the method caller.\\n    /// @param target Address of the approved wallet.\\n    /// @param permissionType Enum type of permission.\\n    event PermissionAdded(address indexed from, address indexed target, uint8 indexed permissionType);\\n\\n    /// @notice Removes a permission for a role.\\n    /// @dev Possible roles are Role.ADAPTER, Role.FACTORY, Role.WHITELISTER\\n    /// @param from Address of the  method caller.\\n    /// @param target Address of the approved wallet.\\n    /// @param permissionType Enum type of permission.\\n    event PermissionRemoved(address indexed from, address indexed target, uint8 indexed permissionType);\\n\\n    /// @notice Removes an approved method.\\n    /// @dev Removes a mapping of method selector to adapter according to eip1967.\\n    /// @param from Address of the  method caller.\\n    /// @param adapter Address of the adapter.\\n    /// @param selector Bytes4 of the method signature.\\n    event RemovedMethod(address indexed from, address indexed adapter, bytes4 indexed selector);\\n\\n    /// @notice Approves a new method.\\n    /// @dev Adds a mapping of method selector to adapter according to eip1967.\\n    /// @param from Address of the  method caller.\\n    /// @param adapter  Address of the adapter.\\n    /// @param selector Bytes4 of the method signature.\\n    event WhitelistedMethod(address indexed from, address indexed adapter, bytes4 indexed selector);\\n\\n    enum Role {\\n        ADAPTER,\\n        FACTORY,\\n        WHITELISTER\\n    }\\n\\n    /// @notice Mapping of permission type to bool.\\n    /// @param Mapping of type of permission to bool is authorized.\\n    struct Permission {\\n        mapping(Role => bool) authorized;\\n    }\\n\\n    /// @notice Allows a whitelister to whitelist a method.\\n    /// @param selector Bytes4 hex of the method selector.\\n    /// @param adapter Address of the adapter implementing the method.\\n    /// @notice We do not save list of approved as better queried by events.\\n    function addMethod(bytes4 selector, address adapter) external;\\n\\n    /// @notice Allows a whitelister to remove a method.\\n    /// @param selector Bytes4 hex of the method selector.\\n    /// @param adapter Address of the adapter implementing the method.\\n    function removeMethod(bytes4 selector, address adapter) external;\\n\\n    /// @notice Allows owner to set extension adapter address.\\n    /// @param adapter Address of the target adapter.\\n    /// @param isWhitelisted Bool whitelisted.\\n    function setAdapter(address adapter, bool isWhitelisted) external;\\n\\n    /// @notice Allows an admin to set factory permission.\\n    /// @param factory Address of the target factory.\\n    /// @param isWhitelisted Bool whitelisted.\\n    function setFactory(address factory, bool isWhitelisted) external;\\n\\n    /// @notice Allows the owner to set whitelister permission.\\n    /// @param whitelister Address of the whitelister.\\n    /// @param isWhitelisted Bool whitelisted.\\n    /// @notice Whitelister permission is required to approve methods in extensions adapter.\\n    function setWhitelister(address whitelister, bool isWhitelisted) external;\\n\\n    /// @notice Returns the address of the adapter associated to the signature.\\n    /// @param selector Hex of the method signature.\\n    /// @return Address of the adapter.\\n    function getApplicationAdapter(bytes4 selector) external view returns (address);\\n\\n    /// @notice Provides whether a factory is whitelisted.\\n    /// @param target Address of the target factory.\\n    /// @return Bool is whitelisted.\\n    function isWhitelistedFactory(address target) external view returns (bool);\\n\\n    /// @notice Provides whether an address is whitelister.\\n    /// @param target Address of the target whitelister.\\n    /// @return Bool is whitelisted.\\n    function isWhitelister(address target) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x339f452eb775e896db7d352ad5d65006cfabb0aeec8a35209812aab0a4fcb4c1\",\"license\":\"Apache 2.0\"},\"contracts/utils/storageSlot/StorageSlot.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\npragma solidity >=0.8.0 <0.9.0;\\n\\nlibrary StorageSlot {\\n    struct AddressSlot {\\n        address value;\\n    }\\n\\n    function getAddressSlot(bytes32 slot) internal pure returns (AddressSlot storage r) {\\n        assembly {\\n            r.slot := slot\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xe2a99d7021b48e1ddfee2640f5914a5f87805d2b63c51f3b899e1750d63a3e48\",\"license\":\"Apache-2.0-or-later\"}},\"version\":1}",
+  "bytecode": "0x60a060405234801561001057600080fd5b5060405161085138038061085183398101604081905261002f91610099565b61005a60017f03de6a299bc35b64db5b38a8b5dbbc4bab6e4b5a493067f0fbe40d83350a61106100c9565b7f03de6a299bc35b64db5b38a8b5dbbc4bab6e4b5a493067f0fbe40d83350a610f14610088576100886100f0565b6001600160a01b0316608052610106565b6000602082840312156100ab57600080fd5b81516001600160a01b03811681146100c257600080fd5b9392505050565b818103818111156100ea57634e487b7160e01b600052601160045260246000fd5b92915050565b634e487b7160e01b600052600160045260246000fd5b60805161072a6101276000396000818160f2015261040b015261072a6000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c80635fa7b5841461005c5780636247f6f2146100715780636ae9e44914610084578063ab37f48614610097578063e2b178a0146100e5575b600080fd5b61006f61006a3660046104f2565b61011c565b005b61006f61007f3660046104f2565b610210565b61006f610092366004610559565b610368565b6100d06100a53660046104f2565b6001600160a01b031660009081526000805160206106d5833981519152602052604090205460ff1690565b60405190151581526020015b60405180910390f35b6040516001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001681526020016100dc565b610124610409565b6001600160a01b03811660009081526000805160206106d5833981519152602052604090205460ff166101ad5760405162461bcd60e51b815260206004820152602660248201527f4557484954454c4953545f544f4b454e5f414c52454144595f52454d4f5645446044820152652fa2a92927a960d11b60648201526084015b60405180910390fd5b6001600160a01b03811660008181526000805160206106d583398151915260209081526040808320805460ff19169055519182527fa54714518c5d275fdcd3d2a461e4858e4e8cb04fb93cd0bca9d6d34115f2644091015b60405180910390a250565b610218610409565b6001600160a01b0381163b61027b5760405162461bcd60e51b815260206004820152602360248201527f4557484954454c4953545f494e5055545f4e4f545f434f4e54524143545f45526044820152622927a960e91b60648201526084016101a4565b6001600160a01b03811660009081526000805160206106d5833981519152602052604090205460ff16156103045760405162461bcd60e51b815260206004820152602a60248201527f4557484954454c4953545f544f4b454e5f414c52454144595f57484954454c4960448201526929aa22a22fa2a92927a960b11b60648201526084016101a4565b6001600160a01b03811660008181526000805160206106d58339815191526020908152604091829020805460ff1916600190811790915591519182527fa54714518c5d275fdcd3d2a461e4858e4e8cb04fb93cd0bca9d6d34115f264409101610205565b60005b82811015610403578181815181106103855761038561067a565b6020026020010151151560011515146103c7576103c28484838181106103ad576103ad61067a565b905060200201602081019061006a91906104f2565b6103f1565b6103f18484838181106103dc576103dc61067a565b905060200201602081019061007f91906104f2565b806103fb81610690565b91505061036b565b50505050565b7f0000000000000000000000000000000000000000000000000000000000000000604051637d0c269f60e01b81523360048201526001600160a01b039190911690637d0c269f90602401602060405180830381865afa158015610470573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061049491906106b7565b6104f05760405162461bcd60e51b815260206004820152602760248201527f4557484954454c4953545f43414c4c45525f4e4f545f57484954454c49535445604482015266292fa2a92927a960c91b60648201526084016101a4565b565b60006020828403121561050457600080fd5b81356001600160a01b038116811461051b57600080fd5b9392505050565b634e487b7160e01b600052604160045260246000fd5b801515811461054657600080fd5b50565b803561055481610538565b919050565b60008060006040848603121561056e57600080fd5b833567ffffffffffffffff8082111561058657600080fd5b818601915086601f83011261059a57600080fd5b8135818111156105a957600080fd5b602088818360051b86010111156105bf57600080fd5b8084019650819550808801359350828411156105da57600080fd5b838801935088601f8501126105ee57600080fd5b833591508282111561060257610602610522565b8160051b604051601f19603f8301168101818110868211171561062757610627610522565b60405292835281830193508481018201928a84111561064557600080fd5b948201945b8386101561066a5761065b86610549565b8552948201949382019361064a565b8096505050505050509250925092565b634e487b7160e01b600052603260045260246000fd5b6000600182016106b057634e487b7160e01b600052601160045260246000fd5b5060010190565b6000602082840312156106c957600080fd5b815161051b8161053856fe03de6a299bc35b64db5b38a8b5dbbc4bab6e4b5a493067f0fbe40d83350a610fa264697066735822122088a8e68fd47d6df0e29aedfc507762ab4aa451622b365f0d4a4f23694a38c93e64736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c80635fa7b5841461005c5780636247f6f2146100715780636ae9e44914610084578063ab37f48614610097578063e2b178a0146100e5575b600080fd5b61006f61006a3660046104f2565b61011c565b005b61006f61007f3660046104f2565b610210565b61006f610092366004610559565b610368565b6100d06100a53660046104f2565b6001600160a01b031660009081526000805160206106d5833981519152602052604090205460ff1690565b60405190151581526020015b60405180910390f35b6040516001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001681526020016100dc565b610124610409565b6001600160a01b03811660009081526000805160206106d5833981519152602052604090205460ff166101ad5760405162461bcd60e51b815260206004820152602660248201527f4557484954454c4953545f544f4b454e5f414c52454144595f52454d4f5645446044820152652fa2a92927a960d11b60648201526084015b60405180910390fd5b6001600160a01b03811660008181526000805160206106d583398151915260209081526040808320805460ff19169055519182527fa54714518c5d275fdcd3d2a461e4858e4e8cb04fb93cd0bca9d6d34115f2644091015b60405180910390a250565b610218610409565b6001600160a01b0381163b61027b5760405162461bcd60e51b815260206004820152602360248201527f4557484954454c4953545f494e5055545f4e4f545f434f4e54524143545f45526044820152622927a960e91b60648201526084016101a4565b6001600160a01b03811660009081526000805160206106d5833981519152602052604090205460ff16156103045760405162461bcd60e51b815260206004820152602a60248201527f4557484954454c4953545f544f4b454e5f414c52454144595f57484954454c4960448201526929aa22a22fa2a92927a960b11b60648201526084016101a4565b6001600160a01b03811660008181526000805160206106d58339815191526020908152604091829020805460ff1916600190811790915591519182527fa54714518c5d275fdcd3d2a461e4858e4e8cb04fb93cd0bca9d6d34115f264409101610205565b60005b82811015610403578181815181106103855761038561067a565b6020026020010151151560011515146103c7576103c28484838181106103ad576103ad61067a565b905060200201602081019061006a91906104f2565b6103f1565b6103f18484838181106103dc576103dc61067a565b905060200201602081019061007f91906104f2565b806103fb81610690565b91505061036b565b50505050565b7f0000000000000000000000000000000000000000000000000000000000000000604051637d0c269f60e01b81523360048201526001600160a01b039190911690637d0c269f90602401602060405180830381865afa158015610470573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061049491906106b7565b6104f05760405162461bcd60e51b815260206004820152602760248201527f4557484954454c4953545f43414c4c45525f4e4f545f57484954454c49535445604482015266292fa2a92927a960c91b60648201526084016101a4565b565b60006020828403121561050457600080fd5b81356001600160a01b038116811461051b57600080fd5b9392505050565b634e487b7160e01b600052604160045260246000fd5b801515811461054657600080fd5b50565b803561055481610538565b919050565b60008060006040848603121561056e57600080fd5b833567ffffffffffffffff8082111561058657600080fd5b818601915086601f83011261059a57600080fd5b8135818111156105a957600080fd5b602088818360051b86010111156105bf57600080fd5b8084019650819550808801359350828411156105da57600080fd5b838801935088601f8501126105ee57600080fd5b833591508282111561060257610602610522565b8160051b604051601f19603f8301168101818110868211171561062757610627610522565b60405292835281830193508481018201928a84111561064557600080fd5b948201945b8386101561066a5761065b86610549565b8552948201949382019361064a565b8096505050505050509250925092565b634e487b7160e01b600052603260045260246000fd5b6000600182016106b057634e487b7160e01b600052601160045260246000fd5b5060010190565b6000602082840312156106c957600080fd5b815161051b8161053856fe03de6a299bc35b64db5b38a8b5dbbc4bab6e4b5a493067f0fbe40d83350a610fa264697066735822122088a8e68fd47d6df0e29aedfc507762ab4aa451622b365f0d4a4f23694a38c93e64736f6c63430008110033",
+  "devdoc": {
+    "author": "Gabriele Rigo - <gab@rigoblock.com>",
+    "kind": "dev",
+    "methods": {
+      "batchUpdateTokens(address[],bool[])": {
+        "params": {
+          "tokens": "Address array to tokens.",
+          "whitelisted": "Bollean array the token is to be whitelisted or removed."
+        }
+      },
+      "getAuthority()": {
+        "returns": {
+          "_0": "Address of the authority contract."
+        }
+      },
+      "isWhitelistedToken(address)": {
+        "params": {
+          "token": "Address of the target token."
+        },
+        "returns": {
+          "_0": "Boolean the token is whitelisted."
+        }
+      },
+      "removeToken(address)": {
+        "params": {
+          "token": "Address of the target token."
+        }
+      },
+      "whitelistToken(address)": {
+        "params": {
+          "token": "Address of the target token."
+        }
+      }
+    },
+    "title": "EWhitelist - Allows whitelisting of tokens.",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "Whitelisted(address,bool)": {
+        "notice": "Emitted when a token is whitelisted or removed."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "batchUpdateTokens(address[],bool[])": {
+        "notice": "Allows a whitelister to whitelist/remove a list of tokens."
+      },
+      "getAuthority()": {
+        "notice": "Returns the address of the authority contract."
+      },
+      "isWhitelistedToken(address)": {
+        "notice": "Returns whether a token has been whitelisted."
+      },
+      "removeToken(address)": {
+        "notice": "Allows a whitelister to remove a token."
+      },
+      "whitelistToken(address)": {
+        "notice": "Allows a whitelister to whitelist a token."
+      }
+    },
+    "notice": "This contract has its own storage, which could potentially clash with pool storage if the allocated slot were already used by the implementation. Warning: careful with upgrades as pool only accesses isWhitelistedToken view method. Other methods are locked and should never be approved by governance.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

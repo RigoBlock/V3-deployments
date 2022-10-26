@@ -1,0 +1,472 @@
+{
+  "address": "0x06767e8090bA5c4Eca89ED00C3A719909D503ED6",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAuthority",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "newRigoblockDao",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "authority",
+          "type": "address"
+        }
+      ],
+      "name": "AuthorityChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "key",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "value",
+          "type": "bytes32"
+        }
+      ],
+      "name": "MetaChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "group",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "name",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "symbol",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "Registered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "rigoblockDao",
+          "type": "address"
+        }
+      ],
+      "name": "RigoblockDaoChanged",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "authority",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getMeta",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "poolMeta",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        }
+      ],
+      "name": "getPoolIdFromAddress",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "poolId",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "poolId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "register",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rigoblockDao",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAuthority",
+          "type": "address"
+        }
+      ],
+      "name": "setAuthority",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "key",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "value",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setMeta",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newRigoblockDao",
+          "type": "address"
+        }
+      ],
+      "name": "setRigoblockDao",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x427ebc6e48c045f22770c3f932f6b5055250189095fec75a7b6d45d1b3f1d61b",
+  "receipt": {
+    "to": "0x914d7Fec6aaC8cd542e72Bca78B30650d45643d7",
+    "from": "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "contractAddress": null,
+    "transactionIndex": 18,
+    "gasUsed": "930192",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xcba0ce07652b27676d1cf10dfb4c7e31d15e3995437182684385e3331aa87032",
+    "transactionHash": "0x427ebc6e48c045f22770c3f932f6b5055250189095fec75a7b6d45d1b3f1d61b",
+    "logs": [],
+    "blockNumber": 7807808,
+    "cumulativeGasUsed": "3059158",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xe35129A1E0BdB913CF6Fd8332E9d3533b5F41472",
+    "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6"
+  ],
+  "solcInputHash": "d4b54f99081d42612f5f3a501b8bf888",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAuthority\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"newRigoblockDao\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"authority\",\"type\":\"address\"}],\"name\":\"AuthorityChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"key\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"value\",\"type\":\"bytes32\"}],\"name\":\"MetaChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"group\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"name\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"symbol\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"}],\"name\":\"Registered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"rigoblockDao\",\"type\":\"address\"}],\"name\":\"RigoblockDaoChanged\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"authority\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"key\",\"type\":\"bytes32\"}],\"name\":\"getMeta\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"poolMeta\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"}],\"name\":\"getPoolIdFromAddress\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"poolId\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"symbol\",\"type\":\"string\"},{\"internalType\":\"bytes32\",\"name\":\"poolId\",\"type\":\"bytes32\"}],\"name\":\"register\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rigoblockDao\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAuthority\",\"type\":\"address\"}],\"name\":\"setAuthority\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"key\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"value\",\"type\":\"bytes32\"}],\"name\":\"setMeta\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newRigoblockDao\",\"type\":\"address\"}],\"name\":\"setRigoblockDao\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Gabriele Rigo - <gab@rigoblock.com>\",\"kind\":\"dev\",\"methods\":{\"getMeta(address,bytes32)\":{\"params\":{\"key\":\"Bytes32 key.\",\"pool\":\"Address of the pool.\"},\"returns\":{\"poolMeta\":\"Meta by key.\"}},\"getPoolIdFromAddress(address)\":{\"params\":{\"pool\":\"Address of the pool.\"},\"returns\":{\"poolId\":\"bytes32 id of the pool.\"}},\"register(address,string,string,bytes32)\":{\"params\":{\"name\":\"String name of the pool (31 characters/bytes or less).\",\"pool\":\"Address of the pool.\",\"poolId\":\"Bytes32 of the pool id.\",\"symbol\":\"String symbol of the pool (3 to 5 characters/bytes).\"}},\"setAuthority(address)\":{\"params\":{\"authority\":\"Address of the authority contract.\"}},\"setMeta(address,bytes32,bytes32)\":{\"params\":{\"key\":\"Bytes32 of the key.\",\"pool\":\"Address of the pool.\",\"value\":\"Bytes32 of the value.\"}},\"setRigoblockDao(address)\":{\"details\":\"Creates internal record.\",\"params\":{\"newRigoblockDao\":\"Address of the Rigoblock Dao.\"}}},\"stateVariables\":{\"authority\":{\"return\":\"Address of the authority contract.\",\"returns\":{\"_0\":\"Address of the authority contract.\"}},\"rigoblockDao\":{\"return\":\"Address of the Rigoblock Dao.\",\"returns\":{\"_0\":\"Address of the Rigoblock Dao.\"}}},\"title\":\"Pool Registry - Allows registration of pools.\",\"version\":1},\"userdoc\":{\"events\":{\"AuthorityChanged(address)\":{\"notice\":\"Emitted when Rigoblock Dao updates authority address.\"},\"MetaChanged(address,bytes32,bytes32)\":{\"notice\":\"Emitted when pool owner updates meta data for its pool.\"},\"Registered(address,address,bytes32,bytes32,bytes32)\":{\"notice\":\"Emitted when a new pool is registered in registry.\"},\"RigoblockDaoChanged(address)\":{\"notice\":\"Emitted when rigoblock Dao address is updated.\"}},\"kind\":\"user\",\"methods\":{\"authority()\":{\"notice\":\"Returns the address of the Rigoblock authority contract.\"},\"getMeta(address,bytes32)\":{\"notice\":\"Returns metadata for a given pool.\"},\"getPoolIdFromAddress(address)\":{\"notice\":\"Returns the id of a pool from its address.\"},\"register(address,string,string,bytes32)\":{\"notice\":\"Allows a factory which is an authority to register a pool.\"},\"rigoblockDao()\":{\"notice\":\"Returns the address of the Rigoblock Dao.\"},\"setAuthority(address)\":{\"notice\":\"Allows Rigoblock governance to update authority.\"},\"setMeta(address,bytes32,bytes32)\":{\"notice\":\"Allows pool owner to set metadata for a pool.\"},\"setRigoblockDao(address)\":{\"notice\":\"Allows Rigoblock Dao to update its address.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/protocol/deps/PoolRegistry.sol\":\"PoolRegistry\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/protocol/IRigoblockV3Pool.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"./interfaces/IERC20.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolActions.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolEvents.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolFallback.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolImmutable.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolInitializer.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolOwnerActions.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolState.sol\\\";\\nimport \\\"./interfaces/pool/IStorageAccessible.sol\\\";\\n\\n/// @title Rigoblock V3 Pool Interface - Allows interaction with the pool contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IRigoblockV3Pool is\\n    IERC20,\\n    IRigoblockV3PoolImmutable,\\n    IRigoblockV3PoolEvents,\\n    IRigoblockV3PoolFallback,\\n    IRigoblockV3PoolInitializer,\\n    IRigoblockV3PoolActions,\\n    IRigoblockV3PoolOwnerActions,\\n    IRigoblockV3PoolState,\\n    IStorageAccessible\\n{\\n\\n}\\n\",\"keccak256\":\"0xfb81b770fcd672450093825bcc04d8fe324d00bcbfef2ae3155ec914e59806c2\",\"license\":\"Apache 2.0\"},\"contracts/protocol/deps/PoolRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2017-2022 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport \\\"../IRigoblockV3Pool.sol\\\";\\nimport {LibSanitize} from \\\"../../utils/libSanitize/LibSanitize.sol\\\";\\nimport {IAuthority as Authority} from \\\"../interfaces/IAuthority.sol\\\";\\n\\nimport {IPoolRegistry} from \\\"../interfaces/IPoolRegistry.sol\\\";\\n\\n/// @title Pool Registry - Allows registration of pools.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ncontract PoolRegistry is IPoolRegistry {\\n    /// @inheritdoc IPoolRegistry\\n    address public override authority;\\n\\n    /// @inheritdoc IPoolRegistry\\n    address public override rigoblockDao;\\n\\n    mapping(address => bytes32) private _mapIdByAddress;\\n\\n    mapping(address => PoolMeta) private _poolMetaByAddress;\\n\\n    /*\\n     * MODIFIERS\\n     */\\n    modifier onlyWhitelistedFactory() {\\n        require(Authority(authority).isWhitelistedFactory(msg.sender), \\\"REGISTRY_FACTORY_NOT_WHITELISTED_ERROR\\\");\\n        _;\\n    }\\n\\n    modifier onlyPoolOperator(address pool) {\\n        require(IRigoblockV3Pool(payable(pool)).owner() == msg.sender, \\\"REGISTRY_CALLER_IS_NOT_POOL_OWNER_ERROR\\\");\\n        _;\\n    }\\n\\n    modifier onlyRigoblockDao() {\\n        require(msg.sender == rigoblockDao, \\\"REGISTRY_CALLER_NOT_DAO_ERROR\\\");\\n        _;\\n    }\\n\\n    modifier whenAddressFree(address pool) {\\n        require(_mapIdByAddress[pool] == bytes32(0), \\\"REGISTRY_ADDRESS_ALREADY_TAKEN_ERROR\\\");\\n        _;\\n    }\\n\\n    modifier whenPoolRegistered(address pool) {\\n        require(_mapIdByAddress[pool] != bytes32(0), \\\"REGISTRY_ADDRESS_NOT_REGISTERED_ERROR\\\");\\n        _;\\n    }\\n\\n    constructor(address newAuthority, address newRigoblockDao) {\\n        authority = newAuthority;\\n        rigoblockDao = newRigoblockDao;\\n    }\\n\\n    /*\\n     * CORE FUNCTIONS\\n     */\\n    /// @inheritdoc IPoolRegistry\\n    function register(\\n        address pool,\\n        string calldata name,\\n        string calldata symbol,\\n        bytes32 poolId\\n    ) external override onlyWhitelistedFactory whenAddressFree(pool) {\\n        _assertValidNameAndSymbol(name, symbol);\\n        _mapIdByAddress[pool] = poolId;\\n\\n        emit Registered(\\n            msg.sender, // proxy factory\\n            pool,\\n            bytes32(bytes(name)),\\n            bytes32(bytes(symbol)),\\n            poolId\\n        );\\n    }\\n\\n    /// @inheritdoc IPoolRegistry\\n    function setAuthority(address newAuthority) external override onlyRigoblockDao {\\n        require(newAuthority != authority, \\\"REGISTRY_SAME_INPUT_ADDRESS_ERROR\\\");\\n        require(_isContract(newAuthority), \\\"REGISTRY_NEW_AUTHORITY_NOT_CONTRACT_ERROR\\\");\\n        authority = newAuthority;\\n        emit AuthorityChanged(newAuthority);\\n    }\\n\\n    /// @inheritdoc IPoolRegistry\\n    function setMeta(\\n        address pool,\\n        bytes32 key,\\n        bytes32 value\\n    ) external override onlyPoolOperator(pool) whenPoolRegistered(pool) {\\n        _poolMetaByAddress[pool].meta[key] = value;\\n        emit MetaChanged(pool, key, value);\\n    }\\n\\n    /// @inheritdoc IPoolRegistry\\n    function setRigoblockDao(address newRigoblockDao) external override onlyRigoblockDao {\\n        require(newRigoblockDao != rigoblockDao, \\\"REGISTRY_SAME_INPUT_ADDRESS_ERROR\\\");\\n        require(_isContract(newRigoblockDao), \\\"REGISTRY_NEW_DAO_NOT_CONTRACT_ERROR\\\");\\n        rigoblockDao = newRigoblockDao;\\n        emit RigoblockDaoChanged(newRigoblockDao);\\n    }\\n\\n    /*\\n     * CONSTANT PUBLIC FUNCTIONS\\n     */\\n    /// @inheritdoc IPoolRegistry\\n    function getPoolIdFromAddress(address pool) external view override returns (bytes32 poolId) {\\n        poolId = _mapIdByAddress[pool];\\n    }\\n\\n    /// @inheritdoc IPoolRegistry\\n    function getMeta(address pool, bytes32 key) external view override returns (bytes32 poolMeta) {\\n        return _poolMetaByAddress[pool].meta[key];\\n    }\\n\\n    /*\\n     * INTERNAL FUNCTIONS\\n     */\\n    function _assertValidNameAndSymbol(string memory name, string memory symbol) internal pure {\\n        uint256 nameLength = bytes(name).length;\\n        // we always want to keep name lenght below 31, for logging bytes32 while making sure that the name toString\\n        // is stored at slot location and not in the pseudorandom slot allocated to strings longer than 31 bytes.\\n        require(nameLength >= uint256(4) && nameLength <= uint256(31), \\\"REGISTRY_NAME_LENGTH_ERROR\\\");\\n\\n        uint256 symbolLength = bytes(symbol).length;\\n        require(symbolLength >= uint256(3) && symbolLength <= uint256(5), \\\"REGISTRY_SYMBOL_LENGTH_ERROR\\\");\\n\\n        // check valid characters in name and symbol\\n        LibSanitize.assertIsValidCheck(name);\\n        LibSanitize.assertIsValidCheck(symbol);\\n        LibSanitize.assertIsUppercase(symbol);\\n    }\\n\\n    function _isContract(address target) private view returns (bool) {\\n        return target.code.length > 0;\\n    }\\n}\\n\",\"keccak256\":\"0xc9a893938990caf424dd68e9a3605863372e60c67311654803c1229c24faef1f\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/IAuthority.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2017-2018 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.7.0 <0.9.0;\\n\\n/// @title Authority Interface - Allows interaction with the Authority contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IAuthority {\\n    /// @notice Adds a permission for a role.\\n    /// @dev Possible roles are Role.ADAPTER, Role.FACTORY, Role.WHITELISTER\\n    /// @param from Address of the method caller.\\n    /// @param target Address of the approved wallet.\\n    /// @param permissionType Enum type of permission.\\n    event PermissionAdded(address indexed from, address indexed target, uint8 indexed permissionType);\\n\\n    /// @notice Removes a permission for a role.\\n    /// @dev Possible roles are Role.ADAPTER, Role.FACTORY, Role.WHITELISTER\\n    /// @param from Address of the  method caller.\\n    /// @param target Address of the approved wallet.\\n    /// @param permissionType Enum type of permission.\\n    event PermissionRemoved(address indexed from, address indexed target, uint8 indexed permissionType);\\n\\n    /// @notice Removes an approved method.\\n    /// @dev Removes a mapping of method selector to adapter according to eip1967.\\n    /// @param from Address of the  method caller.\\n    /// @param adapter Address of the adapter.\\n    /// @param selector Bytes4 of the method signature.\\n    event RemovedMethod(address indexed from, address indexed adapter, bytes4 indexed selector);\\n\\n    /// @notice Approves a new method.\\n    /// @dev Adds a mapping of method selector to adapter according to eip1967.\\n    /// @param from Address of the  method caller.\\n    /// @param adapter  Address of the adapter.\\n    /// @param selector Bytes4 of the method signature.\\n    event WhitelistedMethod(address indexed from, address indexed adapter, bytes4 indexed selector);\\n\\n    enum Role {\\n        ADAPTER,\\n        FACTORY,\\n        WHITELISTER\\n    }\\n\\n    /// @notice Mapping of permission type to bool.\\n    /// @param Mapping of type of permission to bool is authorized.\\n    struct Permission {\\n        mapping(Role => bool) authorized;\\n    }\\n\\n    /// @notice Allows a whitelister to whitelist a method.\\n    /// @param selector Bytes4 hex of the method selector.\\n    /// @param adapter Address of the adapter implementing the method.\\n    /// @notice We do not save list of approved as better queried by events.\\n    function addMethod(bytes4 selector, address adapter) external;\\n\\n    /// @notice Allows a whitelister to remove a method.\\n    /// @param selector Bytes4 hex of the method selector.\\n    /// @param adapter Address of the adapter implementing the method.\\n    function removeMethod(bytes4 selector, address adapter) external;\\n\\n    /// @notice Allows owner to set extension adapter address.\\n    /// @param adapter Address of the target adapter.\\n    /// @param isWhitelisted Bool whitelisted.\\n    function setAdapter(address adapter, bool isWhitelisted) external;\\n\\n    /// @notice Allows an admin to set factory permission.\\n    /// @param factory Address of the target factory.\\n    /// @param isWhitelisted Bool whitelisted.\\n    function setFactory(address factory, bool isWhitelisted) external;\\n\\n    /// @notice Allows the owner to set whitelister permission.\\n    /// @param whitelister Address of the whitelister.\\n    /// @param isWhitelisted Bool whitelisted.\\n    /// @notice Whitelister permission is required to approve methods in extensions adapter.\\n    function setWhitelister(address whitelister, bool isWhitelisted) external;\\n\\n    /// @notice Returns the address of the adapter associated to the signature.\\n    /// @param selector Hex of the method signature.\\n    /// @return Address of the adapter.\\n    function getApplicationAdapter(bytes4 selector) external view returns (address);\\n\\n    /// @notice Provides whether a factory is whitelisted.\\n    /// @param target Address of the target factory.\\n    /// @return Bool is whitelisted.\\n    function isWhitelistedFactory(address target) external view returns (bool);\\n\\n    /// @notice Provides whether an address is whitelister.\\n    /// @param target Address of the target whitelister.\\n    /// @return Bool is whitelisted.\\n    function isWhitelister(address target) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x339f452eb775e896db7d352ad5d65006cfabb0aeec8a35209812aab0a4fcb4c1\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/IERC20.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2018 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface IERC20 {\\n    /// @notice Emitted when a token is transferred.\\n    /// @param from Address transferring the tokens.\\n    /// @param to Address receiving the tokens.\\n    /// @param value Number of token units.\\n    event Transfer(address indexed from, address indexed to, uint256 value);\\n\\n    /// @notice Emitted when a token holder sets and approval.\\n    /// @param owner Address of the account setting the approval.\\n    /// @param spender Address of the allowed account.\\n    /// @param value Number of approved units.\\n    event Approval(address indexed owner, address indexed spender, uint256 value);\\n\\n    /// @notice Transfers token from holder to another address.\\n    /// @param to Address to send tokens to.\\n    /// @param value Number of token units to send.\\n    /// @return success Bool the transaction was successful.\\n    function transfer(address to, uint256 value) external returns (bool success);\\n\\n    /// @notice Allows spender to transfer tokens from the holder.\\n    /// @param from Address of the token holder.\\n    /// @param to Address to send tokens to.\\n    /// @param value Number of units to transfer.\\n    /// @return success Bool the transaction was successful.\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 value\\n    ) external returns (bool success);\\n\\n    /// @notice Allows a holder to approve a spender.\\n    /// @param spender Address of the token spender.\\n    /// @param value Number of units to be approved.\\n    /// @return success Bool the transaction was successful.\\n    function approve(address spender, uint256 value) external returns (bool success);\\n\\n    /// @notice Returns token balance for an address.\\n    /// @param who Address to query balance for.\\n    /// @return Number of units held.\\n    function balanceOf(address who) external view returns (uint256);\\n\\n    /// @notice Returns token allowance of an address to another address.\\n    /// @param owner Address of token hodler.\\n    /// @param spender Address of the token spender.\\n    /// @return Number of allowed units.\\n    function allowance(address owner, address spender) external view returns (uint256);\\n\\n    /// @notice Returns token decimals.\\n    /// @return Uint8 number of decimals.\\n    function decimals() external view returns (uint8);\\n}\\n\",\"keccak256\":\"0x975cd3f1946640b35c0944fc5d36657a3161fd6c9d076764078b41a877612066\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/IPoolRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2017-2022 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.7.0 <0.9.0;\\n\\n/// @title Pool Registry Interface - Allows external interaction with pool registry.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IPoolRegistry {\\n    /// @notice Mapping of pool meta by pool key.\\n    /// @param meta Mapping of bytes32 key to bytes32 meta.\\n    struct PoolMeta {\\n        mapping(bytes32 => bytes32) meta;\\n    }\\n\\n    /// @notice Emitted when Rigoblock Dao updates authority address.\\n    /// @param authority Address of the new authority contract.\\n    event AuthorityChanged(address indexed authority);\\n\\n    /// @notice Emitted when pool owner updates meta data for its pool.\\n    /// @param pool Address of the pool.\\n    /// @param key Bytes32 key for indexing.\\n    /// @param value Bytes32 of the value associated with the key.\\n    event MetaChanged(address indexed pool, bytes32 indexed key, bytes32 value);\\n\\n    /// @notice Emitted when a new pool is registered in registry.\\n    /// @param group Address of the pool factory.\\n    /// @param pool Address of the registered pool.\\n    /// @param name String name of the pool.\\n    /// @param symbol String name of the pool.\\n    /// @param id Bytes32 id of the pool.\\n    event Registered(\\n        address indexed group,\\n        address pool,\\n        bytes32 indexed name, // client can prune sybil pools\\n        bytes32 indexed symbol,\\n        bytes32 id\\n    );\\n\\n    /// @notice Emitted when rigoblock Dao address is updated.\\n    /// @param rigoblockDao New Dao address.\\n    event RigoblockDaoChanged(address indexed rigoblockDao);\\n\\n    /// @notice Returns the address of the Rigoblock authority contract.\\n    /// @return Address of the authority contract.\\n    function authority() external view returns (address);\\n\\n    /// @notice Returns the address of the Rigoblock Dao.\\n    /// @return Address of the Rigoblock Dao.\\n    function rigoblockDao() external view returns (address);\\n\\n    /// @notice Allows a factory which is an authority to register a pool.\\n    /// @param pool Address of the pool.\\n    /// @param name String name of the pool (31 characters/bytes or less).\\n    /// @param symbol String symbol of the pool (3 to 5 characters/bytes).\\n    /// @param poolId Bytes32 of the pool id.\\n    function register(\\n        address pool,\\n        string calldata name,\\n        string calldata symbol,\\n        bytes32 poolId\\n    ) external;\\n\\n    /// @notice Allows Rigoblock governance to update authority.\\n    /// @param authority Address of the authority contract.\\n    function setAuthority(address authority) external;\\n\\n    /// @notice Allows pool owner to set metadata for a pool.\\n    /// @param pool Address of the pool.\\n    /// @param key Bytes32 of the key.\\n    /// @param value Bytes32 of the value.\\n    function setMeta(\\n        address pool,\\n        bytes32 key,\\n        bytes32 value\\n    ) external;\\n\\n    /// @notice Allows Rigoblock Dao to update its address.\\n    /// @dev Creates internal record.\\n    /// @param newRigoblockDao Address of the Rigoblock Dao.\\n    function setRigoblockDao(address newRigoblockDao) external;\\n\\n    /// @notice Returns metadata for a given pool.\\n    /// @param pool Address of the pool.\\n    /// @param key Bytes32 key.\\n    /// @return poolMeta Meta by key.\\n    function getMeta(address pool, bytes32 key) external view returns (bytes32 poolMeta);\\n\\n    /// @notice Returns the id of a pool from its address.\\n    /// @param pool Address of the pool.\\n    /// @return poolId bytes32 id of the pool.\\n    function getPoolIdFromAddress(address pool) external view returns (bytes32 poolId);\\n}\\n\",\"keccak256\":\"0x0da90f76eb6898effb3ed0409b3cd0c4153762a1ceff2731c536a8bfa19f2290\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolActions.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Actions Interface - Allows interaction with the pool contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IRigoblockV3PoolActions {\\n    /// @notice Allows a user to mint pool tokens on behalf of an address.\\n    /// @param recipient Address receiving the tokens.\\n    /// @param amountIn Amount of base tokens.\\n    /// @param amountOutMin Minimum amount to be received, prevents pool operator frontrunning.\\n    /// @return recipientAmount Number of tokens minted to recipient.\\n    function mint(\\n        address recipient,\\n        uint256 amountIn,\\n        uint256 amountOutMin\\n    ) external payable returns (uint256 recipientAmount);\\n\\n    /// @notice Allows a pool holder to burn pool tokens.\\n    /// @param amountIn Number of tokens to burn.\\n    /// @param amountOutMin Minimum amount to be received, prevents pool operator frontrunning.\\n    /// @return netRevenue Net amount of burnt pool tokens.\\n    function burn(uint256 amountIn, uint256 amountOutMin) external returns (uint256 netRevenue);\\n}\\n\",\"keccak256\":\"0x83bb702137e7c695f436eae990426a73f545105e614d847ea16f439400e252cb\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolEvents.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Events - Declares events of the pool contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IRigoblockV3PoolEvents {\\n    /// @notice Emitted when a new pool is initialized.\\n    /// @dev Pool is initialized at new pool creation.\\n    /// @param group Address of the factory.\\n    /// @param owner Address of the owner.\\n    /// @param baseToken Address of the base token.\\n    /// @param name String name of the pool.\\n    /// @param symbol String symbol of the pool.\\n    event PoolInitialized(\\n        address indexed group,\\n        address indexed owner,\\n        address indexed baseToken,\\n        string name,\\n        bytes8 symbol\\n    );\\n\\n    /// @notice Emitted when new owner is set.\\n    /// @param old Address of the previous owner.\\n    /// @param current Address of the new owner.\\n    event NewOwner(address indexed old, address indexed current);\\n\\n    /// @notice Emitted when pool operator updates NAV.\\n    /// @param poolOperator Address of the pool owner.\\n    /// @param pool Address of the pool.\\n    /// @param unitaryValue Value of 1 token in wei units.\\n    event NewNav(address indexed poolOperator, address indexed pool, uint256 unitaryValue);\\n\\n    /// @notice Emitted when pool operator sets new mint fee.\\n    /// @param pool Address of the pool.\\n    /// @param who Address that is sending the transaction.\\n    /// @param transactionFee Number of the new fee in wei.\\n    event NewFee(address indexed pool, address indexed who, uint16 transactionFee);\\n\\n    /// @notice Emitted when pool operator updates fee collector address.\\n    /// @param pool Address of the pool.\\n    /// @param who Address that is sending the transaction.\\n    /// @param feeCollector Address of the new fee collector.\\n    event NewCollector(address indexed pool, address indexed who, address feeCollector);\\n\\n    /// @notice Emitted when pool operator updates minimum holding period.\\n    /// @param pool Address of the pool.\\n    /// @param minimumPeriod Number of seconds.\\n    event MinimumPeriodChanged(address indexed pool, uint48 minimumPeriod);\\n\\n    /// @notice Emitted when pool operator updates the mint/burn spread.\\n    /// @param pool Address of the pool.\\n    /// @param spread Number of the spread in basis points.\\n    event SpreadChanged(address indexed pool, uint16 spread);\\n\\n    /// @notice Emitted when pool operator sets a kyc provider.\\n    /// @param pool Address of the pool.\\n    /// @param kycProvider Address of the kyc provider.\\n    event KycProviderSet(address indexed pool, address indexed kycProvider);\\n}\\n\",\"keccak256\":\"0x7d135508f23e8d67272f9c9f8b709e1d46d028b7d91827e3337e98192bd90651\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolFallback.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Fallback Interface - Interface of the fallback method.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IRigoblockV3PoolFallback {\\n    /// @notice Delegate calls to pool extension.\\n    /// @dev Delegatecall restricted to owner, staticcall accessible by everyone.\\n    /// @dev Restricting delegatecall to owner effectively locks direct calls.\\n    fallback() external payable;\\n\\n    /// @notice Allows transfers to pool.\\n    /// @dev Prevents accidental transfer to implementation contract.\\n    receive() external payable;\\n}\\n\",\"keccak256\":\"0x952f0181a0edb029b3432e270a1efd44874eed5e05defe16ba92b0305cc07262\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolImmutable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Immutable - Interface of the pool storage.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IRigoblockV3PoolImmutable {\\n    /// @notice Returns a string of the pool version.\\n    /// @return String of the pool implementation version.\\n    function VERSION() external view returns (string memory);\\n\\n    /// @notice Returns the address of the authority contract.\\n    /// @return Address of the authority contract.\\n    function authority() external view returns (address);\\n}\\n\",\"keccak256\":\"0x135c52cb47a5482fecf89fe0e399c82ae365831e551836758b37fa167ff5c5c3\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolInitializer.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Initializer Interface - Allows initializing a pool contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IRigoblockV3PoolInitializer {\\n    /// @notice Initializes to pool storage.\\n    /// @dev Pool can only be initialized at creation, meaning this method cannot be called directly to implementation.\\n    function initializePool() external;\\n}\\n\",\"keccak256\":\"0x94bf3c6a51493b9fc8e82f841493fd422bb1f5b5855b0bde0026ec68105d1c8b\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolOwnerActions.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Owner Actions Interface - Interface of the owner methods.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IRigoblockV3PoolOwnerActions {\\n    /// @notice Allows owner to decide where to receive the fee.\\n    /// @param feeCollector Address of the fee receiver.\\n    function changeFeeCollector(address feeCollector) external;\\n\\n    /// @notice Allows pool owner to change the minimum holding period.\\n    /// @param minPeriod Time in seconds.\\n    function changeMinPeriod(uint48 minPeriod) external;\\n\\n    /// @notice Allows pool owner to change the mint/burn spread.\\n    /// @param newSpread Number between 0 and 1000, in basis points.\\n    function changeSpread(uint16 newSpread) external;\\n\\n    /// @notice Allows pool owner to set/update the user whitelist contract.\\n    /// @dev Kyc provider can be set to null, removing user whitelist requirement.\\n    /// @param kycProvider Address if the kyc provider.\\n    function setKycProvider(address kycProvider) external;\\n\\n    /// @notice Allows pool owner to set a new owner address.\\n    /// @dev Method restricted to owner.\\n    /// @param newOwner Address of the new owner.\\n    function setOwner(address newOwner) external;\\n\\n    /// @notice Allows pool owner to set the transaction fee.\\n    /// @param transactionFee Value of the transaction fee in basis points.\\n    function setTransactionFee(uint16 transactionFee) external;\\n\\n    /// @notice Allows pool owner to set the pool price.\\n    /// @param unitaryValue Value of 1 token in wei units.\\n    function setUnitaryValue(uint256 unitaryValue) external;\\n}\\n\",\"keccak256\":\"0x8b06640bb3eeb802b9ea9ae9c27486e49d07ab79ca4b766e1ad38eb8d2509239\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolState.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool State - Returns the pool view methods.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IRigoblockV3PoolState {\\n    /// @notice Returned pool initialization parameters.\\n    /// @dev Symbol is stored as bytes8 but returned as string to facilitating client view.\\n    /// @param name String of the pool name (max 32 characters).\\n    /// @param symbol String of the pool symbol (from 3 to 5 characters).\\n    /// @param decimals Uint8 decimals.\\n    /// @param owner Address of the pool operator.\\n    /// @param baseToken Address of the base token of the pool (0 for base currency).\\n    struct ReturnedPool {\\n        string name;\\n        string symbol;\\n        uint8 decimals;\\n        address owner;\\n        address baseToken;\\n    }\\n\\n    /// @notice Returns the struct containing pool initialization parameters.\\n    /// @dev Symbol is stored as bytes8 but returned as string in the returned struct, unlocked is omitted as alwasy true.\\n    /// @return ReturnedPool struct.\\n    function getPool() external view returns (ReturnedPool memory);\\n\\n    /// @notice Pool variables.\\n    /// @param minPeriod Minimum holding period in seconds.\\n    /// @param spread Value of spread in basis points (from 0 to +-10%).\\n    /// @param transactionFee Value of transaction fee in basis points (from 0 to 1%).\\n    /// @param feeCollector Address of the fee receiver.\\n    /// @param kycProvider Address of the kyc provider.\\n    struct PoolParams {\\n        uint48 minPeriod;\\n        uint16 spread;\\n        uint16 transactionFee;\\n        address feeCollector;\\n        address kycProvider;\\n    }\\n\\n    /// @notice Returns the struct compaining pool parameters.\\n    /// @return PoolParams struct.\\n    function getPoolParams() external view returns (PoolParams memory);\\n\\n    /// @notice Pool tokens.\\n    /// @param unitaryValue A token's unitary value in base token.\\n    /// @param totalSupply Number of total issued pool tokens.\\n    struct PoolTokens {\\n        uint256 unitaryValue;\\n        uint256 totalSupply;\\n    }\\n\\n    /// @notice Returns the struct containing pool tokens info.\\n    /// @return PoolTokens struct.\\n    function getPoolTokens() external view returns (PoolTokens memory);\\n\\n    /// @notice Returns the aggregate pool generic storage.\\n    /// @return poolInitParams The pool's initialization parameters.\\n    /// @return poolVariables The pool's variables.\\n    /// @return poolTokensInfo The pool's tokens info.\\n    function getPoolStorage()\\n        external\\n        view\\n        returns (\\n            ReturnedPool memory poolInitParams,\\n            PoolParams memory poolVariables,\\n            PoolTokens memory poolTokensInfo\\n        );\\n\\n    /// @notice Pool holder account.\\n    /// @param userBalance Number of tokens held by user.\\n    /// @param activation Time when tokens become active.\\n    struct UserAccount {\\n        uint208 userBalance;\\n        uint48 activation;\\n    }\\n\\n    /// @notice Returns a pool holder's account struct.\\n    /// @return UserAccount struct.\\n    function getUserAccount(address _who) external view returns (UserAccount memory);\\n\\n    /// @notice Returns a string of the pool name.\\n    /// @dev Name maximum length 31 bytes.\\n    /// @return String of the name.\\n    function name() external view returns (string memory);\\n\\n    /// @notice Returns the address of the owner.\\n    /// @return Address of the owner.\\n    function owner() external view returns (address);\\n\\n    /// @notice Returns a string of the pool symbol.\\n    /// @return String of the symbol.\\n    function symbol() external view returns (string memory);\\n\\n    /// @notice Returns the total amount of issued tokens for this pool.\\n    /// @return Number of total issued tokens.\\n    function totalSupply() external view returns (uint256);\\n}\\n\",\"keccak256\":\"0x910e237a02fdbd0293765765e31b0cd75f57f3f706557d0a4759bc06f3a03a01\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IStorageAccessible.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.7.0 <0.9.0;\\n\\n/// @title IStorageAccessible - generic base interface that allows callers to access all internal storage.\\n/// @notice See https://github.com/gnosis/util-contracts/blob/bb5fe5fb5df6d8400998094fb1b32a178a47c3a1/contracts/StorageAccessible.sol\\ninterface IStorageAccessible {\\n    /// @notice Reads `length` bytes of storage in the currents contract.\\n    /// @param offset - the offset in the current contract's storage in words to start reading from.\\n    /// @param length - the number of words (32 bytes) of data to read.\\n    /// @return Bytes string of the bytes that were read.\\n    function getStorageAt(uint256 offset, uint256 length) external view returns (bytes memory);\\n\\n    /// @notice Reads bytes of storage at different storage locations.\\n    /// @dev Returns a string with values regarless of where they are stored, i.e. variable, mapping or struct.\\n    /// @param slots The array of storage slots to query into.\\n    /// @return Bytes string composite of different storage locations' value.\\n    function getStorageSlotsAt(uint256[] memory slots) external view returns (bytes memory);\\n}\\n\",\"keccak256\":\"0x15cade0b04b15b0a3fc87289b9078e56802cb8546a581f3bfd0ad64d08e3365d\",\"license\":\"Apache 2.0\"},\"contracts/utils/libSanitize/LibSanitize.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2017-2018 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Lib Sanitize - Sanitize strings in smart contracts.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\nlibrary LibSanitize {\\n    function assertIsValidCheck(string memory str) internal pure {\\n        bytes memory bStr = bytes(str);\\n        uint256 arrayLength = bStr.length;\\n        require(bStr[0] != bytes1(uint8(32)), \\\"LIBSANITIZE_SPACE_AT_BEGINNING_ERROR\\\");\\n        require(bStr[arrayLength - 1] != bytes1(uint8(32)), \\\"LIBSANITIZE_SPACE_AT_END_ERROR\\\");\\n        for (uint256 i = 0; i < arrayLength; i++) {\\n            if (\\n                (bStr[i] < bytes1(uint8(48)) ||\\n                    bStr[i] > bytes1(uint8(122)) ||\\n                    (bStr[i] > bytes1(uint8(57)) && bStr[i] < bytes1(uint8(65))) ||\\n                    (bStr[i] > bytes1(uint8(90)) && bStr[i] < bytes1(uint8(97)))) && bStr[i] != bytes1(uint8(32))\\n            ) revert(\\\"LIBSANITIZE_SPECIAL_CHARACTER_ERROR\\\");\\n        }\\n    }\\n\\n    function assertIsLowercase(string memory str) internal pure {\\n        bytes memory bStr = bytes(str);\\n        uint256 arrayLength = bStr.length;\\n        for (uint256 i = 0; i < arrayLength; i++) {\\n            if ((bStr[i] >= bytes1(uint8(65))) && (bStr[i] <= bytes1(uint8(90))))\\n                revert(\\\"LIBSANITIZE_LOWERCASE_CHARACTER_ERROR\\\");\\n        }\\n    }\\n\\n    function assertIsUppercase(string memory str) internal pure {\\n        bytes memory bStr = bytes(str);\\n        uint256 arrayLength = bStr.length;\\n        for (uint256 i = 0; i < arrayLength; i++) {\\n            if ((bStr[i] >= bytes1(uint8(97))) && (bStr[i] <= bytes1(uint8(122))))\\n                revert(\\\"LIBSANITIZE_UPPERCASE_CHARACTER_ERROR\\\");\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x9f0ed2da64110bdd34d820ef835926b01252ce9b10536d5c311304886c2a2736\",\"license\":\"Apache 2.0\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610fb5380380610fb583398101604081905261002f9161007c565b600080546001600160a01b039384166001600160a01b031991821617909155600180549290931691161790556100af565b80516001600160a01b038116811461007757600080fd5b919050565b6000806040838503121561008f57600080fd5b61009883610060565b91506100a660208401610060565b90509250929050565b610ef7806100be6000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c806356d002c41161005b57806356d002c41461011c5780637a9e5e4b1461012f578063b516e6e114610142578063bf7e214f1461015557600080fd5b80632cee21911461008d578063386f5adf146100c95780633edd80c3146100dc5780633f47734b14610107575b600080fd5b6100b661009b366004610c72565b6001600160a01b031660009081526002602052604090205490565b6040519081526020015b60405180910390f35b6100b66100d7366004610c96565b610168565b6001546100ef906001600160a01b031681565b6040516001600160a01b0390911681526020016100c0565b61011a610115366004610d0b565b610193565b005b61011a61012a366004610d96565b6103c2565b61011a61013d366004610c72565b61056b565b61011a610150366004610c72565b6106a4565b6000546100ef906001600160a01b031681565b6001600160a01b03821660009081526003602090815260408083208484529091529020545b92915050565b6000546040516306e5bd1f60e51b81523360048201526001600160a01b039091169063dcb7a3e090602401602060405180830381865afa1580156101db573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101ff9190610dcb565b61025f5760405162461bcd60e51b815260206004820152602660248201527f52454749535452595f464143544f52595f4e4f545f57484954454c49535445446044820152652fa2a92927a960d11b60648201526084015b60405180910390fd5b6001600160a01b0386166000908152600260205260409020548690156102d35760405162461bcd60e51b8152602060048201526024808201527f52454749535452595f414444524553535f414c52454144595f54414b454e5f45604482015263292927a960e11b6064820152608401610256565b61034686868080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525050604080516020601f8a0181900481028201810190925288815292508891508790819084018382808284376000920191909152506107d992505050565b6001600160a01b038716600090815260026020526040902082905561036b8385610ded565b6103758688610ded565b604080516001600160a01b038b1681526020810186905233917ff9e59440b5a9b7c83d67d07a5a61a2c6c07cfdd82854d9f08624b1fd5e1c01a8910160405180910390a450505050505050565b82336001600160a01b0316816001600160a01b0316638da5cb5b6040518163ffffffff1660e01b8152600401602060405180830381865afa15801561040b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061042f9190610e0b565b6001600160a01b0316146104955760405162461bcd60e51b815260206004820152602760248201527f52454749535452595f43414c4c45525f49535f4e4f545f504f4f4c5f4f574e45604482015266292fa2a92927a960c91b6064820152608401610256565b6001600160a01b038416600090815260026020526040902054849061050a5760405162461bcd60e51b815260206004820152602560248201527f52454749535452595f414444524553535f4e4f545f524547495354455245445f60448201526422a92927a960d91b6064820152608401610256565b6001600160a01b038516600081815260036020908152604080832088845282529182902086905590518581528692917f908d4c229ad1504da754a04d079d71924a9696007407c0e6dc2d88dc18962547910160405180910390a35050505050565b6001546001600160a01b031633146105c55760405162461bcd60e51b815260206004820152601d60248201527f52454749535452595f43414c4c45525f4e4f545f44414f5f4552524f520000006044820152606401610256565b6000546001600160a01b03908116908216036105f35760405162461bcd60e51b815260040161025690610e28565b6001600160a01b0381163b61065c5760405162461bcd60e51b815260206004820152602960248201527f52454749535452595f4e45575f415554484f524954595f4e4f545f434f4e545260448201526820a1aa2fa2a92927a960b91b6064820152608401610256565b600080546001600160a01b0319166001600160a01b038316908117825560405190917f3430ad8dbed7c32bf49006f0d79d2ab70785ea13ebd4ef7d1b87e487ef08928c91a250565b6001546001600160a01b031633146106fe5760405162461bcd60e51b815260206004820152601d60248201527f52454749535452595f43414c4c45525f4e4f545f44414f5f4552524f520000006044820152606401610256565b6001546001600160a01b039081169082160361072c5760405162461bcd60e51b815260040161025690610e28565b6001600160a01b0381163b61078f5760405162461bcd60e51b815260206004820152602360248201527f52454749535452595f4e45575f44414f5f4e4f545f434f4e54524143545f45526044820152622927a960e91b6064820152608401610256565b600180546001600160a01b0319166001600160a01b0383169081179091556040517fed96973ae9959b9cf32518c616176e97e08e78f72ffaba2003327315a3c5bfa390600090a250565b8151600481108015906107ed5750601f8111155b6108395760405162461bcd60e51b815260206004820152601a60248201527f52454749535452595f4e414d455f4c454e4754485f4552524f520000000000006044820152606401610256565b81516003811080159061084d575060058111155b6108995760405162461bcd60e51b815260206004820152601c60248201527f52454749535452595f53594d424f4c5f4c454e4754485f4552524f52000000006044820152606401610256565b6108a2846108ba565b6108ab836108ba565b6108b483610b80565b50505050565b80518190600160fd1b826000836108d3576108d3610e69565b01602001516001600160f81b0319160361093b5760405162461bcd60e51b8152602060048201526024808201527f4c494253414e4954495a455f53504143455f41545f424547494e4e494e475f45604482015263292927a960e11b6064820152608401610256565b600160fd1b8261094c600184610e95565b8151811061095c5761095c610e69565b01602001516001600160f81b031916036109b85760405162461bcd60e51b815260206004820152601e60248201527f4c494253414e4954495a455f53504143455f41545f454e445f4552524f5200006044820152606401610256565b60005b818110156108b4578251600360fc1b908490839081106109dd576109dd610e69565b01602001516001600160f81b0319161080610a1e57508251603d60f91b90849083908110610a0d57610a0d610e69565b01602001516001600160f81b031916115b80610a8057508251603960f81b90849083908110610a3e57610a3e610e69565b01602001516001600160f81b031916118015610a8057508251604160f81b90849083908110610a6f57610a6f610e69565b01602001516001600160f81b031916105b80610ae257508251602d60f91b90849083908110610aa057610aa0610e69565b01602001516001600160f81b031916118015610ae257508251606160f81b90849083908110610ad157610ad1610e69565b01602001516001600160f81b031916105b8015610b1557508251600160fd1b90849083908110610b0357610b03610e69565b01602001516001600160f81b03191614155b15610b6e5760405162461bcd60e51b815260206004820152602360248201527f4c494253414e4954495a455f5350454349414c5f4348415241435445525f45526044820152622927a960e91b6064820152608401610256565b80610b7881610ea8565b9150506109bb565b8051819060005b818110156108b4578251606160f81b90849083908110610ba957610ba9610e69565b01602001516001600160f81b03191610801590610bed57508251603d60f91b90849083908110610bdb57610bdb610e69565b01602001516001600160f81b03191611155b15610c485760405162461bcd60e51b815260206004820152602560248201527f4c494253414e4954495a455f5550504552434153455f4348415241435445525f60448201526422a92927a960d91b6064820152608401610256565b80610c5281610ea8565b915050610b87565b6001600160a01b0381168114610c6f57600080fd5b50565b600060208284031215610c8457600080fd5b8135610c8f81610c5a565b9392505050565b60008060408385031215610ca957600080fd5b8235610cb481610c5a565b946020939093013593505050565b60008083601f840112610cd457600080fd5b50813567ffffffffffffffff811115610cec57600080fd5b602083019150836020828501011115610d0457600080fd5b9250929050565b60008060008060008060808789031215610d2457600080fd5b8635610d2f81610c5a565b9550602087013567ffffffffffffffff80821115610d4c57600080fd5b610d588a838b01610cc2565b90975095506040890135915080821115610d7157600080fd5b50610d7e89828a01610cc2565b979a9699509497949695606090950135949350505050565b600080600060608486031215610dab57600080fd5b8335610db681610c5a565b95602085013595506040909401359392505050565b600060208284031215610ddd57600080fd5b81518015158114610c8f57600080fd5b8035602083101561018d57600019602084900360031b1b1692915050565b600060208284031215610e1d57600080fd5b8151610c8f81610c5a565b60208082526021908201527f52454749535452595f53414d455f494e5055545f414444524553535f4552524f6040820152602960f91b606082015260800190565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b8181038181111561018d5761018d610e7f565b600060018201610eba57610eba610e7f565b506001019056fea264697066735822122073e75ac3b8c1adf691f488a40c982626b75f2de75e2da12a95537a887a930a1d64736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c806356d002c41161005b57806356d002c41461011c5780637a9e5e4b1461012f578063b516e6e114610142578063bf7e214f1461015557600080fd5b80632cee21911461008d578063386f5adf146100c95780633edd80c3146100dc5780633f47734b14610107575b600080fd5b6100b661009b366004610c72565b6001600160a01b031660009081526002602052604090205490565b6040519081526020015b60405180910390f35b6100b66100d7366004610c96565b610168565b6001546100ef906001600160a01b031681565b6040516001600160a01b0390911681526020016100c0565b61011a610115366004610d0b565b610193565b005b61011a61012a366004610d96565b6103c2565b61011a61013d366004610c72565b61056b565b61011a610150366004610c72565b6106a4565b6000546100ef906001600160a01b031681565b6001600160a01b03821660009081526003602090815260408083208484529091529020545b92915050565b6000546040516306e5bd1f60e51b81523360048201526001600160a01b039091169063dcb7a3e090602401602060405180830381865afa1580156101db573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101ff9190610dcb565b61025f5760405162461bcd60e51b815260206004820152602660248201527f52454749535452595f464143544f52595f4e4f545f57484954454c49535445446044820152652fa2a92927a960d11b60648201526084015b60405180910390fd5b6001600160a01b0386166000908152600260205260409020548690156102d35760405162461bcd60e51b8152602060048201526024808201527f52454749535452595f414444524553535f414c52454144595f54414b454e5f45604482015263292927a960e11b6064820152608401610256565b61034686868080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525050604080516020601f8a0181900481028201810190925288815292508891508790819084018382808284376000920191909152506107d992505050565b6001600160a01b038716600090815260026020526040902082905561036b8385610ded565b6103758688610ded565b604080516001600160a01b038b1681526020810186905233917ff9e59440b5a9b7c83d67d07a5a61a2c6c07cfdd82854d9f08624b1fd5e1c01a8910160405180910390a450505050505050565b82336001600160a01b0316816001600160a01b0316638da5cb5b6040518163ffffffff1660e01b8152600401602060405180830381865afa15801561040b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061042f9190610e0b565b6001600160a01b0316146104955760405162461bcd60e51b815260206004820152602760248201527f52454749535452595f43414c4c45525f49535f4e4f545f504f4f4c5f4f574e45604482015266292fa2a92927a960c91b6064820152608401610256565b6001600160a01b038416600090815260026020526040902054849061050a5760405162461bcd60e51b815260206004820152602560248201527f52454749535452595f414444524553535f4e4f545f524547495354455245445f60448201526422a92927a960d91b6064820152608401610256565b6001600160a01b038516600081815260036020908152604080832088845282529182902086905590518581528692917f908d4c229ad1504da754a04d079d71924a9696007407c0e6dc2d88dc18962547910160405180910390a35050505050565b6001546001600160a01b031633146105c55760405162461bcd60e51b815260206004820152601d60248201527f52454749535452595f43414c4c45525f4e4f545f44414f5f4552524f520000006044820152606401610256565b6000546001600160a01b03908116908216036105f35760405162461bcd60e51b815260040161025690610e28565b6001600160a01b0381163b61065c5760405162461bcd60e51b815260206004820152602960248201527f52454749535452595f4e45575f415554484f524954595f4e4f545f434f4e545260448201526820a1aa2fa2a92927a960b91b6064820152608401610256565b600080546001600160a01b0319166001600160a01b038316908117825560405190917f3430ad8dbed7c32bf49006f0d79d2ab70785ea13ebd4ef7d1b87e487ef08928c91a250565b6001546001600160a01b031633146106fe5760405162461bcd60e51b815260206004820152601d60248201527f52454749535452595f43414c4c45525f4e4f545f44414f5f4552524f520000006044820152606401610256565b6001546001600160a01b039081169082160361072c5760405162461bcd60e51b815260040161025690610e28565b6001600160a01b0381163b61078f5760405162461bcd60e51b815260206004820152602360248201527f52454749535452595f4e45575f44414f5f4e4f545f434f4e54524143545f45526044820152622927a960e91b6064820152608401610256565b600180546001600160a01b0319166001600160a01b0383169081179091556040517fed96973ae9959b9cf32518c616176e97e08e78f72ffaba2003327315a3c5bfa390600090a250565b8151600481108015906107ed5750601f8111155b6108395760405162461bcd60e51b815260206004820152601a60248201527f52454749535452595f4e414d455f4c454e4754485f4552524f520000000000006044820152606401610256565b81516003811080159061084d575060058111155b6108995760405162461bcd60e51b815260206004820152601c60248201527f52454749535452595f53594d424f4c5f4c454e4754485f4552524f52000000006044820152606401610256565b6108a2846108ba565b6108ab836108ba565b6108b483610b80565b50505050565b80518190600160fd1b826000836108d3576108d3610e69565b01602001516001600160f81b0319160361093b5760405162461bcd60e51b8152602060048201526024808201527f4c494253414e4954495a455f53504143455f41545f424547494e4e494e475f45604482015263292927a960e11b6064820152608401610256565b600160fd1b8261094c600184610e95565b8151811061095c5761095c610e69565b01602001516001600160f81b031916036109b85760405162461bcd60e51b815260206004820152601e60248201527f4c494253414e4954495a455f53504143455f41545f454e445f4552524f5200006044820152606401610256565b60005b818110156108b4578251600360fc1b908490839081106109dd576109dd610e69565b01602001516001600160f81b0319161080610a1e57508251603d60f91b90849083908110610a0d57610a0d610e69565b01602001516001600160f81b031916115b80610a8057508251603960f81b90849083908110610a3e57610a3e610e69565b01602001516001600160f81b031916118015610a8057508251604160f81b90849083908110610a6f57610a6f610e69565b01602001516001600160f81b031916105b80610ae257508251602d60f91b90849083908110610aa057610aa0610e69565b01602001516001600160f81b031916118015610ae257508251606160f81b90849083908110610ad157610ad1610e69565b01602001516001600160f81b031916105b8015610b1557508251600160fd1b90849083908110610b0357610b03610e69565b01602001516001600160f81b03191614155b15610b6e5760405162461bcd60e51b815260206004820152602360248201527f4c494253414e4954495a455f5350454349414c5f4348415241435445525f45526044820152622927a960e91b6064820152608401610256565b80610b7881610ea8565b9150506109bb565b8051819060005b818110156108b4578251606160f81b90849083908110610ba957610ba9610e69565b01602001516001600160f81b03191610801590610bed57508251603d60f91b90849083908110610bdb57610bdb610e69565b01602001516001600160f81b03191611155b15610c485760405162461bcd60e51b815260206004820152602560248201527f4c494253414e4954495a455f5550504552434153455f4348415241435445525f60448201526422a92927a960d91b6064820152608401610256565b80610c5281610ea8565b915050610b87565b6001600160a01b0381168114610c6f57600080fd5b50565b600060208284031215610c8457600080fd5b8135610c8f81610c5a565b9392505050565b60008060408385031215610ca957600080fd5b8235610cb481610c5a565b946020939093013593505050565b60008083601f840112610cd457600080fd5b50813567ffffffffffffffff811115610cec57600080fd5b602083019150836020828501011115610d0457600080fd5b9250929050565b60008060008060008060808789031215610d2457600080fd5b8635610d2f81610c5a565b9550602087013567ffffffffffffffff80821115610d4c57600080fd5b610d588a838b01610cc2565b90975095506040890135915080821115610d7157600080fd5b50610d7e89828a01610cc2565b979a9699509497949695606090950135949350505050565b600080600060608486031215610dab57600080fd5b8335610db681610c5a565b95602085013595506040909401359392505050565b600060208284031215610ddd57600080fd5b81518015158114610c8f57600080fd5b8035602083101561018d57600019602084900360031b1b1692915050565b600060208284031215610e1d57600080fd5b8151610c8f81610c5a565b60208082526021908201527f52454749535452595f53414d455f494e5055545f414444524553535f4552524f6040820152602960f91b606082015260800190565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b8181038181111561018d5761018d610e7f565b600060018201610eba57610eba610e7f565b506001019056fea264697066735822122073e75ac3b8c1adf691f488a40c982626b75f2de75e2da12a95537a887a930a1d64736f6c63430008110033",
+  "devdoc": {
+    "author": "Gabriele Rigo - <gab@rigoblock.com>",
+    "kind": "dev",
+    "methods": {
+      "getMeta(address,bytes32)": {
+        "params": {
+          "key": "Bytes32 key.",
+          "pool": "Address of the pool."
+        },
+        "returns": {
+          "poolMeta": "Meta by key."
+        }
+      },
+      "getPoolIdFromAddress(address)": {
+        "params": {
+          "pool": "Address of the pool."
+        },
+        "returns": {
+          "poolId": "bytes32 id of the pool."
+        }
+      },
+      "register(address,string,string,bytes32)": {
+        "params": {
+          "name": "String name of the pool (31 characters/bytes or less).",
+          "pool": "Address of the pool.",
+          "poolId": "Bytes32 of the pool id.",
+          "symbol": "String symbol of the pool (3 to 5 characters/bytes)."
+        }
+      },
+      "setAuthority(address)": {
+        "params": {
+          "authority": "Address of the authority contract."
+        }
+      },
+      "setMeta(address,bytes32,bytes32)": {
+        "params": {
+          "key": "Bytes32 of the key.",
+          "pool": "Address of the pool.",
+          "value": "Bytes32 of the value."
+        }
+      },
+      "setRigoblockDao(address)": {
+        "details": "Creates internal record.",
+        "params": {
+          "newRigoblockDao": "Address of the Rigoblock Dao."
+        }
+      }
+    },
+    "stateVariables": {
+      "authority": {
+        "return": "Address of the authority contract.",
+        "returns": {
+          "_0": "Address of the authority contract."
+        }
+      },
+      "rigoblockDao": {
+        "return": "Address of the Rigoblock Dao.",
+        "returns": {
+          "_0": "Address of the Rigoblock Dao."
+        }
+      }
+    },
+    "title": "Pool Registry - Allows registration of pools.",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "AuthorityChanged(address)": {
+        "notice": "Emitted when Rigoblock Dao updates authority address."
+      },
+      "MetaChanged(address,bytes32,bytes32)": {
+        "notice": "Emitted when pool owner updates meta data for its pool."
+      },
+      "Registered(address,address,bytes32,bytes32,bytes32)": {
+        "notice": "Emitted when a new pool is registered in registry."
+      },
+      "RigoblockDaoChanged(address)": {
+        "notice": "Emitted when rigoblock Dao address is updated."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "authority()": {
+        "notice": "Returns the address of the Rigoblock authority contract."
+      },
+      "getMeta(address,bytes32)": {
+        "notice": "Returns metadata for a given pool."
+      },
+      "getPoolIdFromAddress(address)": {
+        "notice": "Returns the id of a pool from its address."
+      },
+      "register(address,string,string,bytes32)": {
+        "notice": "Allows a factory which is an authority to register a pool."
+      },
+      "rigoblockDao()": {
+        "notice": "Returns the address of the Rigoblock Dao."
+      },
+      "setAuthority(address)": {
+        "notice": "Allows Rigoblock governance to update authority."
+      },
+      "setMeta(address,bytes32,bytes32)": {
+        "notice": "Allows pool owner to set metadata for a pool."
+      },
+      "setRigoblockDao(address)": {
+        "notice": "Allows Rigoblock Dao to update its address."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 2854,
+        "contract": "contracts/protocol/deps/PoolRegistry.sol:PoolRegistry",
+        "label": "authority",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 2858,
+        "contract": "contracts/protocol/deps/PoolRegistry.sol:PoolRegistry",
+        "label": "rigoblockDao",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      },
+      {
+        "astId": 2862,
+        "contract": "contracts/protocol/deps/PoolRegistry.sol:PoolRegistry",
+        "label": "_mapIdByAddress",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_bytes32)"
+      },
+      {
+        "astId": 2867,
+        "contract": "contracts/protocol/deps/PoolRegistry.sol:PoolRegistry",
+        "label": "_poolMetaByAddress",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_struct(PoolMeta)6080_storage)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_bytes32)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bytes32)",
+        "numberOfBytes": "32",
+        "value": "t_bytes32"
+      },
+      "t_mapping(t_address,t_struct(PoolMeta)6080_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct IPoolRegistry.PoolMeta)",
+        "numberOfBytes": "32",
+        "value": "t_struct(PoolMeta)6080_storage"
+      },
+      "t_mapping(t_bytes32,t_bytes32)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => bytes32)",
+        "numberOfBytes": "32",
+        "value": "t_bytes32"
+      },
+      "t_struct(PoolMeta)6080_storage": {
+        "encoding": "inplace",
+        "label": "struct IPoolRegistry.PoolMeta",
+        "members": [
+          {
+            "astId": 6079,
+            "contract": "contracts/protocol/deps/PoolRegistry.sol:PoolRegistry",
+            "label": "meta",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_bytes32,t_bytes32)"
+          }
+        ],
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
