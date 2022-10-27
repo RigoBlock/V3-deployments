@@ -112,7 +112,20 @@ AUniswap NA (uniswap does not support bsc)
 "12210e8a": "refundETH()",
 "df2ab5bb": "sweepToken(address,uint256,address)",
 "49404b7c": "unwrapWETH9(uint256,address)",
-"1c58db4f": "wrapETH(uint256)"
+"1c58db4f": "wrapETH(uint256)",
+"472b43f3": "swapExactTokensForTokens(uint256,uint256,address[],address)",
+"42712a67": "swapTokensForExactTokens(uint256,uint256,address[],address)",
+"04e45aaf": "exactInputSingle(ExactInputSingleParams)",
+"b858183f": "exactInput(ExactInputParams)",
+"5023b4df": "exactOutputSingle(ExactOutputSingleParams)",
+"09b81346": "exactOutput(ExactOutputParams)",
+"e90a182f": "sweepToken(address,uint256,address)",
+"e0e189a0": "sweepTokenWithFee(address,uint256,address,uint256,address)",
+"3068c554": "sweepTokenWithFee(address,uint256,uint256,address)",
+"49404b7c": "unwrapWETH9(uint256,address)",
+"49616997": "unwrapWETH9(uint256)",
+"9b2c0a37": "unwrapWETH9WithFee(uint256,address,uint256,address)",
+"d4ef38de": "unwrapWETH9WithFee(uint256,uint256,address)"
 ```
 
 # Whitelisted Tokens
