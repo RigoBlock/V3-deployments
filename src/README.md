@@ -70,6 +70,51 @@ AMulticall 0x3bBdbE026F53500dA7d64fe8cf856cf28755D6Cb
 AUniswap NA (uniswap does not support bsc)
 ```
 
+# Whitelisted Methods (can be called by RigoBlock pools)
+## EUpgrade
+```
+"466f3dc3": "upgradeImplementation()"
+"2d6b3a6b": "getBeacon()"
+```
+## EWhitelist
+```
+"ab37f486": "isWhitelistedToken(address)"
+```
+## AMulticall
+```
+"ac9650d8": "multicall(bytes[])"
+"5ae401dc": "multicall(uint256,bytes[])"
+"1f0464d1": "multicall(bytes32,bytes[])"
+```
+## ASelfCustody (mainnet, goerli only)
+```
+"318698a7": "transferToSelfCustody(address,address,uint256)"
+"6d6b09e9": "poolGrgShortfall(address)"
+"4f8554da": "grgVault()"
+```
+## AStaking (mainnet, goerli only)
+```
+"a694fc3a": "stake(uint256)"
+"4aace835": "undelegateStake(uint256)",
+"2e17de78": "unstake(uint256)",
+"b880660b": "withdrawDelegatorRewards()"
+```
+## AUniswap
+```
+"88316456": "mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))",
+"c391b77c": "uniswapv3Npm()",
+"3fc8cef3": "weth()"
+"42966c68": "burn(uint256)",
+"fc6f7865": "collect((uint256,address,uint128,uint128))",
+"13ead562": "createAndInitializePoolIfNecessary(address,address,uint24,uint160)",
+"0c49ccbe": "decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))",
+"219f5d17": "increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))",
+"12210e8a": "refundETH()",
+"df2ab5bb": "sweepToken(address,uint256,address)",
+"49404b7c": "unwrapWETH9(uint256,address)",
+"1c58db4f": "wrapETH(uint256)"
+```
+
 # Whitelisted Tokens
 ## Mainnet
 ```
