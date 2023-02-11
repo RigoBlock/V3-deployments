@@ -1,0 +1,85 @@
+{
+  "address": "0x64BcA3673c8990B11225E9f49E6da554180690fc",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "factory",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "Upgraded",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "getBeacon",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "upgradeImplementation",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "args": [
+    "0x8DE8895ddD702d9a216E640966A98e08c9228f24"
+  ],
+  "solcInputHash": "b558e216ac68bfdc765602d7590789b5",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"factory\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"getBeacon\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"upgradeImplementation\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Gabriele Rigo - <gab@rigoblock.com>\",\"kind\":\"dev\",\"methods\":{\"upgradeImplementation()\":{\"details\":\"Cannot be called directly and in pool is restricted to pool owner.\"}},\"title\":\"EUpgrade - Allows upgrading implementation.\",\"version\":1},\"userdoc\":{\"events\":{\"Upgraded(address)\":{\"notice\":\"Emitted when pool operator upgrades proxy implementation address.\"}},\"kind\":\"user\",\"methods\":{\"upgradeImplementation()\":{\"notice\":\"Allows caller to upgrade pool implementation.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/protocol/extensions/EUpgrade.sol\":\"EUpgrade\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/protocol/extensions/EUpgrade.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport \\\"./adapters/interfaces/IEUpgrade.sol\\\";\\nimport {IRigoblockPoolProxyFactory as Beacon} from \\\"../interfaces/IRigoblockPoolProxyFactory.sol\\\";\\nimport \\\"../../utils/storageSlot/StorageSlot.sol\\\";\\n\\n/// @title EUpgrade - Allows upgrading implementation.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ncontract EUpgrade is IEUpgrade {\\n    address private immutable _eUpgrade;\\n    address private immutable _factory;\\n\\n    constructor(address factory) {\\n        _eUpgrade = address(this);\\n        _factory = factory;\\n    }\\n\\n    /// @inheritdoc IEUpgrade\\n    function upgradeImplementation() external override {\\n        // prevent direct calls to this contract\\n        require(_eUpgrade != address(this), \\\"EUPGRADE_DIRECT_CALL_ERROR\\\");\\n\\n        // read implementation address from factory. Different factories may have different implementations.\\n        // implementation will always be a contract as factory asserts that.\\n        address newImplementation = Beacon(getBeacon()).implementation();\\n\\n        // we define the storage area where we will write new implementation as the eip1967 implementation slot\\n        bytes32 implementationSlot = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;\\n        assert(implementationSlot == bytes32(uint256(keccak256(\\\"eip1967.proxy.implementation\\\")) - 1));\\n\\n        // we read the current implementation address from the pool proxy storage\\n        address currentImplementation = StorageSlot.getAddressSlot(implementationSlot).value;\\n\\n        // transaction reverted if implementation is same as current\\n        require(newImplementation != currentImplementation, \\\"EUPGRADE_IMPLEMENTATION_SAME_AS_CURRENT_ERROR\\\");\\n\\n        // we write new address to storage at implementation slot location and emit eip1967 log\\n        StorageSlot.getAddressSlot(implementationSlot).value = newImplementation;\\n        emit Upgraded(newImplementation);\\n    }\\n\\n    function getBeacon() public view returns (address) {\\n        return _factory;\\n    }\\n}\\n\",\"keccak256\":\"0x012527224b7bf6d2d8b3b32a8f2a7ffc9642b78e230c379ce7eec61102b7c18c\",\"license\":\"Apache 2.0\"},\"contracts/protocol/extensions/adapters/interfaces/IEUpgrade.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface IEUpgrade {\\n    /// @notice Emitted when pool operator upgrades proxy implementation address.\\n    /// @param implementation Address of the new implementation.\\n    event Upgraded(address indexed implementation);\\n\\n    /// @notice Allows caller to upgrade pool implementation.\\n    /// @dev Cannot be called directly and in pool is restricted to pool owner.\\n    function upgradeImplementation() external;\\n}\\n\",\"keccak256\":\"0x0da5ffeef31a7bf1fcf04d3370fa00613a386b66c3ec0183e08ad9ea28f0173f\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/IRigoblockPoolProxyFactory.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\n/*\\n\\n Copyright 2017-2022 RigoBlock, Rigo Investment Sagl, Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Pool Proxy Factory Interface - Allows external interaction with Pool Proxy Factory.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IRigoblockPoolProxyFactory {\\n    /// @notice Emitted when a new pool is created.\\n    /// @param poolAddress Address of the new pool.\\n    event PoolCreated(address poolAddress);\\n\\n    /// @notice Emitted when a new implementation is set by the Rigoblock Dao.\\n    /// @param implementation Address of the new implementation.\\n    event Upgraded(address indexed implementation);\\n\\n    /// @notice Emitted when registry address is upgraded by the Rigoblock Dao.\\n    /// @param registry Address of the new registry.\\n    event RegistryUpgraded(address indexed registry);\\n\\n    /// @notice Returns the implementation address for the pool proxies.\\n    /// @return Address of the implementation.\\n    function implementation() external view returns (address);\\n\\n    /// @notice Creates a new Rigoblock pool.\\n    /// @param name String of the name.\\n    /// @param symbol String of the symbol.\\n    /// @param baseToken Address of the base token.\\n    /// @return newPoolAddress Address of the new pool.\\n    /// @return poolId Id of the new pool.\\n    function createPool(\\n        string calldata name,\\n        string calldata symbol,\\n        address baseToken\\n    ) external returns (address newPoolAddress, bytes32 poolId);\\n\\n    /// @notice Allows Rigoblock Dao to update factory pool implementation.\\n    /// @param newImplementation Address of the new implementation contract.\\n    function setImplementation(address newImplementation) external;\\n\\n    /// @notice Allows owner to update the registry.\\n    /// @param newRegistry Address of the new registry.\\n    function setRegistry(address newRegistry) external;\\n\\n    /// @notice Returns the address of the pool registry.\\n    /// @return Address of the registry.\\n    function getRegistry() external view returns (address);\\n\\n    /// @notice Pool initialization parameters.\\n    /// @params name String of the name (max 31 characters).\\n    /// @params symbol bytes8 symbol.\\n    /// @params owner Address of the owner.\\n    /// @params baseToken Address of the base token.\\n    struct Parameters {\\n        string name;\\n        bytes8 symbol;\\n        address owner;\\n        address baseToken;\\n    }\\n\\n    /// @notice Returns the pool initialization parameters at proxy deploy.\\n    /// @return Tuple of the pool parameters.\\n    function parameters() external view returns (Parameters memory);\\n}\\n\",\"keccak256\":\"0x2b6dd6e20084094bf470798200415c5195cfbf9d2d744e318d2bd08bfb071a1a\",\"license\":\"Apache-2.0-or-later\"},\"contracts/utils/storageSlot/StorageSlot.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\npragma solidity >=0.8.0 <0.9.0;\\n\\nlibrary StorageSlot {\\n    struct AddressSlot {\\n        address value;\\n    }\\n\\n    function getAddressSlot(bytes32 slot) internal pure returns (AddressSlot storage r) {\\n        assembly {\\n            r.slot := slot\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xe2a99d7021b48e1ddfee2640f5914a5f87805d2b63c51f3b899e1750d63a3e48\",\"license\":\"Apache-2.0-or-later\"}},\"version\":1}",
+  "bytecode": "0x60c060405234801561001057600080fd5b506040516103de3803806103de83398101604081905261002f91610044565b306080526001600160a01b031660a052610074565b60006020828403121561005657600080fd5b81516001600160a01b038116811461006d57600080fd5b9392505050565b60805160a05161034061009e60003960008181603d015261010301526000608501526103406000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80632d6b3a6b1461003b578063466f3dc314610078575b600080fd5b7f00000000000000000000000000000000000000000000000000000000000000006040516001600160a01b03909116815260200160405180910390f35b610080610082565b005b307f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316036100ff5760405162461bcd60e51b815260206004820152601a60248201527f45555047524144455f4449524543545f43414c4c5f4552524f5200000000000060448201526064015b60405180910390fd5b60007f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316635c60da1b6040518163ffffffff1660e01b8152600401602060405180830381865afa15801561015f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610183919061029d565b90507f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc6101d160017f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbd6102cd565b81146101df576101df6102f4565b80546001600160a01b039081169083168190036102545760405162461bcd60e51b815260206004820152602d60248201527f45555047524144455f494d504c454d454e544154494f4e5f53414d455f41535f60448201526c21aaa92922a72a2fa2a92927a960991b60648201526084016100f6565b81546001600160a01b0319166001600160a01b03841690811783556040517fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a2505050565b6000602082840312156102af57600080fd5b81516001600160a01b03811681146102c657600080fd5b9392505050565b818103818111156102ee57634e487b7160e01b600052601160045260246000fd5b92915050565b634e487b7160e01b600052600160045260246000fdfea264697066735822122099428f946c2faa5ef7e1f8def3847537d35f7f87fda72bb5090aaf25f57754e764736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80632d6b3a6b1461003b578063466f3dc314610078575b600080fd5b7f00000000000000000000000000000000000000000000000000000000000000006040516001600160a01b03909116815260200160405180910390f35b610080610082565b005b307f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316036100ff5760405162461bcd60e51b815260206004820152601a60248201527f45555047524144455f4449524543545f43414c4c5f4552524f5200000000000060448201526064015b60405180910390fd5b60007f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316635c60da1b6040518163ffffffff1660e01b8152600401602060405180830381865afa15801561015f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610183919061029d565b90507f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc6101d160017f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbd6102cd565b81146101df576101df6102f4565b80546001600160a01b039081169083168190036102545760405162461bcd60e51b815260206004820152602d60248201527f45555047524144455f494d504c454d454e544154494f4e5f53414d455f41535f60448201526c21aaa92922a72a2fa2a92927a960991b60648201526084016100f6565b81546001600160a01b0319166001600160a01b03841690811783556040517fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a2505050565b6000602082840312156102af57600080fd5b81516001600160a01b03811681146102c657600080fd5b9392505050565b818103818111156102ee57634e487b7160e01b600052601160045260246000fd5b92915050565b634e487b7160e01b600052600160045260246000fdfea264697066735822122099428f946c2faa5ef7e1f8def3847537d35f7f87fda72bb5090aaf25f57754e764736f6c63430008110033",
+  "devdoc": {
+    "author": "Gabriele Rigo - <gab@rigoblock.com>",
+    "kind": "dev",
+    "methods": {
+      "upgradeImplementation()": {
+        "details": "Cannot be called directly and in pool is restricted to pool owner."
+      }
+    },
+    "title": "EUpgrade - Allows upgrading implementation.",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "Upgraded(address)": {
+        "notice": "Emitted when pool operator upgrades proxy implementation address."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "upgradeImplementation()": {
+        "notice": "Allows caller to upgrade pool implementation."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

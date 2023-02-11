@@ -1,0 +1,704 @@
+{
+  "address": "0x58b5FBe3e8F86a3f22BB9e47129a9FDE4702c221",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "grgProxyAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "grgTokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "AuthorizedAddressAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "AuthorizedAddressRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "staker",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "grgProxyAddress",
+          "type": "address"
+        }
+      ],
+      "name": "GrgProxySet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "InCatastrophicFailureMode",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "stakingProxyAddress",
+          "type": "address"
+        }
+      ],
+      "name": "StakingProxySet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "staker",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdraw",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "addAuthorizedAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "authorities",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "authorized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "staker",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "balanceOfGrgVault",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "staker",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "enterCatastrophicFailure",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAuthorizedAddresses",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "grgAssetProxy",
+      "outputs": [
+        {
+          "internalType": "contract IAssetProxy",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isInCatastrophicFailure",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "removeAuthorizedAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "removeAuthorizedAddressAtIndex",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "grgProxyAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setGrgProxy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "stakingProxyAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setStakingProxy",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "stakingProxy",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "staker",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawAllFrom",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "staker",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x1e79bd64cd077af4f275abbcde07d405226aaa315dfd20dfa0bb101774f2af93",
+  "receipt": {
+    "to": "0x914d7Fec6aaC8cd542e72Bca78B30650d45643d7",
+    "from": "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "contractAddress": null,
+    "transactionIndex": 34,
+    "gasUsed": "1148864",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x7582a07859fd51038f992a2c48c43d0500a047da7dad946f19b318c9f9ddeeda",
+    "transactionHash": "0x1e79bd64cd077af4f275abbcde07d405226aaa315dfd20dfa0bb101774f2af93",
+    "logs": [],
+    "blockNumber": 7836947,
+    "cumulativeGasUsed": "7998028",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x28891F41eA506Ba7eA3Be9f2075AB0aa8b81dD29",
+    "0x076C619e7ebaBe40746106B66bFBed731F2c1339",
+    "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6"
+  ],
+  "solcInputHash": "656e34d5c2c173c2d18ee1cf3ed6b924",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"grgProxyAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"grgTokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"AuthorizedAddressAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"AuthorizedAddressRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"grgProxyAddress\",\"type\":\"address\"}],\"name\":\"GrgProxySet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"InCatastrophicFailureMode\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"stakingProxyAddress\",\"type\":\"address\"}],\"name\":\"StakingProxySet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Withdraw\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"}],\"name\":\"addAuthorizedAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"authorities\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"authorized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"balanceOfGrgVault\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"depositFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"enterCatastrophicFailure\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAuthorizedAddresses\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"grgAssetProxy\",\"outputs\":[{\"internalType\":\"contract IAssetProxy\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isInCatastrophicFailure\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"}],\"name\":\"removeAuthorizedAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"removeAuthorizedAddressAtIndex\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"grgProxyAddress\",\"type\":\"address\"}],\"name\":\"setGrgProxy\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"stakingProxyAddress\",\"type\":\"address\"}],\"name\":\"setStakingProxy\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stakingProxy\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"}],\"name\":\"withdrawAllFrom\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"staker\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdrawFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addAuthorizedAddress(address)\":{\"details\":\"Authorizes an address.\",\"params\":{\"target\":\"Address to authorize.\"}},\"balanceOf(address)\":{\"details\":\"Returns the balance in Grg Tokens of the `staker`\",\"returns\":{\"_0\":\"Balance in Grg.\"}},\"balanceOfGrgVault()\":{\"details\":\"Returns the entire balance of Grg tokens in the vault.\"},\"constructor\":{\"details\":\"Constructor.\",\"params\":{\"grgProxyAddress\":\"Address of the RigoBlock Grg Proxy.\",\"grgTokenAddress\":\"Address of the Grg Token.\",\"newOwner\":\"Address of the Grg vault owner.\"}},\"depositFrom(address,uint256)\":{\"details\":\"Deposit an `amount` of Grg Tokens from `staker` into the vault. Note that only the Staking contract can call this. Note that this can only be called when *not* in Catastrophic Failure mode.\",\"params\":{\"amount\":\"of Grg Tokens to deposit.\",\"staker\":\"of Grg Tokens.\"}},\"enterCatastrophicFailure()\":{\"details\":\"Vault enters into Catastrophic Failure Mode. *** WARNING - ONCE IN CATOSTROPHIC FAILURE MODE, YOU CAN NEVER GO BACK! *** Note that only the contract owner can call this function.\"},\"getAuthorizedAddresses()\":{\"details\":\"Gets all authorized addresses.\",\"returns\":{\"_0\":\"Array of authorized addresses.\"}},\"removeAuthorizedAddress(address)\":{\"details\":\"Removes authorizion of an address.\",\"params\":{\"target\":\"Address to remove authorization from.\"}},\"removeAuthorizedAddressAtIndex(address,uint256)\":{\"details\":\"Removes authorizion of an address.\",\"params\":{\"index\":\"Index of target in authorities array.\",\"target\":\"Address to remove authorization from.\"}},\"setGrgProxy(address)\":{\"details\":\"Sets the Grg proxy. Note that only an authorized address can call this function. Note that this can only be called when *not* in Catastrophic Failure mode.\",\"params\":{\"grgProxyAddress\":\"Address of the RigoBlock Grg Proxy.\"}},\"setStakingProxy(address)\":{\"details\":\"Sets the address of the StakingProxy contract. Note that only the contract owner can call this function.\",\"params\":{\"stakingProxyAddress\":\"Address of Staking proxy contract.\"}},\"transferOwnership(address)\":{\"details\":\"Change the owner of this contract.\",\"params\":{\"newOwner\":\"New owner address.\"}},\"withdrawAllFrom(address)\":{\"details\":\"Withdraw ALL Grg Tokens to `staker` from the vault. Note that this can only be called when *in* Catastrophic Failure mode.\",\"params\":{\"staker\":\"of Grg Tokens.\"}},\"withdrawFrom(address,uint256)\":{\"details\":\"Withdraw an `amount` of Grg Tokens to `staker` from the vault. Note that only the Staking contract can call this. Note that this can only be called when *not* in Catastrophic Failure mode.\",\"params\":{\"amount\":\"of Grg Tokens to withdraw.\",\"staker\":\"of Grg Tokens.\"}}},\"version\":1},\"userdoc\":{\"events\":{\"Deposit(address,uint256)\":{\"notice\":\"Emitted when Grg Tokens are deposited into the vault.\"},\"GrgProxySet(address)\":{\"notice\":\"Emitted whenever the Grg AssetProxy is set.\"},\"InCatastrophicFailureMode(address)\":{\"notice\":\"Emitted when the Staking contract is put into Catastrophic Failure Mode\"},\"StakingProxySet(address)\":{\"notice\":\"Emmitted whenever a StakingProxy is set in a vault.\"},\"Withdraw(address,uint256)\":{\"notice\":\"Emitted when Grg Tokens are withdrawn from the vault.\"}},\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/staking/GrgVault.sol\":\"GrgVault\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/staking/GrgVault.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n\\n/*\\n\\n  Original work Copyright 2019 ZeroEx Intl.\\n  Modified work Copyright 2020-2022 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport \\\"../utils/0xUtils/Authorizable.sol\\\";\\nimport \\\"../utils/0xUtils/IAssetProxy.sol\\\";\\nimport \\\"../utils/0xUtils/IAssetData.sol\\\";\\nimport \\\"../utils/0xUtils/IERC20Token.sol\\\";\\nimport \\\"./interfaces/IGrgVault.sol\\\";\\n\\ncontract GrgVault is Authorizable, IGrgVault {\\n    // Address of staking proxy contract\\n    address public stakingProxy;\\n\\n    // True iff vault has been set to Catastrophic Failure Mode\\n    bool public isInCatastrophicFailure;\\n\\n    // Mapping from staker to GRG balance\\n    mapping(address => uint256) internal _balances;\\n\\n    // Grg Asset Proxy\\n    IAssetProxy public grgAssetProxy;\\n\\n    // Grg Token\\n    IERC20Token internal _grgToken;\\n\\n    // Asset data for the ERC20 Proxy\\n    bytes internal _grgAssetData;\\n\\n    /// @dev Only stakingProxy can call this function.\\n    modifier onlyStakingProxy() {\\n        _assertSenderIsStakingProxy();\\n        _;\\n    }\\n\\n    /// @dev Function can only be called in catastrophic failure mode.\\n    modifier onlyInCatastrophicFailure() {\\n        _assertInCatastrophicFailure();\\n        _;\\n    }\\n\\n    /// @dev Function can only be called not in catastropic failure mode\\n    modifier onlyNotInCatastrophicFailure() {\\n        _assertNotInCatastrophicFailure();\\n        _;\\n    }\\n\\n    /// @dev Constructor.\\n    /// @param grgProxyAddress Address of the RigoBlock Grg Proxy.\\n    /// @param grgTokenAddress Address of the Grg Token.\\n    /// @param newOwner Address of the Grg vault owner.\\n    constructor(\\n        address grgProxyAddress,\\n        address grgTokenAddress,\\n        address newOwner\\n    ) Authorizable(newOwner) {\\n        grgAssetProxy = IAssetProxy(grgProxyAddress);\\n        _grgToken = IERC20Token(grgTokenAddress);\\n        _grgAssetData = abi.encodeWithSelector(IAssetData(address(0)).ERC20Token.selector, grgTokenAddress);\\n    }\\n\\n    /// @dev Sets the address of the StakingProxy contract.\\n    /// Note that only the contract owner can call this function.\\n    /// @param stakingProxyAddress Address of Staking proxy contract.\\n    function setStakingProxy(address stakingProxyAddress) external override onlyAuthorized {\\n        stakingProxy = stakingProxyAddress;\\n        emit StakingProxySet(stakingProxyAddress);\\n    }\\n\\n    /// @dev Vault enters into Catastrophic Failure Mode.\\n    /// *** WARNING - ONCE IN CATOSTROPHIC FAILURE MODE, YOU CAN NEVER GO BACK! ***\\n    /// Note that only the contract owner can call this function.\\n    function enterCatastrophicFailure() external override onlyAuthorized onlyNotInCatastrophicFailure {\\n        isInCatastrophicFailure = true;\\n        emit InCatastrophicFailureMode(msg.sender);\\n    }\\n\\n    /// @dev Sets the Grg proxy.\\n    /// Note that only an authorized address can call this function.\\n    /// Note that this can only be called when *not* in Catastrophic Failure mode.\\n    /// @param grgProxyAddress Address of the RigoBlock Grg Proxy.\\n    function setGrgProxy(address grgProxyAddress) external override onlyAuthorized onlyNotInCatastrophicFailure {\\n        grgAssetProxy = IAssetProxy(grgProxyAddress);\\n        emit GrgProxySet(grgProxyAddress);\\n    }\\n\\n    /// @dev Deposit an `amount` of Grg Tokens from `staker` into the vault.\\n    /// Note that only the Staking contract can call this.\\n    /// Note that this can only be called when *not* in Catastrophic Failure mode.\\n    /// @param staker of Grg Tokens.\\n    /// @param amount of Grg Tokens to deposit.\\n    function depositFrom(address staker, uint256 amount)\\n        external\\n        override\\n        onlyStakingProxy\\n        onlyNotInCatastrophicFailure\\n    {\\n        // update balance\\n        _balances[staker] += amount;\\n\\n        // notify\\n        emit Deposit(staker, amount);\\n\\n        // deposit GRG from staker\\n        grgAssetProxy.transferFrom(_grgAssetData, staker, address(this), amount);\\n    }\\n\\n    /// @dev Withdraw an `amount` of Grg Tokens to `staker` from the vault.\\n    /// Note that only the Staking contract can call this.\\n    /// Note that this can only be called when *not* in Catastrophic Failure mode.\\n    /// @param staker of Grg Tokens.\\n    /// @param amount of Grg Tokens to withdraw.\\n    function withdrawFrom(address staker, uint256 amount)\\n        external\\n        override\\n        onlyStakingProxy\\n        onlyNotInCatastrophicFailure\\n    {\\n        _withdrawFrom(staker, amount);\\n    }\\n\\n    /// @dev Withdraw ALL Grg Tokens to `staker` from the vault.\\n    /// Note that this can only be called when *in* Catastrophic Failure mode.\\n    /// @param staker of Grg Tokens.\\n    function withdrawAllFrom(address staker) external override onlyInCatastrophicFailure returns (uint256) {\\n        // get total balance\\n        uint256 totalBalance = _balances[staker];\\n\\n        // withdraw GRG to staker\\n        _withdrawFrom(staker, totalBalance);\\n        return totalBalance;\\n    }\\n\\n    /// @dev Returns the balance in Grg Tokens of the `staker`\\n    /// @return Balance in Grg.\\n    function balanceOf(address staker) external view override returns (uint256) {\\n        return _balances[staker];\\n    }\\n\\n    /// @dev Returns the entire balance of Grg tokens in the vault.\\n    function balanceOfGrgVault() external view override returns (uint256) {\\n        return _grgToken.balanceOf(address(this));\\n    }\\n\\n    /// @dev Withdraw an `amount` of Grg Tokens to `staker` from the vault.\\n    /// @param staker of Grg Tokens.\\n    /// @param amount of Grg Tokens to withdraw.\\n    function _withdrawFrom(address staker, uint256 amount) internal {\\n        // update balance\\n        // note that this call will revert if trying to withdraw more\\n        // than the current balance\\n        _balances[staker] -= amount;\\n\\n        // notify\\n        emit Withdraw(staker, amount);\\n\\n        // withdraw GRG to staker\\n        _grgToken.transfer(staker, amount);\\n    }\\n\\n    /// @dev Asserts that sender is stakingProxy contract.\\n    function _assertSenderIsStakingProxy() private view {\\n        require(msg.sender == stakingProxy, \\\"GRG_VAULT_ONLY_CALLABLE_BY_STAKING_PROXY_ERROR\\\");\\n    }\\n\\n    /// @dev Asserts that vault is in catastrophic failure mode.\\n    function _assertInCatastrophicFailure() private view {\\n        require(isInCatastrophicFailure, \\\"GRG_VAULT_NOT_IN_CATASTROPHIC_FAILURE_ERROR\\\");\\n    }\\n\\n    /// @dev Asserts that vault is not in catastrophic failure mode.\\n    function _assertNotInCatastrophicFailure() private view {\\n        require(!isInCatastrophicFailure, \\\"GRG_VAULT_IN_CATASTROPHIC_FAILURE_ERROR\\\");\\n    }\\n}\\n\",\"keccak256\":\"0x8b512285e86518134e9db103550959461d421800c357afda6f1661adb789e0f2\",\"license\":\"Apache 2.0\"},\"contracts/staking/interfaces/IGrgVault.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n  Original work Copyright 2019 ZeroEx Intl.\\n  Modified work Copyright 2020-2022 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface IGrgVault {\\n    /// @notice Emmitted whenever a StakingProxy is set in a vault.\\n    /// @param stakingProxyAddress Address of the staking proxy contract.\\n    event StakingProxySet(address stakingProxyAddress);\\n\\n    /// @notice Emitted when the Staking contract is put into Catastrophic Failure Mode\\n    /// @param sender Address of sender (`msg.sender`)\\n    event InCatastrophicFailureMode(address sender);\\n\\n    /// @notice Emitted when Grg Tokens are deposited into the vault.\\n    /// @param staker Address of the Grg staker.\\n    /// @param amount of Grg Tokens deposited.\\n    event Deposit(address indexed staker, uint256 amount);\\n\\n    /// @notice Emitted when Grg Tokens are withdrawn from the vault.\\n    /// @param staker Address of the Grg staker.\\n    /// @param amount of Grg Tokens withdrawn.\\n    event Withdraw(address indexed staker, uint256 amount);\\n\\n    /// @notice Emitted whenever the Grg AssetProxy is set.\\n    /// @param grgProxyAddress Address of the Grg transfer proxy.\\n    event GrgProxySet(address grgProxyAddress);\\n\\n    /// @notice Sets the address of the StakingProxy contract.\\n    /// @dev Note that only the contract staker can call this function.\\n    /// @param stakingProxyAddress Address of Staking proxy contract.\\n    function setStakingProxy(address stakingProxyAddress) external;\\n\\n    /// @notice Vault enters into Catastrophic Failure Mode.\\n    /// @dev *** WARNING - ONCE IN CATOSTROPHIC FAILURE MODE, YOU CAN NEVER GO BACK! ***\\n    /// @dev Note that only the contract staker can call this function.\\n    function enterCatastrophicFailure() external;\\n\\n    /// @notice Sets the Grg proxy.\\n    /// @dev Note that only the contract staker can call this.\\n    /// @dev Note that this can only be called when *not* in Catastrophic Failure mode.\\n    /// @param grgProxyAddress Address of the RigoBlock Grg Proxy.\\n    function setGrgProxy(address grgProxyAddress) external;\\n\\n    /// @notice Deposit an `amount` of Grg Tokens from `staker` into the vault.\\n    /// @dev Note that only the Staking contract can call this.\\n    /// @dev Note that this can only be called when *not* in Catastrophic Failure mode.\\n    /// @param staker Address of the Grg staker.\\n    /// @param amount of Grg Tokens to deposit.\\n    function depositFrom(address staker, uint256 amount) external;\\n\\n    /// @notice Withdraw an `amount` of Grg Tokens to `staker` from the vault.\\n    /// @dev Note that only the Staking contract can call this.\\n    /// @dev Note that this can only be called when *not* in Catastrophic Failure mode.\\n    /// @param staker Address of the Grg staker.\\n    /// @param amount of Grg Tokens to withdraw.\\n    function withdrawFrom(address staker, uint256 amount) external;\\n\\n    /// @notice Withdraw ALL Grg Tokens to `staker` from the vault.\\n    /// @dev Note that this can only be called when *in* Catastrophic Failure mode.\\n    /// @param staker Address of the Grg staker.\\n    function withdrawAllFrom(address staker) external returns (uint256);\\n\\n    /// @notice Returns the balance in Grg Tokens of the `staker`\\n    /// @param staker Address of the Grg staker.\\n    /// @return Balance in Grg.\\n    function balanceOf(address staker) external view returns (uint256);\\n\\n    /// @notice Returns the entire balance of Grg tokens in the vault.\\n    /// @return Balance in Grg.\\n    function balanceOfGrgVault() external view returns (uint256);\\n}\\n\",\"keccak256\":\"0xfa990f88c4677e90eab516a194aa47241b74ac0ba374726a4cfe621a385e3f9a\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/Authorizable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n  Copyright 2019 ZeroEx Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.5.9 <0.9.0;\\n\\nimport \\\"./interfaces/IAuthorizable.sol\\\";\\nimport \\\"./Ownable.sol\\\";\\n\\n// solhint-disable no-empty-blocks\\n// TODO: check if should use OwnedUninitialized and remove duplicate contract\\nabstract contract Authorizable is Ownable, IAuthorizable {\\n    /// @dev Only authorized addresses can invoke functions with this modifier.\\n    modifier onlyAuthorized() {\\n        _assertSenderIsAuthorized();\\n        _;\\n    }\\n\\n    /// @dev Whether an address is authorized to call privileged functions.\\n    /// @dev 0 Address to query.\\n    /// @return 0 Whether the address is authorized.\\n    mapping(address => bool) public authorized;\\n    /// @dev Whether an adderss is authorized to call privileged functions.\\n    /// @dev 0 Index of authorized address.\\n    /// @return 0 Authorized address.\\n    address[] public authorities;\\n\\n    /// @dev Initializes the `owner` address.\\n    constructor(address newOwner) Ownable(newOwner) {}\\n\\n    /// @dev Authorizes an address.\\n    /// @param target Address to authorize.\\n    function addAuthorizedAddress(address target) external override onlyOwner {\\n        _addAuthorizedAddress(target);\\n    }\\n\\n    /// @dev Removes authorizion of an address.\\n    /// @param target Address to remove authorization from.\\n    function removeAuthorizedAddress(address target) external override onlyOwner {\\n        require(authorized[target], \\\"TARGET_NOT_AUTHORIZED\\\");\\n        for (uint256 i = 0; i < authorities.length; i++) {\\n            if (authorities[i] == target) {\\n                _removeAuthorizedAddressAtIndex(target, i);\\n                break;\\n            }\\n        }\\n    }\\n\\n    /// @dev Removes authorizion of an address.\\n    /// @param target Address to remove authorization from.\\n    /// @param index Index of target in authorities array.\\n    function removeAuthorizedAddressAtIndex(address target, uint256 index) external override onlyOwner {\\n        _removeAuthorizedAddressAtIndex(target, index);\\n    }\\n\\n    /// @dev Gets all authorized addresses.\\n    /// @return Array of authorized addresses.\\n    function getAuthorizedAddresses() external view override returns (address[] memory) {\\n        return authorities;\\n    }\\n\\n    /// @dev Reverts if msg.sender is not authorized.\\n    function _assertSenderIsAuthorized() internal view {\\n        require(authorized[msg.sender], \\\"AUTHORIZABLE_SENDER_NOT_AUTHORIZED_ERROR\\\");\\n    }\\n\\n    /// @dev Authorizes an address.\\n    /// @param target Address to authorize.\\n    function _addAuthorizedAddress(address target) internal {\\n        // Ensure that the target is not the zero address.\\n        require(target != address(0), \\\"AUTHORIZABLE_NULL_ADDRESS_ERROR\\\");\\n\\n        // Ensure that the target is not already authorized.\\n        require(!authorized[target], \\\"AUTHORIZABLE_ALREADY_AUTHORIZED_ERROR\\\");\\n\\n        authorized[target] = true;\\n        authorities.push(target);\\n        emit AuthorizedAddressAdded(target, msg.sender);\\n    }\\n\\n    /// @dev Removes authorization of an address.\\n    /// @param target Address to remove authorization from.\\n    /// @param index Index of target in authorities array.\\n    function _removeAuthorizedAddressAtIndex(address target, uint256 index) internal {\\n        require(authorized[target], \\\"AUTHORIZABLE_ADDRESS_NOT_AUTHORIZED_ERROR\\\");\\n        require(index < authorities.length, \\\"AUTHORIZABLE_INDEX_OUT_OF_BOUNDS_ERROR\\\");\\n        require(authorities[index] == target, \\\"AUTHORIZABLE_ADDRESS_MISMATCH_ERROR\\\");\\n\\n        delete authorized[target];\\n        authorities[index] = authorities[authorities.length - 1];\\n        authorities.pop();\\n        emit AuthorizedAddressRemoved(target, msg.sender);\\n    }\\n}\\n\",\"keccak256\":\"0xbb14576d94fe826b03b455dc0263cc2599a9b87ecda04d8d43dc54480376359f\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/IAssetData.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n  Original work Copyright 2019 ZeroEx Intl.\\n  Modified work Copyright 2020 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\n// solhint-disable\\npragma solidity >=0.5.4 <0.9.0;\\npragma experimental ABIEncoderV2;\\n\\n// @dev Interface of the asset proxy's assetData.\\n// The asset proxies take an ABI encoded `bytes assetData` as argument.\\n// This argument is ABI encoded as one of the methods of this interface.\\ninterface IAssetData {\\n    /// @dev Function signature for encoding ERC20 assetData.\\n    /// @param tokenAddress Address of ERC20Token contract.\\n    function ERC20Token(address tokenAddress) external;\\n\\n    /// @dev Function signature for encoding ERC721 assetData.\\n    /// @param tokenAddress Address of ERC721 token contract.\\n    /// @param tokenId Id of ERC721 token to be transferred.\\n    function ERC721Token(address tokenAddress, uint256 tokenId) external;\\n\\n    /// @dev Function signature for encoding ERC1155 assetData.\\n    /// @param tokenAddress Address of ERC1155 token contract.\\n    /// @param tokenIds Array of ids of tokens to be transferred.\\n    /// @param values Array of values that correspond to each token id to be transferred.\\n    ///        Note that each value will be multiplied by the amount being filled in the order before transferring.\\n    /// @param callbackData Extra data to be passed to receiver's `onERC1155Received` callback function.\\n    function ERC1155Assets(\\n        address tokenAddress,\\n        uint256[] calldata tokenIds,\\n        uint256[] calldata values,\\n        bytes calldata callbackData\\n    ) external;\\n\\n    /// @dev Function signature for encoding MultiAsset assetData.\\n    /// @param values Array of amounts that correspond to each asset to be transferred.\\n    ///        Note that each value will be multiplied by the amount being filled in the order before transferring.\\n    /// @param nestedAssetData Array of assetData fields that will be be dispatched to their correspnding AssetProxy contract.\\n    function MultiAsset(uint256[] calldata values, bytes[] calldata nestedAssetData) external;\\n\\n    /// @dev Function signature for encoding StaticCall assetData.\\n    /// @param staticCallTargetAddress Address that will execute the staticcall.\\n    /// @param staticCallData Data that will be executed via staticcall on the staticCallTargetAddress.\\n    /// @param expectedReturnDataHash Keccak-256 hash of the expected staticcall return data.\\n    function StaticCall(\\n        address staticCallTargetAddress,\\n        bytes calldata staticCallData,\\n        bytes32 expectedReturnDataHash\\n    ) external;\\n\\n    /// @dev Function signature for encoding ERC20Bridge assetData.\\n    /// @param tokenAddress Address of token to transfer.\\n    /// @param bridgeAddress Address of the bridge contract.\\n    /// @param bridgeData Arbitrary data to be passed to the bridge contract.\\n    function ERC20Bridge(\\n        address tokenAddress,\\n        address bridgeAddress,\\n        bytes calldata bridgeData\\n    ) external;\\n}\\n\",\"keccak256\":\"0xf12d6489706833ed9a3e1823537c04d6735790b0d42b091970d50859d5c281b3\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/IAssetProxy.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n  Original work Copyright 2019 ZeroEx Intl.\\n  Modified work Copyright 2020 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.5.4 <0.9.0;\\n\\nabstract contract IAssetProxy {\\n    /// @dev Transfers assets. Either succeeds or throws.\\n    /// @param assetData Byte array encoded for the respective asset proxy.\\n    /// @param from Address to transfer asset from.\\n    /// @param to Address to transfer asset to.\\n    /// @param amount Amount of asset to transfer.\\n    function transferFrom(\\n        bytes calldata assetData,\\n        address from,\\n        address to,\\n        uint256 amount\\n    ) external virtual;\\n\\n    /// @dev Gets the proxy id associated with the proxy address.\\n    /// @return Proxy id.\\n    function getProxyId() external pure virtual returns (bytes4);\\n}\\n\",\"keccak256\":\"0x2f58cee04b6c37e4cf406ad6ca4c095cfdc621a5c91849a96648f57399dcf31c\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/IERC20Token.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n  Original work Copyright 2019 ZeroEx Intl.\\n  Modified work Copyright 2020 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.5.9 <0.9.0;\\n\\nabstract contract IERC20Token {\\n    // solhint-disable no-simple-event-func-name\\n    event Transfer(address indexed _from, address indexed _to, uint256 _value);\\n\\n    event Approval(address indexed _owner, address indexed _spender, uint256 _value);\\n\\n    /// @dev send `value` token to `to` from `msg.sender`\\n    /// @param _to The address of the recipient\\n    /// @param _value The amount of token to be transferred\\n    /// @return True if transfer was successful\\n    function transfer(address _to, uint256 _value) external virtual returns (bool);\\n\\n    /// @dev send `value` token to `to` from `from` on the condition it is approved by `from`\\n    /// @param _from The address of the sender\\n    /// @param _to The address of the recipient\\n    /// @param _value The amount of token to be transferred\\n    /// @return True if transfer was successful\\n    function transferFrom(\\n        address _from,\\n        address _to,\\n        uint256 _value\\n    ) external virtual returns (bool);\\n\\n    /// @dev `msg.sender` approves `_spender` to spend `_value` tokens\\n    /// @param _spender The address of the account able to transfer the tokens\\n    /// @param _value The amount of wei to be approved for transfer\\n    /// @return Always true if the call has enough gas to complete execution\\n    function approve(address _spender, uint256 _value) external virtual returns (bool);\\n\\n    /// @dev Query total supply of token\\n    /// @return Total supply of token\\n    function totalSupply() external view virtual returns (uint256);\\n\\n    /// @param _owner The address from which the balance will be retrieved\\n    /// @return Balance of owner\\n    function balanceOf(address _owner) external view virtual returns (uint256);\\n\\n    /// @param _owner The address of the account owning tokens\\n    /// @param _spender The address of the account able to transfer the tokens\\n    /// @return Amount of remaining tokens allowed to spent\\n    function allowance(address _owner, address _spender) external view virtual returns (uint256);\\n}\\n\",\"keccak256\":\"0x8e15b57ffcb3b363f49fa860abe4a8162ba1615ff8da5da1d905661782dbabe9\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n  Copyright 2019 ZeroEx Intl.\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n    http://www.apache.org/licenses/LICENSE-2.0\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n*/\\n\\npragma solidity >=0.5.9 <0.9.0;\\n\\nimport \\\"./interfaces/IOwnable.sol\\\";\\n\\nabstract contract Ownable is IOwnable {\\n    /// @dev The owner of this contract.\\n    /// @return 0 The owner address.\\n    address public owner;\\n\\n    constructor(address newOwner) {\\n        owner = newOwner;\\n    }\\n\\n    modifier onlyOwner() {\\n        _assertSenderIsOwner();\\n        _;\\n    }\\n\\n    /// @dev Change the owner of this contract.\\n    /// @param newOwner New owner address.\\n    function transferOwnership(address newOwner) public override onlyOwner {\\n        require(newOwner != address(0), \\\"INPUT_ADDRESS_NULL_ERROR\\\");\\n        owner = newOwner;\\n        emit OwnershipTransferred(msg.sender, newOwner);\\n    }\\n\\n    function _assertSenderIsOwner() internal view {\\n        require(msg.sender == owner, \\\"CALLER_NOT_OWNER_ERROR\\\");\\n    }\\n}\\n\",\"keccak256\":\"0xe720a6261e1cb8d0ff3c1bc834f787228021a4f8d70c2806248edd3c91bb12b2\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/interfaces/IAuthorizable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n  Copyright 2019 ZeroEx Intl.\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n    http://www.apache.org/licenses/LICENSE-2.0\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n*/\\n\\npragma solidity >=0.5.9 <0.9.0;\\n\\nabstract contract IAuthorizable {\\n    /// @dev Emitted when a new address is authorized.\\n    /// @param target Address of the authorized address.\\n    /// @param caller Address of the address that authorized the target.\\n    event AuthorizedAddressAdded(address indexed target, address indexed caller);\\n\\n    /// @dev Emitted when a currently authorized address is unauthorized.\\n    /// @param target Address of the authorized address.\\n    /// @param caller Address of the address that authorized the target.\\n    event AuthorizedAddressRemoved(address indexed target, address indexed caller);\\n\\n    /// @dev Authorizes an address.\\n    /// @param target Address to authorize.\\n    function addAuthorizedAddress(address target) external virtual;\\n\\n    /// @dev Removes authorizion of an address.\\n    /// @param target Address to remove authorization from.\\n    function removeAuthorizedAddress(address target) external virtual;\\n\\n    /// @dev Removes authorizion of an address.\\n    /// @param target Address to remove authorization from.\\n    /// @param index Index of target in authorities array.\\n    function removeAuthorizedAddressAtIndex(address target, uint256 index) external virtual;\\n\\n    /// @dev Gets all authorized addresses.\\n    /// @return Array of authorized addresses.\\n    function getAuthorizedAddresses() external view virtual returns (address[] memory);\\n}\\n\",\"keccak256\":\"0x84b5b063527971800efe5dd2d5264d0e3b96daae16412e225181d67efbdc4ccc\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/interfaces/IOwnable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n  Copyright 2019 ZeroEx Intl.\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n    http://www.apache.org/licenses/LICENSE-2.0\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n*/\\n\\npragma solidity >=0.5.9 <0.9.0;\\n\\nabstract contract IOwnable {\\n    /// @dev Emitted by Ownable when ownership is transferred.\\n    /// @param previousOwner The previous owner of the contract.\\n    /// @param newOwner The new owner of the contract.\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /// @dev Transfers ownership of the contract to a new address.\\n    /// @param newOwner The address that will become the owner.\\n    function transferOwnership(address newOwner) public virtual;\\n}\\n\",\"keccak256\":\"0x7ae57f991fe7eeeda16d9dc449cbe9535aeccf8f90691fe40af96e05a936a942\",\"license\":\"Apache 2.0\"}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b50604051620013d0380380620013d08339810160408190526200003491620000dd565b600080546001600160a01b03199081166001600160a01b0384811691909117909255600580548216868416179055600680549091169184169182179055604080516024808201939093528151808203909301835260440190526020810180516001600160e01b0316630f47261b60e41b179052600790620000b69082620001cc565b5050505062000298565b80516001600160a01b0381168114620000d857600080fd5b919050565b600080600060608486031215620000f357600080fd5b620000fe84620000c0565b92506200010e60208501620000c0565b91506200011e60408501620000c0565b90509250925092565b634e487b7160e01b600052604160045260246000fd5b600181811c908216806200015257607f821691505b6020821081036200017357634e487b7160e01b600052602260045260246000fd5b50919050565b601f821115620001c757600081815260208120601f850160051c81016020861015620001a25750805b601f850160051c820191505b81811015620001c357828155600101620001ae565b5050505b505050565b81516001600160401b03811115620001e857620001e862000127565b6200020081620001f984546200013d565b8462000179565b602080601f8311600181146200023857600084156200021f5750858301515b600019600386901b1c1916600185901b178555620001c3565b600085815260208120601f198616915b82811015620002695788860151825594840194600190910190840162000248565b5085821015620002885787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b61112880620002a86000396000f3fe608060405234801561001057600080fd5b50600436106101215760003560e01c806370a08231116100ad578063c02e5a7f11610071578063c02e5a7f14610289578063d39de6e914610291578063db8e54bd146102a6578063f2fde38b146102b9578063f957ddba146102cc57600080fd5b806370a08231146102045780638da5cb5b1461022d5780639470b0bd146102405780639ad2674414610253578063b91816111461026657600080fd5b8063494503d4116100f4578063494503d4146101a257806363e17553146101b55780636b6df5aa146101c85780636bf3f9e5146101de57806370712939146101f157600080fd5b806315cc36f21461012657806322f80d111461013b578063266df27c1461016b57806342f1181e1461018f575b600080fd5b610139610134366004610e9c565b6102df565b005b60035461014e906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b60035461017f90600160a01b900460ff1681565b6040519015158152602001610162565b61013961019d366004610ec6565b6103c7565b61014e6101b0366004610ee8565b6103db565b60055461014e906001600160a01b031681565b6101d0610405565b604051908152602001610162565b6101396101ec366004610ec6565b610477565b6101396101ff366004610ec6565b6104d4565b6101d0610212366004610ec6565b6001600160a01b031660009081526004602052604090205490565b60005461014e906001600160a01b031681565b61013961024e366004610e9c565b6105a5565b610139610261366004610e9c565b6105bf565b61017f610274366004610ec6565b60016020526000908152604090205460ff1681565b6101396105d1565b610299610629565b6040516101629190610f01565b6101396102b4366004610ec6565b61068b565b6101396102c7366004610ec6565b6106e9565b6101d06102da366004610ec6565b610792565b6102e76107c7565b6102ef61083a565b6001600160a01b03821660009081526004602052604081208054839290610317908490610f64565b90915550506040518181526001600160a01b038316907fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c9060200160405180910390a2600554604051632a17967960e21b81526001600160a01b039091169063a85e59e49061039190600790869030908790600401610f7d565b600060405180830381600087803b1580156103ab57600080fd5b505af11580156103bf573d6000803e3d6000fd5b505050505050565b6103cf6108a4565b6103d8816108f7565b50565b600281815481106103eb57600080fd5b6000918252602090912001546001600160a01b0316905081565b6006546040516370a0823160e01b81523060048201526000916001600160a01b0316906370a0823190602401602060405180830381865afa15801561044e573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610472919061105f565b905090565b61047f610a52565b600380546001600160a01b0319166001600160a01b0383169081179091556040519081527fb72b2a9919ffd08bc0d415d8a38b1395a40377207a9867cac2e3c10b1aa560fc906020015b60405180910390a150565b6104dc6108a4565b6001600160a01b03811660009081526001602052604090205460ff166105415760405162461bcd60e51b815260206004820152601560248201527415105491d15517d393d517d055551213d492569151605a1b60448201526064015b60405180910390fd5b60005b60025481101561058f57816001600160a01b03166002828154811061056b5761056b611078565b6000918252602090912001546001600160a01b0316036105935761058f8282610ac2565b5050565b8061059d8161108e565b915050610544565b6105ad6107c7565b6105b561083a565b61058f8282610d31565b6105c76108a4565b61058f8282610ac2565b6105d9610a52565b6105e161083a565b6003805460ff60a01b1916600160a01b1790556040513381527fdc2ba7cd6b8e3bf6f27f665a737e34fb7f72f480a597b51686332c539fab04489060200160405180910390a1565b6060600280548060200260200160405190810160405280929190818152602001828054801561068157602002820191906000526020600020905b81546001600160a01b03168152600190910190602001808311610663575b5050505050905090565b610693610a52565b61069b61083a565b600580546001600160a01b0319166001600160a01b0383169081179091556040519081527f879c7a1bd9d1f1c5b50ae7282977dff1e2c9af679317df596df768664f22d68c906020016104c9565b6106f16108a4565b6001600160a01b0381166107475760405162461bcd60e51b815260206004820152601860248201527f494e5055545f414444524553535f4e554c4c5f4552524f5200000000000000006044820152606401610538565b600080546001600160a01b0319166001600160a01b0383169081178255604051909133917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a350565b600061079c610e18565b6001600160a01b0382166000908152600460205260409020546107bf8382610d31565b90505b919050565b6003546001600160a01b031633146108385760405162461bcd60e51b815260206004820152602e60248201527f4752475f5641554c545f4f4e4c595f43414c4c41424c455f42595f5354414b4960448201526d2723afa82927ac2cafa2a92927a960911b6064820152608401610538565b565b600354600160a01b900460ff16156108385760405162461bcd60e51b815260206004820152602760248201527f4752475f5641554c545f494e5f434154415354524f504849435f4641494c555260448201526622afa2a92927a960c91b6064820152608401610538565b6000546001600160a01b031633146108385760405162461bcd60e51b815260206004820152601660248201527521a0a62622a92fa727aa2fa7aba722a92fa2a92927a960511b6044820152606401610538565b6001600160a01b03811661094d5760405162461bcd60e51b815260206004820152601f60248201527f415554484f52495a41424c455f4e554c4c5f414444524553535f4552524f52006044820152606401610538565b6001600160a01b03811660009081526001602052604090205460ff16156109c45760405162461bcd60e51b815260206004820152602560248201527f415554484f52495a41424c455f414c52454144595f415554484f52495a45445f60448201526422a92927a960d91b6064820152608401610538565b6001600160a01b0381166000818152600160208190526040808320805460ff19168317905560028054928301815583527f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace90910180546001600160a01b03191684179055513392917f3147867c59d17e8fa9d522465651d44aae0a9e38f902f3475b97e58072f0ed4c91a350565b3360009081526001602052604090205460ff166108385760405162461bcd60e51b815260206004820152602860248201527f415554484f52495a41424c455f53454e4445525f4e4f545f415554484f52495a60448201526722a22fa2a92927a960c11b6064820152608401610538565b6001600160a01b03821660009081526001602052604090205460ff16610b3c5760405162461bcd60e51b815260206004820152602960248201527f415554484f52495a41424c455f414444524553535f4e4f545f415554484f52496044820152682d22a22fa2a92927a960b91b6064820152608401610538565b6002548110610b9c5760405162461bcd60e51b815260206004820152602660248201527f415554484f52495a41424c455f494e4445585f4f55545f4f465f424f554e44536044820152652fa2a92927a960d11b6064820152608401610538565b816001600160a01b031660028281548110610bb957610bb9611078565b6000918252602090912001546001600160a01b031614610c275760405162461bcd60e51b815260206004820152602360248201527f415554484f52495a41424c455f414444524553535f4d49534d415443485f45526044820152622927a960e91b6064820152608401610538565b6001600160a01b0382166000908152600160208190526040909120805460ff19169055600280549091610c59916110a7565b81548110610c6957610c69611078565b600091825260209091200154600280546001600160a01b039092169183908110610c9557610c95611078565b9060005260206000200160006101000a8154816001600160a01b0302191690836001600160a01b031602179055506002805480610cd457610cd46110ba565b600082815260208120820160001990810180546001600160a01b031916905590910190915560405133916001600160a01b038516917f1f32c1b084e2de0713b8fb16bd46bb9df710a3dbeae2f3ca93af46e016dcc6b09190a35050565b6001600160a01b03821660009081526004602052604081208054839290610d599084906110a7565b90915550506040518181526001600160a01b038316907f884edad9ce6fa2440d8a54cc123490eb96d2768479d49ff9c7366125a94243649060200160405180910390a260065460405163a9059cbb60e01b81526001600160a01b038481166004830152602482018490529091169063a9059cbb906044016020604051808303816000875af1158015610def573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610e1391906110d0565b505050565b600354600160a01b900460ff166108385760405162461bcd60e51b815260206004820152602b60248201527f4752475f5641554c545f4e4f545f494e5f434154415354524f504849435f464160448201526a24a62aa922afa2a92927a960a91b6064820152608401610538565b80356001600160a01b03811681146107c257600080fd5b60008060408385031215610eaf57600080fd5b610eb883610e85565b946020939093013593505050565b600060208284031215610ed857600080fd5b610ee182610e85565b9392505050565b600060208284031215610efa57600080fd5b5035919050565b6020808252825182820181905260009190848201906040850190845b81811015610f425783516001600160a01b031683529284019291840191600101610f1d565b50909695505050505050565b634e487b7160e01b600052601160045260246000fd5b80820180821115610f7757610f77610f4e565b92915050565b60808152600080865481600182811c915080831680610f9d57607f831692505b60208084108203610fbc57634e487b7160e01b86526022600452602486fd5b6080880184905260a08801828015610fdb5760018114610ff15761101c565b60ff198716825285151560051b8201975061101c565b60008e81526020902060005b8781101561101657815484820152908601908401610ffd565b83019850505b50508596506110358189018c6001600160a01b03169052565b50505050505061105060408301856001600160a01b03169052565b82606083015295945050505050565b60006020828403121561107157600080fd5b5051919050565b634e487b7160e01b600052603260045260246000fd5b6000600182016110a0576110a0610f4e565b5060010190565b81810381811115610f7757610f77610f4e565b634e487b7160e01b600052603160045260246000fd5b6000602082840312156110e257600080fd5b81518015158114610ee157600080fdfea26469706673582212205ebbaa4407605d887d4cfe0dcd3d13365a4af7064bc3a7154333517c86f3d92464736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106101215760003560e01c806370a08231116100ad578063c02e5a7f11610071578063c02e5a7f14610289578063d39de6e914610291578063db8e54bd146102a6578063f2fde38b146102b9578063f957ddba146102cc57600080fd5b806370a08231146102045780638da5cb5b1461022d5780639470b0bd146102405780639ad2674414610253578063b91816111461026657600080fd5b8063494503d4116100f4578063494503d4146101a257806363e17553146101b55780636b6df5aa146101c85780636bf3f9e5146101de57806370712939146101f157600080fd5b806315cc36f21461012657806322f80d111461013b578063266df27c1461016b57806342f1181e1461018f575b600080fd5b610139610134366004610e9c565b6102df565b005b60035461014e906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b60035461017f90600160a01b900460ff1681565b6040519015158152602001610162565b61013961019d366004610ec6565b6103c7565b61014e6101b0366004610ee8565b6103db565b60055461014e906001600160a01b031681565b6101d0610405565b604051908152602001610162565b6101396101ec366004610ec6565b610477565b6101396101ff366004610ec6565b6104d4565b6101d0610212366004610ec6565b6001600160a01b031660009081526004602052604090205490565b60005461014e906001600160a01b031681565b61013961024e366004610e9c565b6105a5565b610139610261366004610e9c565b6105bf565b61017f610274366004610ec6565b60016020526000908152604090205460ff1681565b6101396105d1565b610299610629565b6040516101629190610f01565b6101396102b4366004610ec6565b61068b565b6101396102c7366004610ec6565b6106e9565b6101d06102da366004610ec6565b610792565b6102e76107c7565b6102ef61083a565b6001600160a01b03821660009081526004602052604081208054839290610317908490610f64565b90915550506040518181526001600160a01b038316907fe1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c9060200160405180910390a2600554604051632a17967960e21b81526001600160a01b039091169063a85e59e49061039190600790869030908790600401610f7d565b600060405180830381600087803b1580156103ab57600080fd5b505af11580156103bf573d6000803e3d6000fd5b505050505050565b6103cf6108a4565b6103d8816108f7565b50565b600281815481106103eb57600080fd5b6000918252602090912001546001600160a01b0316905081565b6006546040516370a0823160e01b81523060048201526000916001600160a01b0316906370a0823190602401602060405180830381865afa15801561044e573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610472919061105f565b905090565b61047f610a52565b600380546001600160a01b0319166001600160a01b0383169081179091556040519081527fb72b2a9919ffd08bc0d415d8a38b1395a40377207a9867cac2e3c10b1aa560fc906020015b60405180910390a150565b6104dc6108a4565b6001600160a01b03811660009081526001602052604090205460ff166105415760405162461bcd60e51b815260206004820152601560248201527415105491d15517d393d517d055551213d492569151605a1b60448201526064015b60405180910390fd5b60005b60025481101561058f57816001600160a01b03166002828154811061056b5761056b611078565b6000918252602090912001546001600160a01b0316036105935761058f8282610ac2565b5050565b8061059d8161108e565b915050610544565b6105ad6107c7565b6105b561083a565b61058f8282610d31565b6105c76108a4565b61058f8282610ac2565b6105d9610a52565b6105e161083a565b6003805460ff60a01b1916600160a01b1790556040513381527fdc2ba7cd6b8e3bf6f27f665a737e34fb7f72f480a597b51686332c539fab04489060200160405180910390a1565b6060600280548060200260200160405190810160405280929190818152602001828054801561068157602002820191906000526020600020905b81546001600160a01b03168152600190910190602001808311610663575b5050505050905090565b610693610a52565b61069b61083a565b600580546001600160a01b0319166001600160a01b0383169081179091556040519081527f879c7a1bd9d1f1c5b50ae7282977dff1e2c9af679317df596df768664f22d68c906020016104c9565b6106f16108a4565b6001600160a01b0381166107475760405162461bcd60e51b815260206004820152601860248201527f494e5055545f414444524553535f4e554c4c5f4552524f5200000000000000006044820152606401610538565b600080546001600160a01b0319166001600160a01b0383169081178255604051909133917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a350565b600061079c610e18565b6001600160a01b0382166000908152600460205260409020546107bf8382610d31565b90505b919050565b6003546001600160a01b031633146108385760405162461bcd60e51b815260206004820152602e60248201527f4752475f5641554c545f4f4e4c595f43414c4c41424c455f42595f5354414b4960448201526d2723afa82927ac2cafa2a92927a960911b6064820152608401610538565b565b600354600160a01b900460ff16156108385760405162461bcd60e51b815260206004820152602760248201527f4752475f5641554c545f494e5f434154415354524f504849435f4641494c555260448201526622afa2a92927a960c91b6064820152608401610538565b6000546001600160a01b031633146108385760405162461bcd60e51b815260206004820152601660248201527521a0a62622a92fa727aa2fa7aba722a92fa2a92927a960511b6044820152606401610538565b6001600160a01b03811661094d5760405162461bcd60e51b815260206004820152601f60248201527f415554484f52495a41424c455f4e554c4c5f414444524553535f4552524f52006044820152606401610538565b6001600160a01b03811660009081526001602052604090205460ff16156109c45760405162461bcd60e51b815260206004820152602560248201527f415554484f52495a41424c455f414c52454144595f415554484f52495a45445f60448201526422a92927a960d91b6064820152608401610538565b6001600160a01b0381166000818152600160208190526040808320805460ff19168317905560028054928301815583527f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace90910180546001600160a01b03191684179055513392917f3147867c59d17e8fa9d522465651d44aae0a9e38f902f3475b97e58072f0ed4c91a350565b3360009081526001602052604090205460ff166108385760405162461bcd60e51b815260206004820152602860248201527f415554484f52495a41424c455f53454e4445525f4e4f545f415554484f52495a60448201526722a22fa2a92927a960c11b6064820152608401610538565b6001600160a01b03821660009081526001602052604090205460ff16610b3c5760405162461bcd60e51b815260206004820152602960248201527f415554484f52495a41424c455f414444524553535f4e4f545f415554484f52496044820152682d22a22fa2a92927a960b91b6064820152608401610538565b6002548110610b9c5760405162461bcd60e51b815260206004820152602660248201527f415554484f52495a41424c455f494e4445585f4f55545f4f465f424f554e44536044820152652fa2a92927a960d11b6064820152608401610538565b816001600160a01b031660028281548110610bb957610bb9611078565b6000918252602090912001546001600160a01b031614610c275760405162461bcd60e51b815260206004820152602360248201527f415554484f52495a41424c455f414444524553535f4d49534d415443485f45526044820152622927a960e91b6064820152608401610538565b6001600160a01b0382166000908152600160208190526040909120805460ff19169055600280549091610c59916110a7565b81548110610c6957610c69611078565b600091825260209091200154600280546001600160a01b039092169183908110610c9557610c95611078565b9060005260206000200160006101000a8154816001600160a01b0302191690836001600160a01b031602179055506002805480610cd457610cd46110ba565b600082815260208120820160001990810180546001600160a01b031916905590910190915560405133916001600160a01b038516917f1f32c1b084e2de0713b8fb16bd46bb9df710a3dbeae2f3ca93af46e016dcc6b09190a35050565b6001600160a01b03821660009081526004602052604081208054839290610d599084906110a7565b90915550506040518181526001600160a01b038316907f884edad9ce6fa2440d8a54cc123490eb96d2768479d49ff9c7366125a94243649060200160405180910390a260065460405163a9059cbb60e01b81526001600160a01b038481166004830152602482018490529091169063a9059cbb906044016020604051808303816000875af1158015610def573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610e1391906110d0565b505050565b600354600160a01b900460ff166108385760405162461bcd60e51b815260206004820152602b60248201527f4752475f5641554c545f4e4f545f494e5f434154415354524f504849435f464160448201526a24a62aa922afa2a92927a960a91b6064820152608401610538565b80356001600160a01b03811681146107c257600080fd5b60008060408385031215610eaf57600080fd5b610eb883610e85565b946020939093013593505050565b600060208284031215610ed857600080fd5b610ee182610e85565b9392505050565b600060208284031215610efa57600080fd5b5035919050565b6020808252825182820181905260009190848201906040850190845b81811015610f425783516001600160a01b031683529284019291840191600101610f1d565b50909695505050505050565b634e487b7160e01b600052601160045260246000fd5b80820180821115610f7757610f77610f4e565b92915050565b60808152600080865481600182811c915080831680610f9d57607f831692505b60208084108203610fbc57634e487b7160e01b86526022600452602486fd5b6080880184905260a08801828015610fdb5760018114610ff15761101c565b60ff198716825285151560051b8201975061101c565b60008e81526020902060005b8781101561101657815484820152908601908401610ffd565b83019850505b50508596506110358189018c6001600160a01b03169052565b50505050505061105060408301856001600160a01b03169052565b82606083015295945050505050565b60006020828403121561107157600080fd5b5051919050565b634e487b7160e01b600052603260045260246000fd5b6000600182016110a0576110a0610f4e565b5060010190565b81810381811115610f7757610f77610f4e565b634e487b7160e01b600052603160045260246000fd5b6000602082840312156110e257600080fd5b81518015158114610ee157600080fdfea26469706673582212205ebbaa4407605d887d4cfe0dcd3d13365a4af7064bc3a7154333517c86f3d92464736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "addAuthorizedAddress(address)": {
+        "details": "Authorizes an address.",
+        "params": {
+          "target": "Address to authorize."
+        }
+      },
+      "balanceOf(address)": {
+        "details": "Returns the balance in Grg Tokens of the `staker`",
+        "returns": {
+          "_0": "Balance in Grg."
+        }
+      },
+      "balanceOfGrgVault()": {
+        "details": "Returns the entire balance of Grg tokens in the vault."
+      },
+      "constructor": {
+        "details": "Constructor.",
+        "params": {
+          "grgProxyAddress": "Address of the RigoBlock Grg Proxy.",
+          "grgTokenAddress": "Address of the Grg Token.",
+          "newOwner": "Address of the Grg vault owner."
+        }
+      },
+      "depositFrom(address,uint256)": {
+        "details": "Deposit an `amount` of Grg Tokens from `staker` into the vault. Note that only the Staking contract can call this. Note that this can only be called when *not* in Catastrophic Failure mode.",
+        "params": {
+          "amount": "of Grg Tokens to deposit.",
+          "staker": "of Grg Tokens."
+        }
+      },
+      "enterCatastrophicFailure()": {
+        "details": "Vault enters into Catastrophic Failure Mode. *** WARNING - ONCE IN CATOSTROPHIC FAILURE MODE, YOU CAN NEVER GO BACK! *** Note that only the contract owner can call this function."
+      },
+      "getAuthorizedAddresses()": {
+        "details": "Gets all authorized addresses.",
+        "returns": {
+          "_0": "Array of authorized addresses."
+        }
+      },
+      "removeAuthorizedAddress(address)": {
+        "details": "Removes authorizion of an address.",
+        "params": {
+          "target": "Address to remove authorization from."
+        }
+      },
+      "removeAuthorizedAddressAtIndex(address,uint256)": {
+        "details": "Removes authorizion of an address.",
+        "params": {
+          "index": "Index of target in authorities array.",
+          "target": "Address to remove authorization from."
+        }
+      },
+      "setGrgProxy(address)": {
+        "details": "Sets the Grg proxy. Note that only an authorized address can call this function. Note that this can only be called when *not* in Catastrophic Failure mode.",
+        "params": {
+          "grgProxyAddress": "Address of the RigoBlock Grg Proxy."
+        }
+      },
+      "setStakingProxy(address)": {
+        "details": "Sets the address of the StakingProxy contract. Note that only the contract owner can call this function.",
+        "params": {
+          "stakingProxyAddress": "Address of Staking proxy contract."
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Change the owner of this contract.",
+        "params": {
+          "newOwner": "New owner address."
+        }
+      },
+      "withdrawAllFrom(address)": {
+        "details": "Withdraw ALL Grg Tokens to `staker` from the vault. Note that this can only be called when *in* Catastrophic Failure mode.",
+        "params": {
+          "staker": "of Grg Tokens."
+        }
+      },
+      "withdrawFrom(address,uint256)": {
+        "details": "Withdraw an `amount` of Grg Tokens to `staker` from the vault. Note that only the Staking contract can call this. Note that this can only be called when *not* in Catastrophic Failure mode.",
+        "params": {
+          "amount": "of Grg Tokens to withdraw.",
+          "staker": "of Grg Tokens."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "Deposit(address,uint256)": {
+        "notice": "Emitted when Grg Tokens are deposited into the vault."
+      },
+      "GrgProxySet(address)": {
+        "notice": "Emitted whenever the Grg AssetProxy is set."
+      },
+      "InCatastrophicFailureMode(address)": {
+        "notice": "Emitted when the Staking contract is put into Catastrophic Failure Mode"
+      },
+      "StakingProxySet(address)": {
+        "notice": "Emmitted whenever a StakingProxy is set in a vault."
+      },
+      "Withdraw(address,uint256)": {
+        "notice": "Emitted when Grg Tokens are withdrawn from the vault."
+      }
+    },
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 16123,
+        "contract": "contracts/staking/GrgVault.sol:GrgVault",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 15017,
+        "contract": "contracts/staking/GrgVault.sol:GrgVault",
+        "label": "authorized",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 15021,
+        "contract": "contracts/staking/GrgVault.sol:GrgVault",
+        "label": "authorities",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_array(t_address)dyn_storage"
+      },
+      {
+        "astId": 7744,
+        "contract": "contracts/staking/GrgVault.sol:GrgVault",
+        "label": "stakingProxy",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_address"
+      },
+      {
+        "astId": 7746,
+        "contract": "contracts/staking/GrgVault.sol:GrgVault",
+        "label": "isInCatastrophicFailure",
+        "offset": 20,
+        "slot": "3",
+        "type": "t_bool"
+      },
+      {
+        "astId": 7750,
+        "contract": "contracts/staking/GrgVault.sol:GrgVault",
+        "label": "_balances",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 7753,
+        "contract": "contracts/staking/GrgVault.sol:GrgVault",
+        "label": "grgAssetProxy",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_contract(IAssetProxy)15572"
+      },
+      {
+        "astId": 7756,
+        "contract": "contracts/staking/GrgVault.sol:GrgVault",
+        "label": "_grgToken",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_contract(IERC20Token)15647"
+      },
+      {
+        "astId": 7758,
+        "contract": "contracts/staking/GrgVault.sol:GrgVault",
+        "label": "_grgAssetData",
+        "offset": 0,
+        "slot": "7",
+        "type": "t_bytes_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes_storage": {
+        "encoding": "bytes",
+        "label": "bytes",
+        "numberOfBytes": "32"
+      },
+      "t_contract(IAssetProxy)15572": {
+        "encoding": "inplace",
+        "label": "contract IAssetProxy",
+        "numberOfBytes": "20"
+      },
+      "t_contract(IERC20Token)15647": {
+        "encoding": "inplace",
+        "label": "contract IERC20Token",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
