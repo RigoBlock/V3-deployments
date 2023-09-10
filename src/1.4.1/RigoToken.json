@@ -1,0 +1,554 @@
+{
+  "address": "0x076C619e7ebaBe40746106B66bFBed731F2c1339",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "setMinter",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "setRigoblock",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "grgHolder",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "TokenMinted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "changeMintingAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newAddress",
+          "type": "address"
+        }
+      ],
+      "name": "changeRigoblockAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mintToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "minter",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rigoblock",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x6cbf86c411700f40a7abdba38b095c7cc792d4d4504c8bb123ec5a05a819208e",
+  "receipt": {
+    "to": "0x914d7Fec6aaC8cd542e72Bca78B30650d45643d7",
+    "from": "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "contractAddress": null,
+    "transactionIndex": 45,
+    "gasUsed": "588920",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x0fbbf5624d9c6da015a5efec8d5e0b7fb05214435315ff7485518ecb48e1a28d",
+    "transactionHash": "0x6cbf86c411700f40a7abdba38b095c7cc792d4d4504c8bb123ec5a05a819208e",
+    "logs": [],
+    "blockNumber": 7836946,
+    "cumulativeGasUsed": "8866511",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6"
+  ],
+  "solcInputHash": "656e34d5c2c173c2d18ee1cf3ed6b924",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"setMinter\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"setRigoblock\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"grgHolder\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"TokenMinted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAddress\",\"type\":\"address\"}],\"name\":\"changeMintingAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newAddress\",\"type\":\"address\"}],\"name\":\"changeRigoblockAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"mintToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"minter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rigoblock\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Gabriele Rigo - <gab@rigoblock.com>\",\"kind\":\"dev\",\"methods\":{\"allowance(address,address)\":{\"params\":{\"owner\":\"Address of token hodler.\",\"spender\":\"Address of the token spender.\"},\"returns\":{\"_0\":\"Number of allowed units.\"}},\"approve(address,uint256)\":{\"params\":{\"spender\":\"Address of the token spender.\",\"value\":\"Number of units to be approved.\"},\"returns\":{\"success\":\"Bool the transaction was successful.\"}},\"changeMintingAddress(address)\":{\"params\":{\"newAddress\":\"Address of the new minter.\"}},\"changeRigoblockAddress(address)\":{\"params\":{\"newAddress\":\"Address of the new Dao.\"}},\"mintToken(address,uint256)\":{\"details\":\"Mint method is reserved for minter module.\",\"params\":{\"amount\":\"Number of minted tokens.\",\"recipient\":\"Address receiving the new tokens.\"}},\"transfer(address,uint256)\":{\"params\":{\"to\":\"Address to send tokens to.\",\"value\":\"Number of token units to send.\"},\"returns\":{\"success\":\"Bool the transaction was successful.\"}},\"transferFrom(address,address,uint256)\":{\"details\":\"ERC20 transferFrom, modified such that an allowance of _MAX_UINT represents an unlimited allowance.\",\"params\":{\"from\":\"Address to transfer from.\",\"to\":\"Address to transfer to.\",\"value\":\"Amount to transfer.\"},\"returns\":{\"_0\":\"Success of transfer.\"}}},\"stateVariables\":{\"minter\":{\"return\":\"Address of the minter.\",\"returns\":{\"_0\":\"Address of the minter.\"}},\"rigoblock\":{\"return\":\"Address of the Dao.\",\"returns\":{\"_0\":\"Address of the Dao.\"}}},\"title\":\"Rigo Token - Rules of the Rigo token.\",\"version\":1},\"userdoc\":{\"events\":{\"Approval(address,address,uint256)\":{\"notice\":\"Emitted when a token holder sets and approval.\"},\"TokenMinted(address,uint256)\":{\"notice\":\"Emitted when new tokens have been minted.\"},\"Transfer(address,address,uint256)\":{\"notice\":\"Emitted when a token is transferred.\"}},\"kind\":\"user\",\"methods\":{\"allowance(address,address)\":{\"notice\":\"Returns token allowance of an address to another address.\"},\"approve(address,uint256)\":{\"notice\":\"Allows a holder to approve a spender.\"},\"changeMintingAddress(address)\":{\"notice\":\"Allows Rigoblock Dao to update minter.\"},\"changeRigoblockAddress(address)\":{\"notice\":\"Allows Rigoblock Dao to update its address.\"},\"mintToken(address,uint256)\":{\"notice\":\"Allows minter to create new tokens.\"},\"minter()\":{\"notice\":\"Returns the address of the minter.\"},\"rigoblock()\":{\"notice\":\"Returns the address of the Rigoblock Dao.\"},\"totalSupply()\":{\"notice\":\"Returns the total supply of the token.\"},\"transfer(address,uint256)\":{\"notice\":\"Transfers token from holder to another address.\"}},\"notice\":\"UnlimitedAllowanceToken is ERC20\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/rigoToken/rigoToken/RigoToken.sol\":\"RigoToken\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/rigoToken/interfaces/IRigoToken.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2017-2018 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../../tokens/ERC20/IERC20.sol\\\";\\n\\n/// @title Rigo Token Interface - Allows interaction with the Rigo token.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IRigoToken is IERC20 {\\n    /// @notice Emitted when new tokens have been minted.\\n    /// @param recipient Address receiving the new tokens.\\n    /// @param amount Number of minted units.\\n    event TokenMinted(address indexed recipient, uint256 amount);\\n\\n    /// @notice Returns the address of the minter.\\n    /// @return Address of the minter.\\n    function minter() external view returns (address);\\n\\n    /// @notice Returns the address of the Rigoblock Dao.\\n    /// @return Address of the Dao.\\n    function rigoblock() external view returns (address);\\n\\n    /// @notice Allows minter to create new tokens.\\n    /// @dev Mint method is reserved for minter module.\\n    /// @param recipient Address receiving the new tokens.\\n    /// @param amount Number of minted tokens.\\n    function mintToken(address recipient, uint256 amount) external;\\n\\n    /// @notice Allows Rigoblock Dao to update minter.\\n    /// @param newAddress Address of the new minter.\\n    function changeMintingAddress(address newAddress) external;\\n\\n    /// @notice Allows Rigoblock Dao to update its address.\\n    /// @param newAddress Address of the new Dao.\\n    function changeRigoblockAddress(address newAddress) external;\\n}\\n\",\"keccak256\":\"0x042f3630d00829ee9d1e31747d8986eb8ac3021b9ea376b9c24b9200fe600181\",\"license\":\"Apache 2.0\"},\"contracts/rigoToken/rigoToken/RigoToken.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2017-2018 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport {UnlimitedAllowanceToken} from \\\"../../tokens/UnlimitedAllowanceToken/UnlimitedAllowanceToken.sol\\\";\\nimport \\\"../interfaces/IRigoToken.sol\\\";\\n\\n/// @title Rigo Token - Rules of the Rigo token.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n/// @notice UnlimitedAllowanceToken is ERC20\\ncontract RigoToken is IRigoToken, UnlimitedAllowanceToken {\\n    /* solhint-disable const-name-snakecase */\\n    string public constant name = \\\"Rigo Token\\\";\\n    string public constant symbol = \\\"GRG\\\";\\n    uint8 public constant decimals = 18;\\n\\n    /* solhint-enable const-name-snakecase */\\n\\n    /// @inheritdoc IRigoToken\\n    address public override minter;\\n\\n    /// @inheritdoc IRigoToken\\n    address public override rigoblock;\\n\\n    /*\\n     * MODIFIERS\\n     */\\n    modifier onlyMinter() {\\n        require(msg.sender == minter);\\n        _;\\n    }\\n\\n    modifier onlyRigoblock() {\\n        require(msg.sender == rigoblock);\\n        _;\\n    }\\n\\n    constructor(\\n        address setMinter,\\n        address setRigoblock,\\n        address grgHolder\\n    ) {\\n        minter = setMinter;\\n        rigoblock = setRigoblock;\\n        totalSupply = 1e25; // 10 million tokens, 18 decimals\\n        _balances[grgHolder] = totalSupply;\\n    }\\n\\n    /*\\n     * CORE FUNCTIONS\\n     */\\n    /// @inheritdoc IRigoToken\\n    function mintToken(address recipient, uint256 amount) external override onlyMinter {\\n        _balances[recipient] += amount;\\n        totalSupply += amount;\\n        emit TokenMinted(recipient, amount);\\n    }\\n\\n    /// @inheritdoc IRigoToken\\n    function changeMintingAddress(address newAddress) external override onlyRigoblock {\\n        minter = newAddress;\\n    }\\n\\n    /// @inheritdoc IRigoToken\\n    function changeRigoblockAddress(address newAddress) external override onlyRigoblock {\\n        rigoblock = newAddress;\\n    }\\n}\\n\",\"keccak256\":\"0x13db4015c964bfc07a2d01760212bda12d413a9458a0070f0e9748f1f4bb71b2\",\"license\":\"Apache 2.0\"},\"contracts/tokens/ERC20/ERC20.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport {IERC20} from \\\"./IERC20.sol\\\";\\n\\nabstract contract ERC20 is IERC20 {\\n    function transfer(address to, uint256 value) external override returns (bool success) {\\n        require(_balances[msg.sender] >= value && _balances[to] + value > _balances[to]);\\n        _balances[msg.sender] -= value;\\n        _balances[to] += value;\\n        emit Transfer(msg.sender, to, value);\\n        return true;\\n    }\\n\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 value\\n    ) external virtual override returns (bool success) {\\n        require(\\n            _balances[from] >= value && _allowed[from][msg.sender] >= value && _balances[to] + value > _balances[to]\\n        );\\n        _balances[to] += value;\\n        _balances[from] -= value;\\n        _allowed[from][msg.sender] -= value;\\n        emit Transfer(from, to, value);\\n        return true;\\n    }\\n\\n    function approve(address spender, uint256 value) external override returns (bool success) {\\n        _allowed[msg.sender][spender] = value;\\n        emit Approval(msg.sender, spender, value);\\n        return true;\\n    }\\n\\n    function balanceOf(address owner) external view override returns (uint256) {\\n        return _balances[owner];\\n    }\\n\\n    function allowance(address owner, address spender) external view override returns (uint256) {\\n        return _allowed[owner][spender];\\n    }\\n\\n    uint256 public override totalSupply;\\n    mapping(address => uint256) internal _balances;\\n    mapping(address => mapping(address => uint256)) internal _allowed;\\n}\\n\",\"keccak256\":\"0x296676796227fc168dffa288a1adc0aef02fbee418ea00c6263feaed990060f7\",\"license\":\"Apache 2.0\"},\"contracts/tokens/ERC20/IERC20.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.5.0;\\n\\ninterface IERC20 {\\n    /// @notice Emitted when a token is transferred.\\n    /// @param from Address transferring the tokens.\\n    /// @param to Address receiving the tokens.\\n    /// @param value Number of token units.\\n    event Transfer(address indexed from, address indexed to, uint256 value);\\n\\n    /// @notice Emitted when a token holder sets and approval.\\n    /// @param owner Address of the account setting the approval.\\n    /// @param spender Address of the allowed account.\\n    /// @param value Number of approved units.\\n    event Approval(address indexed owner, address indexed spender, uint256 value);\\n\\n    /// @notice Transfers token from holder to another address.\\n    /// @param to Address to send tokens to.\\n    /// @param value Number of token units to send.\\n    /// @return success Bool the transaction was successful.\\n    function transfer(address to, uint256 value) external returns (bool success);\\n\\n    /// @notice Allows spender to transfer tokens from the holder.\\n    /// @param from Address of the token holder.\\n    /// @param to Address to send tokens to.\\n    /// @param value Number of units to transfer.\\n    /// @return success Bool the transaction was successful.\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 value\\n    ) external returns (bool success);\\n\\n    /// @notice Allows a holder to approve a spender.\\n    /// @param spender Address of the token spender.\\n    /// @param value Number of units to be approved.\\n    /// @return success Bool the transaction was successful.\\n    function approve(address spender, uint256 value) external returns (bool success);\\n\\n    /// @notice Returns token balance for an address.\\n    /// @param who Address to query balance for.\\n    /// @return Number of units held.\\n    function balanceOf(address who) external view returns (uint256);\\n\\n    /// @notice Returns token allowance of an address to another address.\\n    /// @param owner Address of token hodler.\\n    /// @param spender Address of the token spender.\\n    /// @return Number of allowed units.\\n    function allowance(address owner, address spender) external view returns (uint256);\\n\\n    /// @notice Returns the total supply of the token.\\n    /// @return Number of issued units.\\n    function totalSupply() external view returns (uint256);\\n}\\n\",\"keccak256\":\"0x3ba0ff41a9dbfc83e4b1e8909b38cd833462ac6c82a83347d00cfcce4862b1bb\",\"license\":\"Apache 2.0\"},\"contracts/tokens/UnlimitedAllowanceToken/UnlimitedAllowanceToken.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport {ERC20} from \\\"../ERC20/ERC20.sol\\\";\\n\\nabstract contract UnlimitedAllowanceToken is ERC20 {\\n    uint256 private constant _MAX_UINT = type(uint256).max;\\n\\n    /// @dev ERC20 transferFrom, modified such that an allowance of _MAX_UINT represents an unlimited allowance.\\n    /// @param from Address to transfer from.\\n    /// @param to Address to transfer to.\\n    /// @param value Amount to transfer.\\n    /// @return Success of transfer.\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 value\\n    ) external override returns (bool) {\\n        uint256 allowance = _allowed[from][msg.sender];\\n        require(_balances[from] >= value && allowance >= value && _balances[to] + value >= _balances[to]);\\n        _balances[to] += value;\\n        _balances[from] -= value;\\n        if (allowance < _MAX_UINT) {\\n            _allowed[from][msg.sender] -= value;\\n        }\\n        emit Transfer(from, to, value);\\n        return true;\\n    }\\n}\\n\",\"keccak256\":\"0x62420e7fddb60059f338ff252773aea39d0ddb7342cfbacaeb989113810eb504\",\"license\":\"Apache 2.0\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516108ee3803806108ee83398101604081905261002f916100a1565b600380546001600160a01b03199081166001600160a01b039586161790915560048054909116928416929092179091556a084595161401484a0000006000818155919092168152600160205260409020556100e4565b80516001600160a01b038116811461009c57600080fd5b919050565b6000806000606084860312156100b657600080fd5b6100bf84610085565b92506100cd60208501610085565b91506100db60408501610085565b90509250925092565b6107fb806100f36000396000f3fe608060405234801561001057600080fd5b50600436106100ea5760003560e01c806351892f071161008c578063882f7e8311610066578063882f7e831461022457806395d89b4114610237578063a9059cbb14610259578063dd62ed3e1461026c57600080fd5b806351892f07146101d357806370a08231146101e857806379c650681461021157600080fd5b806318160ddd116100c857806318160ddd1461017c57806323b872dd14610193578063313ce567146101a65780633f04d040146101c057600080fd5b806306fdde03146100ef578063075461721461012e578063095ea7b314610159575b600080fd5b6101186040518060400160405280600a8152602001692934b3b7902a37b5b2b760b11b81525081565b6040516101259190610664565b60405180910390f35b600354610141906001600160a01b031681565b6040516001600160a01b039091168152602001610125565b61016c6101673660046106ce565b6102a5565b6040519015158152602001610125565b61018560005481565b604051908152602001610125565b61016c6101a13660046106f8565b610312565b6101ae601281565b60405160ff9091168152602001610125565b600454610141906001600160a01b031681565b6101e66101e1366004610734565b61047e565b005b6101856101f6366004610734565b6001600160a01b031660009081526001602052604090205490565b6101e661021f3660046106ce565b6104b7565b6101e6610232366004610734565b610555565b6101186040518060400160405280600381526020016247524760e81b81525081565b61016c6102673660046106ce565b61058e565b61018561027a366004610756565b6001600160a01b03918216600090815260026020908152604080832093909416825291909152205490565b3360008181526002602090815260408083206001600160a01b038716808552925280832085905551919290917f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925906103009086815260200190565b60405180910390a35060015b92915050565b6001600160a01b0383166000818152600260209081526040808320338452825280832054938352600190915281205490919083118015906103535750828110155b801561038057506001600160a01b03841660009081526001602052604090205461037d848261079f565b10155b61038957600080fd5b6001600160a01b038416600090815260016020526040812080548592906103b190849061079f565b90915550506001600160a01b038516600090815260016020526040812080548592906103de9084906107b2565b9091555050600019811015610426576001600160a01b0385166000908152600260209081526040808320338452909152812080548592906104209084906107b2565b90915550505b836001600160a01b0316856001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef8560405161046b91815260200190565b60405180910390a3506001949350505050565b6004546001600160a01b0316331461049557600080fd5b600380546001600160a01b0319166001600160a01b0392909216919091179055565b6003546001600160a01b031633146104ce57600080fd5b6001600160a01b038216600090815260016020526040812080548392906104f690849061079f565b925050819055508060008082825461050e919061079f565b90915550506040518181526001600160a01b038316907fb9144c96c86541f6fa89c9f2f02495cccf4b08cd6643e26d34ee00aa586558a89060200160405180910390a25050565b6004546001600160a01b0316331461056c57600080fd5b600480546001600160a01b0319166001600160a01b0392909216919091179055565b3360009081526001602052604081205482118015906105cd57506001600160a01b0383166000908152600160205260409020546105cb838261079f565b115b6105d657600080fd5b33600090815260016020526040812080548492906105f59084906107b2565b90915550506001600160a01b0383166000908152600160205260408120805484929061062290849061079f565b90915550506040518281526001600160a01b0384169033907fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef90602001610300565b600060208083528351808285015260005b8181101561069157858101830151858201604001528201610675565b506000604082860101526040601f19601f8301168501019250505092915050565b80356001600160a01b03811681146106c957600080fd5b919050565b600080604083850312156106e157600080fd5b6106ea836106b2565b946020939093013593505050565b60008060006060848603121561070d57600080fd5b610716846106b2565b9250610724602085016106b2565b9150604084013590509250925092565b60006020828403121561074657600080fd5b61074f826106b2565b9392505050565b6000806040838503121561076957600080fd5b610772836106b2565b9150610780602084016106b2565b90509250929050565b634e487b7160e01b600052601160045260246000fd5b8082018082111561030c5761030c610789565b8181038181111561030c5761030c61078956fea26469706673582212200446a4f873028a36db7fdd7e26765b6d0c158ad513bec44dafc87a810fd835a364736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100ea5760003560e01c806351892f071161008c578063882f7e8311610066578063882f7e831461022457806395d89b4114610237578063a9059cbb14610259578063dd62ed3e1461026c57600080fd5b806351892f07146101d357806370a08231146101e857806379c650681461021157600080fd5b806318160ddd116100c857806318160ddd1461017c57806323b872dd14610193578063313ce567146101a65780633f04d040146101c057600080fd5b806306fdde03146100ef578063075461721461012e578063095ea7b314610159575b600080fd5b6101186040518060400160405280600a8152602001692934b3b7902a37b5b2b760b11b81525081565b6040516101259190610664565b60405180910390f35b600354610141906001600160a01b031681565b6040516001600160a01b039091168152602001610125565b61016c6101673660046106ce565b6102a5565b6040519015158152602001610125565b61018560005481565b604051908152602001610125565b61016c6101a13660046106f8565b610312565b6101ae601281565b60405160ff9091168152602001610125565b600454610141906001600160a01b031681565b6101e66101e1366004610734565b61047e565b005b6101856101f6366004610734565b6001600160a01b031660009081526001602052604090205490565b6101e661021f3660046106ce565b6104b7565b6101e6610232366004610734565b610555565b6101186040518060400160405280600381526020016247524760e81b81525081565b61016c6102673660046106ce565b61058e565b61018561027a366004610756565b6001600160a01b03918216600090815260026020908152604080832093909416825291909152205490565b3360008181526002602090815260408083206001600160a01b038716808552925280832085905551919290917f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925906103009086815260200190565b60405180910390a35060015b92915050565b6001600160a01b0383166000818152600260209081526040808320338452825280832054938352600190915281205490919083118015906103535750828110155b801561038057506001600160a01b03841660009081526001602052604090205461037d848261079f565b10155b61038957600080fd5b6001600160a01b038416600090815260016020526040812080548592906103b190849061079f565b90915550506001600160a01b038516600090815260016020526040812080548592906103de9084906107b2565b9091555050600019811015610426576001600160a01b0385166000908152600260209081526040808320338452909152812080548592906104209084906107b2565b90915550505b836001600160a01b0316856001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef8560405161046b91815260200190565b60405180910390a3506001949350505050565b6004546001600160a01b0316331461049557600080fd5b600380546001600160a01b0319166001600160a01b0392909216919091179055565b6003546001600160a01b031633146104ce57600080fd5b6001600160a01b038216600090815260016020526040812080548392906104f690849061079f565b925050819055508060008082825461050e919061079f565b90915550506040518181526001600160a01b038316907fb9144c96c86541f6fa89c9f2f02495cccf4b08cd6643e26d34ee00aa586558a89060200160405180910390a25050565b6004546001600160a01b0316331461056c57600080fd5b600480546001600160a01b0319166001600160a01b0392909216919091179055565b3360009081526001602052604081205482118015906105cd57506001600160a01b0383166000908152600160205260409020546105cb838261079f565b115b6105d657600080fd5b33600090815260016020526040812080548492906105f59084906107b2565b90915550506001600160a01b0383166000908152600160205260408120805484929061062290849061079f565b90915550506040518281526001600160a01b0384169033907fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef90602001610300565b600060208083528351808285015260005b8181101561069157858101830151858201604001528201610675565b506000604082860101526040601f19601f8301168501019250505092915050565b80356001600160a01b03811681146106c957600080fd5b919050565b600080604083850312156106e157600080fd5b6106ea836106b2565b946020939093013593505050565b60008060006060848603121561070d57600080fd5b610716846106b2565b9250610724602085016106b2565b9150604084013590509250925092565b60006020828403121561074657600080fd5b61074f826106b2565b9392505050565b6000806040838503121561076957600080fd5b610772836106b2565b9150610780602084016106b2565b90509250929050565b634e487b7160e01b600052601160045260246000fd5b8082018082111561030c5761030c610789565b8181038181111561030c5761030c61078956fea26469706673582212200446a4f873028a36db7fdd7e26765b6d0c158ad513bec44dafc87a810fd835a364736f6c63430008110033",
+  "devdoc": {
+    "author": "Gabriele Rigo - <gab@rigoblock.com>",
+    "kind": "dev",
+    "methods": {
+      "allowance(address,address)": {
+        "params": {
+          "owner": "Address of token hodler.",
+          "spender": "Address of the token spender."
+        },
+        "returns": {
+          "_0": "Number of allowed units."
+        }
+      },
+      "approve(address,uint256)": {
+        "params": {
+          "spender": "Address of the token spender.",
+          "value": "Number of units to be approved."
+        },
+        "returns": {
+          "success": "Bool the transaction was successful."
+        }
+      },
+      "changeMintingAddress(address)": {
+        "params": {
+          "newAddress": "Address of the new minter."
+        }
+      },
+      "changeRigoblockAddress(address)": {
+        "params": {
+          "newAddress": "Address of the new Dao."
+        }
+      },
+      "mintToken(address,uint256)": {
+        "details": "Mint method is reserved for minter module.",
+        "params": {
+          "amount": "Number of minted tokens.",
+          "recipient": "Address receiving the new tokens."
+        }
+      },
+      "transfer(address,uint256)": {
+        "params": {
+          "to": "Address to send tokens to.",
+          "value": "Number of token units to send."
+        },
+        "returns": {
+          "success": "Bool the transaction was successful."
+        }
+      },
+      "transferFrom(address,address,uint256)": {
+        "details": "ERC20 transferFrom, modified such that an allowance of _MAX_UINT represents an unlimited allowance.",
+        "params": {
+          "from": "Address to transfer from.",
+          "to": "Address to transfer to.",
+          "value": "Amount to transfer."
+        },
+        "returns": {
+          "_0": "Success of transfer."
+        }
+      }
+    },
+    "stateVariables": {
+      "minter": {
+        "return": "Address of the minter.",
+        "returns": {
+          "_0": "Address of the minter."
+        }
+      },
+      "rigoblock": {
+        "return": "Address of the Dao.",
+        "returns": {
+          "_0": "Address of the Dao."
+        }
+      }
+    },
+    "title": "Rigo Token - Rules of the Rigo token.",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "Approval(address,address,uint256)": {
+        "notice": "Emitted when a token holder sets and approval."
+      },
+      "TokenMinted(address,uint256)": {
+        "notice": "Emitted when new tokens have been minted."
+      },
+      "Transfer(address,address,uint256)": {
+        "notice": "Emitted when a token is transferred."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "allowance(address,address)": {
+        "notice": "Returns token allowance of an address to another address."
+      },
+      "approve(address,uint256)": {
+        "notice": "Allows a holder to approve a spender."
+      },
+      "changeMintingAddress(address)": {
+        "notice": "Allows Rigoblock Dao to update minter."
+      },
+      "changeRigoblockAddress(address)": {
+        "notice": "Allows Rigoblock Dao to update its address."
+      },
+      "mintToken(address,uint256)": {
+        "notice": "Allows minter to create new tokens."
+      },
+      "minter()": {
+        "notice": "Returns the address of the minter."
+      },
+      "rigoblock()": {
+        "notice": "Returns the address of the Rigoblock Dao."
+      },
+      "totalSupply()": {
+        "notice": "Returns the total supply of the token."
+      },
+      "transfer(address,uint256)": {
+        "notice": "Transfers token from holder to another address."
+      }
+    },
+    "notice": "UnlimitedAllowanceToken is ERC20",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 14563,
+        "contract": "contracts/rigoToken/rigoToken/RigoToken.sol:RigoToken",
+        "label": "totalSupply",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 14567,
+        "contract": "contracts/rigoToken/rigoToken/RigoToken.sol:RigoToken",
+        "label": "_balances",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 14573,
+        "contract": "contracts/rigoToken/rigoToken/RigoToken.sol:RigoToken",
+        "label": "_allowed",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))"
+      },
+      {
+        "astId": 7621,
+        "contract": "contracts/rigoToken/rigoToken/RigoToken.sol:RigoToken",
+        "label": "minter",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_address"
+      },
+      {
+        "astId": 7625,
+        "contract": "contracts/rigoToken/rigoToken/RigoToken.sol:RigoToken",
+        "label": "rigoblock",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(address => uint256))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_uint256)"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
