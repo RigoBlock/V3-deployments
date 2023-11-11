@@ -1,0 +1,258 @@
+{
+  "address": "0xc1AdDa7605d2DC47Dd91A930c978Cd6a18D2D760",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "governance",
+          "type": "address"
+        }
+      ],
+      "name": "GovernanceCreated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "governanceStrategy",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "proposalThreshold",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "quorumThreshold",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum IGovernanceState.TimeType",
+          "name": "timeType",
+          "type": "uint8"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "createGovernance",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "governance",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "parameters",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "implementation",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "governanceStrategy",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "proposalThreshold",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "quorumThreshold",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum IGovernanceState.TimeType",
+              "name": "timeType",
+              "type": "uint8"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct IRigoblockGovernanceFactory.Parameters",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xefba97f1b2a1b74bef890c5c60600de0448bd372bf3d10044f8174866d51a0b5",
+  "receipt": {
+    "to": "0x914d7Fec6aaC8cd542e72Bca78B30650d45643d7",
+    "from": "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "contractAddress": null,
+    "transactionIndex": 0,
+    "gasUsed": "756460",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x745885b6a92ddf9daca563d37d6db80b6140535857cfad90d4da9ba21596b270",
+    "transactionHash": "0xefba97f1b2a1b74bef890c5c60600de0448bd372bf3d10044f8174866d51a0b5",
+    "logs": [],
+    "blockNumber": 8467619,
+    "cumulativeGasUsed": "756460",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "ddaa16d64cc41ec9e7df5c1081b4e1ec",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"governance\",\"type\":\"address\"}],\"name\":\"GovernanceCreated\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"governanceStrategy\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"proposalThreshold\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"quorumThreshold\",\"type\":\"uint256\"},{\"internalType\":\"enum IGovernanceState.TimeType\",\"name\":\"timeType\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"createGovernance\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"governance\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"parameters\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"governanceStrategy\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"proposalThreshold\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"quorumThreshold\",\"type\":\"uint256\"},{\"internalType\":\"enum IGovernanceState.TimeType\",\"name\":\"timeType\",\"type\":\"uint8\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"internalType\":\"struct IRigoblockGovernanceFactory.Parameters\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"createGovernance(address,address,uint256,uint256,uint8,string)\":{\"params\":{\"governanceStrategy\":\"Address of the voting strategy.\",\"implementation\":\"Address of the governance implementation contract.\",\"name\":\"Human readable string of the name.\",\"proposalThreshold\":\"Number of votes required for creating a new proposal.\",\"quorumThreshold\":\"Number of votes required for execution.\",\"timeType\":\"Enum of time type (block number or timestamp).\"},\"returns\":{\"governance\":\"Address of the new governance.\"}},\"parameters()\":{\"returns\":{\"_0\":\"Tuple of the governance parameters.\"}}},\"version\":1},\"userdoc\":{\"events\":{\"GovernanceCreated(address)\":{\"notice\":\"Emitted when a governance is created.\"}},\"kind\":\"user\",\"methods\":{\"createGovernance(address,address,uint256,uint256,uint8,string)\":{\"notice\":\"Creates a new governance proxy.\"},\"parameters()\":{\"notice\":\"Returns the governance initialization parameters at proxy deploy.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/governance/proxies/RigoblockGovernanceFactory.sol\":\"RigoblockGovernanceFactory\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/governance/IRigoblockGovernance.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0\\n/*\\n\\n  Copyright 2023 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"./interfaces/governance/IGovernanceEvents.sol\\\";\\nimport \\\"./interfaces/governance/IGovernanceInitializer.sol\\\";\\nimport \\\"./interfaces/governance/IGovernanceState.sol\\\";\\nimport \\\"./interfaces/governance/IGovernanceUpgrade.sol\\\";\\nimport \\\"./interfaces/governance/IGovernanceVoting.sol\\\";\\n\\ninterface IRigoblockGovernance is\\n    IGovernanceEvents,\\n    IGovernanceInitializer,\\n    IGovernanceUpgrade,\\n    IGovernanceVoting,\\n    IGovernanceState\\n{}\\n\",\"keccak256\":\"0xfbc59c1a4a4b8e98cca0c8c419aa41196db9395f7fe38b0da1ccdd558cc49b6b\",\"license\":\"Apache-2.0\"},\"contracts/governance/interfaces/IRigoblockGovernanceFactory.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\n/*\\n\\n Copyright 2017-2022 RigoBlock, Rigo Investment Sagl, Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../IRigoblockGovernance.sol\\\";\\n\\n// solhint-disable-next-line\\ninterface IRigoblockGovernanceFactory {\\n    /// @notice Emitted when a governance is created.\\n    /// @param governance Address of the governance proxy.\\n    event GovernanceCreated(address governance);\\n\\n    /// @notice Creates a new governance proxy.\\n    /// @param implementation Address of the governance implementation contract.\\n    /// @param governanceStrategy Address of the voting strategy.\\n    /// @param proposalThreshold Number of votes required for creating a new proposal.\\n    /// @param quorumThreshold Number of votes required for execution.\\n    /// @param timeType Enum of time type (block number or timestamp).\\n    /// @param name Human readable string of the name.\\n    /// @return governance Address of the new governance.\\n    function createGovernance(\\n        address implementation,\\n        address governanceStrategy,\\n        uint256 proposalThreshold,\\n        uint256 quorumThreshold,\\n        IRigoblockGovernance.TimeType timeType,\\n        string calldata name\\n    ) external returns (address governance);\\n\\n    struct Parameters {\\n        /// @notice Address of the governance implementation contract.\\n        address implementation;\\n        /// @notice Address of the voting strategy.\\n        address governanceStrategy;\\n        /// @notice Number of votes required for creating a new proposal.\\n        uint256 proposalThreshold;\\n        /// @notice Number of votes required for execution.\\n        uint256 quorumThreshold;\\n        /// @notice Type of time chosed, block number of timestamp.\\n        IRigoblockGovernance.TimeType timeType;\\n        /// @notice String of the name of the application.\\n        string name;\\n    }\\n\\n    /// @notice Returns the governance initialization parameters at proxy deploy.\\n    /// @return Tuple of the governance parameters.\\n    function parameters() external view returns (Parameters memory);\\n}\\n\",\"keccak256\":\"0xe13ee4c410a4777d1202fc32c245a7266cd9b6f59b2eca695954b68209594294\",\"license\":\"Apache-2.0-or-later\"},\"contracts/governance/interfaces/governance/IGovernanceEvents.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0\\n/*\\n\\n  Copyright 2023 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"./IGovernanceVoting.sol\\\";\\n\\ninterface IGovernanceEvents {\\n    /// @notice Emitted when a new proposal is created.\\n    /// @param proposer Address of the proposer.\\n    /// @param proposalId Number of the proposal.\\n    /// @param actions Struct array of actions (targets, datas, values).\\n    /// @param startBlockOrTime Timestamp in seconds after which proposal can be voted on.\\n    /// @param endBlockOrTime Timestamp in seconds after which proposal can be executed.\\n    /// @param description String description of proposal.\\n    event ProposalCreated(\\n        address proposer,\\n        uint256 proposalId,\\n        IGovernanceVoting.ProposedAction[] actions,\\n        uint256 startBlockOrTime,\\n        uint256 endBlockOrTime,\\n        string description\\n    );\\n\\n    /// @notice Emitted when a proposal is executed.\\n    /// @param proposalId Number of the proposal.\\n    event ProposalExecuted(uint256 proposalId);\\n\\n    /// @notice Emmited when the governance strategy is upgraded.\\n    /// @param newStrategy Address of the new strategy contract.\\n    event StrategyUpgraded(address newStrategy);\\n\\n    /// @notice Emitted when voting thresholds get updated.\\n    /// @dev Only governance can update thresholds.\\n    /// @param proposalThreshold Number of votes required to add a proposal.\\n    /// @param quorumThreshold Number of votes required to execute a proposal.\\n    event ThresholdsUpdated(uint256 proposalThreshold, uint256 quorumThreshold);\\n\\n    /// @notice Emitted when implementation written to proxy storage.\\n    /// @dev Emitted also at first variable initialization.\\n    /// @param newImplementation Address of the new implementation.\\n    event Upgraded(address indexed newImplementation);\\n\\n    /// @notice Emitted when a voter votes.\\n    /// @param voter Address of the voter.\\n    /// @param proposalId Number of the proposal.\\n    /// @param voteType Number of vote type.\\n    /// @param votingPower Number of votes.\\n    event VoteCast(address voter, uint256 proposalId, IGovernanceVoting.VoteType voteType, uint256 votingPower);\\n}\\n\",\"keccak256\":\"0x67a905fce6d0b2f78461f1fdd6265858fc8b7791fa1f181be0e85dda6995095f\",\"license\":\"Apache-2.0\"},\"contracts/governance/interfaces/governance/IGovernanceInitializer.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0\\n/*\\n\\n  Copyright 2023 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface IGovernanceInitializer {\\n    /// @notice Initializes the Rigoblock Governance.\\n    /// @dev Params are stored in factory and read from there.\\n    function initializeGovernance() external;\\n}\\n\",\"keccak256\":\"0x81b5986d7f88ddc8e9f02953c1ef292688747faf2ee678d42bd7aa4f51727525\",\"license\":\"Apache-2.0\"},\"contracts/governance/interfaces/governance/IGovernanceState.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0\\n/*\\n\\n  Copyright 2023 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"./IGovernanceVoting.sol\\\";\\n\\ninterface IGovernanceState {\\n    enum ProposalState {\\n        Pending,\\n        Active,\\n        Canceled,\\n        Qualified,\\n        Defeated,\\n        Succeeded,\\n        Queued,\\n        Expired,\\n        Executed\\n    }\\n\\n    enum TimeType {\\n        Blocknumber,\\n        Timestamp\\n    }\\n\\n    struct Proposal {\\n        uint256 actionsLength;\\n        uint256 startBlockOrTime;\\n        uint256 endBlockOrTime;\\n        uint256 votesFor;\\n        uint256 votesAgainst;\\n        uint256 votesAbstain;\\n        bool executed;\\n    }\\n\\n    struct ProposalWrapper {\\n        Proposal proposal;\\n        IGovernanceVoting.ProposedAction[] proposedAction;\\n    }\\n\\n    /// @notice Returns the actions proposed for a given proposal.\\n    /// @param proposalId Number of the proposal.\\n    /// @return proposedActions Array of tuple of proposed actions.\\n    function getActions(uint256 proposalId)\\n        external\\n        view\\n        returns (IGovernanceVoting.ProposedAction[] memory proposedActions);\\n\\n    /// @notice Returns a proposal for a given id.\\n    /// @param proposalId The number of the proposal.\\n    /// @return proposalWrapper Tuple wrapper of the proposal and proposed actions tuples.\\n    function getProposalById(uint256 proposalId) external view returns (ProposalWrapper memory proposalWrapper);\\n\\n    /// @notice Returns the state of a proposal.\\n    /// @param proposalId Number of the proposal.\\n    /// @return Number of proposal state.\\n    function getProposalState(uint256 proposalId) external view returns (ProposalState);\\n\\n    struct Receipt {\\n        bool hasVoted;\\n        uint96 votes;\\n        IGovernanceVoting.VoteType voteType;\\n    }\\n\\n    /// @notice Returns the receipt of a voter for a given proposal.\\n    /// @param proposalId Number of the proposal.\\n    /// @param voter Address of the voter.\\n    /// @return Tuple of voter receipt.\\n    function getReceipt(uint256 proposalId, address voter) external view returns (Receipt memory);\\n\\n    /// @notice Computes the current voting power of the given account.\\n    /// @param account The address of the account.\\n    /// @return votingPower The current voting power of the given account.\\n    function getVotingPower(address account) external view returns (uint256 votingPower);\\n\\n    struct GovernanceParameters {\\n        address strategy;\\n        uint256 proposalThreshold;\\n        uint256 quorumThreshold;\\n        TimeType timeType;\\n    }\\n\\n    struct EnhancedParams {\\n        GovernanceParameters params;\\n        string name;\\n        string version;\\n    }\\n\\n    /// @notice Returns the governance parameters.\\n    /// @return Tuple of the governance parameters.\\n    function governanceParameters() external view returns (EnhancedParams memory);\\n\\n    /// @notice Returns the name of the governace.\\n    /// @return Human readable string of the name.\\n    function name() external view returns (string memory);\\n\\n    /// @notice Returns the total number of proposals.\\n    /// @return count The number of proposals.\\n    function proposalCount() external view returns (uint256 count);\\n\\n    /// @notice Returns all proposals ever made to the governance.\\n    /// @return proposalWrapper Tuple array of all governance proposals.\\n    function proposals() external view returns (ProposalWrapper[] memory proposalWrapper);\\n\\n    /// @notice Returns the voting period.\\n    /// @return Number of blocks or seconds.\\n    function votingPeriod() external view returns (uint256);\\n}\\n\",\"keccak256\":\"0x908a600952dfe4492ee92447a99539adfe9be4978bf601a7814c6a5af7a48140\",\"license\":\"Apache-2.0\"},\"contracts/governance/interfaces/governance/IGovernanceUpgrade.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0\\n/*\\n\\n  Copyright 2023 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface IGovernanceUpgrade {\\n    /// @notice Updates the proposal and quorum thresholds to the given values.\\n    /// @dev Only callable by the governance contract itself.\\n    /// @dev Thresholds can only be updated via a successful governance proposal.\\n    /// @param newProposalThreshold The new value for the proposal threshold.\\n    /// @param newQuorumThreshold The new value for the quorum threshold.\\n    function updateThresholds(uint256 newProposalThreshold, uint256 newQuorumThreshold) external;\\n\\n    /// @notice Updates the governance implementation address.\\n    /// @dev Only callable after successful voting.\\n    /// @param newImplementation Address of the new governance implementation contract.\\n    function upgradeImplementation(address newImplementation) external;\\n\\n    /// @notice Updates the governance strategy plugin.\\n    /// @dev Only callable by the governance contract itself.\\n    /// @param newStrategy Address of the new strategy contract.\\n    function upgradeStrategy(address newStrategy) external;\\n}\\n\",\"keccak256\":\"0xbae785d4fbbf815c137bee6de57e05db1faa9953a4bc477bebcd10392e2996d4\",\"license\":\"Apache-2.0\"},\"contracts/governance/interfaces/governance/IGovernanceVoting.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0\\n/*\\n\\n  Copyright 2023 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"./IGovernanceEvents.sol\\\";\\n\\ninterface IGovernanceVoting {\\n    enum VoteType {\\n        For,\\n        Against,\\n        Abstain\\n    }\\n\\n    /// @notice Casts a vote for the given proposal.\\n    /// @dev Only callable during the voting period for that proposal. One address can only vote once.\\n    /// @param proposalId The ID of the proposal to vote on.\\n    /// @param voteType Whether to support, not support or abstain.\\n    function castVote(uint256 proposalId, VoteType voteType) external;\\n\\n    /// @notice Casts a vote for the given proposal, by signature.\\n    /// @dev Only callable during the voting period for that proposal. One voter can only vote once.\\n    /// @param proposalId The ID of the proposal to vote on.\\n    /// @param voteType Whether to support, not support or abstain.\\n    /// @param v the v field of the signature.\\n    /// @param r the r field of the signature.\\n    /// @param s the s field of the signature.\\n    function castVoteBySignature(\\n        uint256 proposalId,\\n        VoteType voteType,\\n        uint8 v,\\n        bytes32 r,\\n        bytes32 s\\n    ) external;\\n\\n    /// @notice Executes a proposal that has passed and is currently executable.\\n    /// @param proposalId The ID of the proposal to execute.\\n    function execute(uint256 proposalId) external payable;\\n\\n    struct ProposedAction {\\n        address target;\\n        bytes data;\\n        uint256 value;\\n    }\\n\\n    /// @notice Creates a proposal on the the given actions. Must have at least `proposalThreshold`.\\n    /// @dev Must have at least `proposalThreshold` of voting power to call this function.\\n    /// @param actions The proposed actions. An action specifies a contract call.\\n    /// @param description A text description for the proposal.\\n    /// @return proposalId The ID of the newly created proposal.\\n    function propose(ProposedAction[] calldata actions, string calldata description)\\n        external\\n        returns (uint256 proposalId);\\n}\\n\",\"keccak256\":\"0x6c33e6a81368ae6c155e6bf6b1e1e62045a4f4d5a7712589ebcb152ac15a78e5\",\"license\":\"Apache-2.0\"},\"contracts/governance/proxies/RigoblockGovernanceFactory.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\n/*\\n\\n Copyright 2023 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport \\\"./RigoblockGovernanceProxy.sol\\\";\\nimport \\\"../IRigoblockGovernance.sol\\\";\\nimport \\\"../interfaces/IRigoblockGovernanceFactory.sol\\\";\\n\\n// solhint-disable-next-line\\ncontract RigoblockGovernanceFactory is IRigoblockGovernanceFactory {\\n    Parameters private _parameters;\\n\\n    // @inheritdoc IRigoblockGovernanceFactory\\n    function createGovernance(\\n        address implementation,\\n        address governanceStrategy,\\n        uint256 proposalThreshold,\\n        uint256 quorumThreshold,\\n        IRigoblockGovernance.TimeType timeType,\\n        string calldata name\\n    ) external returns (address governance) {\\n        assert(_isContract(implementation));\\n        assert(_isContract(governanceStrategy));\\n\\n        // we write to storage to allow proxy to read initialization parameters\\n        _parameters = Parameters({\\n            implementation: implementation,\\n            governanceStrategy: governanceStrategy,\\n            proposalThreshold: proposalThreshold,\\n            quorumThreshold: quorumThreshold,\\n            timeType: timeType,\\n            name: name\\n        });\\n        governance = address(new RigoblockGovernanceProxy{salt: keccak256(abi.encode(msg.sender, name))}());\\n\\n        delete _parameters;\\n        emit GovernanceCreated(governance);\\n    }\\n\\n    // @inheritdoc IRigoblockGovernanceFactory\\n    function parameters() external view override returns (Parameters memory) {\\n        return _parameters;\\n    }\\n\\n    /// @dev Returns whether an address is a contract.\\n    /// @return Bool target address has code.\\n    function _isContract(address target) private view returns (bool) {\\n        return target.code.length > 0;\\n    }\\n}\\n\",\"keccak256\":\"0x3ee18dbab4ed0eddb3ce8fd51a67b2ae75b618ebe9563aacf932c04038950f1f\",\"license\":\"Apache-2.0-or-later\"},\"contracts/governance/proxies/RigoblockGovernanceProxy.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0\\n/*\\n\\n  Copyright 2023 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport \\\"../interfaces/IRigoblockGovernanceFactory.sol\\\";\\n\\ncontract RigoblockGovernanceProxy {\\n    /// @notice Emitted when implementation written to proxy storage.\\n    /// @dev Emitted also at first variable initialization.\\n    /// @param newImplementation Address of the new implementation.\\n    event Upgraded(address indexed newImplementation);\\n\\n    // implementation slot is used to store implementation address, a contract which implements the governance logic.\\n    // Reduced deployment cost by using internal variable.\\n    bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;\\n\\n    /// @notice Sets address of implementation contract.\\n    constructor() payable {\\n        // store implementation address in implementation slot value\\n        assert(_IMPLEMENTATION_SLOT == bytes32(uint256(keccak256(\\\"eip1967.proxy.implementation\\\")) - 1));\\n\\n        // we retrieve the set implementation from the factory storage\\n        address implementation = IRigoblockGovernanceFactory(msg.sender).parameters().implementation;\\n\\n        // we store the implementation address\\n        _getImplementation().implementation = implementation;\\n        emit Upgraded(implementation);\\n\\n        // initialize governance\\n        // abi.encodeWithSelector(IRigoblockGovernance.initializeGovernance.selector)\\n        (, bytes memory returnData) = implementation.delegatecall(abi.encodeWithSelector(0xe9134903));\\n\\n        // we must assert initialization didn't fail, otherwise it could fail silently and still deploy the governance.\\n        assert(returnData.length == 0);\\n    }\\n\\n    /* solhint-disable no-complex-fallback */\\n    /// @notice Fallback function forwards all transactions and returns all received return data.\\n    fallback() external payable {\\n        address implementation = _getImplementation().implementation;\\n        // solhint-disable-next-line no-inline-assembly\\n        assembly {\\n            calldatacopy(0, 0, calldatasize())\\n            let success := delegatecall(gas(), implementation, 0, calldatasize(), 0, 0)\\n            returndatacopy(0, 0, returndatasize())\\n            if eq(success, 0) {\\n                revert(0, returndatasize())\\n            }\\n            return(0, returndatasize())\\n        }\\n    }\\n\\n    /// @notice Allows this contract to receive ether.\\n    receive() external payable {}\\n\\n    /* solhint-enable no-complex-fallback */\\n\\n    /// @notice Implementation slot is accessed directly.\\n    /// @dev Saves gas compared to using storage slot library.\\n    /// @param implementation Address of the implementation.\\n    struct ImplementationSlot {\\n        address implementation;\\n    }\\n\\n    /// @notice Method to read/write from/to implementation slot.\\n    /// @return s Storage slot of the governance implementation.\\n    function _getImplementation() private pure returns (ImplementationSlot storage s) {\\n        assembly {\\n            s.slot := _IMPLEMENTATION_SLOT\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xf39537aef19924b337eccbef7a3db722996e2e15465f5da908b0488d1a6f9397\",\"license\":\"Apache-2.0\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610cb8806100206000396000f3fe60806040523480156200001157600080fd5b50600436106200003a5760003560e01c806389035730146200003f578063a1cbaff41462000061575b600080fd5b6200004962000091565b604051620000589190620004d4565b60405180910390f35b620000786200007236600462000575565b620001df565b6040516001600160a01b03909116815260200162000058565b620000cb6040805160c081018252600080825260208201819052918101829052606081018290529060808201908152602001606081525090565b6040805160c081018252600080546001600160a01b03908116835260018054909116602084015260025493830193909352600354606083015260045491929091608084019160ff9091169081111562000128576200012862000476565b60018111156200013c576200013c62000476565b815260200160058201805462000152906200063d565b80601f016020809104026020016040519081016040528092919081815260200182805462000180906200063d565b8015620001d15780601f10620001a557610100808354040283529160200191620001d1565b820191906000526020600020905b815481529060010190602001808311620001b357829003601f168201915b505050505081525050905090565b60006001600160a01b0388163b620001fb57620001fb62000679565b6001600160a01b0387163b62000215576200021562000679565b6040518060c00160405280896001600160a01b03168152602001886001600160a01b031681526020018781526020018681526020018560018111156200025f576200025f62000476565b815260200184848080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920182905250939094525050825181546001600160a01b039182166001600160a01b0319918216178355602085015160018054919093169116178155604084015160025560608401516003556080840151600480549394509092909160ff1990911690838181111562000307576200030762000476565b021790555060a08201516005820190620003229082620006f8565b50506040516200033c9150339085908590602001620007c5565b6040516020818303038152906040528051906020012060405162000360906200040b565b8190604051809103906000f590508015801562000381573d6000803e3d6000fd5b50600080546001600160a01b03199081168255600180549091169055600281905560038190556004805460ff1916905590915080620003c260058262000419565b50506040516001600160a01b03821681527f7d665fbb2700ef23f717fb231fcd73aff73a785b5121909fb9bf32de3039de839060200160405180910390a1979650505050505050565b61047d806200080683390190565b50805462000427906200063d565b6000825580601f1062000438575050565b601f0160209004906000526020600020908101906200045891906200045b565b50565b5b808211156200047257600081556001016200045c565b5090565b634e487b7160e01b600052602160045260246000fd5b6000815180845260005b81811015620004b45760208185018101518683018201520162000496565b506000602082860101526020601f19601f83011685010191505092915050565b60208152600060018060a01b038084511660208401528060208501511660408401525060408301516060830152606083015160808301526080830151600281106200052f57634e487b7160e01b600052602160045260246000fd5b8060a08401525060a083015160c0808401526200055060e08401826200048c565b949350505050565b80356001600160a01b03811681146200057057600080fd5b919050565b600080600080600080600060c0888a0312156200059157600080fd5b6200059c8862000558565b9650620005ac6020890162000558565b95506040880135945060608801359350608088013560028110620005cf57600080fd5b925060a088013567ffffffffffffffff80821115620005ed57600080fd5b818a0191508a601f8301126200060257600080fd5b8135818111156200061257600080fd5b8b60208285010111156200062557600080fd5b60208301945080935050505092959891949750929550565b600181811c908216806200065257607f821691505b6020821081036200067357634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052600160045260246000fd5b634e487b7160e01b600052604160045260246000fd5b601f821115620006f357600081815260208120601f850160051c81016020861015620006ce5750805b601f850160051c820191505b81811015620006ef57828155600101620006da565b5050505b505050565b815167ffffffffffffffff8111156200071557620007156200068f565b6200072d816200072684546200063d565b84620006a5565b602080601f8311600181146200076557600084156200074c5750858301515b600019600386901b1c1916600185901b178555620006ef565b600085815260208120601f198616915b82811015620007965788860151825594840194600190910190840162000775565b5085821015620007b55787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b6001600160a01b03841681526040602082018190528101829052818360608301376000818301606090810191909152601f909201601f191601019291505056fe608060405261002f60017f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbd6101ab565b60008051602061045d8339815191521461004b5761004b6101d2565b6000336001600160a01b031663890357306040518163ffffffff1660e01b8152600401600060405180830381865afa15801561008b573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f191682016040526100b391908101906102ed565b5190508060008051602061045d83398151915280546001600160a01b0319166001600160a01b03928316179055604051908216907fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a260408051600481526024810182526020810180516001600160e01b031663e913490360e01b17905290516000916001600160a01b0384169161014f91906103a6565b600060405180830381855af49150503d806000811461018a576040519150601f19603f3d011682016040523d82523d6000602084013e61018f565b606091505b5091505080516000146101a4576101a46101d2565b50506103c2565b818103818111156101cc57634e487b7160e01b600052601160045260246000fd5b92915050565b634e487b7160e01b600052600160045260246000fd5b634e487b7160e01b600052604160045260246000fd5b60405160c081016001600160401b0381118282101715610220576102206101e8565b60405290565b80516001600160a01b038116811461023d57600080fd5b919050565b60005b8381101561025d578181015183820152602001610245565b50506000910152565b600082601f83011261027757600080fd5b81516001600160401b0380821115610291576102916101e8565b604051601f8301601f19908116603f011681019082821181831017156102b9576102b96101e8565b816040528381528660208588010111156102d257600080fd5b6102e3846020830160208901610242565b9695505050505050565b6000602082840312156102ff57600080fd5b81516001600160401b038082111561031657600080fd5b9083019060c0828603121561032a57600080fd5b6103326101fe565b61033b83610226565b815261034960208401610226565b6020820152604083015160408201526060830151606082015260808301516002811061037457600080fd5b608082015260a08301518281111561038b57600080fd5b61039787828601610266565b60a08301525095945050505050565b600082516103b8818460208701610242565b9190910192915050565b608d806103d06000396000f3fe608060405236600a57005b7f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b03163660008037600080366000845af43d6000803e806051573d6000fd5b503d6000f3fea2646970667358221220b46548fd0886cca68ec07b40b37c6d687a9b39ebefe4fc50ce2a0f50e26277ab64736f6c63430008110033360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbca26469706673582212200114d65018832463a479fb84d03b352d431ea4fcb18714a47998250420e8d80164736f6c63430008110033",
+  "deployedBytecode": "0x60806040523480156200001157600080fd5b50600436106200003a5760003560e01c806389035730146200003f578063a1cbaff41462000061575b600080fd5b6200004962000091565b604051620000589190620004d4565b60405180910390f35b620000786200007236600462000575565b620001df565b6040516001600160a01b03909116815260200162000058565b620000cb6040805160c081018252600080825260208201819052918101829052606081018290529060808201908152602001606081525090565b6040805160c081018252600080546001600160a01b03908116835260018054909116602084015260025493830193909352600354606083015260045491929091608084019160ff9091169081111562000128576200012862000476565b60018111156200013c576200013c62000476565b815260200160058201805462000152906200063d565b80601f016020809104026020016040519081016040528092919081815260200182805462000180906200063d565b8015620001d15780601f10620001a557610100808354040283529160200191620001d1565b820191906000526020600020905b815481529060010190602001808311620001b357829003601f168201915b505050505081525050905090565b60006001600160a01b0388163b620001fb57620001fb62000679565b6001600160a01b0387163b62000215576200021562000679565b6040518060c00160405280896001600160a01b03168152602001886001600160a01b031681526020018781526020018681526020018560018111156200025f576200025f62000476565b815260200184848080601f0160208091040260200160405190810160405280939291908181526020018383808284376000920182905250939094525050825181546001600160a01b039182166001600160a01b0319918216178355602085015160018054919093169116178155604084015160025560608401516003556080840151600480549394509092909160ff1990911690838181111562000307576200030762000476565b021790555060a08201516005820190620003229082620006f8565b50506040516200033c9150339085908590602001620007c5565b6040516020818303038152906040528051906020012060405162000360906200040b565b8190604051809103906000f590508015801562000381573d6000803e3d6000fd5b50600080546001600160a01b03199081168255600180549091169055600281905560038190556004805460ff1916905590915080620003c260058262000419565b50506040516001600160a01b03821681527f7d665fbb2700ef23f717fb231fcd73aff73a785b5121909fb9bf32de3039de839060200160405180910390a1979650505050505050565b61047d806200080683390190565b50805462000427906200063d565b6000825580601f1062000438575050565b601f0160209004906000526020600020908101906200045891906200045b565b50565b5b808211156200047257600081556001016200045c565b5090565b634e487b7160e01b600052602160045260246000fd5b6000815180845260005b81811015620004b45760208185018101518683018201520162000496565b506000602082860101526020601f19601f83011685010191505092915050565b60208152600060018060a01b038084511660208401528060208501511660408401525060408301516060830152606083015160808301526080830151600281106200052f57634e487b7160e01b600052602160045260246000fd5b8060a08401525060a083015160c0808401526200055060e08401826200048c565b949350505050565b80356001600160a01b03811681146200057057600080fd5b919050565b600080600080600080600060c0888a0312156200059157600080fd5b6200059c8862000558565b9650620005ac6020890162000558565b95506040880135945060608801359350608088013560028110620005cf57600080fd5b925060a088013567ffffffffffffffff80821115620005ed57600080fd5b818a0191508a601f8301126200060257600080fd5b8135818111156200061257600080fd5b8b60208285010111156200062557600080fd5b60208301945080935050505092959891949750929550565b600181811c908216806200065257607f821691505b6020821081036200067357634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052600160045260246000fd5b634e487b7160e01b600052604160045260246000fd5b601f821115620006f357600081815260208120601f850160051c81016020861015620006ce5750805b601f850160051c820191505b81811015620006ef57828155600101620006da565b5050505b505050565b815167ffffffffffffffff8111156200071557620007156200068f565b6200072d816200072684546200063d565b84620006a5565b602080601f8311600181146200076557600084156200074c5750858301515b600019600386901b1c1916600185901b178555620006ef565b600085815260208120601f198616915b82811015620007965788860151825594840194600190910190840162000775565b5085821015620007b55787850151600019600388901b60f8161c191681555b5050505050600190811b01905550565b6001600160a01b03841681526040602082018190528101829052818360608301376000818301606090810191909152601f909201601f191601019291505056fe608060405261002f60017f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbd6101ab565b60008051602061045d8339815191521461004b5761004b6101d2565b6000336001600160a01b031663890357306040518163ffffffff1660e01b8152600401600060405180830381865afa15801561008b573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f191682016040526100b391908101906102ed565b5190508060008051602061045d83398151915280546001600160a01b0319166001600160a01b03928316179055604051908216907fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a260408051600481526024810182526020810180516001600160e01b031663e913490360e01b17905290516000916001600160a01b0384169161014f91906103a6565b600060405180830381855af49150503d806000811461018a576040519150601f19603f3d011682016040523d82523d6000602084013e61018f565b606091505b5091505080516000146101a4576101a46101d2565b50506103c2565b818103818111156101cc57634e487b7160e01b600052601160045260246000fd5b92915050565b634e487b7160e01b600052600160045260246000fd5b634e487b7160e01b600052604160045260246000fd5b60405160c081016001600160401b0381118282101715610220576102206101e8565b60405290565b80516001600160a01b038116811461023d57600080fd5b919050565b60005b8381101561025d578181015183820152602001610245565b50506000910152565b600082601f83011261027757600080fd5b81516001600160401b0380821115610291576102916101e8565b604051601f8301601f19908116603f011681019082821181831017156102b9576102b96101e8565b816040528381528660208588010111156102d257600080fd5b6102e3846020830160208901610242565b9695505050505050565b6000602082840312156102ff57600080fd5b81516001600160401b038082111561031657600080fd5b9083019060c0828603121561032a57600080fd5b6103326101fe565b61033b83610226565b815261034960208401610226565b6020820152604083015160408201526060830151606082015260808301516002811061037457600080fd5b608082015260a08301518281111561038b57600080fd5b61039787828601610266565b60a08301525095945050505050565b600082516103b8818460208701610242565b9190910192915050565b608d806103d06000396000f3fe608060405236600a57005b7f360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc546001600160a01b03163660008037600080366000845af43d6000803e806051573d6000fd5b503d6000f3fea2646970667358221220b46548fd0886cca68ec07b40b37c6d687a9b39ebefe4fc50ce2a0f50e26277ab64736f6c63430008110033360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbca26469706673582212200114d65018832463a479fb84d03b352d431ea4fcb18714a47998250420e8d80164736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "createGovernance(address,address,uint256,uint256,uint8,string)": {
+        "params": {
+          "governanceStrategy": "Address of the voting strategy.",
+          "implementation": "Address of the governance implementation contract.",
+          "name": "Human readable string of the name.",
+          "proposalThreshold": "Number of votes required for creating a new proposal.",
+          "quorumThreshold": "Number of votes required for execution.",
+          "timeType": "Enum of time type (block number or timestamp)."
+        },
+        "returns": {
+          "governance": "Address of the new governance."
+        }
+      },
+      "parameters()": {
+        "returns": {
+          "_0": "Tuple of the governance parameters."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "GovernanceCreated(address)": {
+        "notice": "Emitted when a governance is created."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "createGovernance(address,address,uint256,uint256,uint8,string)": {
+        "notice": "Creates a new governance proxy."
+      },
+      "parameters()": {
+        "notice": "Returns the governance initialization parameters at proxy deploy."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 2209,
+        "contract": "contracts/governance/proxies/RigoblockGovernanceFactory.sol:RigoblockGovernanceFactory",
+        "label": "_parameters",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_struct(Parameters)518_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_enum(TimeType)604": {
+        "encoding": "inplace",
+        "label": "enum IGovernanceState.TimeType",
+        "numberOfBytes": "1"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Parameters)518_storage": {
+        "encoding": "inplace",
+        "label": "struct IRigoblockGovernanceFactory.Parameters",
+        "members": [
+          {
+            "astId": 501,
+            "contract": "contracts/governance/proxies/RigoblockGovernanceFactory.sol:RigoblockGovernanceFactory",
+            "label": "implementation",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 504,
+            "contract": "contracts/governance/proxies/RigoblockGovernanceFactory.sol:RigoblockGovernanceFactory",
+            "label": "governanceStrategy",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_address"
+          },
+          {
+            "astId": 507,
+            "contract": "contracts/governance/proxies/RigoblockGovernanceFactory.sol:RigoblockGovernanceFactory",
+            "label": "proposalThreshold",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 510,
+            "contract": "contracts/governance/proxies/RigoblockGovernanceFactory.sol:RigoblockGovernanceFactory",
+            "label": "quorumThreshold",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 514,
+            "contract": "contracts/governance/proxies/RigoblockGovernanceFactory.sol:RigoblockGovernanceFactory",
+            "label": "timeType",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_enum(TimeType)604"
+          },
+          {
+            "astId": 517,
+            "contract": "contracts/governance/proxies/RigoblockGovernanceFactory.sol:RigoblockGovernanceFactory",
+            "label": "name",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_string_storage"
+          }
+        ],
+        "numberOfBytes": "192"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
