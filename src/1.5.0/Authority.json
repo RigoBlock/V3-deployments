@@ -1,0 +1,559 @@
+{
+  "address": "0xe35129A1E0BdB913CF6Fd8332E9d3533b5F41472",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "old",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "current",
+          "type": "address"
+        }
+      ],
+      "name": "NewOwner",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint8",
+          "name": "permissionType",
+          "type": "uint8"
+        }
+      ],
+      "name": "PermissionAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint8",
+          "name": "permissionType",
+          "type": "uint8"
+        }
+      ],
+      "name": "PermissionRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "RemovedMethod",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "WhitelistedMethod",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        }
+      ],
+      "name": "addMethod",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "getApplicationAdapter",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "isWhitelistedFactory",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "isWhitelister",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        }
+      ],
+      "name": "removeMethod",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "adapter",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "isWhitelisted",
+          "type": "bool"
+        }
+      ],
+      "name": "setAdapter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "factory",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "isWhitelisted",
+          "type": "bool"
+        }
+      ],
+      "name": "setFactory",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "whitelister",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "isWhitelisted",
+          "type": "bool"
+        }
+      ],
+      "name": "setWhitelister",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xbdf727715443fa51e0c2086c051d37a011fb7a6703104e36f38b0e5cb89ea500",
+  "receipt": {
+    "to": "0x914d7Fec6aaC8cd542e72Bca78B30650d45643d7",
+    "from": "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "contractAddress": null,
+    "transactionIndex": 66,
+    "gasUsed": "814965",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xd8ccd3122984ef418c28de0ff7f0d662ac7b2db9a900df48d8ffd977ef868ea2",
+    "transactionHash": "0xbdf727715443fa51e0c2086c051d37a011fb7a6703104e36f38b0e5cb89ea500",
+    "logs": [],
+    "blockNumber": 7807790,
+    "cumulativeGasUsed": "8546817",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6"
+  ],
+  "solcInputHash": "d4b54f99081d42612f5f3a501b8bf888",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"old\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"current\",\"type\":\"address\"}],\"name\":\"NewOwner\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"permissionType\",\"type\":\"uint8\"}],\"name\":\"PermissionAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint8\",\"name\":\"permissionType\",\"type\":\"uint8\"}],\"name\":\"PermissionRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"adapter\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes4\",\"name\":\"selector\",\"type\":\"bytes4\"}],\"name\":\"RemovedMethod\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"adapter\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes4\",\"name\":\"selector\",\"type\":\"bytes4\"}],\"name\":\"WhitelistedMethod\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"selector\",\"type\":\"bytes4\"},{\"internalType\":\"address\",\"name\":\"adapter\",\"type\":\"address\"}],\"name\":\"addMethod\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"selector\",\"type\":\"bytes4\"}],\"name\":\"getApplicationAdapter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"}],\"name\":\"isWhitelistedFactory\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"}],\"name\":\"isWhitelister\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"selector\",\"type\":\"bytes4\"},{\"internalType\":\"address\",\"name\":\"adapter\",\"type\":\"address\"}],\"name\":\"removeMethod\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"adapter\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"isWhitelisted\",\"type\":\"bool\"}],\"name\":\"setAdapter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"factory\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"isWhitelisted\",\"type\":\"bool\"}],\"name\":\"setFactory\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"setOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"whitelister\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"isWhitelisted\",\"type\":\"bool\"}],\"name\":\"setWhitelister\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Gabriele Rigo - <gab@rigoblock.com>\",\"kind\":\"dev\",\"methods\":{\"addMethod(bytes4,address)\":{\"params\":{\"adapter\":\"Address of the adapter implementing the method.\",\"selector\":\"Bytes4 hex of the method selector.\"}},\"getApplicationAdapter(bytes4)\":{\"params\":{\"selector\":\"Hex of the method signature.\"},\"returns\":{\"_0\":\"Address of the adapter.\"}},\"isWhitelistedFactory(address)\":{\"params\":{\"target\":\"Address of the target factory.\"},\"returns\":{\"_0\":\"Bool is whitelisted.\"}},\"isWhitelister(address)\":{\"params\":{\"target\":\"Address of the target whitelister.\"},\"returns\":{\"_0\":\"Bool is whitelisted.\"}},\"removeMethod(bytes4,address)\":{\"params\":{\"adapter\":\"Address of the adapter implementing the method.\",\"selector\":\"Bytes4 hex of the method selector.\"}},\"setAdapter(address,bool)\":{\"params\":{\"adapter\":\"Address of the target adapter.\",\"isWhitelisted\":\"Bool whitelisted.\"}},\"setFactory(address,bool)\":{\"params\":{\"factory\":\"Address of the target factory.\",\"isWhitelisted\":\"Bool whitelisted.\"}},\"setOwner(address)\":{\"details\":\"Method restricted to owner.\",\"params\":{\"newOwner\":\"Address of the new owner.\"}},\"setWhitelister(address,bool)\":{\"params\":{\"isWhitelisted\":\"Bool whitelisted.\",\"whitelister\":\"Address of the whitelister.\"}}},\"title\":\"Authority - Allows to set up the base rules of the protocol.\",\"version\":1},\"userdoc\":{\"events\":{\"NewOwner(address,address)\":{\"notice\":\"Emitted when new owner is set.\"},\"PermissionAdded(address,address,uint8)\":{\"notice\":\"Adds a permission for a role.\"},\"PermissionRemoved(address,address,uint8)\":{\"notice\":\"Removes a permission for a role.\"},\"RemovedMethod(address,address,bytes4)\":{\"notice\":\"Removes an approved method.\"},\"WhitelistedMethod(address,address,bytes4)\":{\"notice\":\"Approves a new method.\"}},\"kind\":\"user\",\"methods\":{\"addMethod(bytes4,address)\":{\"notice\":\"Allows a whitelister to whitelist a method.We do not save list of approved as better queried by events.\"},\"getApplicationAdapter(bytes4)\":{\"notice\":\"Returns the address of the adapter associated to the signature.\"},\"isWhitelistedFactory(address)\":{\"notice\":\"Provides whether a factory is whitelisted.\"},\"isWhitelister(address)\":{\"notice\":\"Provides whether an address is whitelister.\"},\"owner()\":{\"notice\":\"Returns the address of the owner.\"},\"removeMethod(bytes4,address)\":{\"notice\":\"Allows a whitelister to remove a method.\"},\"setAdapter(address,bool)\":{\"notice\":\"Allows owner to set extension adapter address.\"},\"setFactory(address,bool)\":{\"notice\":\"Allows an admin to set factory permission.\"},\"setOwner(address)\":{\"notice\":\"Allows current owner to set a new owner address.\"},\"setWhitelister(address,bool)\":{\"notice\":\"Allows the owner to set whitelister permission.Whitelister permission is required to approve methods in extensions adapter.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/protocol/deps/Authority.sol\":\"Authority\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/protocol/deps/Authority.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2017-2018 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport {OwnedUninitialized as Owned} from \\\"../../utils/owned/OwnedUninitialized.sol\\\";\\nimport {IAuthority} from \\\"../interfaces/IAuthority.sol\\\";\\n\\n/// @title Authority - Allows to set up the base rules of the protocol.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ncontract Authority is Owned, IAuthority {\\n    mapping(bytes4 => address) private _adapterBySelector;\\n    mapping(address => Permission) private _permission;\\n    mapping(Role => address[]) private _roleToList;\\n\\n    modifier onlyWhitelister() {\\n        require(isWhitelister(msg.sender), \\\"AUTHORITY_SENDER_NOT_WHITELISTER_ERROR\\\");\\n        _;\\n    }\\n\\n    constructor(address newOwner) {\\n        owner = newOwner;\\n    }\\n\\n    /*\\n     * CORE FUNCTIONS\\n     */\\n    /// @inheritdoc IAuthority\\n    function addMethod(bytes4 selector, address adapter) external override onlyWhitelister {\\n        require(_permission[adapter].authorized[Role.ADAPTER], \\\"ADAPTER_NOT_WHITELISTED_ERROR\\\");\\n        require(_adapterBySelector[selector] == address(0), \\\"SELECTOR_EXISTS_ERROR\\\");\\n        _adapterBySelector[selector] = adapter;\\n        emit WhitelistedMethod(msg.sender, adapter, selector);\\n    }\\n\\n    /// @inheritdoc IAuthority\\n    function removeMethod(bytes4 selector, address adapter) external override onlyWhitelister {\\n        require(_adapterBySelector[selector] != address(0), \\\"AUTHORITY_METHOD_NOT_APPROVED_ERROR\\\");\\n        delete _adapterBySelector[selector];\\n        emit RemovedMethod(msg.sender, adapter, selector);\\n    }\\n\\n    /// @inheritdoc IAuthority\\n    function setWhitelister(address whitelister, bool isWhitelisted) external override onlyOwner {\\n        _changePermission(whitelister, isWhitelisted, Role.WHITELISTER);\\n    }\\n\\n    /// @inheritdoc IAuthority\\n    function setAdapter(address adapter, bool isWhitelisted) external override onlyOwner {\\n        _changePermission(adapter, isWhitelisted, Role.ADAPTER);\\n    }\\n\\n    /// @inheritdoc IAuthority\\n    function setFactory(address factory, bool isWhitelisted) external override onlyOwner {\\n        _changePermission(factory, isWhitelisted, Role.FACTORY);\\n    }\\n\\n    /*\\n     * CONSTANT PUBLIC FUNCTIONS\\n     */\\n    /// @inheritdoc IAuthority\\n    function isWhitelistedFactory(address target) external view override returns (bool) {\\n        return _permission[target].authorized[Role.FACTORY];\\n    }\\n\\n    function getApplicationAdapter(bytes4 selector) external view override returns (address) {\\n        return _adapterBySelector[selector];\\n    }\\n\\n    /// @inheritdoc IAuthority\\n    function isWhitelister(address target) public view override returns (bool) {\\n        return _permission[target].authorized[Role.WHITELISTER];\\n    }\\n\\n    /*\\n     * PRIVATE METHODS\\n     */\\n    function _changePermission(\\n        address target,\\n        bool isWhitelisted,\\n        Role role\\n    ) private {\\n        require(target != address(0), \\\"AUTHORITY_TARGET_NULL_ADDRESS_ERROR\\\");\\n        if (isWhitelisted) {\\n            require(!_permission[target].authorized[role], \\\"ALREADY_WHITELISTED_ERROR\\\");\\n            _permission[target].authorized[role] = isWhitelisted;\\n            _roleToList[role].push(target);\\n            emit PermissionAdded(msg.sender, target, uint8(role));\\n        } else {\\n            require(_permission[target].authorized[role], \\\"NOT_ALREADY_WHITELISTED\\\");\\n            delete _permission[target].authorized[role];\\n            uint256 length = _roleToList[role].length;\\n            for (uint256 i = 0; i < length; i++) {\\n                if (_roleToList[role][i] == target) {\\n                    _roleToList[role][i] = _roleToList[role][length - 1];\\n                    _roleToList[role].pop();\\n                    emit PermissionRemoved(msg.sender, target, uint8(role));\\n\\n                    break;\\n                }\\n            }\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xd5951fc4e31e44cd7b159989689538a4ac2586a78575990378e0f1a208fc2d36\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/IAuthority.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2017-2018 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.7.0 <0.9.0;\\n\\n/// @title Authority Interface - Allows interaction with the Authority contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IAuthority {\\n    /// @notice Adds a permission for a role.\\n    /// @dev Possible roles are Role.ADAPTER, Role.FACTORY, Role.WHITELISTER\\n    /// @param from Address of the method caller.\\n    /// @param target Address of the approved wallet.\\n    /// @param permissionType Enum type of permission.\\n    event PermissionAdded(address indexed from, address indexed target, uint8 indexed permissionType);\\n\\n    /// @notice Removes a permission for a role.\\n    /// @dev Possible roles are Role.ADAPTER, Role.FACTORY, Role.WHITELISTER\\n    /// @param from Address of the  method caller.\\n    /// @param target Address of the approved wallet.\\n    /// @param permissionType Enum type of permission.\\n    event PermissionRemoved(address indexed from, address indexed target, uint8 indexed permissionType);\\n\\n    /// @notice Removes an approved method.\\n    /// @dev Removes a mapping of method selector to adapter according to eip1967.\\n    /// @param from Address of the  method caller.\\n    /// @param adapter Address of the adapter.\\n    /// @param selector Bytes4 of the method signature.\\n    event RemovedMethod(address indexed from, address indexed adapter, bytes4 indexed selector);\\n\\n    /// @notice Approves a new method.\\n    /// @dev Adds a mapping of method selector to adapter according to eip1967.\\n    /// @param from Address of the  method caller.\\n    /// @param adapter  Address of the adapter.\\n    /// @param selector Bytes4 of the method signature.\\n    event WhitelistedMethod(address indexed from, address indexed adapter, bytes4 indexed selector);\\n\\n    enum Role {\\n        ADAPTER,\\n        FACTORY,\\n        WHITELISTER\\n    }\\n\\n    /// @notice Mapping of permission type to bool.\\n    /// @param Mapping of type of permission to bool is authorized.\\n    struct Permission {\\n        mapping(Role => bool) authorized;\\n    }\\n\\n    /// @notice Allows a whitelister to whitelist a method.\\n    /// @param selector Bytes4 hex of the method selector.\\n    /// @param adapter Address of the adapter implementing the method.\\n    /// @notice We do not save list of approved as better queried by events.\\n    function addMethod(bytes4 selector, address adapter) external;\\n\\n    /// @notice Allows a whitelister to remove a method.\\n    /// @param selector Bytes4 hex of the method selector.\\n    /// @param adapter Address of the adapter implementing the method.\\n    function removeMethod(bytes4 selector, address adapter) external;\\n\\n    /// @notice Allows owner to set extension adapter address.\\n    /// @param adapter Address of the target adapter.\\n    /// @param isWhitelisted Bool whitelisted.\\n    function setAdapter(address adapter, bool isWhitelisted) external;\\n\\n    /// @notice Allows an admin to set factory permission.\\n    /// @param factory Address of the target factory.\\n    /// @param isWhitelisted Bool whitelisted.\\n    function setFactory(address factory, bool isWhitelisted) external;\\n\\n    /// @notice Allows the owner to set whitelister permission.\\n    /// @param whitelister Address of the whitelister.\\n    /// @param isWhitelisted Bool whitelisted.\\n    /// @notice Whitelister permission is required to approve methods in extensions adapter.\\n    function setWhitelister(address whitelister, bool isWhitelisted) external;\\n\\n    /// @notice Returns the address of the adapter associated to the signature.\\n    /// @param selector Hex of the method signature.\\n    /// @return Address of the adapter.\\n    function getApplicationAdapter(bytes4 selector) external view returns (address);\\n\\n    /// @notice Provides whether a factory is whitelisted.\\n    /// @param target Address of the target factory.\\n    /// @return Bool is whitelisted.\\n    function isWhitelistedFactory(address target) external view returns (bool);\\n\\n    /// @notice Provides whether an address is whitelister.\\n    /// @param target Address of the target whitelister.\\n    /// @return Bool is whitelisted.\\n    function isWhitelister(address target) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x339f452eb775e896db7d352ad5d65006cfabb0aeec8a35209812aab0a4fcb4c1\",\"license\":\"Apache 2.0\"},\"contracts/utils/owned/IOwnedUninitialized.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.7.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Interface - Allows interaction with the pool contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IOwnedUninitialized {\\n    /// @notice Emitted when new owner is set.\\n    /// @param old Address of the previous owner.\\n    /// @param current Address of the new owner.\\n    event NewOwner(address indexed old, address indexed current);\\n\\n    /// @notice Allows current owner to set a new owner address.\\n    /// @dev Method restricted to owner.\\n    /// @param newOwner Address of the new owner.\\n    function setOwner(address newOwner) external;\\n\\n    /// @notice Returns the address of the owner.\\n    /// @return Address of the owner.\\n    function owner() external view returns (address);\\n}\\n\",\"keccak256\":\"0xf920bf35d912de09628f7b6b222eaa1c744f7b0b50839b4aa15f91dc4437a832\",\"license\":\"Apache 2.0\"},\"contracts/utils/owned/OwnedUninitialized.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.7.0 <0.9.0;\\n\\nimport {IOwnedUninitialized} from \\\"./IOwnedUninitialized.sol\\\";\\n\\nabstract contract OwnedUninitialized is IOwnedUninitialized {\\n    /// @inheritdoc IOwnedUninitialized\\n    address public override owner;\\n\\n    modifier onlyOwner() {\\n        require(msg.sender == owner, \\\"OWNED_CALLER_IS_NOT_OWNER_ERROR\\\");\\n        _;\\n    }\\n\\n    /// @inheritdoc IOwnedUninitialized\\n    function setOwner(address newOwner) public override onlyOwner {\\n        require(newOwner != address(0));\\n        address oldOWner = newOwner;\\n        owner = newOwner;\\n        emit NewOwner(oldOWner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0x27fbaf14646c4fcd29dc326b8d809dd5a6da95b95e42a5d62b1de6afc7639de7\",\"license\":\"Apache 2.0\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610de3380380610de383398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b610d50806100936000396000f3fe608060405234801561001057600080fd5b506004361061009e5760003560e01c8063c348fa1911610066578063c348fa1914610131578063c91b014914610164578063cd29d47314610177578063d9efcc1e1461018a578063dcb7a3e01461019d57600080fd5b806313af4035146100a3578063332f6465146100b857806371013c10146100cb5780637d0c269f146100de5780638da5cb5b14610106575b600080fd5b6100b66100b1366004610b4f565b6101b0565b005b6100b66100c6366004610b71565b610242565b6100b66100d9366004610b71565b61027c565b6100f16100ec366004610b4f565b6102b2565b60405190151581526020015b60405180910390f35b600054610119906001600160a01b031681565b6040516001600160a01b0390911681526020016100fd565b61011961013f366004610bc5565b6001600160e01b0319166000908152600160205260409020546001600160a01b031690565b6100b6610172366004610b71565b6102fb565b6100b6610185366004610be0565b610331565b6100b6610198366004610be0565b610495565b6100f16101ab366004610b4f565b610593565b6000546001600160a01b031633146101e35760405162461bcd60e51b81526004016101da90610c13565b60405180910390fd5b6001600160a01b0381166101f657600080fd5b600080546001600160a01b0319166001600160a01b0383169081178255604051839282917f70aea8d848e8a90fb7661b227dc522eb6395c3dac71b63cb59edd5c9899b23649190a35050565b6000546001600160a01b0316331461026c5760405162461bcd60e51b81526004016101da90610c13565b610278828260006105b3565b5050565b6000546001600160a01b031633146102a65760405162461bcd60e51b81526004016101da90610c13565b610278828260016105b3565b6001600160a01b038116600090815260026020819052604082209082905b60028111156102e1576102e1610c4a565b815260208101919091526040016000205460ff1692915050565b6000546001600160a01b031633146103255760405162461bcd60e51b81526004016101da90610c13565b610278828260026105b3565b61033a336102b2565b6103565760405162461bcd60e51b81526004016101da90610c60565b6001600160a01b038116600090815260026020908152604080832083805290915290205460ff166103c95760405162461bcd60e51b815260206004820152601d60248201527f414441505445525f4e4f545f57484954454c49535445445f4552524f5200000060448201526064016101da565b6001600160e01b031982166000908152600160205260409020546001600160a01b0316156104315760405162461bcd60e51b815260206004820152601560248201527429a2a622a1aa27a92fa2ac24a9aa29afa2a92927a960591b60448201526064016101da565b6001600160e01b0319821660008181526001602052604080822080546001600160a01b0319166001600160a01b0386169081179091559051909133917f4bfe05ca0802f4608ad79d1388e6dab1d51ea9d58cc5b040ef64b5fdf06f07479190a45050565b61049e336102b2565b6104ba5760405162461bcd60e51b81526004016101da90610c60565b6001600160e01b031982166000908152600160205260409020546001600160a01b03166105355760405162461bcd60e51b815260206004820152602360248201527f415554484f524954595f4d4554484f445f4e4f545f415050524f5645445f45526044820152622927a960e91b60648201526084016101da565b6001600160e01b0319821660008181526001602052604080822080546001600160a01b0319169055516001600160a01b0384169133917f39c1f105ed185188b27fb6ebe0d1f26e6bfa6e13f84427b7e47e977bbca2683d9190a45050565b6001600160a01b03811660009081526002602052604081208160016102d0565b6001600160a01b0383166106155760405162461bcd60e51b815260206004820152602360248201527f415554484f524954595f5441524745545f4e554c4c5f414444524553535f45526044820152622927a960e91b60648201526084016101da565b81156107db576001600160a01b038316600090815260026020819052604082209190839081111561064857610648610c4a565b600281111561065957610659610c4a565b815260208101919091526040016000205460ff16156106ba5760405162461bcd60e51b815260206004820152601960248201527f414c52454144595f57484954454c49535445445f4552524f520000000000000060448201526064016101da565b6001600160a01b038316600090815260026020819052604082208492909184908111156106e9576106e9610c4a565b60028111156106fa576106fa610c4a565b815260200190815260200160002060006101000a81548160ff0219169083151502179055506003600082600281111561073557610735610c4a565b600281111561074657610746610c4a565b8152602080820192909252604001600090812080546001810182559082529190200180546001600160a01b0319166001600160a01b03851617905580600281111561079357610793610c4a565b60ff16836001600160a01b0316336001600160a01b03167fc9925e1e7c78483bcaa1f9ddbd1415e0c31417ca72db22826cc78422c7fcae6460405160405180910390a4505050565b6001600160a01b038316600090815260026020819052604082209190839081111561080857610808610c4a565b600281111561081957610819610c4a565b815260208101919091526040016000205460ff166108795760405162461bcd60e51b815260206004820152601760248201527f4e4f545f414c52454144595f57484954454c495354454400000000000000000060448201526064016101da565b6001600160a01b03831660009081526002602081905260408220919083908111156108a6576108a6610c4a565b60028111156108b7576108b7610c4a565b815260208101919091526040016000908120805460ff191690556003818360028111156108e6576108e6610c4a565b60028111156108f7576108f7610c4a565b815260200190815260200160002080549050905060005b81811015610b2c57846001600160a01b03166003600085600281111561093657610936610c4a565b600281111561094757610947610c4a565b8152602001908152602001600020828154811061096657610966610ca6565b6000918252602090912001546001600160a01b031603610b1a576003600084600281111561099657610996610c4a565b60028111156109a7576109a7610c4a565b81526020019081526020016000206001836109c29190610cd2565b815481106109d2576109d2610ca6565b60009182526020822001546001600160a01b0316906003908560028111156109fc576109fc610c4a565b6002811115610a0d57610a0d610c4a565b81526020019081526020016000208281548110610a2c57610a2c610ca6565b9060005260206000200160006101000a8154816001600160a01b0302191690836001600160a01b0316021790555060036000846002811115610a7057610a70610c4a565b6002811115610a8157610a81610c4a565b8152602001908152602001600020805480610a9e57610a9e610ceb565b600082815260209020810160001990810180546001600160a01b0319169055019055826002811115610ad257610ad2610c4a565b60ff16856001600160a01b0316336001600160a01b03167fe3b51f8d90b37d00b380ddb149d86211a255d48b375094b2b9e467abb4b663ee60405160405180910390a4610b2c565b80610b2481610d01565b91505061090e565b5050505050565b80356001600160a01b0381168114610b4a57600080fd5b919050565b600060208284031215610b6157600080fd5b610b6a82610b33565b9392505050565b60008060408385031215610b8457600080fd5b610b8d83610b33565b915060208301358015158114610ba257600080fd5b809150509250929050565b80356001600160e01b031981168114610b4a57600080fd5b600060208284031215610bd757600080fd5b610b6a82610bad565b60008060408385031215610bf357600080fd5b610bfc83610bad565b9150610c0a60208401610b33565b90509250929050565b6020808252601f908201527f4f574e45445f43414c4c45525f49535f4e4f545f4f574e45525f4552524f5200604082015260600190565b634e487b7160e01b600052602160045260246000fd5b60208082526026908201527f415554484f524954595f53454e4445525f4e4f545f57484954454c49535445526040820152652fa2a92927a960d11b606082015260800190565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b81810381811115610ce557610ce5610cbc565b92915050565b634e487b7160e01b600052603160045260246000fd5b600060018201610d1357610d13610cbc565b506001019056fea2646970667358221220e5feb7bf111e6413ccdaa9582f879ba37e6c55b72e9311b571712991290e911164736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061009e5760003560e01c8063c348fa1911610066578063c348fa1914610131578063c91b014914610164578063cd29d47314610177578063d9efcc1e1461018a578063dcb7a3e01461019d57600080fd5b806313af4035146100a3578063332f6465146100b857806371013c10146100cb5780637d0c269f146100de5780638da5cb5b14610106575b600080fd5b6100b66100b1366004610b4f565b6101b0565b005b6100b66100c6366004610b71565b610242565b6100b66100d9366004610b71565b61027c565b6100f16100ec366004610b4f565b6102b2565b60405190151581526020015b60405180910390f35b600054610119906001600160a01b031681565b6040516001600160a01b0390911681526020016100fd565b61011961013f366004610bc5565b6001600160e01b0319166000908152600160205260409020546001600160a01b031690565b6100b6610172366004610b71565b6102fb565b6100b6610185366004610be0565b610331565b6100b6610198366004610be0565b610495565b6100f16101ab366004610b4f565b610593565b6000546001600160a01b031633146101e35760405162461bcd60e51b81526004016101da90610c13565b60405180910390fd5b6001600160a01b0381166101f657600080fd5b600080546001600160a01b0319166001600160a01b0383169081178255604051839282917f70aea8d848e8a90fb7661b227dc522eb6395c3dac71b63cb59edd5c9899b23649190a35050565b6000546001600160a01b0316331461026c5760405162461bcd60e51b81526004016101da90610c13565b610278828260006105b3565b5050565b6000546001600160a01b031633146102a65760405162461bcd60e51b81526004016101da90610c13565b610278828260016105b3565b6001600160a01b038116600090815260026020819052604082209082905b60028111156102e1576102e1610c4a565b815260208101919091526040016000205460ff1692915050565b6000546001600160a01b031633146103255760405162461bcd60e51b81526004016101da90610c13565b610278828260026105b3565b61033a336102b2565b6103565760405162461bcd60e51b81526004016101da90610c60565b6001600160a01b038116600090815260026020908152604080832083805290915290205460ff166103c95760405162461bcd60e51b815260206004820152601d60248201527f414441505445525f4e4f545f57484954454c49535445445f4552524f5200000060448201526064016101da565b6001600160e01b031982166000908152600160205260409020546001600160a01b0316156104315760405162461bcd60e51b815260206004820152601560248201527429a2a622a1aa27a92fa2ac24a9aa29afa2a92927a960591b60448201526064016101da565b6001600160e01b0319821660008181526001602052604080822080546001600160a01b0319166001600160a01b0386169081179091559051909133917f4bfe05ca0802f4608ad79d1388e6dab1d51ea9d58cc5b040ef64b5fdf06f07479190a45050565b61049e336102b2565b6104ba5760405162461bcd60e51b81526004016101da90610c60565b6001600160e01b031982166000908152600160205260409020546001600160a01b03166105355760405162461bcd60e51b815260206004820152602360248201527f415554484f524954595f4d4554484f445f4e4f545f415050524f5645445f45526044820152622927a960e91b60648201526084016101da565b6001600160e01b0319821660008181526001602052604080822080546001600160a01b0319169055516001600160a01b0384169133917f39c1f105ed185188b27fb6ebe0d1f26e6bfa6e13f84427b7e47e977bbca2683d9190a45050565b6001600160a01b03811660009081526002602052604081208160016102d0565b6001600160a01b0383166106155760405162461bcd60e51b815260206004820152602360248201527f415554484f524954595f5441524745545f4e554c4c5f414444524553535f45526044820152622927a960e91b60648201526084016101da565b81156107db576001600160a01b038316600090815260026020819052604082209190839081111561064857610648610c4a565b600281111561065957610659610c4a565b815260208101919091526040016000205460ff16156106ba5760405162461bcd60e51b815260206004820152601960248201527f414c52454144595f57484954454c49535445445f4552524f520000000000000060448201526064016101da565b6001600160a01b038316600090815260026020819052604082208492909184908111156106e9576106e9610c4a565b60028111156106fa576106fa610c4a565b815260200190815260200160002060006101000a81548160ff0219169083151502179055506003600082600281111561073557610735610c4a565b600281111561074657610746610c4a565b8152602080820192909252604001600090812080546001810182559082529190200180546001600160a01b0319166001600160a01b03851617905580600281111561079357610793610c4a565b60ff16836001600160a01b0316336001600160a01b03167fc9925e1e7c78483bcaa1f9ddbd1415e0c31417ca72db22826cc78422c7fcae6460405160405180910390a4505050565b6001600160a01b038316600090815260026020819052604082209190839081111561080857610808610c4a565b600281111561081957610819610c4a565b815260208101919091526040016000205460ff166108795760405162461bcd60e51b815260206004820152601760248201527f4e4f545f414c52454144595f57484954454c495354454400000000000000000060448201526064016101da565b6001600160a01b03831660009081526002602081905260408220919083908111156108a6576108a6610c4a565b60028111156108b7576108b7610c4a565b815260208101919091526040016000908120805460ff191690556003818360028111156108e6576108e6610c4a565b60028111156108f7576108f7610c4a565b815260200190815260200160002080549050905060005b81811015610b2c57846001600160a01b03166003600085600281111561093657610936610c4a565b600281111561094757610947610c4a565b8152602001908152602001600020828154811061096657610966610ca6565b6000918252602090912001546001600160a01b031603610b1a576003600084600281111561099657610996610c4a565b60028111156109a7576109a7610c4a565b81526020019081526020016000206001836109c29190610cd2565b815481106109d2576109d2610ca6565b60009182526020822001546001600160a01b0316906003908560028111156109fc576109fc610c4a565b6002811115610a0d57610a0d610c4a565b81526020019081526020016000208281548110610a2c57610a2c610ca6565b9060005260206000200160006101000a8154816001600160a01b0302191690836001600160a01b0316021790555060036000846002811115610a7057610a70610c4a565b6002811115610a8157610a81610c4a565b8152602001908152602001600020805480610a9e57610a9e610ceb565b600082815260209020810160001990810180546001600160a01b0319169055019055826002811115610ad257610ad2610c4a565b60ff16856001600160a01b0316336001600160a01b03167fe3b51f8d90b37d00b380ddb149d86211a255d48b375094b2b9e467abb4b663ee60405160405180910390a4610b2c565b80610b2481610d01565b91505061090e565b5050505050565b80356001600160a01b0381168114610b4a57600080fd5b919050565b600060208284031215610b6157600080fd5b610b6a82610b33565b9392505050565b60008060408385031215610b8457600080fd5b610b8d83610b33565b915060208301358015158114610ba257600080fd5b809150509250929050565b80356001600160e01b031981168114610b4a57600080fd5b600060208284031215610bd757600080fd5b610b6a82610bad565b60008060408385031215610bf357600080fd5b610bfc83610bad565b9150610c0a60208401610b33565b90509250929050565b6020808252601f908201527f4f574e45445f43414c4c45525f49535f4e4f545f4f574e45525f4552524f5200604082015260600190565b634e487b7160e01b600052602160045260246000fd5b60208082526026908201527f415554484f524954595f53454e4445525f4e4f545f57484954454c49535445526040820152652fa2a92927a960d11b606082015260800190565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b81810381811115610ce557610ce5610cbc565b92915050565b634e487b7160e01b600052603160045260246000fd5b600060018201610d1357610d13610cbc565b506001019056fea2646970667358221220e5feb7bf111e6413ccdaa9582f879ba37e6c55b72e9311b571712991290e911164736f6c63430008110033",
+  "devdoc": {
+    "author": "Gabriele Rigo - <gab@rigoblock.com>",
+    "kind": "dev",
+    "methods": {
+      "addMethod(bytes4,address)": {
+        "params": {
+          "adapter": "Address of the adapter implementing the method.",
+          "selector": "Bytes4 hex of the method selector."
+        }
+      },
+      "getApplicationAdapter(bytes4)": {
+        "params": {
+          "selector": "Hex of the method signature."
+        },
+        "returns": {
+          "_0": "Address of the adapter."
+        }
+      },
+      "isWhitelistedFactory(address)": {
+        "params": {
+          "target": "Address of the target factory."
+        },
+        "returns": {
+          "_0": "Bool is whitelisted."
+        }
+      },
+      "isWhitelister(address)": {
+        "params": {
+          "target": "Address of the target whitelister."
+        },
+        "returns": {
+          "_0": "Bool is whitelisted."
+        }
+      },
+      "removeMethod(bytes4,address)": {
+        "params": {
+          "adapter": "Address of the adapter implementing the method.",
+          "selector": "Bytes4 hex of the method selector."
+        }
+      },
+      "setAdapter(address,bool)": {
+        "params": {
+          "adapter": "Address of the target adapter.",
+          "isWhitelisted": "Bool whitelisted."
+        }
+      },
+      "setFactory(address,bool)": {
+        "params": {
+          "factory": "Address of the target factory.",
+          "isWhitelisted": "Bool whitelisted."
+        }
+      },
+      "setOwner(address)": {
+        "details": "Method restricted to owner.",
+        "params": {
+          "newOwner": "Address of the new owner."
+        }
+      },
+      "setWhitelister(address,bool)": {
+        "params": {
+          "isWhitelisted": "Bool whitelisted.",
+          "whitelister": "Address of the whitelister."
+        }
+      }
+    },
+    "title": "Authority - Allows to set up the base rules of the protocol.",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "NewOwner(address,address)": {
+        "notice": "Emitted when new owner is set."
+      },
+      "PermissionAdded(address,address,uint8)": {
+        "notice": "Adds a permission for a role."
+      },
+      "PermissionRemoved(address,address,uint8)": {
+        "notice": "Removes a permission for a role."
+      },
+      "RemovedMethod(address,address,bytes4)": {
+        "notice": "Removes an approved method."
+      },
+      "WhitelistedMethod(address,address,bytes4)": {
+        "notice": "Approves a new method."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "addMethod(bytes4,address)": {
+        "notice": "Allows a whitelister to whitelist a method.We do not save list of approved as better queried by events."
+      },
+      "getApplicationAdapter(bytes4)": {
+        "notice": "Returns the address of the adapter associated to the signature."
+      },
+      "isWhitelistedFactory(address)": {
+        "notice": "Provides whether a factory is whitelisted."
+      },
+      "isWhitelister(address)": {
+        "notice": "Provides whether an address is whitelister."
+      },
+      "owner()": {
+        "notice": "Returns the address of the owner."
+      },
+      "removeMethod(bytes4,address)": {
+        "notice": "Allows a whitelister to remove a method."
+      },
+      "setAdapter(address,bool)": {
+        "notice": "Allows owner to set extension adapter address."
+      },
+      "setFactory(address,bool)": {
+        "notice": "Allows an admin to set factory permission."
+      },
+      "setOwner(address)": {
+        "notice": "Allows current owner to set a new owner address."
+      },
+      "setWhitelister(address,bool)": {
+        "notice": "Allows the owner to set whitelister permission.Whitelister permission is required to approve methods in extensions adapter."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 17258,
+        "contract": "contracts/protocol/deps/Authority.sol:Authority",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 2475,
+        "contract": "contracts/protocol/deps/Authority.sol:Authority",
+        "label": "_adapterBySelector",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_bytes4,t_address)"
+      },
+      {
+        "astId": 2480,
+        "contract": "contracts/protocol/deps/Authority.sol:Authority",
+        "label": "_permission",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_struct(Permission)5918_storage)"
+      },
+      {
+        "astId": 2486,
+        "contract": "contracts/protocol/deps/Authority.sol:Authority",
+        "label": "_roleToList",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_enum(Role)5912,t_array(t_address)dyn_storage)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes4": {
+        "encoding": "inplace",
+        "label": "bytes4",
+        "numberOfBytes": "4"
+      },
+      "t_enum(Role)5912": {
+        "encoding": "inplace",
+        "label": "enum IAuthority.Role",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_struct(Permission)5918_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct IAuthority.Permission)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Permission)5918_storage"
+      },
+      "t_mapping(t_bytes4,t_address)": {
+        "encoding": "mapping",
+        "key": "t_bytes4",
+        "label": "mapping(bytes4 => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_mapping(t_enum(Role)5912,t_array(t_address)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_enum(Role)5912",
+        "label": "mapping(enum IAuthority.Role => address[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_address)dyn_storage"
+      },
+      "t_mapping(t_enum(Role)5912,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_enum(Role)5912",
+        "label": "mapping(enum IAuthority.Role => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_struct(Permission)5918_storage": {
+        "encoding": "inplace",
+        "label": "struct IAuthority.Permission",
+        "members": [
+          {
+            "astId": 5917,
+            "contract": "contracts/protocol/deps/Authority.sol:Authority",
+            "label": "authorized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_enum(Role)5912,t_bool)"
+          }
+        ],
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

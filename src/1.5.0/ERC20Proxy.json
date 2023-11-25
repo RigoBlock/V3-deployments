@@ -1,0 +1,335 @@
+{
+  "address": "0x28891F41eA506Ba7eA3Be9f2075AB0aa8b81dD29",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "AuthorizedAddressAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "AuthorizedAddressRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "stateMutability": "nonpayable",
+      "type": "fallback"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "addAuthorizedAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "authorities",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "authorized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAuthorizedAddresses",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getProxyId",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "removeAuthorizedAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "target",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "removeAuthorizedAddressAtIndex",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x4ca0e25bc0926f0a4cf92499d0883fbadf77ff8f47c3bc175e665c2c53170314",
+  "receipt": {
+    "to": "0x914d7Fec6aaC8cd542e72Bca78B30650d45643d7",
+    "from": "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "contractAddress": null,
+    "transactionIndex": 40,
+    "gasUsed": "656001",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xa4a14d639d1e54af45402575ab5f0657ba8b18a5c3004a2166a1d28022267e3b",
+    "transactionHash": "0x4ca0e25bc0926f0a4cf92499d0883fbadf77ff8f47c3bc175e665c2c53170314",
+    "logs": [],
+    "blockNumber": 7836943,
+    "cumulativeGasUsed": "11746203",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6"
+  ],
+  "solcInputHash": "656e34d5c2c173c2d18ee1cf3ed6b924",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"AuthorizedAddressAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"AuthorizedAddressRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"stateMutability\":\"nonpayable\",\"type\":\"fallback\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"}],\"name\":\"addAuthorizedAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"authorities\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"authorized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAuthorizedAddresses\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getProxyId\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"}],\"name\":\"removeAuthorizedAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"target\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"removeAuthorizedAddressAtIndex\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addAuthorizedAddress(address)\":{\"details\":\"Authorizes an address.\",\"params\":{\"target\":\"Address to authorize.\"}},\"getAuthorizedAddresses()\":{\"details\":\"Gets all authorized addresses.\",\"returns\":{\"_0\":\"Array of authorized addresses.\"}},\"getProxyId()\":{\"details\":\"Gets the proxy id associated with the proxy address.\",\"returns\":{\"_0\":\"Proxy id.\"}},\"removeAuthorizedAddress(address)\":{\"details\":\"Removes authorizion of an address.\",\"params\":{\"target\":\"Address to remove authorization from.\"}},\"removeAuthorizedAddressAtIndex(address,uint256)\":{\"details\":\"Removes authorizion of an address.\",\"params\":{\"index\":\"Index of target in authorities array.\",\"target\":\"Address to remove authorization from.\"}},\"transferOwnership(address)\":{\"details\":\"Change the owner of this contract.\",\"params\":{\"newOwner\":\"New owner address.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/utils/0xUtils/ERC20Proxy/ERC20Proxy.sol\":\"ERC20Proxy\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/utils/0xUtils/ERC20Proxy/ERC20Proxy.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n  Copyright 2018 ZeroEx Intl. 2022 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport \\\"./MixinAuthorizable.sol\\\";\\n\\ncontract ERC20Proxy is MixinAuthorizable {\\n    constructor(address _owner) Ownable(_owner) {}\\n\\n    // Id of this proxy.\\n    bytes4 internal constant PROXY_ID = bytes4(keccak256(\\\"ERC20Token(address)\\\"));\\n\\n    // solhint-disable-next-line payable-fallback\\n    fallback() external {\\n        assembly {\\n            // The first 4 bytes of calldata holds the function selector\\n            let selector := and(calldataload(0), 0xffffffff00000000000000000000000000000000000000000000000000000000)\\n\\n            // `transferFrom` will be called with the following parameters:\\n            // assetData Encoded byte array.\\n            // from Address to transfer asset from.\\n            // to Address to transfer asset to.\\n            // amount Amount of asset to transfer.\\n            // bytes4(keccak256(\\\"transferFrom(bytes,address,address,uint256)\\\")) = 0xa85e59e4\\n            if eq(selector, 0xa85e59e400000000000000000000000000000000000000000000000000000000) {\\n                // To lookup a value in a mapping, we load from the storage location keccak256(k, p),\\n                // where k is the key left padded to 32 bytes and p is the storage slot\\n                let start := mload(64)\\n                mstore(start, and(caller(), 0xffffffffffffffffffffffffffffffffffffffff))\\n                mstore(add(start, 32), authorized.slot)\\n\\n                // Revert if authorized[msg.sender] == false\\n                if iszero(sload(keccak256(start, 64))) {\\n                    // Revert with `Error(\\\"SENDER_NOT_AUTHORIZED\\\")`\\n                    mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000)\\n                    mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000)\\n                    mstore(64, 0x0000001553454e4445525f4e4f545f415554484f52495a454400000000000000)\\n                    mstore(96, 0)\\n                    revert(0, 100)\\n                }\\n\\n                // `transferFrom`.\\n                // The function is marked `external`, so no abi decodeding is done for\\n                // us. Instead, we expect the `calldata` memory to contain the\\n                // following:\\n                //\\n                // | Area     | Offset | Length  | Contents                            |\\n                // |----------|--------|---------|-------------------------------------|\\n                // | Header   | 0      | 4       | function selector                   |\\n                // | Params   |        | 4 * 32  | function parameters:                |\\n                // |          | 4      |         |   1. offset to assetData (*)        |\\n                // |          | 36     |         |   2. from                           |\\n                // |          | 68     |         |   3. to                             |\\n                // |          | 100    |         |   4. amount                         |\\n                // | Data     |        |         | assetData:                          |\\n                // |          | 132    | 32      | assetData Length                    |\\n                // |          | 164    | **      | assetData Contents                  |\\n                //\\n                // (*): offset is computed from start of function parameters, so offset\\n                //      by an additional 4 bytes in the calldata.\\n                //\\n                // (**): see table below to compute length of assetData Contents\\n                //\\n                // WARNING: The ABIv2 specification allows additional padding between\\n                //          the Params and Data section. This will result in a larger\\n                //          offset to assetData.\\n\\n                // Asset data itself is encoded as follows:\\n                //\\n                // | Area     | Offset | Length  | Contents                            |\\n                // |----------|--------|---------|-------------------------------------|\\n                // | Header   | 0      | 4       | function selector                   |\\n                // | Params   |        | 1 * 32  | function parameters:                |\\n                // |          | 4      | 12 + 20 |   1. token address                  |\\n\\n                // We construct calldata for the `token.transferFrom` ABI.\\n                // The layout of this calldata is in the table below.\\n                //\\n                // | Area     | Offset | Length  | Contents                            |\\n                // |----------|--------|---------|-------------------------------------|\\n                // | Header   | 0      | 4       | function selector                   |\\n                // | Params   |        | 3 * 32  | function parameters:                |\\n                // |          | 4      |         |   1. from                           |\\n                // |          | 36     |         |   2. to                             |\\n                // |          | 68     |         |   3. amount                         |\\n\\n                /////// Read token address from calldata ///////\\n                // * The token address is stored in `assetData`.\\n                //\\n                // * The \\\"offset to assetData\\\" is stored at offset 4 in the calldata (table 1).\\n                //   [assetDataOffsetFromParams = calldataload(4)]\\n                //\\n                // * Notes that the \\\"offset to assetData\\\" is relative to the \\\"Params\\\" area of calldata;\\n                //   add 4 bytes to account for the length of the \\\"Header\\\" area (table 1).\\n                //   [assetDataOffsetFromHeader = assetDataOffsetFromParams + 4]\\n                //\\n                // * The \\\"token address\\\" is offset 32+4=36 bytes into \\\"assetData\\\" (tables 1 & 2).\\n                //   [tokenOffset = assetDataOffsetFromHeader + 36 = calldataload(4) + 4 + 36]\\n                let token := calldataload(add(calldataload(4), 40))\\n\\n                /////// Setup Header Area ///////\\n                // This area holds the 4-byte `transferFrom` selector.\\n                // Any trailing data in transferFromSelector will be\\n                // overwritten in the next `mstore` call.\\n                mstore(0, 0x23b872dd00000000000000000000000000000000000000000000000000000000)\\n\\n                /////// Setup Params Area ///////\\n                // We copy the fields `from`, `to` and `amount` in bulk\\n                // from our own calldata to the new calldata.\\n                calldatacopy(4, 36, 96)\\n\\n                /////// Call `token.transferFrom` using the calldata ///////\\n                let success := call(\\n                    gas(), // forward all gas\\n                    token, // call address of token contract\\n                    0, // don't send any ETH\\n                    0, // pointer to start of input\\n                    100, // length of input\\n                    0, // write output over input\\n                    32 // output size should be 32 bytes\\n                )\\n\\n                /////// Check return data. ///////\\n                // If there is no return data, we assume the token incorrectly\\n                // does not return a bool. In this case we expect it to revert\\n                // on failure, which was handled above.\\n                // If the token does return data, we require that it is a single\\n                // nonzero 32 bytes value.\\n                // So the transfer succeeded if the call succeeded and either\\n                // returned nothing, or returned a non-zero 32 byte value.\\n                success := and(success, or(iszero(returndatasize()), and(eq(returndatasize(), 32), gt(mload(0), 0))))\\n                if success {\\n                    return(0, 0)\\n                }\\n\\n                // Revert with `Error(\\\"TRANSFER_FAILED\\\")`\\n                mstore(0, 0x08c379a000000000000000000000000000000000000000000000000000000000)\\n                mstore(32, 0x0000002000000000000000000000000000000000000000000000000000000000)\\n                mstore(64, 0x0000000f5452414e534645525f4641494c454400000000000000000000000000)\\n                mstore(96, 0)\\n                revert(0, 100)\\n            }\\n\\n            // Revert if undefined function is called\\n            revert(0, 0)\\n        }\\n    }\\n\\n    /// @dev Gets the proxy id associated with the proxy address.\\n    /// @return Proxy id.\\n    function getProxyId() external pure returns (bytes4) {\\n        return PROXY_ID;\\n    }\\n}\\n\",\"keccak256\":\"0xc3f25c85d8eff4c352ae663c172c4ea4a93deb3058581d2d94b8260fdd5cd504\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/ERC20Proxy/MAuthorizable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n  Copyright 2018 ZeroEx Intl. 2022 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport \\\"../interfaces/IAuthorizable.sol\\\";\\n\\nabstract contract MAuthorizable is IAuthorizable {\\n    /// @dev Only authorized addresses can invoke functions with this modifier.\\n    modifier onlyAuthorized() virtual {\\n        revert();\\n        _;\\n    }\\n}\\n\",\"keccak256\":\"0x6ea0896f907340f54e00d0d2fae0f1a4773bf6f4011a9a67a2f32fd069ddd1ec\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/ERC20Proxy/MixinAuthorizable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n  Copyright 2018 ZeroEx Intl. 2022 Rigo Intl.\\n\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n\\n    http://www.apache.org/licenses/LICENSE-2.0\\n\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n\\n*/\\n\\npragma solidity 0.8.17;\\n\\nimport \\\"../Ownable.sol\\\";\\nimport \\\"./MAuthorizable.sol\\\";\\n\\nabstract contract MixinAuthorizable is Ownable, MAuthorizable {\\n    /// @dev Only authorized addresses can invoke functions with this modifier.\\n    modifier onlyAuthorized() override {\\n        require(authorized[msg.sender], \\\"SENDER_NOT_AUTHORIZED\\\");\\n        _;\\n    }\\n\\n    mapping(address => bool) public authorized;\\n    address[] public authorities;\\n\\n    /// @dev Authorizes an address.\\n    /// @param target Address to authorize.\\n    function addAuthorizedAddress(address target) external override onlyOwner {\\n        require(!authorized[target], \\\"TARGET_ALREADY_AUTHORIZED\\\");\\n\\n        authorized[target] = true;\\n        authorities.push(target);\\n        emit AuthorizedAddressAdded(target, msg.sender);\\n    }\\n\\n    /// @dev Removes authorizion of an address.\\n    /// @param target Address to remove authorization from.\\n    function removeAuthorizedAddress(address target) external override onlyOwner {\\n        require(authorized[target], \\\"TARGET_NOT_AUTHORIZED\\\");\\n\\n        delete authorized[target];\\n        for (uint256 i = 0; i < authorities.length; i++) {\\n            if (authorities[i] == target) {\\n                authorities[i] = authorities[authorities.length - 1];\\n                authorities.pop();\\n                break;\\n            }\\n        }\\n        emit AuthorizedAddressRemoved(target, msg.sender);\\n    }\\n\\n    /// @dev Removes authorizion of an address.\\n    /// @param target Address to remove authorization from.\\n    /// @param index Index of target in authorities array.\\n    function removeAuthorizedAddressAtIndex(address target, uint256 index) external override onlyOwner {\\n        require(authorized[target], \\\"TARGET_NOT_AUTHORIZED\\\");\\n        require(index < authorities.length, \\\"INDEX_OUT_OF_BOUNDS\\\");\\n        require(authorities[index] == target, \\\"AUTHORIZED_ADDRESS_MISMATCH\\\");\\n\\n        delete authorized[target];\\n        authorities[index] = authorities[authorities.length - 1];\\n        authorities.pop();\\n        emit AuthorizedAddressRemoved(target, msg.sender);\\n    }\\n\\n    /// @dev Gets all authorized addresses.\\n    /// @return Array of authorized addresses.\\n    function getAuthorizedAddresses() external view override returns (address[] memory) {\\n        return authorities;\\n    }\\n}\\n\",\"keccak256\":\"0xcdacaa4750e7ebe64bf73d973a3b8ed68f18a1275b7785903028db6756bc9444\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n  Copyright 2019 ZeroEx Intl.\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n    http://www.apache.org/licenses/LICENSE-2.0\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n*/\\n\\npragma solidity >=0.5.9 <0.9.0;\\n\\nimport \\\"./interfaces/IOwnable.sol\\\";\\n\\nabstract contract Ownable is IOwnable {\\n    /// @dev The owner of this contract.\\n    /// @return 0 The owner address.\\n    address public owner;\\n\\n    constructor(address newOwner) {\\n        owner = newOwner;\\n    }\\n\\n    modifier onlyOwner() {\\n        _assertSenderIsOwner();\\n        _;\\n    }\\n\\n    /// @dev Change the owner of this contract.\\n    /// @param newOwner New owner address.\\n    function transferOwnership(address newOwner) public override onlyOwner {\\n        require(newOwner != address(0), \\\"INPUT_ADDRESS_NULL_ERROR\\\");\\n        owner = newOwner;\\n        emit OwnershipTransferred(msg.sender, newOwner);\\n    }\\n\\n    function _assertSenderIsOwner() internal view {\\n        require(msg.sender == owner, \\\"CALLER_NOT_OWNER_ERROR\\\");\\n    }\\n}\\n\",\"keccak256\":\"0xe720a6261e1cb8d0ff3c1bc834f787228021a4f8d70c2806248edd3c91bb12b2\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/interfaces/IAuthorizable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n  Copyright 2019 ZeroEx Intl.\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n    http://www.apache.org/licenses/LICENSE-2.0\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n*/\\n\\npragma solidity >=0.5.9 <0.9.0;\\n\\nabstract contract IAuthorizable {\\n    /// @dev Emitted when a new address is authorized.\\n    /// @param target Address of the authorized address.\\n    /// @param caller Address of the address that authorized the target.\\n    event AuthorizedAddressAdded(address indexed target, address indexed caller);\\n\\n    /// @dev Emitted when a currently authorized address is unauthorized.\\n    /// @param target Address of the authorized address.\\n    /// @param caller Address of the address that authorized the target.\\n    event AuthorizedAddressRemoved(address indexed target, address indexed caller);\\n\\n    /// @dev Authorizes an address.\\n    /// @param target Address to authorize.\\n    function addAuthorizedAddress(address target) external virtual;\\n\\n    /// @dev Removes authorizion of an address.\\n    /// @param target Address to remove authorization from.\\n    function removeAuthorizedAddress(address target) external virtual;\\n\\n    /// @dev Removes authorizion of an address.\\n    /// @param target Address to remove authorization from.\\n    /// @param index Index of target in authorities array.\\n    function removeAuthorizedAddressAtIndex(address target, uint256 index) external virtual;\\n\\n    /// @dev Gets all authorized addresses.\\n    /// @return Array of authorized addresses.\\n    function getAuthorizedAddresses() external view virtual returns (address[] memory);\\n}\\n\",\"keccak256\":\"0x84b5b063527971800efe5dd2d5264d0e3b96daae16412e225181d67efbdc4ccc\",\"license\":\"Apache 2.0\"},\"contracts/utils/0xUtils/interfaces/IOwnable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n  Copyright 2019 ZeroEx Intl.\\n  Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n  you may not use this file except in compliance with the License.\\n  You may obtain a copy of the License at\\n    http://www.apache.org/licenses/LICENSE-2.0\\n  Unless required by applicable law or agreed to in writing, software\\n  distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n  See the License for the specific language governing permissions and\\n  limitations under the License.\\n*/\\n\\npragma solidity >=0.5.9 <0.9.0;\\n\\nabstract contract IOwnable {\\n    /// @dev Emitted by Ownable when ownership is transferred.\\n    /// @param previousOwner The previous owner of the contract.\\n    /// @param newOwner The new owner of the contract.\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /// @dev Transfers ownership of the contract to a new address.\\n    /// @param newOwner The address that will become the owner.\\n    function transferOwnership(address newOwner) public virtual;\\n}\\n\",\"keccak256\":\"0x7ae57f991fe7eeeda16d9dc449cbe9535aeccf8f90691fe40af96e05a936a942\",\"license\":\"Apache 2.0\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610b04380380610b0483398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b610a71806100936000396000f3fe608060405234801561001057600080fd5b50600436106100935760003560e01c80639ad26744116100665780639ad26744146101e8578063ae25532e146101fb578063b918161114610210578063d39de6e914610243578063f2fde38b1461025857610093565b806342f1181e1461017d578063494503d41461019257806370712939146101c25780638da5cb5b146101d5575b6001600160e01b031960003516632a17967960e21b8103610178576040805133815260016020820152908120546101025762461bcd60e51b600052600160e51b6020527c1553454e4445525f4e4f545f415554484f52495a454400000000000000604052600060605260646000fd5b50602860043501356323b872dd60e01b60005260606024600437602060006064600080855af19050600080511160203d14163d151781169050801561014357005b5062461bcd60e51b600052600160e51b6020526f03d514905394d1915497d19052531151606a1b604052600060605260646000fd5b600080fd5b61019061018b366004610915565b61026b565b005b6101a56101a0366004610937565b61036f565b6040516001600160a01b0390911681526020015b60405180910390f35b6101906101d0366004610915565b610399565b6000546101a5906001600160a01b031681565b6101906101f6366004610950565b610561565b604051630f47261b60e41b81526020016101b9565b61023361021e366004610915565b60016020526000908152604090205460ff1681565b60405190151581526020016101b9565b61024b610799565b6040516101b9919061097a565b610190610266366004610915565b6107fb565b6102736108a4565b6001600160a01b03811660009081526001602052604090205460ff16156102e15760405162461bcd60e51b815260206004820152601960248201527f5441524745545f414c52454144595f415554484f52495a45440000000000000060448201526064015b60405180910390fd5b6001600160a01b0381166000818152600160208190526040808320805460ff19168317905560028054928301815583527f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace90910180546001600160a01b03191684179055513392917f3147867c59d17e8fa9d522465651d44aae0a9e38f902f3475b97e58072f0ed4c91a350565b6002818154811061037f57600080fd5b6000918252602090912001546001600160a01b0316905081565b6103a16108a4565b6001600160a01b03811660009081526001602052604090205460ff166104015760405162461bcd60e51b815260206004820152601560248201527415105491d15517d393d517d055551213d492569151605a1b60448201526064016102d8565b6001600160a01b0381166000908152600160205260408120805460ff191690555b60025481101561052757816001600160a01b031660028281548110610449576104496109c7565b6000918252602090912001546001600160a01b0316036105155760028054610473906001906109f3565b81548110610483576104836109c7565b600091825260209091200154600280546001600160a01b0390921691839081106104af576104af6109c7565b9060005260206000200160006101000a8154816001600160a01b0302191690836001600160a01b0316021790555060028054806104ee576104ee610a0c565b600082815260209020810160001990810180546001600160a01b0319169055019055610527565b8061051f81610a22565b915050610422565b5060405133906001600160a01b038316907f1f32c1b084e2de0713b8fb16bd46bb9df710a3dbeae2f3ca93af46e016dcc6b090600090a350565b6105696108a4565b6001600160a01b03821660009081526001602052604090205460ff166105c95760405162461bcd60e51b815260206004820152601560248201527415105491d15517d393d517d055551213d492569151605a1b60448201526064016102d8565b60025481106106105760405162461bcd60e51b8152602060048201526013602482015272494e4445585f4f55545f4f465f424f554e445360681b60448201526064016102d8565b816001600160a01b03166002828154811061062d5761062d6109c7565b6000918252602090912001546001600160a01b03161461068f5760405162461bcd60e51b815260206004820152601b60248201527f415554484f52495a45445f414444524553535f4d49534d41544348000000000060448201526064016102d8565b6001600160a01b0382166000908152600160208190526040909120805460ff191690556002805490916106c1916109f3565b815481106106d1576106d16109c7565b600091825260209091200154600280546001600160a01b0390921691839081106106fd576106fd6109c7565b9060005260206000200160006101000a8154816001600160a01b0302191690836001600160a01b03160217905550600280548061073c5761073c610a0c565b600082815260208120820160001990810180546001600160a01b031916905590910190915560405133916001600160a01b038516917f1f32c1b084e2de0713b8fb16bd46bb9df710a3dbeae2f3ca93af46e016dcc6b09190a35050565b606060028054806020026020016040519081016040528092919081815260200182805480156107f157602002820191906000526020600020905b81546001600160a01b031681526001909101906020018083116107d3575b5050505050905090565b6108036108a4565b6001600160a01b0381166108595760405162461bcd60e51b815260206004820152601860248201527f494e5055545f414444524553535f4e554c4c5f4552524f52000000000000000060448201526064016102d8565b600080546001600160a01b0319166001600160a01b0383169081178255604051909133917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a350565b6000546001600160a01b031633146108f75760405162461bcd60e51b815260206004820152601660248201527521a0a62622a92fa727aa2fa7aba722a92fa2a92927a960511b60448201526064016102d8565b565b80356001600160a01b038116811461091057600080fd5b919050565b60006020828403121561092757600080fd5b610930826108f9565b9392505050565b60006020828403121561094957600080fd5b5035919050565b6000806040838503121561096357600080fd5b61096c836108f9565b946020939093013593505050565b6020808252825182820181905260009190848201906040850190845b818110156109bb5783516001600160a01b031683529284019291840191600101610996565b50909695505050505050565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b81810381811115610a0657610a066109dd565b92915050565b634e487b7160e01b600052603160045260246000fd5b600060018201610a3457610a346109dd565b506001019056fea26469706673582212206045cc2041b8c2df51f5a46688661e3490e50763724e5d9521f085fc85795a0264736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100935760003560e01c80639ad26744116100665780639ad26744146101e8578063ae25532e146101fb578063b918161114610210578063d39de6e914610243578063f2fde38b1461025857610093565b806342f1181e1461017d578063494503d41461019257806370712939146101c25780638da5cb5b146101d5575b6001600160e01b031960003516632a17967960e21b8103610178576040805133815260016020820152908120546101025762461bcd60e51b600052600160e51b6020527c1553454e4445525f4e4f545f415554484f52495a454400000000000000604052600060605260646000fd5b50602860043501356323b872dd60e01b60005260606024600437602060006064600080855af19050600080511160203d14163d151781169050801561014357005b5062461bcd60e51b600052600160e51b6020526f03d514905394d1915497d19052531151606a1b604052600060605260646000fd5b600080fd5b61019061018b366004610915565b61026b565b005b6101a56101a0366004610937565b61036f565b6040516001600160a01b0390911681526020015b60405180910390f35b6101906101d0366004610915565b610399565b6000546101a5906001600160a01b031681565b6101906101f6366004610950565b610561565b604051630f47261b60e41b81526020016101b9565b61023361021e366004610915565b60016020526000908152604090205460ff1681565b60405190151581526020016101b9565b61024b610799565b6040516101b9919061097a565b610190610266366004610915565b6107fb565b6102736108a4565b6001600160a01b03811660009081526001602052604090205460ff16156102e15760405162461bcd60e51b815260206004820152601960248201527f5441524745545f414c52454144595f415554484f52495a45440000000000000060448201526064015b60405180910390fd5b6001600160a01b0381166000818152600160208190526040808320805460ff19168317905560028054928301815583527f405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace90910180546001600160a01b03191684179055513392917f3147867c59d17e8fa9d522465651d44aae0a9e38f902f3475b97e58072f0ed4c91a350565b6002818154811061037f57600080fd5b6000918252602090912001546001600160a01b0316905081565b6103a16108a4565b6001600160a01b03811660009081526001602052604090205460ff166104015760405162461bcd60e51b815260206004820152601560248201527415105491d15517d393d517d055551213d492569151605a1b60448201526064016102d8565b6001600160a01b0381166000908152600160205260408120805460ff191690555b60025481101561052757816001600160a01b031660028281548110610449576104496109c7565b6000918252602090912001546001600160a01b0316036105155760028054610473906001906109f3565b81548110610483576104836109c7565b600091825260209091200154600280546001600160a01b0390921691839081106104af576104af6109c7565b9060005260206000200160006101000a8154816001600160a01b0302191690836001600160a01b0316021790555060028054806104ee576104ee610a0c565b600082815260209020810160001990810180546001600160a01b0319169055019055610527565b8061051f81610a22565b915050610422565b5060405133906001600160a01b038316907f1f32c1b084e2de0713b8fb16bd46bb9df710a3dbeae2f3ca93af46e016dcc6b090600090a350565b6105696108a4565b6001600160a01b03821660009081526001602052604090205460ff166105c95760405162461bcd60e51b815260206004820152601560248201527415105491d15517d393d517d055551213d492569151605a1b60448201526064016102d8565b60025481106106105760405162461bcd60e51b8152602060048201526013602482015272494e4445585f4f55545f4f465f424f554e445360681b60448201526064016102d8565b816001600160a01b03166002828154811061062d5761062d6109c7565b6000918252602090912001546001600160a01b03161461068f5760405162461bcd60e51b815260206004820152601b60248201527f415554484f52495a45445f414444524553535f4d49534d41544348000000000060448201526064016102d8565b6001600160a01b0382166000908152600160208190526040909120805460ff191690556002805490916106c1916109f3565b815481106106d1576106d16109c7565b600091825260209091200154600280546001600160a01b0390921691839081106106fd576106fd6109c7565b9060005260206000200160006101000a8154816001600160a01b0302191690836001600160a01b03160217905550600280548061073c5761073c610a0c565b600082815260208120820160001990810180546001600160a01b031916905590910190915560405133916001600160a01b038516917f1f32c1b084e2de0713b8fb16bd46bb9df710a3dbeae2f3ca93af46e016dcc6b09190a35050565b606060028054806020026020016040519081016040528092919081815260200182805480156107f157602002820191906000526020600020905b81546001600160a01b031681526001909101906020018083116107d3575b5050505050905090565b6108036108a4565b6001600160a01b0381166108595760405162461bcd60e51b815260206004820152601860248201527f494e5055545f414444524553535f4e554c4c5f4552524f52000000000000000060448201526064016102d8565b600080546001600160a01b0319166001600160a01b0383169081178255604051909133917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a350565b6000546001600160a01b031633146108f75760405162461bcd60e51b815260206004820152601660248201527521a0a62622a92fa727aa2fa7aba722a92fa2a92927a960511b60448201526064016102d8565b565b80356001600160a01b038116811461091057600080fd5b919050565b60006020828403121561092757600080fd5b610930826108f9565b9392505050565b60006020828403121561094957600080fd5b5035919050565b6000806040838503121561096357600080fd5b61096c836108f9565b946020939093013593505050565b6020808252825182820181905260009190848201906040850190845b818110156109bb5783516001600160a01b031683529284019291840191600101610996565b50909695505050505050565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b81810381811115610a0657610a066109dd565b92915050565b634e487b7160e01b600052603160045260246000fd5b600060018201610a3457610a346109dd565b506001019056fea26469706673582212206045cc2041b8c2df51f5a46688661e3490e50763724e5d9521f085fc85795a0264736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "addAuthorizedAddress(address)": {
+        "details": "Authorizes an address.",
+        "params": {
+          "target": "Address to authorize."
+        }
+      },
+      "getAuthorizedAddresses()": {
+        "details": "Gets all authorized addresses.",
+        "returns": {
+          "_0": "Array of authorized addresses."
+        }
+      },
+      "getProxyId()": {
+        "details": "Gets the proxy id associated with the proxy address.",
+        "returns": {
+          "_0": "Proxy id."
+        }
+      },
+      "removeAuthorizedAddress(address)": {
+        "details": "Removes authorizion of an address.",
+        "params": {
+          "target": "Address to remove authorization from."
+        }
+      },
+      "removeAuthorizedAddressAtIndex(address,uint256)": {
+        "details": "Removes authorizion of an address.",
+        "params": {
+          "index": "Index of target in authorities array.",
+          "target": "Address to remove authorization from."
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Change the owner of this contract.",
+        "params": {
+          "newOwner": "New owner address."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 16123,
+        "contract": "contracts/utils/0xUtils/ERC20Proxy/ERC20Proxy.sol:ERC20Proxy",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 15310,
+        "contract": "contracts/utils/0xUtils/ERC20Proxy/ERC20Proxy.sol:ERC20Proxy",
+        "label": "authorized",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 15313,
+        "contract": "contracts/utils/0xUtils/ERC20Proxy/ERC20Proxy.sol:ERC20Proxy",
+        "label": "authorities",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_array(t_address)dyn_storage"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      }
+    }
+  }
+}

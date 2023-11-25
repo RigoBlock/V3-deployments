@@ -1,0 +1,1138 @@
+{
+  "address": "0x204Bc468cc9333A7Aac12aC2dBe03DcCFe9f03d0",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newUniswapRouter02",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint128",
+              "name": "amount0Max",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "amount1Max",
+              "type": "uint128"
+            }
+          ],
+          "internalType": "struct INonfungiblePositionManager.CollectParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "collect",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token0",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token1",
+          "type": "address"
+        },
+        {
+          "internalType": "uint24",
+          "name": "fee",
+          "type": "uint24"
+        },
+        {
+          "internalType": "uint160",
+          "name": "sqrtPriceX96",
+          "type": "uint160"
+        }
+      ],
+      "name": "createAndInitializePoolIfNecessary",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint128",
+              "name": "liquidity",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct INonfungiblePositionManager.DecreaseLiquidityParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "decreaseLiquidity",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "path",
+              "type": "bytes"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountIn",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountOutMinimum",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IV3SwapRouter.ExactInputParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "exactInput",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountOut",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "tokenIn",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "tokenOut",
+              "type": "address"
+            },
+            {
+              "internalType": "uint24",
+              "name": "fee",
+              "type": "uint24"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountIn",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountOutMinimum",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint160",
+              "name": "sqrtPriceLimitX96",
+              "type": "uint160"
+            }
+          ],
+          "internalType": "struct IV3SwapRouter.ExactInputSingleParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "exactInputSingle",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountOut",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "path",
+              "type": "bytes"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountOut",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountInMaximum",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IV3SwapRouter.ExactOutputParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "exactOutput",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountIn",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "tokenIn",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "tokenOut",
+              "type": "address"
+            },
+            {
+              "internalType": "uint24",
+              "name": "fee",
+              "type": "uint24"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountOut",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amountInMaximum",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint160",
+              "name": "sqrtPriceLimitX96",
+              "type": "uint160"
+            }
+          ],
+          "internalType": "struct IV3SwapRouter.ExactOutputSingleParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "exactOutputSingle",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountIn",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "tokenId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0Desired",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1Desired",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct INonfungiblePositionManager.IncreaseLiquidityParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "increaseLiquidity",
+      "outputs": [
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "uint24",
+              "name": "fee",
+              "type": "uint24"
+            },
+            {
+              "internalType": "int24",
+              "name": "tickLower",
+              "type": "int24"
+            },
+            {
+              "internalType": "int24",
+              "name": "tickUpper",
+              "type": "int24"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0Desired",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1Desired",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1Min",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct INonfungiblePositionManager.MintParams",
+          "name": "params",
+          "type": "tuple"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "refundETH",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountIn",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountOutMin",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "path",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "swapExactTokensForTokens",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountOut",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountOut",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountInMax",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "path",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "swapTokensForExactTokens",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountIn",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountMinimum",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "sweepToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountMinimum",
+          "type": "uint256"
+        }
+      ],
+      "name": "sweepToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountMinimum",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "feeBips",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "feeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "sweepTokenWithFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amountMinimum",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "feeBips",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "feeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "sweepTokenWithFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "uniswapRouter02",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "uniswapv3Npm",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountMinimum",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "unwrapWETH9",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountMinimum",
+          "type": "uint256"
+        }
+      ],
+      "name": "unwrapWETH9",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountMinimum",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "feeBips",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "feeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "unwrapWETH9WithFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amountMinimum",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "feeBips",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "feeRecipient",
+          "type": "address"
+        }
+      ],
+      "name": "unwrapWETH9WithFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "weth",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "wrapETH",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x0a78d1572446a0162232e92799e75c00e8705491db4ccb8a88e8f7ce2b8ddef1",
+  "receipt": {
+    "to": "0x914d7Fec6aaC8cd542e72Bca78B30650d45643d7",
+    "from": "0x080f08076e8EAdC66006C3CbFEd28a34918A1fA6",
+    "contractAddress": null,
+    "transactionIndex": 0,
+    "gasUsed": "1902688",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x22b41f7ae85dfe974a57e31abcde02c898ddb19b272b80a2c10e03f4d04792e6",
+    "transactionHash": "0x0a78d1572446a0162232e92799e75c00e8705491db4ccb8a88e8f7ce2b8ddef1",
+    "logs": [],
+    "blockNumber": 9664080,
+    "cumulativeGasUsed": "1902688",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45"
+  ],
+  "numDeployments": 4,
+  "solcInputHash": "931b0b297b565cf5f449257cf12bba83",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newUniswapRouter02\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint128\",\"name\":\"amount0Max\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"amount1Max\",\"type\":\"uint128\"}],\"internalType\":\"struct INonfungiblePositionManager.CollectParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"collect\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"uint160\",\"name\":\"sqrtPriceX96\",\"type\":\"uint160\"}],\"name\":\"createAndInitializePoolIfNecessary\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"pool\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount0Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct INonfungiblePositionManager.DecreaseLiquidityParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"decreaseLiquidity\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"bytes\",\"name\":\"path\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountOutMinimum\",\"type\":\"uint256\"}],\"internalType\":\"struct IV3SwapRouter.ExactInputParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"exactInput\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amountOut\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"tokenIn\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenOut\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountOutMinimum\",\"type\":\"uint256\"},{\"internalType\":\"uint160\",\"name\":\"sqrtPriceLimitX96\",\"type\":\"uint160\"}],\"internalType\":\"struct IV3SwapRouter.ExactInputSingleParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"exactInputSingle\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amountOut\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"bytes\",\"name\":\"path\",\"type\":\"bytes\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountOut\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountInMaximum\",\"type\":\"uint256\"}],\"internalType\":\"struct IV3SwapRouter.ExactOutputParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"exactOutput\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"tokenIn\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"tokenOut\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountOut\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountInMaximum\",\"type\":\"uint256\"},{\"internalType\":\"uint160\",\"name\":\"sqrtPriceLimitX96\",\"type\":\"uint160\"}],\"internalType\":\"struct IV3SwapRouter.ExactOutputSingleParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"exactOutputSingle\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount0Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount0Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct INonfungiblePositionManager.IncreaseLiquidityParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"increaseLiquidity\",\"outputs\":[{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"fee\",\"type\":\"uint24\"},{\"internalType\":\"int24\",\"name\":\"tickLower\",\"type\":\"int24\"},{\"internalType\":\"int24\",\"name\":\"tickUpper\",\"type\":\"int24\"},{\"internalType\":\"uint256\",\"name\":\"amount0Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Desired\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount0Min\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1Min\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct INonfungiblePositionManager.MintParams\",\"name\":\"params\",\"type\":\"tuple\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"},{\"internalType\":\"uint128\",\"name\":\"liquidity\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"refundETH\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountOutMin\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"path\",\"type\":\"address[]\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"swapExactTokensForTokens\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amountOut\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amountOut\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amountInMax\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"path\",\"type\":\"address[]\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"}],\"name\":\"swapTokensForExactTokens\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amountIn\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountMinimum\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"sweepToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountMinimum\",\"type\":\"uint256\"}],\"name\":\"sweepToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountMinimum\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"feeBips\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"feeRecipient\",\"type\":\"address\"}],\"name\":\"sweepTokenWithFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amountMinimum\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"feeBips\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"feeRecipient\",\"type\":\"address\"}],\"name\":\"sweepTokenWithFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"uniswapRouter02\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"uniswapv3Npm\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amountMinimum\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"unwrapWETH9\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amountMinimum\",\"type\":\"uint256\"}],\"name\":\"unwrapWETH9\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amountMinimum\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"feeBips\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"feeRecipient\",\"type\":\"address\"}],\"name\":\"unwrapWETH9WithFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amountMinimum\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"feeBips\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"feeRecipient\",\"type\":\"address\"}],\"name\":\"unwrapWETH9WithFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"weth\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"wrapETH\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Gabriele Rigo - <gab@rigoblock.com>\",\"kind\":\"dev\",\"methods\":{\"burn(uint256)\":{\"params\":{\"tokenId\":\"The ID of the token that is being burned.\"}},\"collect((uint256,address,uint128,uint128))\":{\"params\":{\"params\":\"tokenId The ID of the NFT for which tokens are being collected, recipient The account that should receive the tokens, amount0Max The maximum amount of token0 to collect, amount1Max The maximum amount of token1 to collect.\"},\"returns\":{\"amount0\":\"The amount of fees collected in token0.\",\"amount1\":\"The amount of fees collected in token1.\"}},\"createAndInitializePoolIfNecessary(address,address,uint24,uint160)\":{\"details\":\"This method can be bundled with others via IMulticall for the first action (e.g. mint) performed against a pool.\",\"params\":{\"fee\":\"The fee amount of the v3 pool for the specified token pair.\",\"sqrtPriceX96\":\"The initial square root price of the pool as a Q64.96 value.\",\"token0\":\"The contract address of token0 of the pool.\",\"token1\":\"The contract address of token1 of the pool.\"},\"returns\":{\"pool\":\"Returns the pool address based on the pair of tokens and fee, will return the newly created pool address if necessary.\"}},\"decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))\":{\"params\":{\"params\":\"tokenId The ID of the token for which liquidity is being decreased, amount The amount by which liquidity will be decreased, amount0Min The minimum amount of token0 that should be accounted for the burned liquidity, amount1Min The minimum amount of token1 that should be accounted for the burned liquidity, deadline The time by which the transaction must be included to effect the change.\"},\"returns\":{\"amount0\":\"The amount of token0 accounted to the position's tokens owed.\",\"amount1\":\"The amount of token1 accounted to the position's tokens owed.\"}},\"exactInput((bytes,address,uint256,uint256))\":{\"params\":{\"params\":\"The parameters necessary for the multi-hop swap, encoded as `ExactInputParams` in calldata.\"},\"returns\":{\"amountOut\":\"The amount of the received token.\"}},\"exactInputSingle((address,address,uint24,address,uint256,uint256,uint160))\":{\"params\":{\"params\":\"The parameters necessary for the swap, encoded as `ExactInputSingleParams` in calldata.\"},\"returns\":{\"amountOut\":\"The amount of the received token.\"}},\"exactOutput((bytes,address,uint256,uint256))\":{\"params\":{\"params\":\"The parameters necessary for the multi-hop swap, encoded as `ExactOutputParams` in calldata.\"},\"returns\":{\"amountIn\":\"The amount of the input token.\"}},\"exactOutputSingle((address,address,uint24,address,uint256,uint256,uint160))\":{\"params\":{\"params\":\"The parameters necessary for the swap, encoded as `ExactOutputSingleParams` in calldata.\"},\"returns\":{\"amountIn\":\"The amount of the input token.\"}},\"increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))\":{\"params\":{\"params\":\"tokenId The ID of the token for which liquidity is being increased, amount0Desired The desired amount of token0 to be spent, amount1Desired The desired amount of token1 to be spent, amount0Min The minimum amount of token0 to spend, which serves as a slippage check, amount1Min The minimum amount of token1 to spend, which serves as a slippage check, deadline The time by which the transaction must be included to effect the change.\"},\"returns\":{\"amount0\":\"The amount of token0 to acheive resulting liquidity.\",\"amount1\":\"The amount of token1 to acheive resulting liquidity.\",\"liquidity\":\"The new liquidity amount as a result of the increase.\"}},\"mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))\":{\"details\":\"Call this when the pool does exist and is initialized. Note that if the pool is created but not initialized a method does not exist, i.e. the pool is assumed to be initialized.\",\"params\":{\"params\":\"The params necessary to mint a position, encoded as `MintParams` in calldata.\"},\"returns\":{\"amount0\":\"The amount of token0.\",\"amount1\":\"The amount of token1.\",\"liquidity\":\"The amount of liquidity for this position.\",\"tokenId\":\"The ID of the token that represents the minted position.\"}},\"refundETH()\":{\"details\":\"Declared virtual as we never send ETH to Uniswap router contract.\"},\"swapExactTokensForTokens(uint256,uint256,address[],address)\":{\"details\":\"Setting `amountIn` to 0 will cause the contract to look up its own balance, and swap the entire amount, enabling contracts to send tokens before calling this function.\",\"params\":{\"amountIn\":\"The amount of token to swap.\",\"amountOutMin\":\"The minimum amount of output that must be received.\",\"path\":\"The ordered list of tokens to swap through.\",\"to\":\"The recipient address.\"},\"returns\":{\"amountOut\":\"The amount of the received token.\"}},\"swapTokensForExactTokens(uint256,uint256,address[],address)\":{\"params\":{\"amountInMax\":\"The maximum amount of input that the caller will pay.\",\"amountOut\":\"The amount of token to swap for.\",\"path\":\"The ordered list of tokens to swap through.\",\"to\":\"The recipient address.\"},\"returns\":{\"amountIn\":\"The amount of token to pay.\"}},\"sweepToken(address,uint256)\":{\"details\":\"The amountMinimum parameter prevents malicious contracts from stealing the token from users.\",\"params\":{\"amountMinimum\":\"The minimum amount of token required for a transfer.\",\"token\":\"The contract address of the token which will be transferred to `recipient`.\"}},\"sweepToken(address,uint256,address)\":{\"details\":\"The amountMinimum parameter prevents malicious contracts from stealing the token from users.\",\"params\":{\"amountMinimum\":\"The minimum amount of token required for a transfer.\",\"recipient\":\"The destination address of the token.\",\"token\":\"The contract address of the token which will be transferred to `recipient`.\"}},\"sweepTokenWithFee(address,uint256,address,uint256,address)\":{\"details\":\"The amountMinimum parameter prevents malicious contracts from stealing the token from users.\",\"params\":{\"amountMinimum\":\"The minimum amount of token required for a transfer.\",\"feeBips\":\"The amount of fee in basis points.\",\"feeRecipient\":\"The destination address of the token.\",\"recipient\":\"The destination address of the token.\",\"token\":\"The contract address of the token which will be transferred to `recipient`.\"}},\"sweepTokenWithFee(address,uint256,uint256,address)\":{\"details\":\"The amountMinimum parameter prevents malicious contracts from stealing the token from users.\",\"params\":{\"amountMinimum\":\"The minimum amount of token required for a transfer.\",\"feeBips\":\"The amount of fee in basis points.\",\"feeRecipient\":\"The destination address of the token.\",\"token\":\"The contract address of the token which will be transferred to `recipient`.\"}},\"unwrapWETH9(uint256)\":{\"details\":\"The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.\",\"params\":{\"amountMinimum\":\"The minimum amount of WETH9 to unwrap.\"}},\"unwrapWETH9(uint256,address)\":{\"params\":{\"amountMinimum\":\"The minimum amount of WETH9 to unwrap.\",\"recipient\":\"The address to keep same uniswap npm selector.\"}},\"unwrapWETH9WithFee(uint256,address,uint256,address)\":{\"details\":\"The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.\",\"params\":{\"amountMinimum\":\"The minimum amount of token required for a transfer.\",\"feeBips\":\"The amount of fee in basis points.\",\"feeRecipient\":\"The destination address of the token.\",\"recipient\":\"The destination address of the token.\"}},\"unwrapWETH9WithFee(uint256,uint256,address)\":{\"details\":\"The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.\",\"params\":{\"amountMinimum\":\"The minimum amount of token required for a transfer.\",\"feeBips\":\"The amount of fee in basis points.\",\"feeRecipient\":\"The destination address of the token.\"}},\"wrapETH(uint256)\":{\"details\":\"Client must wrap if input is native currency.\",\"params\":{\"value\":\"The ETH amount to be wrapped.\"}}},\"stateVariables\":{\"uniswapRouter02\":{\"return\":\"Address of the uniswap router.\",\"returns\":{\"_0\":\"Address of the uniswap router.\"}},\"uniswapv3Npm\":{\"return\":\"Address of the Uniswap NPM contract.\",\"returns\":{\"_0\":\"Address of the Uniswap NPM contract.\"}},\"weth\":{\"return\":\"Address of the Weth contract.\",\"returns\":{\"_0\":\"Address of the Weth contract.\"}}},\"title\":\"AUniswap - Allows interactions with the Uniswap contracts.\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"burn(uint256)\":{\"notice\":\"Burns a token ID, which deletes it from the NFT contract. The token must have 0 liquidity and all tokens. must be collected first.\"},\"collect((uint256,address,uint128,uint128))\":{\"notice\":\"Collects up to a maximum amount of fees owed to a specific position to the recipient.\"},\"createAndInitializePoolIfNecessary(address,address,uint24,uint160)\":{\"notice\":\"Creates a new pool if it does not exist, then initializes if not initialized\"},\"decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))\":{\"notice\":\"Decreases the amount of liquidity in a position and accounts it to the position.\"},\"exactInput((bytes,address,uint256,uint256))\":{\"notice\":\"Swaps `amountIn` of one token for as much as possible of another along the specified path.\"},\"exactInputSingle((address,address,uint24,address,uint256,uint256,uint160))\":{\"notice\":\"Swaps `amountIn` of one token for as much as possible of another token.\"},\"exactOutput((bytes,address,uint256,uint256))\":{\"notice\":\"Swaps as little as possible of one token for `amountOut` of another along the specified path (reversed).\"},\"exactOutputSingle((address,address,uint24,address,uint256,uint256,uint160))\":{\"notice\":\"Swaps as little as possible of one token for `amountOut` of another token.\"},\"increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))\":{\"notice\":\"Increases the amount of liquidity in a position, with tokens paid by the `msg.sender`.\"},\"mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))\":{\"notice\":\"Creates a new position wrapped in a NFT.\"},\"refundETH()\":{\"notice\":\"Allows sending pool transactions exactly as Uniswap original transactions.\"},\"swapExactTokensForTokens(uint256,uint256,address[],address)\":{\"notice\":\"Swaps `amountIn` of one token for as much as possible of another token.\"},\"swapTokensForExactTokens(uint256,uint256,address[],address)\":{\"notice\":\"Swaps as little as possible of one token for an exact amount of another token.\"},\"sweepToken(address,uint256)\":{\"notice\":\"Transfers the full amount of a token held by this contract to recipient.\"},\"sweepToken(address,uint256,address)\":{\"notice\":\"Transfers the full amount of a token held by this contract to recipient.\"},\"sweepTokenWithFee(address,uint256,address,uint256,address)\":{\"notice\":\"Transfers the full amount of a token held by this contract to recipient, with a percentage between 0 (exclusive) and 1 (inclusive) going to feeRecipient.\"},\"sweepTokenWithFee(address,uint256,uint256,address)\":{\"notice\":\"Transfers the full amount of a token held by this contract to recipient, with a percentage between 0 (exclusive) and 1 (inclusive) going to feeRecipient.\"},\"uniswapRouter02()\":{\"notice\":\"Returns the address of the Uniswap swap router contract.\"},\"uniswapv3Npm()\":{\"notice\":\"Returns the address of the Uniswap NPM contract.\"},\"unwrapWETH9(uint256)\":{\"notice\":\"Unwraps the contract's WETH9 balance and sends it to recipient as ETH.\"},\"unwrapWETH9(uint256,address)\":{\"notice\":\"Unwraps ETH from WETH9.\"},\"unwrapWETH9WithFee(uint256,address,uint256,address)\":{\"notice\":\"Unwraps the contract's WETH9 balance and sends it to recipient as ETH, with a percentage between 0 (exclusive), and 1 (inclusive) going to feeRecipient.\"},\"unwrapWETH9WithFee(uint256,uint256,address)\":{\"notice\":\"Unwraps the contract's WETH9 balance and sends it to recipient as ETH, with a percentage between 0 (exclusive), and 1 (inclusive) going to feeRecipient.\"},\"weth()\":{\"notice\":\"Returns the address of the Weth contract.\"},\"wrapETH(uint256)\":{\"notice\":\"Wraps ETH.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/protocol/extensions/adapters/AUniswap.sol\":\"AUniswap\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@uniswap/swap-router-contracts/contracts/interfaces/IImmutableState.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.5.0;\\n\\n/// @title Immutable state\\n/// @notice Functions that return immutable state of the router\\ninterface IImmutableState {\\n    /// @return Returns the address of the Uniswap V2 factory\\n    function factoryV2() external view returns (address);\\n\\n    /// @return Returns the address of Uniswap V3 NFT position manager\\n    function positionManager() external view returns (address);\\n}\\n\",\"keccak256\":\"0xe30562a3c59b7a755b558c688e9c87b7b8f919be54cf9f46507afe2537adc5db\",\"license\":\"GPL-2.0-or-later\"},\"@uniswap/swap-router-contracts/contracts/interfaces/IPeripheryPaymentsExtended.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.7.5;\\n\\nimport '@uniswap/v3-periphery/contracts/interfaces/IPeripheryPayments.sol';\\n\\n/// @title Periphery Payments Extended\\n/// @notice Functions to ease deposits and withdrawals of ETH and tokens\\ninterface IPeripheryPaymentsExtended is IPeripheryPayments {\\n    /// @notice Unwraps the contract's WETH9 balance and sends it to msg.sender as ETH.\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.\\n    /// @param amountMinimum The minimum amount of WETH9 to unwrap\\n    function unwrapWETH9(uint256 amountMinimum) external payable;\\n\\n    /// @notice Wraps the contract's ETH balance into WETH9\\n    /// @dev The resulting WETH9 is custodied by the router, thus will require further distribution\\n    /// @param value The amount of ETH to wrap\\n    function wrapETH(uint256 value) external payable;\\n\\n    /// @notice Transfers the full amount of a token held by this contract to msg.sender\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing the token from users\\n    /// @param token The contract address of the token which will be transferred to msg.sender\\n    /// @param amountMinimum The minimum amount of token required for a transfer\\n    function sweepToken(address token, uint256 amountMinimum) external payable;\\n\\n    /// @notice Transfers the specified amount of a token from the msg.sender to address(this)\\n    /// @param token The token to pull\\n    /// @param value The amount to pay\\n    function pull(address token, uint256 value) external payable;\\n}\\n\",\"keccak256\":\"0x897628dc9cb66ea0b2237a12853d56f791a6acadb86906b33220213468c02fcc\",\"license\":\"GPL-2.0-or-later\"},\"@uniswap/swap-router-contracts/contracts/interfaces/IPeripheryPaymentsWithFeeExtended.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.7.5;\\n\\nimport '@uniswap/v3-periphery/contracts/interfaces/IPeripheryPaymentsWithFee.sol';\\n\\nimport './IPeripheryPaymentsExtended.sol';\\n\\n/// @title Periphery Payments With Fee Extended\\n/// @notice Functions to ease deposits and withdrawals of ETH\\ninterface IPeripheryPaymentsWithFeeExtended is IPeripheryPaymentsExtended, IPeripheryPaymentsWithFee {\\n    /// @notice Unwraps the contract's WETH9 balance and sends it to msg.sender as ETH, with a percentage between\\n    /// 0 (exclusive), and 1 (inclusive) going to feeRecipient\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.\\n    function unwrapWETH9WithFee(\\n        uint256 amountMinimum,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external payable;\\n\\n    /// @notice Transfers the full amount of a token held by this contract to msg.sender, with a percentage between\\n    /// 0 (exclusive) and 1 (inclusive) going to feeRecipient\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing the token from users\\n    function sweepTokenWithFee(\\n        address token,\\n        uint256 amountMinimum,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external payable;\\n}\\n\",\"keccak256\":\"0x297f6db20c8faf7085e40e540ac3da6cba16bace8bf5cc1cc643d400838625c8\",\"license\":\"GPL-2.0-or-later\"},\"@uniswap/v3-periphery/contracts/interfaces/IPeripheryPayments.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.7.5;\\n\\n/// @title Periphery Payments\\n/// @notice Functions to ease deposits and withdrawals of ETH\\ninterface IPeripheryPayments {\\n    /// @notice Unwraps the contract's WETH9 balance and sends it to recipient as ETH.\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.\\n    /// @param amountMinimum The minimum amount of WETH9 to unwrap\\n    /// @param recipient The address receiving ETH\\n    function unwrapWETH9(uint256 amountMinimum, address recipient) external payable;\\n\\n    /// @notice Refunds any ETH balance held by this contract to the `msg.sender`\\n    /// @dev Useful for bundling with mint or increase liquidity that uses ether, or exact output swaps\\n    /// that use ether for the input amount\\n    function refundETH() external payable;\\n\\n    /// @notice Transfers the full amount of a token held by this contract to recipient\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing the token from users\\n    /// @param token The contract address of the token which will be transferred to `recipient`\\n    /// @param amountMinimum The minimum amount of token required for a transfer\\n    /// @param recipient The destination address of the token\\n    function sweepToken(\\n        address token,\\n        uint256 amountMinimum,\\n        address recipient\\n    ) external payable;\\n}\\n\",\"keccak256\":\"0xb547e10f1e69bed03621a62b73a503e260643066c6b4054867a4d1fef47eb274\",\"license\":\"GPL-2.0-or-later\"},\"@uniswap/v3-periphery/contracts/interfaces/IPeripheryPaymentsWithFee.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.7.5;\\n\\nimport './IPeripheryPayments.sol';\\n\\n/// @title Periphery Payments\\n/// @notice Functions to ease deposits and withdrawals of ETH\\ninterface IPeripheryPaymentsWithFee is IPeripheryPayments {\\n    /// @notice Unwraps the contract's WETH9 balance and sends it to recipient as ETH, with a percentage between\\n    /// 0 (exclusive), and 1 (inclusive) going to feeRecipient\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.\\n    function unwrapWETH9WithFee(\\n        uint256 amountMinimum,\\n        address recipient,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external payable;\\n\\n    /// @notice Transfers the full amount of a token held by this contract to recipient, with a percentage between\\n    /// 0 (exclusive) and 1 (inclusive) going to feeRecipient\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing the token from users\\n    function sweepTokenWithFee(\\n        address token,\\n        uint256 amountMinimum,\\n        address recipient,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external payable;\\n}\\n\",\"keccak256\":\"0x23ebe0ced112c7ca3869868874b691fcbb50f90c482580dc9ebe718bda34edfc\",\"license\":\"GPL-2.0-or-later\"},\"contracts/protocol/IRigoblockV3Pool.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"./interfaces/IERC20.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolActions.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolEvents.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolFallback.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolImmutable.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolInitializer.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolOwnerActions.sol\\\";\\nimport \\\"./interfaces/pool/IRigoblockV3PoolState.sol\\\";\\nimport \\\"./interfaces/pool/IStorageAccessible.sol\\\";\\n\\n/// @title Rigoblock V3 Pool Interface - Allows interaction with the pool contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IRigoblockV3Pool is\\n    IERC20,\\n    IRigoblockV3PoolImmutable,\\n    IRigoblockV3PoolEvents,\\n    IRigoblockV3PoolFallback,\\n    IRigoblockV3PoolInitializer,\\n    IRigoblockV3PoolActions,\\n    IRigoblockV3PoolOwnerActions,\\n    IRigoblockV3PoolState,\\n    IStorageAccessible\\n{\\n\\n}\\n\",\"keccak256\":\"0xfb81b770fcd672450093825bcc04d8fe324d00bcbfef2ae3155ec914e59806c2\",\"license\":\"Apache 2.0\"},\"contracts/protocol/extensions/adapters/AUniswap.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\n/*\\n\\n Copyright 2021-2023 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\n// solhint-disable-next-line\\npragma solidity 0.8.17;\\n\\nimport \\\"./AUniswapV3NPM.sol\\\";\\nimport \\\"./interfaces/IAUniswap.sol\\\";\\nimport \\\"./interfaces/IEWhitelist.sol\\\";\\nimport \\\"../../interfaces/IWETH9.sol\\\";\\nimport \\\"../../IRigoblockV3Pool.sol\\\";\\nimport \\\"../../../utils/exchanges/uniswap/v3-periphery/contracts/libraries/BytesLib.sol\\\";\\nimport \\\"../../../utils/exchanges/uniswap/ISwapRouter02/ISwapRouter02.sol\\\";\\n\\n/// @title AUniswap - Allows interactions with the Uniswap contracts.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// @notice We implement sweep token methods routed to uniswap router even though could be defined as virtual and not implemented,\\n//  because we always wrap/unwrap ETH within the pool and never accidentally send tokens to uniswap router or npm contracts.\\n//  This allows to avoid clasing signatures and correctly reach target address for payment methods.\\ncontract AUniswap is IAUniswap, AUniswapV3NPM {\\n    using BytesLib for bytes;\\n\\n    // storage must be immutable as needs to be rutime consistent\\n    // 0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45 on public networks\\n    /// @inheritdoc IAUniswap\\n    address public immutable override uniswapRouter02;\\n\\n    // 0xC36442b4a4522E871399CD717aBDD847Ab11FE88 on public networks\\n    /// @inheritdoc IAUniswap\\n    address public immutable override uniswapv3Npm;\\n\\n    /// @inheritdoc IAUniswap\\n    address public immutable override weth;\\n\\n    constructor(address newUniswapRouter02) {\\n        uniswapRouter02 = newUniswapRouter02;\\n        uniswapv3Npm = payable(ISwapRouter02(uniswapRouter02).positionManager());\\n        weth = payable(INonfungiblePositionManager(uniswapv3Npm).WETH9());\\n    }\\n\\n    /*\\n     * UNISWAP V2 METHODS\\n     */\\n    /// @inheritdoc IAUniswap\\n    function swapExactTokensForTokens(\\n        uint256 amountIn,\\n        uint256 amountOutMin,\\n        address[] calldata path,\\n        address to\\n    ) external override returns (uint256 amountOut) {\\n        address uniswapRouter = _preSwap(path[0], path[path.length - 1]);\\n\\n        amountOut = ISwapRouter02(uniswapRouter).swapExactTokensForTokens(\\n            amountIn,\\n            amountOutMin,\\n            path,\\n            to != address(this) ? address(this) : to\\n        );\\n\\n        // we make sure we do not clear storage\\n        _safeApprove(path[0], uniswapRouter, uint256(1));\\n    }\\n\\n    /// @inheritdoc IAUniswap\\n    function swapTokensForExactTokens(\\n        uint256 amountOut,\\n        uint256 amountInMax,\\n        address[] calldata path,\\n        address to\\n    ) external override returns (uint256 amountIn) {\\n        address uniswapRouter = _preSwap(path[0], path[path.length - 1]);\\n\\n        amountIn = ISwapRouter02(uniswapRouter).swapTokensForExactTokens(\\n            amountOut,\\n            amountInMax,\\n            path,\\n            to != address(this) ? address(this) : to\\n        );\\n\\n        // we make sure we do not clear storage\\n        _safeApprove(path[0], uniswapRouter, uint256(1));\\n    }\\n\\n    /*\\n     * UNISWAP V3 SWAP METHODS\\n     */\\n    /// @inheritdoc IAUniswap\\n    function exactInputSingle(ISwapRouter02.ExactInputSingleParams calldata params)\\n        external\\n        override\\n        returns (uint256 amountOut)\\n    {\\n        address uniswapRouter = _preSwap(params.tokenIn, params.tokenOut);\\n\\n        // we swap the tokens\\n        amountOut = ISwapRouter02(uniswapRouter).exactInputSingle(\\n            IV3SwapRouter.ExactInputSingleParams({\\n                tokenIn: params.tokenIn,\\n                tokenOut: params.tokenOut,\\n                fee: params.fee,\\n                recipient: address(this), // this pool is always the recipient\\n                amountIn: params.amountIn,\\n                amountOutMinimum: params.amountOutMinimum,\\n                sqrtPriceLimitX96: params.sqrtPriceLimitX96\\n            })\\n        );\\n\\n        // we make sure we do not clear storage\\n        _safeApprove(params.tokenIn, uniswapRouter, uint256(1));\\n    }\\n\\n    /// @inheritdoc IAUniswap\\n    function exactInput(ISwapRouter02.ExactInputParams calldata params) external override returns (uint256 amountOut) {\\n        // tokenIn is the first address in the path, tokenOut the last\\n        address tokenIn = params.path.toAddress(0);\\n        address tokenOut = params.path.toAddress(params.path.length - 20);\\n        address uniswapRouter = _preSwap(tokenIn, tokenOut);\\n\\n        // we swap the tokens\\n        amountOut = ISwapRouter02(uniswapRouter).exactInput(\\n            IV3SwapRouter.ExactInputParams({\\n                path: params.path,\\n                recipient: address(this), // this pool is always the recipient\\n                amountIn: params.amountIn,\\n                amountOutMinimum: params.amountOutMinimum\\n            })\\n        );\\n\\n        // we make sure we do not clear storage\\n        _safeApprove(tokenIn, uniswapRouter, uint256(1));\\n    }\\n\\n    /// @inheritdoc IAUniswap\\n    function exactOutputSingle(ISwapRouter02.ExactOutputSingleParams calldata params)\\n        external\\n        override\\n        returns (uint256 amountIn)\\n    {\\n        address uniswapRouter = _preSwap(params.tokenIn, params.tokenOut);\\n\\n        // we swap the tokens\\n        amountIn = ISwapRouter02(uniswapRouter).exactOutputSingle(\\n            IV3SwapRouter.ExactOutputSingleParams({\\n                tokenIn: params.tokenIn,\\n                tokenOut: params.tokenOut,\\n                fee: params.fee,\\n                recipient: address(this), // this pool is always the recipient\\n                amountOut: params.amountOut,\\n                amountInMaximum: params.amountInMaximum,\\n                sqrtPriceLimitX96: params.sqrtPriceLimitX96\\n            })\\n        );\\n\\n        // we make sure we do not clear storage\\n        _safeApprove(params.tokenIn, uniswapRouter, uint256(1));\\n    }\\n\\n    /// @inheritdoc IAUniswap\\n    function exactOutput(ISwapRouter02.ExactOutputParams calldata params) external override returns (uint256 amountIn) {\\n        // tokenIn is the last address in the path, tokenOut the first\\n        address tokenOut = params.path.toAddress(0);\\n        address tokenIn = params.path.toAddress(params.path.length - 20);\\n        address uniswapRouter = _preSwap(tokenIn, tokenOut);\\n\\n        // we swap the tokens\\n        amountIn = ISwapRouter02(uniswapRouter).exactOutput(\\n            IV3SwapRouter.ExactOutputParams({\\n                path: params.path,\\n                recipient: address(this), // this pool is always the recipient\\n                amountOut: params.amountOut,\\n                amountInMaximum: params.amountInMaximum\\n            })\\n        );\\n\\n        // we make sure we do not clear storage\\n        _safeApprove(tokenIn, uniswapRouter, uint256(1));\\n    }\\n\\n    /*\\n     * UNISWAP V3 PAYMENT METHODS\\n     */\\n    /// @inheritdoc IAUniswap\\n    function sweepToken(address token, uint256 amountMinimum) external virtual override {}\\n\\n    /// @inheritdoc IAUniswap\\n    function sweepToken(\\n        address token,\\n        uint256 amountMinimum,\\n        address recipient\\n    ) external virtual override {}\\n\\n    /// @inheritdoc IAUniswap\\n    function sweepTokenWithFee(\\n        address token,\\n        uint256 amountMinimum,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external virtual override {}\\n\\n    /// @inheritdoc IAUniswap\\n    function sweepTokenWithFee(\\n        address token,\\n        uint256 amountMinimum,\\n        address recipient,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external virtual override {}\\n\\n    /// @inheritdoc IAUniswap\\n    function unwrapWETH9(uint256 amountMinimum) external override {\\n        IWETH9(_getWeth()).withdraw(amountMinimum);\\n    }\\n\\n    /// @inheritdoc IAUniswap\\n    function unwrapWETH9(uint256 amountMinimum, address recipient) external override {\\n        if (recipient != address(this)) {\\n            recipient = address(this);\\n        }\\n        IWETH9(_getWeth()).withdraw(amountMinimum);\\n    }\\n\\n    /// @inheritdoc IAUniswap\\n    function unwrapWETH9WithFee(\\n        uint256 amountMinimum,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external virtual override {}\\n\\n    /// @inheritdoc IAUniswap\\n    function unwrapWETH9WithFee(\\n        uint256 amountMinimum,\\n        address recipient,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external virtual override {}\\n\\n    /// @inheritdoc IAUniswap\\n    function wrapETH(uint256 value) external override {\\n        if (value > uint256(0)) {\\n            IWETH9(_getWeth()).deposit{value: value}();\\n        }\\n    }\\n\\n    /// @inheritdoc IAUniswap\\n    function refundETH() external virtual override {}\\n\\n    function _safeApprove(\\n        address token,\\n        address spender,\\n        uint256 value\\n    ) internal override {\\n        // 0x095ea7b3 = bytes4(keccak256(bytes(\\\"approve(address,uint256)\\\")))\\n        // solhint-disable-next-line avoid-low-level-calls\\n        (, bytes memory data) = token.call(abi.encodeWithSelector(0x095ea7b3, spender, value));\\n        // approval never fails unless rogue token\\n        assert(data.length == 0 || abi.decode(data, (bool)));\\n    }\\n\\n    function _preSwap(address tokenIn, address tokenOut) private returns (address uniswapRouter) {\\n        _assertTokenWhitelisted(tokenOut);\\n\\n        // we require target to being contract to prevent call being executed to EOA\\n        require(_isContract(tokenIn), \\\"AUNISWAP_APPROVE_TARGET_NOT_CONTRACT_ERROR\\\");\\n        uniswapRouter = _getUniswapRouter2();\\n\\n        // we set the allowance to the uniswap router\\n        _safeApprove(tokenIn, uniswapRouter, type(uint256).max);\\n    }\\n\\n    function _assertTokenWhitelisted(address token) internal view override {\\n        // we allow swapping to base token even if not whitelisted token\\n        if (token != IRigoblockV3Pool(payable(address(this))).getPool().baseToken) {\\n            require(IEWhitelist(address(this)).isWhitelistedToken(token), \\\"AUNISWAP_TOKEN_NOT_WHITELISTED_ERROR\\\");\\n        }\\n    }\\n\\n    function _getUniswapNpm() internal view override returns (address) {\\n        return uniswapv3Npm;\\n    }\\n\\n    function _getUniswapRouter2() private view returns (address) {\\n        return uniswapRouter02;\\n    }\\n\\n    function _getWeth() private view returns (address) {\\n        return weth;\\n    }\\n\\n    function _isContract(address target) private view returns (bool) {\\n        return target.code.length > 0;\\n    }\\n}\\n\",\"keccak256\":\"0x5977825326206235737111983b9012793cd83dae8b7ecd824aaba22d5511a5dc\",\"license\":\"Apache-2.0-or-later\"},\"contracts/protocol/extensions/adapters/AUniswapV3NPM.sol\":{\"content\":\"// SPDX-License-Identifier: Apache-2.0-or-later\\n/*\\n\\n Copyright 2021-2023 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\n// solhint-disable-next-line\\npragma solidity 0.8.17;\\n\\nimport \\\"./interfaces/IAUniswapV3NPM.sol\\\";\\nimport \\\"../../interfaces/IWETH9.sol\\\";\\nimport \\\"../../../utils/exchanges/uniswap/INonfungiblePositionManager/INonfungiblePositionManager.sol\\\";\\n\\n/// @title AUniswapV3NPM - Allows interactions with the Uniswap NPM contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\nabstract contract AUniswapV3NPM is IAUniswapV3NPM {\\n    /// @inheritdoc IAUniswapV3NPM\\n    function mint(INonfungiblePositionManager.MintParams calldata params)\\n        external\\n        override\\n        returns (\\n            uint256 tokenId,\\n            uint128 liquidity,\\n            uint256 amount0,\\n            uint256 amount1\\n        )\\n    {\\n        // we require both token being whitelisted\\n        _assertTokenWhitelisted(params.token0);\\n        _assertTokenWhitelisted(params.token1);\\n        address uniswapNpm = _getUniswapNpm();\\n\\n        // we set the allowance to the uniswap position manager\\n        if (params.amount0Desired > 0) _safeApprove(params.token0, uniswapNpm, type(uint256).max);\\n        if (params.amount1Desired > 0) _safeApprove(params.token1, uniswapNpm, type(uint256).max);\\n\\n        // only then do we mint the liquidity token\\n        (tokenId, liquidity, amount0, amount1) = INonfungiblePositionManager(uniswapNpm).mint(\\n            INonfungiblePositionManager.MintParams({\\n                token0: params.token0,\\n                token1: params.token1,\\n                fee: params.fee,\\n                tickLower: params.tickLower,\\n                tickUpper: params.tickUpper,\\n                amount0Desired: params.amount0Desired,\\n                amount1Desired: params.amount1Desired,\\n                amount0Min: params.amount0Min,\\n                amount1Min: params.amount1Min,\\n                recipient: address(this), // this pool is always the recipient\\n                deadline: params.deadline\\n            })\\n        );\\n\\n        // we make sure we do not clear storage\\n        if (params.amount0Desired > 0) _safeApprove(params.token0, uniswapNpm, uint256(1));\\n        if (params.amount1Desired > 0) _safeApprove(params.token1, uniswapNpm, uint256(1));\\n    }\\n\\n    /// @inheritdoc IAUniswapV3NPM\\n    function increaseLiquidity(INonfungiblePositionManager.IncreaseLiquidityParams calldata params)\\n        external\\n        override\\n        returns (\\n            uint128 liquidity,\\n            uint256 amount0,\\n            uint256 amount1\\n        )\\n    {\\n        address uniswapNpm = _getUniswapNpm();\\n        assert(INonfungiblePositionManager(uniswapNpm).ownerOf(params.tokenId) == address(this));\\n        (, , address token0, address token1, , , , , , , , ) = INonfungiblePositionManager(uniswapNpm).positions(\\n            params.tokenId\\n        );\\n\\n        // we require both tokens being whitelisted\\n        _assertTokenWhitelisted(token0);\\n        _assertTokenWhitelisted(token1);\\n\\n        // we first set the allowance to the uniswap position manager\\n        if (params.amount0Desired > 0) _safeApprove(token0, uniswapNpm, type(uint256).max);\\n        if (params.amount1Desired > 0) _safeApprove(token1, uniswapNpm, type(uint256).max);\\n\\n        // finally, we add to the liquidity token\\n        (liquidity, amount0, amount1) = INonfungiblePositionManager(uniswapNpm).increaseLiquidity(\\n            INonfungiblePositionManager.IncreaseLiquidityParams({\\n                tokenId: params.tokenId,\\n                amount0Desired: params.amount0Desired,\\n                amount1Desired: params.amount1Desired,\\n                amount0Min: params.amount0Min,\\n                amount1Min: params.amount1Min,\\n                deadline: params.deadline\\n            })\\n        );\\n\\n        // we make sure we do not clear storage\\n        if (params.amount0Desired > 0) _safeApprove(token0, uniswapNpm, uint256(1));\\n        if (params.amount1Desired > 0) _safeApprove(token1, uniswapNpm, uint256(1));\\n    }\\n\\n    /// @inheritdoc IAUniswapV3NPM\\n    function decreaseLiquidity(INonfungiblePositionManager.DecreaseLiquidityParams calldata params)\\n        external\\n        override\\n        returns (uint256 amount0, uint256 amount1)\\n    {\\n        (amount0, amount1) = INonfungiblePositionManager(_getUniswapNpm()).decreaseLiquidity(\\n            INonfungiblePositionManager.DecreaseLiquidityParams({\\n                tokenId: params.tokenId,\\n                liquidity: params.liquidity,\\n                amount0Min: params.amount0Min,\\n                amount1Min: params.amount1Min,\\n                deadline: params.deadline\\n            })\\n        );\\n    }\\n\\n    /// @inheritdoc IAUniswapV3NPM\\n    function collect(INonfungiblePositionManager.CollectParams calldata params)\\n        external\\n        override\\n        returns (uint256 amount0, uint256 amount1)\\n    {\\n        (amount0, amount1) = INonfungiblePositionManager(_getUniswapNpm()).collect(\\n            INonfungiblePositionManager.CollectParams({\\n                tokenId: params.tokenId,\\n                recipient: address(this), // this pool is always the recipient\\n                amount0Max: params.amount0Max,\\n                amount1Max: params.amount1Max\\n            })\\n        );\\n    }\\n\\n    /// @inheritdoc IAUniswapV3NPM\\n    function burn(uint256 tokenId) external override {\\n        INonfungiblePositionManager(_getUniswapNpm()).burn(tokenId);\\n    }\\n\\n    /// @inheritdoc IAUniswapV3NPM\\n    function createAndInitializePoolIfNecessary(\\n        address token0,\\n        address token1,\\n        uint24 fee,\\n        uint160 sqrtPriceX96\\n    ) external override returns (address pool) {\\n        pool = INonfungiblePositionManager(_getUniswapNpm()).createAndInitializePoolIfNecessary(\\n            token0,\\n            token1,\\n            fee,\\n            sqrtPriceX96\\n        );\\n    }\\n\\n    function _assertTokenWhitelisted(address token) internal view virtual {}\\n\\n    function _safeApprove(\\n        address token,\\n        address spender,\\n        uint256 value\\n    ) internal virtual {}\\n\\n    function _getUniswapNpm() internal view virtual returns (address) {}\\n}\\n\",\"keccak256\":\"0x395680353fb3f787e0a51dd65ef104c4e859eeb1864fbe4a83f5e9c12cd13500\",\"license\":\"Apache-2.0-or-later\"},\"contracts/protocol/extensions/adapters/interfaces/IAUniswap.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../../../../utils/exchanges/uniswap/ISwapRouter02/ISwapRouter02.sol\\\";\\n\\ninterface IAUniswap {\\n    /// @notice Returns the address of the Uniswap swap router contract.\\n    /// @return Address of the uniswap router.\\n    function uniswapRouter02() external view returns (address);\\n\\n    /// @notice Returns the address of the Uniswap NPM contract.\\n    /// @return Address of the Uniswap NPM contract.\\n    function uniswapv3Npm() external view returns (address);\\n\\n    /// @notice Returns the address of the Weth contract.\\n    /// @return Address of the Weth contract.\\n    function weth() external view returns (address);\\n\\n    /*\\n     * UNISWAP V2 METHODS\\n     */\\n    /// @notice Swaps `amountIn` of one token for as much as possible of another token.\\n    /// @dev Setting `amountIn` to 0 will cause the contract to look up its own balance,\\n    /// and swap the entire amount, enabling contracts to send tokens before calling this function.\\n    /// @param amountIn The amount of token to swap.\\n    /// @param amountOutMin The minimum amount of output that must be received.\\n    /// @param path The ordered list of tokens to swap through.\\n    /// @param to The recipient address.\\n    /// @return amountOut The amount of the received token.\\n    function swapExactTokensForTokens(\\n        uint256 amountIn,\\n        uint256 amountOutMin,\\n        address[] calldata path,\\n        address to\\n    ) external returns (uint256 amountOut);\\n\\n    /// @notice Swaps as little as possible of one token for an exact amount of another token.\\n    /// @param amountOut The amount of token to swap for.\\n    /// @param amountInMax The maximum amount of input that the caller will pay.\\n    /// @param path The ordered list of tokens to swap through.\\n    /// @param to The recipient address.\\n    /// @return amountIn The amount of token to pay.\\n    function swapTokensForExactTokens(\\n        uint256 amountOut,\\n        uint256 amountInMax,\\n        address[] calldata path,\\n        address to\\n    ) external returns (uint256 amountIn);\\n\\n    /*\\n     * UNISWAP V3 SWAP METHODS\\n     */\\n    /// @notice Swaps `amountIn` of one token for as much as possible of another token.\\n    /// @param params The parameters necessary for the swap, encoded as `ExactInputSingleParams` in calldata.\\n    /// @return amountOut The amount of the received token.\\n    function exactInputSingle(ISwapRouter02.ExactInputSingleParams calldata params)\\n        external\\n        returns (uint256 amountOut);\\n\\n    /// @notice Swaps `amountIn` of one token for as much as possible of another along the specified path.\\n    /// @param params The parameters necessary for the multi-hop swap, encoded as `ExactInputParams` in calldata.\\n    /// @return amountOut The amount of the received token.\\n    function exactInput(ISwapRouter02.ExactInputParams calldata params) external returns (uint256 amountOut);\\n\\n    /// @notice Swaps as little as possible of one token for `amountOut` of another token.\\n    /// @param params The parameters necessary for the swap, encoded as `ExactOutputSingleParams` in calldata.\\n    /// @return amountIn The amount of the input token.\\n    function exactOutputSingle(ISwapRouter02.ExactOutputSingleParams calldata params)\\n        external\\n        returns (uint256 amountIn);\\n\\n    /// @notice Swaps as little as possible of one token for `amountOut` of another along the specified path (reversed).\\n    /// @param params The parameters necessary for the multi-hop swap, encoded as `ExactOutputParams` in calldata.\\n    /// @return amountIn The amount of the input token.\\n    function exactOutput(ISwapRouter02.ExactOutputParams calldata params) external returns (uint256 amountIn);\\n\\n    /*\\n     * UNISWAP V3 PAYMENT METHODS\\n     */\\n    /// @notice Transfers the full amount of a token held by this contract to recipient.\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing the token from users.\\n    /// @param token The contract address of the token which will be transferred to `recipient`.\\n    /// @param amountMinimum The minimum amount of token required for a transfer.\\n    function sweepToken(address token, uint256 amountMinimum) external;\\n\\n    /// @notice Transfers the full amount of a token held by this contract to recipient.\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing the token from users.\\n    /// @param token The contract address of the token which will be transferred to `recipient`.\\n    /// @param amountMinimum The minimum amount of token required for a transfer.\\n    /// @param recipient The destination address of the token.\\n    function sweepToken(\\n        address token,\\n        uint256 amountMinimum,\\n        address recipient\\n    ) external;\\n\\n    /// @notice Transfers the full amount of a token held by this contract to recipient, with a percentage between\\n    /// 0 (exclusive) and 1 (inclusive) going to feeRecipient.\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing the token from users.\\n    /// @param token The contract address of the token which will be transferred to `recipient`.\\n    /// @param amountMinimum The minimum amount of token required for a transfer.\\n    /// @param feeBips The amount of fee in basis points.\\n    /// @param feeRecipient The destination address of the token.\\n    function sweepTokenWithFee(\\n        address token,\\n        uint256 amountMinimum,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external;\\n\\n    /// @notice Transfers the full amount of a token held by this contract to recipient, with a percentage between\\n    /// 0 (exclusive) and 1 (inclusive) going to feeRecipient.\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing the token from users.\\n    /// @param token The contract address of the token which will be transferred to `recipient`.\\n    /// @param amountMinimum The minimum amount of token required for a transfer.\\n    /// @param recipient The destination address of the token.\\n    /// @param feeBips The amount of fee in basis points.\\n    /// @param feeRecipient The destination address of the token.\\n    function sweepTokenWithFee(\\n        address token,\\n        uint256 amountMinimum,\\n        address recipient,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external;\\n\\n    /// @notice Unwraps the contract's WETH9 balance and sends it to recipient as ETH.\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.\\n    /// @param amountMinimum The minimum amount of WETH9 to unwrap.\\n    function unwrapWETH9(uint256 amountMinimum) external;\\n\\n    /// @notice Unwraps ETH from WETH9.\\n    /// @param amountMinimum The minimum amount of WETH9 to unwrap.\\n    /// @param recipient The address to keep same uniswap npm selector.\\n    function unwrapWETH9(uint256 amountMinimum, address recipient) external;\\n\\n    /// @notice Unwraps the contract's WETH9 balance and sends it to recipient as ETH, with a percentage between\\n    /// 0 (exclusive), and 1 (inclusive) going to feeRecipient.\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.\\n    /// @param amountMinimum The minimum amount of token required for a transfer.\\n    /// @param feeBips The amount of fee in basis points.\\n    /// @param feeRecipient The destination address of the token.\\n    function unwrapWETH9WithFee(\\n        uint256 amountMinimum,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external;\\n\\n    /// @notice Unwraps the contract's WETH9 balance and sends it to recipient as ETH, with a percentage between\\n    /// 0 (exclusive), and 1 (inclusive) going to feeRecipient.\\n    /// @dev The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.\\n    /// @param amountMinimum The minimum amount of token required for a transfer.\\n    /// @param recipient The destination address of the token.\\n    /// @param feeBips The amount of fee in basis points.\\n    /// @param feeRecipient The destination address of the token.\\n    function unwrapWETH9WithFee(\\n        uint256 amountMinimum,\\n        address recipient,\\n        uint256 feeBips,\\n        address feeRecipient\\n    ) external;\\n\\n    /// @notice Wraps ETH.\\n    /// @dev Client must wrap if input is native currency.\\n    /// @param value The ETH amount to be wrapped.\\n    function wrapETH(uint256 value) external;\\n\\n    /// @notice Allows sending pool transactions exactly as Uniswap original transactions.\\n    /// @dev Declared virtual as we never send ETH to Uniswap router contract.\\n    function refundETH() external;\\n}\\n\",\"keccak256\":\"0x5fe91283879bccaf0ce7e4c931f2a5329ebbdb3b8bf5844bbae612dbfb0a0684\",\"license\":\"Apache 2.0\"},\"contracts/protocol/extensions/adapters/interfaces/IAUniswapV3NPM.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../../../../utils/exchanges/uniswap/INonfungiblePositionManager/INonfungiblePositionManager.sol\\\";\\n\\ninterface IAUniswapV3NPM {\\n    /*\\n     * UNISWAP V3 LIQUIDITY METHODS\\n     */\\n    /// @notice Creates a new position wrapped in a NFT.\\n    /// @dev Call this when the pool does exist and is initialized. Note that if the pool is created but not initialized\\n    /// a method does not exist, i.e. the pool is assumed to be initialized.\\n    /// @param params The params necessary to mint a position, encoded as `MintParams` in calldata.\\n    /// @return tokenId The ID of the token that represents the minted position.\\n    /// @return liquidity The amount of liquidity for this position.\\n    /// @return amount0 The amount of token0.\\n    /// @return amount1 The amount of token1.\\n    function mint(INonfungiblePositionManager.MintParams calldata params)\\n        external\\n        returns (\\n            uint256 tokenId,\\n            uint128 liquidity,\\n            uint256 amount0,\\n            uint256 amount1\\n        );\\n\\n    /// @notice Increases the amount of liquidity in a position, with tokens paid by the `msg.sender`.\\n    /// @param params tokenId The ID of the token for which liquidity is being increased,\\n    /// amount0Desired The desired amount of token0 to be spent,\\n    /// amount1Desired The desired amount of token1 to be spent,\\n    /// amount0Min The minimum amount of token0 to spend, which serves as a slippage check,\\n    /// amount1Min The minimum amount of token1 to spend, which serves as a slippage check,\\n    /// deadline The time by which the transaction must be included to effect the change.\\n    /// @return liquidity The new liquidity amount as a result of the increase.\\n    /// @return amount0 The amount of token0 to acheive resulting liquidity.\\n    /// @return amount1 The amount of token1 to acheive resulting liquidity.\\n    function increaseLiquidity(INonfungiblePositionManager.IncreaseLiquidityParams calldata params)\\n        external\\n        returns (\\n            uint128 liquidity,\\n            uint256 amount0,\\n            uint256 amount1\\n        );\\n\\n    /// @notice Decreases the amount of liquidity in a position and accounts it to the position.\\n    /// @param params tokenId The ID of the token for which liquidity is being decreased,\\n    /// amount The amount by which liquidity will be decreased,\\n    /// amount0Min The minimum amount of token0 that should be accounted for the burned liquidity,\\n    /// amount1Min The minimum amount of token1 that should be accounted for the burned liquidity,\\n    /// deadline The time by which the transaction must be included to effect the change.\\n    /// @return amount0 The amount of token0 accounted to the position's tokens owed.\\n    /// @return amount1 The amount of token1 accounted to the position's tokens owed.\\n    function decreaseLiquidity(INonfungiblePositionManager.DecreaseLiquidityParams calldata params)\\n        external\\n        returns (uint256 amount0, uint256 amount1);\\n\\n    /// @notice Collects up to a maximum amount of fees owed to a specific position to the recipient.\\n    /// @param params tokenId The ID of the NFT for which tokens are being collected,\\n    /// recipient The account that should receive the tokens,\\n    /// amount0Max The maximum amount of token0 to collect,\\n    /// amount1Max The maximum amount of token1 to collect.\\n    /// @return amount0 The amount of fees collected in token0.\\n    /// @return amount1 The amount of fees collected in token1.\\n    function collect(INonfungiblePositionManager.CollectParams calldata params)\\n        external\\n        returns (uint256 amount0, uint256 amount1);\\n\\n    /// @notice Burns a token ID, which deletes it from the NFT contract. The token must have 0 liquidity and all tokens.\\n    /// must be collected first.\\n    /// @param tokenId The ID of the token that is being burned.\\n    function burn(uint256 tokenId) external;\\n\\n    /// @notice Creates a new pool if it does not exist, then initializes if not initialized\\n    /// @dev This method can be bundled with others via IMulticall for the first action (e.g. mint) performed against a pool.\\n    /// @param token0 The contract address of token0 of the pool.\\n    /// @param token1 The contract address of token1 of the pool.\\n    /// @param fee The fee amount of the v3 pool for the specified token pair.\\n    /// @param sqrtPriceX96 The initial square root price of the pool as a Q64.96 value.\\n    /// @return pool Returns the pool address based on the pair of tokens and fee, will return the newly created pool address if necessary.\\n    function createAndInitializePoolIfNecessary(\\n        address token0,\\n        address token1,\\n        uint24 fee,\\n        uint160 sqrtPriceX96\\n    ) external returns (address pool);\\n}\\n\",\"keccak256\":\"0xcb22a055b8e3e1672b1080d9aeff6468c085bd570e6534e527b3a57856e28ed5\",\"license\":\"Apache 2.0\"},\"contracts/protocol/extensions/adapters/interfaces/IEWhitelist.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title EWhitelist Interface - Allows interaction with the whitelist extension contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IEWhitelist {\\n    /// @notice Emitted when a token is whitelisted or removed.\\n    /// @param token Address pf the target token.\\n    /// @param isWhitelisted Boolean the token is added or removed.\\n    event Whitelisted(address indexed token, bool isWhitelisted);\\n\\n    /// @notice Allows a whitelister to whitelist a token.\\n    /// @param token Address of the target token.\\n    function whitelistToken(address token) external;\\n\\n    /// @notice Allows a whitelister to remove a token.\\n    /// @param token Address of the target token.\\n    function removeToken(address token) external;\\n\\n    /// @notice Allows a whitelister to whitelist/remove a list of tokens.\\n    /// @param tokens Address array to tokens.\\n    /// @param whitelisted Bollean array the token is to be whitelisted or removed.\\n    function batchUpdateTokens(address[] calldata tokens, bool[] memory whitelisted) external;\\n\\n    /// @notice Returns whether a token has been whitelisted.\\n    /// @param token Address of the target token.\\n    /// @return Boolean the token is whitelisted.\\n    function isWhitelistedToken(address token) external view returns (bool);\\n\\n    /// @notice Returns the address of the authority contract.\\n    /// @return Address of the authority contract.\\n    function getAuthority() external view returns (address);\\n}\\n\",\"keccak256\":\"0xa3a10f3e82f01143c11b673efe8ef0c7dd2b6c45a7fafb9ef5097fcd341b0092\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/IERC20.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2018 RigoBlock, Rigo Investment Sagl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface IERC20 {\\n    /// @notice Emitted when a token is transferred.\\n    /// @param from Address transferring the tokens.\\n    /// @param to Address receiving the tokens.\\n    /// @param value Number of token units.\\n    event Transfer(address indexed from, address indexed to, uint256 value);\\n\\n    /// @notice Emitted when a token holder sets and approval.\\n    /// @param owner Address of the account setting the approval.\\n    /// @param spender Address of the allowed account.\\n    /// @param value Number of approved units.\\n    event Approval(address indexed owner, address indexed spender, uint256 value);\\n\\n    /// @notice Transfers token from holder to another address.\\n    /// @param to Address to send tokens to.\\n    /// @param value Number of token units to send.\\n    /// @return success Bool the transaction was successful.\\n    function transfer(address to, uint256 value) external returns (bool success);\\n\\n    /// @notice Allows spender to transfer tokens from the holder.\\n    /// @param from Address of the token holder.\\n    /// @param to Address to send tokens to.\\n    /// @param value Number of units to transfer.\\n    /// @return success Bool the transaction was successful.\\n    function transferFrom(\\n        address from,\\n        address to,\\n        uint256 value\\n    ) external returns (bool success);\\n\\n    /// @notice Allows a holder to approve a spender.\\n    /// @param spender Address of the token spender.\\n    /// @param value Number of units to be approved.\\n    /// @return success Bool the transaction was successful.\\n    function approve(address spender, uint256 value) external returns (bool success);\\n\\n    /// @notice Returns token balance for an address.\\n    /// @param who Address to query balance for.\\n    /// @return Number of units held.\\n    function balanceOf(address who) external view returns (uint256);\\n\\n    /// @notice Returns token allowance of an address to another address.\\n    /// @param owner Address of token hodler.\\n    /// @param spender Address of the token spender.\\n    /// @return Number of allowed units.\\n    function allowance(address owner, address spender) external view returns (uint256);\\n\\n    /// @notice Returns token decimals.\\n    /// @return Uint8 number of decimals.\\n    function decimals() external view returns (uint8);\\n}\\n\",\"keccak256\":\"0x975cd3f1946640b35c0944fc5d36657a3161fd6c9d076764078b41a877612066\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/IWETH9.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.8.0;\\n\\nimport \\\"./IERC20.sol\\\";\\n\\n/// @title Interface for WETH9\\ninterface IWETH9 is IERC20 {\\n    /// @notice Deposit ether to get wrapped ether\\n    function deposit() external payable;\\n\\n    /// @notice Withdraw wrapped ether to get ether\\n    function withdraw(uint256) external;\\n}\\n\",\"keccak256\":\"0x90bafbd719be3e5e1491caefb1454a2f38dae14f3ce7efd029019e9a53bfe2fe\",\"license\":\"GPL-2.0-or-later\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolActions.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Actions Interface - Allows interaction with the pool contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IRigoblockV3PoolActions {\\n    /// @notice Allows a user to mint pool tokens on behalf of an address.\\n    /// @param recipient Address receiving the tokens.\\n    /// @param amountIn Amount of base tokens.\\n    /// @param amountOutMin Minimum amount to be received, prevents pool operator frontrunning.\\n    /// @return recipientAmount Number of tokens minted to recipient.\\n    function mint(\\n        address recipient,\\n        uint256 amountIn,\\n        uint256 amountOutMin\\n    ) external payable returns (uint256 recipientAmount);\\n\\n    /// @notice Allows a pool holder to burn pool tokens.\\n    /// @param amountIn Number of tokens to burn.\\n    /// @param amountOutMin Minimum amount to be received, prevents pool operator frontrunning.\\n    /// @return netRevenue Net amount of burnt pool tokens.\\n    function burn(uint256 amountIn, uint256 amountOutMin) external returns (uint256 netRevenue);\\n}\\n\",\"keccak256\":\"0x83bb702137e7c695f436eae990426a73f545105e614d847ea16f439400e252cb\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolEvents.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Events - Declares events of the pool contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IRigoblockV3PoolEvents {\\n    /// @notice Emitted when a new pool is initialized.\\n    /// @dev Pool is initialized at new pool creation.\\n    /// @param group Address of the factory.\\n    /// @param owner Address of the owner.\\n    /// @param baseToken Address of the base token.\\n    /// @param name String name of the pool.\\n    /// @param symbol String symbol of the pool.\\n    event PoolInitialized(\\n        address indexed group,\\n        address indexed owner,\\n        address indexed baseToken,\\n        string name,\\n        bytes8 symbol\\n    );\\n\\n    /// @notice Emitted when new owner is set.\\n    /// @param old Address of the previous owner.\\n    /// @param current Address of the new owner.\\n    event NewOwner(address indexed old, address indexed current);\\n\\n    /// @notice Emitted when pool operator updates NAV.\\n    /// @param poolOperator Address of the pool owner.\\n    /// @param pool Address of the pool.\\n    /// @param unitaryValue Value of 1 token in wei units.\\n    event NewNav(address indexed poolOperator, address indexed pool, uint256 unitaryValue);\\n\\n    /// @notice Emitted when pool operator sets new mint fee.\\n    /// @param pool Address of the pool.\\n    /// @param who Address that is sending the transaction.\\n    /// @param transactionFee Number of the new fee in wei.\\n    event NewFee(address indexed pool, address indexed who, uint16 transactionFee);\\n\\n    /// @notice Emitted when pool operator updates fee collector address.\\n    /// @param pool Address of the pool.\\n    /// @param who Address that is sending the transaction.\\n    /// @param feeCollector Address of the new fee collector.\\n    event NewCollector(address indexed pool, address indexed who, address feeCollector);\\n\\n    /// @notice Emitted when pool operator updates minimum holding period.\\n    /// @param pool Address of the pool.\\n    /// @param minimumPeriod Number of seconds.\\n    event MinimumPeriodChanged(address indexed pool, uint48 minimumPeriod);\\n\\n    /// @notice Emitted when pool operator updates the mint/burn spread.\\n    /// @param pool Address of the pool.\\n    /// @param spread Number of the spread in basis points.\\n    event SpreadChanged(address indexed pool, uint16 spread);\\n\\n    /// @notice Emitted when pool operator sets a kyc provider.\\n    /// @param pool Address of the pool.\\n    /// @param kycProvider Address of the kyc provider.\\n    event KycProviderSet(address indexed pool, address indexed kycProvider);\\n}\\n\",\"keccak256\":\"0x7d135508f23e8d67272f9c9f8b709e1d46d028b7d91827e3337e98192bd90651\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolFallback.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Fallback Interface - Interface of the fallback method.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IRigoblockV3PoolFallback {\\n    /// @notice Delegate calls to pool extension.\\n    /// @dev Delegatecall restricted to owner, staticcall accessible by everyone.\\n    /// @dev Restricting delegatecall to owner effectively locks direct calls.\\n    fallback() external payable;\\n\\n    /// @notice Allows transfers to pool.\\n    /// @dev Prevents accidental transfer to implementation contract.\\n    receive() external payable;\\n}\\n\",\"keccak256\":\"0x952f0181a0edb029b3432e270a1efd44874eed5e05defe16ba92b0305cc07262\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolImmutable.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Immutable - Interface of the pool storage.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IRigoblockV3PoolImmutable {\\n    /// @notice Returns a string of the pool version.\\n    /// @return String of the pool implementation version.\\n    function VERSION() external view returns (string memory);\\n\\n    /// @notice Returns the address of the authority contract.\\n    /// @return Address of the authority contract.\\n    function authority() external view returns (address);\\n}\\n\",\"keccak256\":\"0x135c52cb47a5482fecf89fe0e399c82ae365831e551836758b37fa167ff5c5c3\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolInitializer.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\n/*\\n\\n Copyright 2022 Rigo Intl.\\n\\n Licensed under the Apache License, Version 2.0 (the \\\"License\\\");\\n you may not use this file except in compliance with the License.\\n You may obtain a copy of the License at\\n\\n     http://www.apache.org/licenses/LICENSE-2.0\\n\\n Unless required by applicable law or agreed to in writing, software\\n distributed under the License is distributed on an \\\"AS IS\\\" BASIS,\\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\\n See the License for the specific language governing permissions and\\n limitations under the License.\\n\\n*/\\n\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Initializer Interface - Allows initializing a pool contract.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\n// solhint-disable-next-line\\ninterface IRigoblockV3PoolInitializer {\\n    /// @notice Initializes to pool storage.\\n    /// @dev Pool can only be initialized at creation, meaning this method cannot be called directly to implementation.\\n    function initializePool() external;\\n}\\n\",\"keccak256\":\"0x94bf3c6a51493b9fc8e82f841493fd422bb1f5b5855b0bde0026ec68105d1c8b\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolOwnerActions.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool Owner Actions Interface - Interface of the owner methods.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IRigoblockV3PoolOwnerActions {\\n    /// @notice Allows owner to decide where to receive the fee.\\n    /// @param feeCollector Address of the fee receiver.\\n    function changeFeeCollector(address feeCollector) external;\\n\\n    /// @notice Allows pool owner to change the minimum holding period.\\n    /// @param minPeriod Time in seconds.\\n    function changeMinPeriod(uint48 minPeriod) external;\\n\\n    /// @notice Allows pool owner to change the mint/burn spread.\\n    /// @param newSpread Number between 0 and 1000, in basis points.\\n    function changeSpread(uint16 newSpread) external;\\n\\n    /// @notice Allows pool owner to set/update the user whitelist contract.\\n    /// @dev Kyc provider can be set to null, removing user whitelist requirement.\\n    /// @param kycProvider Address if the kyc provider.\\n    function setKycProvider(address kycProvider) external;\\n\\n    /// @notice Allows pool owner to set a new owner address.\\n    /// @dev Method restricted to owner.\\n    /// @param newOwner Address of the new owner.\\n    function setOwner(address newOwner) external;\\n\\n    /// @notice Allows pool owner to set the transaction fee.\\n    /// @param transactionFee Value of the transaction fee in basis points.\\n    function setTransactionFee(uint16 transactionFee) external;\\n\\n    /// @notice Allows pool owner to set the pool price.\\n    /// @param unitaryValue Value of 1 token in wei units.\\n    function setUnitaryValue(uint256 unitaryValue) external;\\n}\\n\",\"keccak256\":\"0x8b06640bb3eeb802b9ea9ae9c27486e49d07ab79ca4b766e1ad38eb8d2509239\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IRigoblockV3PoolState.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Rigoblock V3 Pool State - Returns the pool view methods.\\n/// @author Gabriele Rigo - <gab@rigoblock.com>\\ninterface IRigoblockV3PoolState {\\n    /// @notice Returned pool initialization parameters.\\n    /// @dev Symbol is stored as bytes8 but returned as string to facilitating client view.\\n    /// @param name String of the pool name (max 32 characters).\\n    /// @param symbol String of the pool symbol (from 3 to 5 characters).\\n    /// @param decimals Uint8 decimals.\\n    /// @param owner Address of the pool operator.\\n    /// @param baseToken Address of the base token of the pool (0 for base currency).\\n    struct ReturnedPool {\\n        string name;\\n        string symbol;\\n        uint8 decimals;\\n        address owner;\\n        address baseToken;\\n    }\\n\\n    /// @notice Returns the struct containing pool initialization parameters.\\n    /// @dev Symbol is stored as bytes8 but returned as string in the returned struct, unlocked is omitted as alwasy true.\\n    /// @return ReturnedPool struct.\\n    function getPool() external view returns (ReturnedPool memory);\\n\\n    /// @notice Pool variables.\\n    /// @param minPeriod Minimum holding period in seconds.\\n    /// @param spread Value of spread in basis points (from 0 to +-10%).\\n    /// @param transactionFee Value of transaction fee in basis points (from 0 to 1%).\\n    /// @param feeCollector Address of the fee receiver.\\n    /// @param kycProvider Address of the kyc provider.\\n    struct PoolParams {\\n        uint48 minPeriod;\\n        uint16 spread;\\n        uint16 transactionFee;\\n        address feeCollector;\\n        address kycProvider;\\n    }\\n\\n    /// @notice Returns the struct compaining pool parameters.\\n    /// @return PoolParams struct.\\n    function getPoolParams() external view returns (PoolParams memory);\\n\\n    /// @notice Pool tokens.\\n    /// @param unitaryValue A token's unitary value in base token.\\n    /// @param totalSupply Number of total issued pool tokens.\\n    struct PoolTokens {\\n        uint256 unitaryValue;\\n        uint256 totalSupply;\\n    }\\n\\n    /// @notice Returns the struct containing pool tokens info.\\n    /// @return PoolTokens struct.\\n    function getPoolTokens() external view returns (PoolTokens memory);\\n\\n    /// @notice Returns the aggregate pool generic storage.\\n    /// @return poolInitParams The pool's initialization parameters.\\n    /// @return poolVariables The pool's variables.\\n    /// @return poolTokensInfo The pool's tokens info.\\n    function getPoolStorage()\\n        external\\n        view\\n        returns (\\n            ReturnedPool memory poolInitParams,\\n            PoolParams memory poolVariables,\\n            PoolTokens memory poolTokensInfo\\n        );\\n\\n    /// @notice Pool holder account.\\n    /// @param userBalance Number of tokens held by user.\\n    /// @param activation Time when tokens become active.\\n    struct UserAccount {\\n        uint208 userBalance;\\n        uint48 activation;\\n    }\\n\\n    /// @notice Returns a pool holder's account struct.\\n    /// @return UserAccount struct.\\n    function getUserAccount(address _who) external view returns (UserAccount memory);\\n\\n    /// @notice Returns a string of the pool name.\\n    /// @dev Name maximum length 31 bytes.\\n    /// @return String of the name.\\n    function name() external view returns (string memory);\\n\\n    /// @notice Returns the address of the owner.\\n    /// @return Address of the owner.\\n    function owner() external view returns (address);\\n\\n    /// @notice Returns a string of the pool symbol.\\n    /// @return String of the symbol.\\n    function symbol() external view returns (string memory);\\n\\n    /// @notice Returns the total amount of issued tokens for this pool.\\n    /// @return Number of total issued tokens.\\n    function totalSupply() external view returns (uint256);\\n}\\n\",\"keccak256\":\"0x910e237a02fdbd0293765765e31b0cd75f57f3f706557d0a4759bc06f3a03a01\",\"license\":\"Apache 2.0\"},\"contracts/protocol/interfaces/pool/IStorageAccessible.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.7.0 <0.9.0;\\n\\n/// @title IStorageAccessible - generic base interface that allows callers to access all internal storage.\\n/// @notice See https://github.com/gnosis/util-contracts/blob/bb5fe5fb5df6d8400998094fb1b32a178a47c3a1/contracts/StorageAccessible.sol\\ninterface IStorageAccessible {\\n    /// @notice Reads `length` bytes of storage in the currents contract.\\n    /// @param offset - the offset in the current contract's storage in words to start reading from.\\n    /// @param length - the number of words (32 bytes) of data to read.\\n    /// @return Bytes string of the bytes that were read.\\n    function getStorageAt(uint256 offset, uint256 length) external view returns (bytes memory);\\n\\n    /// @notice Reads bytes of storage at different storage locations.\\n    /// @dev Returns a string with values regarless of where they are stored, i.e. variable, mapping or struct.\\n    /// @param slots The array of storage slots to query into.\\n    /// @return Bytes string composite of different storage locations' value.\\n    function getStorageSlotsAt(uint256[] memory slots) external view returns (bytes memory);\\n}\\n\",\"keccak256\":\"0x15cade0b04b15b0a3fc87289b9078e56802cb8546a581f3bfd0ad64d08e3365d\",\"license\":\"Apache 2.0\"},\"contracts/utils/exchanges/uniswap/INonfungiblePositionManager/INonfungiblePositionManager.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../v3-periphery/contracts/interfaces/external/IERC721.sol\\\";\\nimport \\\"../v3-periphery/contracts/interfaces/IPeripheryImmutableState.sol\\\";\\nimport \\\"../v3-periphery/contracts/interfaces/IPoolInitializer.sol\\\";\\n\\n/// @title Non-fungible token for positions\\n/// @notice Wraps Uniswap V3 positions in a non-fungible token interface which allows for them to be transferred\\n/// and authorized.\\ninterface INonfungiblePositionManager is IERC721, IPeripheryImmutableState, IPoolInitializer {\\n    /// @notice Returns the position information associated with a given token ID.\\n    /// @dev Throws if the token ID is not valid.\\n    /// @param tokenId The ID of the token that represents the position\\n    /// @return nonce The nonce for permits\\n    /// @return operator The address that is approved for spending\\n    /// @return token0 The address of the token0 for a specific pool\\n    /// @return token1 The address of the token1 for a specific pool\\n    /// @return fee The fee associated with the pool\\n    /// @return tickLower The lower end of the tick range for the position\\n    /// @return tickUpper The higher end of the tick range for the position\\n    /// @return liquidity The liquidity of the position\\n    /// @return feeGrowthInside0LastX128 The fee growth of token0 as of the last action on the individual position\\n    /// @return feeGrowthInside1LastX128 The fee growth of token1 as of the last action on the individual position\\n    /// @return tokensOwed0 The uncollected amount of token0 owed to the position as of the last computation\\n    /// @return tokensOwed1 The uncollected amount of token1 owed to the position as of the last computation\\n    function positions(uint256 tokenId)\\n        external\\n        view\\n        returns (\\n            uint96 nonce,\\n            address operator,\\n            address token0,\\n            address token1,\\n            uint24 fee,\\n            int24 tickLower,\\n            int24 tickUpper,\\n            uint128 liquidity,\\n            uint256 feeGrowthInside0LastX128,\\n            uint256 feeGrowthInside1LastX128,\\n            uint128 tokensOwed0,\\n            uint128 tokensOwed1\\n        );\\n\\n    struct MintParams {\\n        address token0;\\n        address token1;\\n        uint24 fee;\\n        int24 tickLower;\\n        int24 tickUpper;\\n        uint256 amount0Desired;\\n        uint256 amount1Desired;\\n        uint256 amount0Min;\\n        uint256 amount1Min;\\n        address recipient;\\n        uint256 deadline;\\n    }\\n\\n    /// @notice Creates a new position wrapped in a NFT\\n    /// @dev Call this when the pool does exist and is initialized. Note that if the pool is created but not initialized\\n    /// a method does not exist, i.e. the pool is assumed to be initialized.\\n    /// @param params The params necessary to mint a position, encoded as `MintParams` in calldata\\n    /// @return tokenId The ID of the token that represents the minted position\\n    /// @return liquidity The amount of liquidity for this position\\n    /// @return amount0 The amount of token0\\n    /// @return amount1 The amount of token1\\n    function mint(MintParams calldata params)\\n        external\\n        payable\\n        returns (\\n            uint256 tokenId,\\n            uint128 liquidity,\\n            uint256 amount0,\\n            uint256 amount1\\n        );\\n\\n    struct IncreaseLiquidityParams {\\n        uint256 tokenId;\\n        uint256 amount0Desired;\\n        uint256 amount1Desired;\\n        uint256 amount0Min;\\n        uint256 amount1Min;\\n        uint256 deadline;\\n    }\\n\\n    /// @notice Increases the amount of liquidity in a position, with tokens paid by the `msg.sender`\\n    /// @param params tokenId The ID of the token for which liquidity is being increased,\\n    /// amount0Desired The desired amount of token0 to be spent,\\n    /// amount1Desired The desired amount of token1 to be spent,\\n    /// amount0Min The minimum amount of token0 to spend, which serves as a slippage check,\\n    /// amount1Min The minimum amount of token1 to spend, which serves as a slippage check,\\n    /// deadline The time by which the transaction must be included to effect the change\\n    /// @return liquidity The new liquidity amount as a result of the increase\\n    /// @return amount0 The amount of token0 to acheive resulting liquidity\\n    /// @return amount1 The amount of token1 to acheive resulting liquidity\\n    function increaseLiquidity(IncreaseLiquidityParams calldata params)\\n        external\\n        payable\\n        returns (\\n            uint128 liquidity,\\n            uint256 amount0,\\n            uint256 amount1\\n        );\\n\\n    struct DecreaseLiquidityParams {\\n        uint256 tokenId;\\n        uint128 liquidity;\\n        uint256 amount0Min;\\n        uint256 amount1Min;\\n        uint256 deadline;\\n    }\\n\\n    /// @notice Decreases the amount of liquidity in a position and accounts it to the position\\n    /// @param params tokenId The ID of the token for which liquidity is being decreased,\\n    /// amount The amount by which liquidity will be decreased,\\n    /// amount0Min The minimum amount of token0 that should be accounted for the burned liquidity,\\n    /// amount1Min The minimum amount of token1 that should be accounted for the burned liquidity,\\n    /// deadline The time by which the transaction must be included to effect the change\\n    /// @return amount0 The amount of token0 accounted to the position's tokens owed\\n    /// @return amount1 The amount of token1 accounted to the position's tokens owed\\n    function decreaseLiquidity(DecreaseLiquidityParams calldata params)\\n        external\\n        payable\\n        returns (uint256 amount0, uint256 amount1);\\n\\n    struct CollectParams {\\n        uint256 tokenId;\\n        address recipient;\\n        uint128 amount0Max;\\n        uint128 amount1Max;\\n    }\\n\\n    /// @notice Collects up to a maximum amount of fees owed to a specific position to the recipient\\n    /// @param params tokenId The ID of the NFT for which tokens are being collected,\\n    /// recipient The account that should receive the tokens,\\n    /// amount0Max The maximum amount of token0 to collect,\\n    /// amount1Max The maximum amount of token1 to collect\\n    /// @return amount0 The amount of fees collected in token0\\n    /// @return amount1 The amount of fees collected in token1\\n    function collect(CollectParams calldata params) external payable returns (uint256 amount0, uint256 amount1);\\n\\n    /// @notice Burns a token ID, which deletes it from the NFT contract. The token must have 0 liquidity and all tokens\\n    /// must be collected first.\\n    /// @param tokenId The ID of the token that is being burned\\n    function burn(uint256 tokenId) external payable;\\n}\\n\",\"keccak256\":\"0xeca59071a94f546c5fa96699af271ae75e214c3464a971af97fe23de780d07da\",\"license\":\"GPL-2.0-or-later\"},\"contracts/utils/exchanges/uniswap/ISwapRouter02/ISwapRouter02.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"@uniswap/swap-router-contracts/contracts/interfaces/IImmutableState.sol\\\";\\nimport \\\"@uniswap/swap-router-contracts/contracts/interfaces/IPeripheryPaymentsWithFeeExtended.sol\\\";\\n\\nimport \\\"./IV2SwapRouter.sol\\\";\\nimport \\\"./IV3SwapRouter.sol\\\";\\n\\n/// @title Router token swapping functionality\\ninterface ISwapRouter02 is IV2SwapRouter, IV3SwapRouter, IImmutableState, IPeripheryPaymentsWithFeeExtended {\\n\\n}\\n\",\"keccak256\":\"0x6a80a6e34dc227c1bd17150cbf0cc477b89a1f4eb1db537c4531035b46cb1d2b\",\"license\":\"GPL-2.0-or-later\"},\"contracts/utils/exchanges/uniswap/ISwapRouter02/IV2SwapRouter.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Router token swapping functionality\\n/// @notice Functions for swapping tokens via Uniswap V2\\ninterface IV2SwapRouter {\\n    /// @notice Swaps `amountIn` of one token for as much as possible of another token\\n    /// @dev Setting `amountIn` to 0 will cause the contract to look up its own balance,\\n    /// and swap the entire amount, enabling contracts to send tokens before calling this function.\\n    /// @param amountIn The amount of token to swap\\n    /// @param amountOutMin The minimum amount of output that must be received\\n    /// @param path The ordered list of tokens to swap through\\n    /// @param to The recipient address\\n    /// @return amountOut The amount of the received token\\n    function swapExactTokensForTokens(\\n        uint256 amountIn,\\n        uint256 amountOutMin,\\n        address[] calldata path,\\n        address to\\n    ) external payable returns (uint256 amountOut);\\n\\n    /// @notice Swaps as little as possible of one token for an exact amount of another token\\n    /// @param amountOut The amount of token to swap for\\n    /// @param amountInMax The maximum amount of input that the caller will pay\\n    /// @param path The ordered list of tokens to swap through\\n    /// @param to The recipient address\\n    /// @return amountIn The amount of token to pay\\n    function swapTokensForExactTokens(\\n        uint256 amountOut,\\n        uint256 amountInMax,\\n        address[] calldata path,\\n        address to\\n    ) external payable returns (uint256 amountIn);\\n}\\n\",\"keccak256\":\"0x149c776f55678e958d0b7b0c8e3b6d6751f9a0b1c71178efdbe9d5ffc1704aee\",\"license\":\"GPL-2.0-or-later\"},\"contracts/utils/exchanges/uniswap/ISwapRouter02/IV3SwapRouter.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.8.0 <0.9.0;\\n\\n/// @title Router token swapping functionality\\n/// @notice Functions for swapping tokens via Uniswap V3\\ninterface IV3SwapRouter {\\n    struct ExactInputSingleParams {\\n        address tokenIn;\\n        address tokenOut;\\n        uint24 fee;\\n        address recipient;\\n        uint256 amountIn;\\n        uint256 amountOutMinimum;\\n        uint160 sqrtPriceLimitX96;\\n    }\\n\\n    /// @notice Swaps `amountIn` of one token for as much as possible of another token\\n    /// @dev Setting `amountIn` to 0 will cause the contract to look up its own balance,\\n    /// and swap the entire amount, enabling contracts to send tokens before calling this function.\\n    /// @param params The parameters necessary for the swap, encoded as `ExactInputSingleParams` in calldata\\n    /// @return amountOut The amount of the received token\\n    function exactInputSingle(ExactInputSingleParams calldata params) external payable returns (uint256 amountOut);\\n\\n    struct ExactInputParams {\\n        bytes path;\\n        address recipient;\\n        uint256 amountIn;\\n        uint256 amountOutMinimum;\\n    }\\n\\n    /// @notice Swaps `amountIn` of one token for as much as possible of another along the specified path\\n    /// @dev Setting `amountIn` to 0 will cause the contract to look up its own balance,\\n    /// and swap the entire amount, enabling contracts to send tokens before calling this function.\\n    /// @param params The parameters necessary for the multi-hop swap, encoded as `ExactInputParams` in calldata\\n    /// @return amountOut The amount of the received token\\n    function exactInput(ExactInputParams calldata params) external payable returns (uint256 amountOut);\\n\\n    struct ExactOutputSingleParams {\\n        address tokenIn;\\n        address tokenOut;\\n        uint24 fee;\\n        address recipient;\\n        uint256 amountOut;\\n        uint256 amountInMaximum;\\n        uint160 sqrtPriceLimitX96;\\n    }\\n\\n    /// @notice Swaps as little as possible of one token for `amountOut` of another token\\n    /// that may remain in the router after the swap.\\n    /// @param params The parameters necessary for the swap, encoded as `ExactOutputSingleParams` in calldata\\n    /// @return amountIn The amount of the input token\\n    function exactOutputSingle(ExactOutputSingleParams calldata params) external payable returns (uint256 amountIn);\\n\\n    struct ExactOutputParams {\\n        bytes path;\\n        address recipient;\\n        uint256 amountOut;\\n        uint256 amountInMaximum;\\n    }\\n\\n    /// @notice Swaps as little as possible of one token for `amountOut` of another along the specified path (reversed)\\n    /// that may remain in the router after the swap.\\n    /// @param params The parameters necessary for the multi-hop swap, encoded as `ExactOutputParams` in calldata\\n    /// @return amountIn The amount of the input token\\n    function exactOutput(ExactOutputParams calldata params) external payable returns (uint256 amountIn);\\n}\\n\",\"keccak256\":\"0x6a0766a8ddb7d4acb4bef74b7a00a7a2d118e6c6d61079b967e25ae1419a78b6\",\"license\":\"GPL-2.0-or-later\"},\"contracts/utils/exchanges/uniswap/v3-periphery/contracts/interfaces/IPeripheryImmutableState.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.5.0 <0.9.0;\\n\\n/// @title Immutable state\\n/// @notice Functions that return immutable state of the router\\ninterface IPeripheryImmutableState {\\n    /// @return Returns the address of the Uniswap V3 factory\\n    function factory() external view returns (address);\\n\\n    /// @return Returns the address of WETH9\\n    function WETH9() external view returns (address);\\n}\\n\",\"keccak256\":\"0xf2b45f816a9da797cfaa34bd02ef898aa60f388c254b1ff6fa940de62662bc22\",\"license\":\"GPL-2.0-or-later\"},\"contracts/utils/exchanges/uniswap/v3-periphery/contracts/interfaces/IPoolInitializer.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity >=0.7.5 <0.9.0;\\npragma abicoder v2;\\n\\n/// @title Creates and initializes V3 Pools\\n/// @notice Provides a method for creating and initializing a pool, if necessary, for bundling with other methods that\\n/// require the pool to exist.\\ninterface IPoolInitializer {\\n    /// @notice Creates a new pool if it does not exist, then initializes if not initialized\\n    /// @dev This method can be bundled with others via IMulticall for the first action (e.g. mint) performed against a pool\\n    /// @param token0 The contract address of token0 of the pool\\n    /// @param token1 The contract address of token1 of the pool\\n    /// @param fee The fee amount of the v3 pool for the specified token pair\\n    /// @param sqrtPriceX96 The initial square root price of the pool as a Q64.96 value\\n    /// @return pool Returns the pool address based on the pair of tokens and fee, will return the newly created pool address if necessary\\n    function createAndInitializePoolIfNecessary(\\n        address token0,\\n        address token1,\\n        uint24 fee,\\n        uint160 sqrtPriceX96\\n    ) external payable returns (address pool);\\n}\\n\",\"keccak256\":\"0x5338ba07472b1dc129d3283e2f0df7e60e5657201b740fdc1d5c98b2131fc9e7\",\"license\":\"GPL-2.0-or-later\"},\"contracts/utils/exchanges/uniswap/v3-periphery/contracts/interfaces/external/IERC721.sol\":{\"content\":\"// SPDX-License-Identifier: Apache 2.0\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface IERC721 {\\n    /// @notice Returns the owner of a given id.\\n    /// @param tokenId Number of the token id.\\n    /// @return owner Address of the token owner.\\n    function ownerOf(uint256 tokenId) external view returns (address owner);\\n}\\n\",\"keccak256\":\"0x88677bcf8182ac6a9ca88600d29c0fb43e6d27ae0b363fde3069a3da13a3ba4f\",\"license\":\"Apache 2.0\"},\"contracts/utils/exchanges/uniswap/v3-periphery/contracts/libraries/BytesLib.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\n/*\\n * @title Solidity Bytes Arrays Utils\\n * @author Gon\\u00e7alo S\\u00e1 <goncalo.sa@consensys.net>\\n *\\n * @dev Bytes tightly packed arrays utility library for ethereum contracts written in Solidity.\\n *      The library lets you concatenate, slice and type cast bytes arrays both in memory and storage.\\n */\\npragma solidity >=0.5.0 <0.9.0;\\n\\nlibrary BytesLib {\\n    function slice(\\n        bytes memory _bytes,\\n        uint256 _start,\\n        uint256 _length\\n    ) internal pure returns (bytes memory) {\\n        require(_length + 31 >= _length, \\\"slice_overflow\\\");\\n        require(_start + _length >= _start, \\\"slice_overflow\\\");\\n        require(_bytes.length >= _start + _length, \\\"slice_outOfBounds\\\");\\n\\n        bytes memory tempBytes;\\n\\n        assembly {\\n            switch iszero(_length)\\n            case 0 {\\n                // Get a location of some free memory and store it in tempBytes as\\n                // Solidity does for memory variables.\\n                tempBytes := mload(0x40)\\n\\n                // The first word of the slice result is potentially a partial\\n                // word read from the original array. To read it, we calculate\\n                // the length of that partial word and start copying that many\\n                // bytes into the array. The first word we copy will start with\\n                // data we don't care about, but the last `lengthmod` bytes will\\n                // land at the beginning of the contents of the new array. When\\n                // we're done copying, we overwrite the full first word with\\n                // the actual length of the slice.\\n                let lengthmod := and(_length, 31)\\n\\n                // The multiplication in the next line is necessary\\n                // because when slicing multiples of 32 bytes (lengthmod == 0)\\n                // the following copy loop was copying the origin's length\\n                // and then ending prematurely not copying everything it should.\\n                let mc := add(add(tempBytes, lengthmod), mul(0x20, iszero(lengthmod)))\\n                let end := add(mc, _length)\\n\\n                for {\\n                    // The multiplication in the next line has the same exact purpose\\n                    // as the one above.\\n                    let cc := add(add(add(_bytes, lengthmod), mul(0x20, iszero(lengthmod))), _start)\\n                } lt(mc, end) {\\n                    mc := add(mc, 0x20)\\n                    cc := add(cc, 0x20)\\n                } {\\n                    mstore(mc, mload(cc))\\n                }\\n\\n                mstore(tempBytes, _length)\\n\\n                //update free-memory pointer\\n                //allocating the array padded to 32 bytes like the compiler does now\\n                mstore(0x40, and(add(mc, 31), not(31)))\\n            }\\n            //if we want a zero-length slice let's just return a zero-length array\\n            default {\\n                tempBytes := mload(0x40)\\n                //zero out the 32 bytes slice we are about to return\\n                //we need to do it because Solidity does not garbage collect\\n                mstore(tempBytes, 0)\\n\\n                mstore(0x40, add(tempBytes, 0x20))\\n            }\\n        }\\n\\n        return tempBytes;\\n    }\\n\\n    function toAddress(bytes memory _bytes, uint256 _start) internal pure returns (address) {\\n        require(_start + 20 >= _start, \\\"toAddress_overflow\\\");\\n        require(_bytes.length >= _start + 20, \\\"toAddress_outOfBounds\\\");\\n        address tempAddress;\\n\\n        assembly {\\n            tempAddress := div(mload(add(add(_bytes, 0x20), _start)), 0x1000000000000000000000000)\\n        }\\n\\n        return tempAddress;\\n    }\\n\\n    function toUint24(bytes memory _bytes, uint256 _start) internal pure returns (uint24) {\\n        require(_start + 3 >= _start, \\\"toUint24_overflow\\\");\\n        require(_bytes.length >= _start + 3, \\\"toUint24_outOfBounds\\\");\\n        uint24 tempUint;\\n\\n        assembly {\\n            tempUint := mload(add(add(_bytes, 0x3), _start))\\n        }\\n\\n        return tempUint;\\n    }\\n}\\n\",\"keccak256\":\"0x1836eff3c35e80fe0d86679a5681aa95c8d1f48fa0afa62a772b01dff5fdd3ca\",\"license\":\"GPL-2.0-or-later\"}},\"version\":1}",
+  "bytecode": "0x60e06040523480156200001157600080fd5b506040516200230838038062002308833981016040819052620000349162000128565b6001600160a01b038116608081905260408051631e46e62f60e21b8152905163791b98bc916004808201926020929091908290030181865afa1580156200007f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190620000a5919062000128565b6001600160a01b031660a0819052604080516312a9293f60e21b81529051634aa4a4fc916004808201926020929091908290030181865afa158015620000ef573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019062000115919062000128565b6001600160a01b031660c052506200015a565b6000602082840312156200013b57600080fd5b81516001600160a01b03811681146200015357600080fd5b9392505050565b60805160a05160c051612138620001d06000396000818161026a015281816108b901528181610dca0152610e2c01526000818161035f015281816106d7015281816108000152818161093601528181610cf301528181610ecc01526111de0152600081816103ce015261133901526121386000f3fe608060405234801561001057600080fd5b50600436106101735760003560e01c806349404b7c116100de578063c391b77c11610097578063e0e189a011610071578063e0e189a0146103a2578063e90a182f146103b7578063fb912246146103c9578063fc6f7865146103f057600080fd5b8063c391b77c1461035a578063d4ef38de14610381578063df2ab5bb1461039457600080fd5b806349404b7c146102c557806349616997146102d85780635023b4df146102eb57806388316456146102fe5780639b2c0a3714610339578063b858183f1461034757600080fd5b8063219f5d1711610130578063219f5d17146102195780633068c554146102515780633fc8cef31461026557806342712a671461028c57806342966c681461029f578063472b43f3146102b257600080fd5b806304e45aaf1461017857806309b813461461019e5780630c49ccbe146101b157806312210e8a146101d957806313ead562146101db5780631c58db4f14610206575b600080fd5b61018b61018636600461163c565b610403565b6040519081526020015b60405180910390f35b61018b6101ac366004611671565b610557565b6101c46101bf3660046116ae565b6106d2565b60408051928352602083019190915201610195565b005b6101ee6101e93660046116e6565b6107fc565b6040516001600160a01b039091168152602001610195565b6101d9610214366004611742565b6108b1565b61022c61022736600461175b565b61092f565b604080516001600160801b039094168452602084019290925290820152606001610195565b6101d961025f36600461176d565b50505050565b6101ee7f000000000000000000000000000000000000000000000000000000000000000081565b61018b61029a3660046117ac565b610ba6565b6101d96102ad366004611742565b610cd5565b61018b6102c03660046117ac565b610d4c565b6101d96102d336600461184a565b610d99565b6101d96102e6366004611742565b610e0e565b61018b6102f936600461163c565b610e5b565b61031161030c36600461187a565b610e9d565b604080519485526001600160801b039093166020850152918301526060820152608001610195565b6101d961025f36600461188d565b61018b610355366004611671565b6110b8565b6101ee7f000000000000000000000000000000000000000000000000000000000000000081565b6101d961038f3660046118cc565b505050565b6101d961038f366004611905565b6101d96103b036600461193c565b5050505050565b6101d96103c536600461198d565b5050565b6101ee7f000000000000000000000000000000000000000000000000000000000000000081565b6101c46103fe3660046119b9565b6111d9565b60008061042b61041660208501856119d5565b61042660408601602087016119d5565b6112bc565b9050806001600160a01b03166304e45aaf6040518060e0016040528086600001602081019061045a91906119d5565b6001600160a01b0316815260200186602001602081019061047b91906119d5565b6001600160a01b0316815260200161049960608801604089016119f2565b62ffffff168152306020820152608080880135604083015260a08801356060830152016104cc60e0880160c089016119d5565b6001600160a01b03168152506040518263ffffffff1660e01b81526004016104f49190611a0f565b6020604051808303816000875af1158015610513573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105379190611a6e565b915061055161054960208501856119d5565b82600161136b565b50919050565b6000806105a5816105688580611a87565b8080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525092939250506114349050565b905060006105cd60146105b88680611a87565b6105c3929150611aeb565b6105688680611a87565b905060006105db82846112bc565b9050806001600160a01b03166309b8134660405180608001604052808880600001906106079190611a87565b8080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250505090825250306020820152604089810135818301526060808b0135920191909152516001600160e01b031960e084901b1681526106799190600401611b7d565b6020604051808303816000875af1158015610698573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106bc9190611a6e565b93506106ca8282600161136b565b505050919050565b6000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316630c49ccbe6040518060a001604052808660000135815260200186602001602081019061072c9190611ba5565b6001600160801b03168152602001866040013581526020018660600135815260200186608001358152506040518263ffffffff1660e01b81526004016107b09190600060a082019050825182526001600160801b03602084015116602083015260408301516040830152606083015160608301526080830151608083015292915050565b60408051808303816000875af11580156107ce573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107f29190611bc2565b9094909350915050565b60007f00000000000000000000000000000000000000000000000000000000000000006040516309f56ab160e11b81526001600160a01b038781166004830152868116602483015262ffffff86166044830152848116606483015291909116906313ead562906084016020604051808303816000875af1158015610884573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108a89190611bf6565b95945050505050565b801561092c577f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663d0e30db0826040518263ffffffff1660e01b81526004016000604051808303818588803b15801561091257600080fd5b505af1158015610926573d6000803e3d6000fd5b50505050505b50565b60008080807f00000000000000000000000000000000000000000000000000000000000000006040516331a9108f60e11b81528635600482015290915030906001600160a01b03831690636352211e90602401602060405180830381865afa15801561099f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109c39190611bf6565b6001600160a01b0316146109d9576109d9611c13565b60405163133f757160e31b81528535600482015260009081906001600160a01b038416906399fbab889060240161018060405180830381865afa158015610a24573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610a489190611c59565b5050505050505050935093505050610a5f826114e8565b610a68816114e8565b602087013515610a7f57610a7f828460001961136b565b604087013515610a9657610a96818460001961136b565b6040805160c081018252883581526020808a0135908201908152898301358284019081526060808c01359084019081526080808d013590850190815260a0808e0135908601908152955163219f5d1760e01b8152945160048601529251602485015290516044840152516064830152516084820152905160a48201526001600160a01b0384169063219f5d179060c4016060604051808303816000875af1158015610b45573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b699190611d3a565b91975095509350602087013515610b8657610b868284600161136b565b604087013515610b9c57610b9c8184600161136b565b5050509193909250565b600080610c0585856000818110610bbf57610bbf611d71565b9050602002016020810190610bd491906119d5565b8686610be1600182611aeb565b818110610bf057610bf0611d71565b905060200201602081019061042691906119d5565b9050806001600160a01b03166342712a6788888888306001600160a01b0316896001600160a01b031603610c395788610c3b565b305b6040518663ffffffff1660e01b8152600401610c5b959493929190611d87565b6020604051808303816000875af1158015610c7a573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610c9e9190611a6e565b9150610ccb85856000818110610cb657610cb6611d71565b905060200201602081019061054991906119d5565b5095945050505050565b604051630852cd8d60e31b8152600481018290526001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016906342966c68906024015b600060405180830381600087803b158015610d3857600080fd5b505af11580156103b0573d6000803e3d6000fd5b600080610d6585856000818110610bbf57610bbf611d71565b9050806001600160a01b031663472b43f388888888306001600160a01b0316896001600160a01b031603610c395788610c3b565b6001600160a01b0381163014610dac5750305b604051632e1a7d4d60e01b8152600481018390526001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001690632e1a7d4d90602401600060405180830381600087803b15801561091257600080fd5b604051632e1a7d4d60e01b8152600481018290526001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001690632e1a7d4d90602401610d1e565b600080610e6e61041660208501856119d5565b9050806001600160a01b0316635023b4df6040518060e0016040528086600001602081019061045a91906119d5565b6000808080610eb7610eb260208701876119d5565b6114e8565b610eca610eb260408701602088016119d5565b7f000000000000000000000000000000000000000000000000000000000000000060a086013515610f0e57610f0e610f0560208801886119d5565b8260001961136b565b60c086013515610f2b57610f2b610f0560408801602089016119d5565b6040805161016081019091526001600160a01b0382169063883164569080610f5660208b018b6119d5565b6001600160a01b03168152602001896020016020810190610f7791906119d5565b6001600160a01b03168152602001610f9560608b0160408c016119f2565b62ffffff168152602001610faf60808b0160608c01611dfc565b60020b8152602001610fc760a08b0160808c01611dfc565b60020b81526020018960a0013581526020018960c0013581526020018960e0013581526020018961010001358152602001306001600160a01b031681526020018961014001358152506040518263ffffffff1660e01b815260040161102c9190611e19565b6080604051808303816000875af115801561104b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061106f9190611edd565b9297509095509350915060a0860135156110935761109361054960208801886119d5565b60c0860135156110b0576110b061054960408801602089016119d5565b509193509193565b6000806110c9816105688580611a87565b905060006110dc60146105b88680611a87565b905060006110ea83836112bc565b9050806001600160a01b031663b858183f60405180608001604052808880600001906111169190611a87565b8080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250505090825250306020820152604089810135818301526060808b0135920191909152516001600160e01b031960e084901b1681526111889190600401611b7d565b6020604051808303816000875af11580156111a7573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906111cb9190611a6e565b93506106ca8382600161136b565b6000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663fc6f7865604051806080016040528086600001358152602001306001600160a01b031681526020018660400160208101906112429190611ba5565b6001600160801b031681526020016112606080880160608901611ba5565b6001600160801b03908116909152604080516001600160e01b031960e086901b1681528351600482015260208401516001600160a01b0316602482015290830151821660448201526060909201511660648201526084016107b0565b60006112c7826114e8565b6001600160a01b0383163b6113365760405162461bcd60e51b815260206004820152602a60248201527f41554e49535741505f415050524f56455f5441524745545f4e4f545f434f4e546044820152692920a1aa2fa2a92927a960b11b60648201526084015b60405180910390fd5b507f0000000000000000000000000000000000000000000000000000000000000000611365838260001961136b565b92915050565b604080516001600160a01b038481166024830152604480830185905283518084039091018152606490920183526020820180516001600160e01b031663095ea7b360e01b17905291516000928616916113c391611f1b565b6000604051808303816000865af19150503d8060008114611400576040519150601f19603f3d011682016040523d82523d6000602084013e611405565b606091505b509150508051600014806114285750808060200190518101906114289190611f37565b61025f5761025f611c13565b600081611442816014611f59565b10156114855760405162461bcd60e51b8152602060048201526012602482015271746f416464726573735f6f766572666c6f7760701b604482015260640161132d565b611490826014611f59565b835110156114d85760405162461bcd60e51b8152602060048201526015602482015274746f416464726573735f6f75744f66426f756e647360581b604482015260640161132d565b500160200151600160601b900490565b306001600160a01b031663026b1d5f6040518163ffffffff1660e01b8152600401600060405180830381865afa158015611526573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261154e9190810190612033565b608001516001600160a01b0316816001600160a01b03161461092c5760405163559bfa4360e11b81526001600160a01b0382166004820152309063ab37f48690602401602060405180830381865afa1580156115ae573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906115d29190611f37565b61092c5760405162461bcd60e51b8152602060048201526024808201527f41554e49535741505f544f4b454e5f4e4f545f57484954454c49535445445f45604482015263292927a960e11b606482015260840161132d565b600060e0828403121561055157600080fd5b600060e0828403121561164e57600080fd5b611658838361162a565b9392505050565b60006080828403121561055157600080fd5b60006020828403121561168357600080fd5b813567ffffffffffffffff81111561169a57600080fd5b6116a68482850161165f565b949350505050565b600060a0828403121561055157600080fd5b6001600160a01b038116811461092c57600080fd5b62ffffff8116811461092c57600080fd5b600080600080608085870312156116fc57600080fd5b8435611707816116c0565b93506020850135611717816116c0565b92506040850135611727816116d5565b91506060850135611737816116c0565b939692955090935050565b60006020828403121561175457600080fd5b5035919050565b600060c0828403121561055157600080fd5b6000806000806080858703121561178357600080fd5b843561178e816116c0565b935060208501359250604085013591506060850135611737816116c0565b6000806000806000608086880312156117c457600080fd5b8535945060208601359350604086013567ffffffffffffffff808211156117ea57600080fd5b818801915088601f8301126117fe57600080fd5b81358181111561180d57600080fd5b8960208260051b850101111561182257600080fd5b602083019550809450505050606086013561183c816116c0565b809150509295509295909350565b6000806040838503121561185d57600080fd5b82359150602083013561186f816116c0565b809150509250929050565b6000610160828403121561055157600080fd5b600080600080608085870312156118a357600080fd5b8435935060208501356118b5816116c0565b9250604085013591506060850135611737816116c0565b6000806000606084860312156118e157600080fd5b833592506020840135915060408401356118fa816116c0565b809150509250925092565b60008060006060848603121561191a57600080fd5b8335611925816116c0565b92506020840135915060408401356118fa816116c0565b600080600080600060a0868803121561195457600080fd5b853561195f816116c0565b9450602086013593506040860135611976816116c0565b925060608601359150608086013561183c816116c0565b600080604083850312156119a057600080fd5b82356119ab816116c0565b946020939093013593505050565b6000608082840312156119cb57600080fd5b611658838361165f565b6000602082840312156119e757600080fd5b8135611658816116c0565b600060208284031215611a0457600080fd5b8135611658816116d5565b60e08101611365828480516001600160a01b03908116835260208083015182169084015260408083015162ffffff16908401526060808301518216908401526080808301519084015260a0828101519084015260c09182015116910152565b600060208284031215611a8057600080fd5b5051919050565b6000808335601e19843603018112611a9e57600080fd5b83018035915067ffffffffffffffff821115611ab957600080fd5b602001915036819003821315611ace57600080fd5b9250929050565b634e487b7160e01b600052601160045260246000fd5b8181038181111561136557611365611ad5565b60005b83811015611b19578181015183820152602001611b01565b50506000910152565b60008151608084528051806080860152611b438160a0870160208501611afe565b6020848101516001600160a01b03169086015260408085015190860152606093840151938501939093525050601f01601f19160160a00190565b6020815260006116586020830184611b22565b6001600160801b038116811461092c57600080fd5b600060208284031215611bb757600080fd5b813561165881611b90565b60008060408385031215611bd557600080fd5b505080516020909101519092909150565b8051611bf1816116c0565b919050565b600060208284031215611c0857600080fd5b8151611658816116c0565b634e487b7160e01b600052600160045260246000fd5b8051611bf1816116d5565b8060020b811461092c57600080fd5b8051611bf181611c34565b8051611bf181611b90565b6000806000806000806000806000806000806101808d8f031215611c7c57600080fd5b8c516bffffffffffffffffffffffff81168114611c9857600080fd5b9b50611ca660208e01611be6565b9a50611cb460408e01611be6565b9950611cc260608e01611be6565b9850611cd060808e01611c29565b9750611cde60a08e01611c43565b9650611cec60c08e01611c43565b9550611cfa60e08e01611c4e565b94506101008d015193506101208d01519250611d196101408e01611c4e565b9150611d286101608e01611c4e565b90509295989b509295989b509295989b565b600080600060608486031215611d4f57600080fd5b8351611d5a81611b90565b602085015160409095015190969495509392505050565b634e487b7160e01b600052603260045260246000fd5b85815260208082018690526080604083018190528201849052600090859060a08401835b87811015611dd9578335611dbe816116c0565b6001600160a01b031682529282019290820190600101611dab565b506001600160a01b03959095166060949094019390935250919695505050505050565b600060208284031215611e0e57600080fd5b813561165881611c34565b81516001600160a01b0316815261016081016020830151611e4560208401826001600160a01b03169052565b506040830151611e5c604084018262ffffff169052565b506060830151611e71606084018260020b9052565b506080830151611e86608084018260020b9052565b5060a083015160a083015260c083015160c083015260e083015160e083015261010080840151818401525061012080840151611ecc828501826001600160a01b03169052565b505061014092830151919092015290565b60008060008060808587031215611ef357600080fd5b845193506020850151611f0581611b90565b6040860151606090960151949790965092505050565b60008251611f2d818460208701611afe565b9190910192915050565b600060208284031215611f4957600080fd5b8151801515811461165857600080fd5b8082018082111561136557611365611ad5565b634e487b7160e01b600052604160045260246000fd5b60405160a0810167ffffffffffffffff81118282101715611fa557611fa5611f6c565b60405290565b600082601f830112611fbc57600080fd5b815167ffffffffffffffff80821115611fd757611fd7611f6c565b604051601f8301601f19908116603f01168101908282118183101715611fff57611fff611f6c565b8160405283815286602085880101111561201857600080fd5b612029846020830160208901611afe565b9695505050505050565b60006020828403121561204557600080fd5b815167ffffffffffffffff8082111561205d57600080fd5b9083019060a0828603121561207157600080fd5b612079611f82565b82518281111561208857600080fd5b61209487828601611fab565b8252506020830151828111156120a957600080fd5b6120b587828601611fab565b6020830152506040830151915060ff821682146120d157600080fd5b8160408201526120e360608401611be6565b60608201526120f460808401611be6565b60808201529594505050505056fea26469706673582212204f5cc4c8c487540df569ba9ad25fef8529aacbb3613118ab9fcf49f361c8c11164736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106101735760003560e01c806349404b7c116100de578063c391b77c11610097578063e0e189a011610071578063e0e189a0146103a2578063e90a182f146103b7578063fb912246146103c9578063fc6f7865146103f057600080fd5b8063c391b77c1461035a578063d4ef38de14610381578063df2ab5bb1461039457600080fd5b806349404b7c146102c557806349616997146102d85780635023b4df146102eb57806388316456146102fe5780639b2c0a3714610339578063b858183f1461034757600080fd5b8063219f5d1711610130578063219f5d17146102195780633068c554146102515780633fc8cef31461026557806342712a671461028c57806342966c681461029f578063472b43f3146102b257600080fd5b806304e45aaf1461017857806309b813461461019e5780630c49ccbe146101b157806312210e8a146101d957806313ead562146101db5780631c58db4f14610206575b600080fd5b61018b61018636600461163c565b610403565b6040519081526020015b60405180910390f35b61018b6101ac366004611671565b610557565b6101c46101bf3660046116ae565b6106d2565b60408051928352602083019190915201610195565b005b6101ee6101e93660046116e6565b6107fc565b6040516001600160a01b039091168152602001610195565b6101d9610214366004611742565b6108b1565b61022c61022736600461175b565b61092f565b604080516001600160801b039094168452602084019290925290820152606001610195565b6101d961025f36600461176d565b50505050565b6101ee7f000000000000000000000000000000000000000000000000000000000000000081565b61018b61029a3660046117ac565b610ba6565b6101d96102ad366004611742565b610cd5565b61018b6102c03660046117ac565b610d4c565b6101d96102d336600461184a565b610d99565b6101d96102e6366004611742565b610e0e565b61018b6102f936600461163c565b610e5b565b61031161030c36600461187a565b610e9d565b604080519485526001600160801b039093166020850152918301526060820152608001610195565b6101d961025f36600461188d565b61018b610355366004611671565b6110b8565b6101ee7f000000000000000000000000000000000000000000000000000000000000000081565b6101d961038f3660046118cc565b505050565b6101d961038f366004611905565b6101d96103b036600461193c565b5050505050565b6101d96103c536600461198d565b5050565b6101ee7f000000000000000000000000000000000000000000000000000000000000000081565b6101c46103fe3660046119b9565b6111d9565b60008061042b61041660208501856119d5565b61042660408601602087016119d5565b6112bc565b9050806001600160a01b03166304e45aaf6040518060e0016040528086600001602081019061045a91906119d5565b6001600160a01b0316815260200186602001602081019061047b91906119d5565b6001600160a01b0316815260200161049960608801604089016119f2565b62ffffff168152306020820152608080880135604083015260a08801356060830152016104cc60e0880160c089016119d5565b6001600160a01b03168152506040518263ffffffff1660e01b81526004016104f49190611a0f565b6020604051808303816000875af1158015610513573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906105379190611a6e565b915061055161054960208501856119d5565b82600161136b565b50919050565b6000806105a5816105688580611a87565b8080601f01602080910402602001604051908101604052809392919081815260200183838082843760009201919091525092939250506114349050565b905060006105cd60146105b88680611a87565b6105c3929150611aeb565b6105688680611a87565b905060006105db82846112bc565b9050806001600160a01b03166309b8134660405180608001604052808880600001906106079190611a87565b8080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250505090825250306020820152604089810135818301526060808b0135920191909152516001600160e01b031960e084901b1681526106799190600401611b7d565b6020604051808303816000875af1158015610698573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106bc9190611a6e565b93506106ca8282600161136b565b505050919050565b6000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316630c49ccbe6040518060a001604052808660000135815260200186602001602081019061072c9190611ba5565b6001600160801b03168152602001866040013581526020018660600135815260200186608001358152506040518263ffffffff1660e01b81526004016107b09190600060a082019050825182526001600160801b03602084015116602083015260408301516040830152606083015160608301526080830151608083015292915050565b60408051808303816000875af11580156107ce573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906107f29190611bc2565b9094909350915050565b60007f00000000000000000000000000000000000000000000000000000000000000006040516309f56ab160e11b81526001600160a01b038781166004830152868116602483015262ffffff86166044830152848116606483015291909116906313ead562906084016020604051808303816000875af1158015610884573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906108a89190611bf6565b95945050505050565b801561092c577f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663d0e30db0826040518263ffffffff1660e01b81526004016000604051808303818588803b15801561091257600080fd5b505af1158015610926573d6000803e3d6000fd5b50505050505b50565b60008080807f00000000000000000000000000000000000000000000000000000000000000006040516331a9108f60e11b81528635600482015290915030906001600160a01b03831690636352211e90602401602060405180830381865afa15801561099f573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109c39190611bf6565b6001600160a01b0316146109d9576109d9611c13565b60405163133f757160e31b81528535600482015260009081906001600160a01b038416906399fbab889060240161018060405180830381865afa158015610a24573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610a489190611c59565b5050505050505050935093505050610a5f826114e8565b610a68816114e8565b602087013515610a7f57610a7f828460001961136b565b604087013515610a9657610a96818460001961136b565b6040805160c081018252883581526020808a0135908201908152898301358284019081526060808c01359084019081526080808d013590850190815260a0808e0135908601908152955163219f5d1760e01b8152945160048601529251602485015290516044840152516064830152516084820152905160a48201526001600160a01b0384169063219f5d179060c4016060604051808303816000875af1158015610b45573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b699190611d3a565b91975095509350602087013515610b8657610b868284600161136b565b604087013515610b9c57610b9c8184600161136b565b5050509193909250565b600080610c0585856000818110610bbf57610bbf611d71565b9050602002016020810190610bd491906119d5565b8686610be1600182611aeb565b818110610bf057610bf0611d71565b905060200201602081019061042691906119d5565b9050806001600160a01b03166342712a6788888888306001600160a01b0316896001600160a01b031603610c395788610c3b565b305b6040518663ffffffff1660e01b8152600401610c5b959493929190611d87565b6020604051808303816000875af1158015610c7a573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610c9e9190611a6e565b9150610ccb85856000818110610cb657610cb6611d71565b905060200201602081019061054991906119d5565b5095945050505050565b604051630852cd8d60e31b8152600481018290526001600160a01b037f000000000000000000000000000000000000000000000000000000000000000016906342966c68906024015b600060405180830381600087803b158015610d3857600080fd5b505af11580156103b0573d6000803e3d6000fd5b600080610d6585856000818110610bbf57610bbf611d71565b9050806001600160a01b031663472b43f388888888306001600160a01b0316896001600160a01b031603610c395788610c3b565b6001600160a01b0381163014610dac5750305b604051632e1a7d4d60e01b8152600481018390526001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001690632e1a7d4d90602401600060405180830381600087803b15801561091257600080fd5b604051632e1a7d4d60e01b8152600481018290526001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001690632e1a7d4d90602401610d1e565b600080610e6e61041660208501856119d5565b9050806001600160a01b0316635023b4df6040518060e0016040528086600001602081019061045a91906119d5565b6000808080610eb7610eb260208701876119d5565b6114e8565b610eca610eb260408701602088016119d5565b7f000000000000000000000000000000000000000000000000000000000000000060a086013515610f0e57610f0e610f0560208801886119d5565b8260001961136b565b60c086013515610f2b57610f2b610f0560408801602089016119d5565b6040805161016081019091526001600160a01b0382169063883164569080610f5660208b018b6119d5565b6001600160a01b03168152602001896020016020810190610f7791906119d5565b6001600160a01b03168152602001610f9560608b0160408c016119f2565b62ffffff168152602001610faf60808b0160608c01611dfc565b60020b8152602001610fc760a08b0160808c01611dfc565b60020b81526020018960a0013581526020018960c0013581526020018960e0013581526020018961010001358152602001306001600160a01b031681526020018961014001358152506040518263ffffffff1660e01b815260040161102c9190611e19565b6080604051808303816000875af115801561104b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061106f9190611edd565b9297509095509350915060a0860135156110935761109361054960208801886119d5565b60c0860135156110b0576110b061054960408801602089016119d5565b509193509193565b6000806110c9816105688580611a87565b905060006110dc60146105b88680611a87565b905060006110ea83836112bc565b9050806001600160a01b031663b858183f60405180608001604052808880600001906111169190611a87565b8080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250505090825250306020820152604089810135818301526060808b0135920191909152516001600160e01b031960e084901b1681526111889190600401611b7d565b6020604051808303816000875af11580156111a7573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906111cb9190611a6e565b93506106ca8382600161136b565b6000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663fc6f7865604051806080016040528086600001358152602001306001600160a01b031681526020018660400160208101906112429190611ba5565b6001600160801b031681526020016112606080880160608901611ba5565b6001600160801b03908116909152604080516001600160e01b031960e086901b1681528351600482015260208401516001600160a01b0316602482015290830151821660448201526060909201511660648201526084016107b0565b60006112c7826114e8565b6001600160a01b0383163b6113365760405162461bcd60e51b815260206004820152602a60248201527f41554e49535741505f415050524f56455f5441524745545f4e4f545f434f4e546044820152692920a1aa2fa2a92927a960b11b60648201526084015b60405180910390fd5b507f0000000000000000000000000000000000000000000000000000000000000000611365838260001961136b565b92915050565b604080516001600160a01b038481166024830152604480830185905283518084039091018152606490920183526020820180516001600160e01b031663095ea7b360e01b17905291516000928616916113c391611f1b565b6000604051808303816000865af19150503d8060008114611400576040519150601f19603f3d011682016040523d82523d6000602084013e611405565b606091505b509150508051600014806114285750808060200190518101906114289190611f37565b61025f5761025f611c13565b600081611442816014611f59565b10156114855760405162461bcd60e51b8152602060048201526012602482015271746f416464726573735f6f766572666c6f7760701b604482015260640161132d565b611490826014611f59565b835110156114d85760405162461bcd60e51b8152602060048201526015602482015274746f416464726573735f6f75744f66426f756e647360581b604482015260640161132d565b500160200151600160601b900490565b306001600160a01b031663026b1d5f6040518163ffffffff1660e01b8152600401600060405180830381865afa158015611526573d6000803e3d6000fd5b505050506040513d6000823e601f3d908101601f1916820160405261154e9190810190612033565b608001516001600160a01b0316816001600160a01b03161461092c5760405163559bfa4360e11b81526001600160a01b0382166004820152309063ab37f48690602401602060405180830381865afa1580156115ae573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906115d29190611f37565b61092c5760405162461bcd60e51b8152602060048201526024808201527f41554e49535741505f544f4b454e5f4e4f545f57484954454c49535445445f45604482015263292927a960e11b606482015260840161132d565b600060e0828403121561055157600080fd5b600060e0828403121561164e57600080fd5b611658838361162a565b9392505050565b60006080828403121561055157600080fd5b60006020828403121561168357600080fd5b813567ffffffffffffffff81111561169a57600080fd5b6116a68482850161165f565b949350505050565b600060a0828403121561055157600080fd5b6001600160a01b038116811461092c57600080fd5b62ffffff8116811461092c57600080fd5b600080600080608085870312156116fc57600080fd5b8435611707816116c0565b93506020850135611717816116c0565b92506040850135611727816116d5565b91506060850135611737816116c0565b939692955090935050565b60006020828403121561175457600080fd5b5035919050565b600060c0828403121561055157600080fd5b6000806000806080858703121561178357600080fd5b843561178e816116c0565b935060208501359250604085013591506060850135611737816116c0565b6000806000806000608086880312156117c457600080fd5b8535945060208601359350604086013567ffffffffffffffff808211156117ea57600080fd5b818801915088601f8301126117fe57600080fd5b81358181111561180d57600080fd5b8960208260051b850101111561182257600080fd5b602083019550809450505050606086013561183c816116c0565b809150509295509295909350565b6000806040838503121561185d57600080fd5b82359150602083013561186f816116c0565b809150509250929050565b6000610160828403121561055157600080fd5b600080600080608085870312156118a357600080fd5b8435935060208501356118b5816116c0565b9250604085013591506060850135611737816116c0565b6000806000606084860312156118e157600080fd5b833592506020840135915060408401356118fa816116c0565b809150509250925092565b60008060006060848603121561191a57600080fd5b8335611925816116c0565b92506020840135915060408401356118fa816116c0565b600080600080600060a0868803121561195457600080fd5b853561195f816116c0565b9450602086013593506040860135611976816116c0565b925060608601359150608086013561183c816116c0565b600080604083850312156119a057600080fd5b82356119ab816116c0565b946020939093013593505050565b6000608082840312156119cb57600080fd5b611658838361165f565b6000602082840312156119e757600080fd5b8135611658816116c0565b600060208284031215611a0457600080fd5b8135611658816116d5565b60e08101611365828480516001600160a01b03908116835260208083015182169084015260408083015162ffffff16908401526060808301518216908401526080808301519084015260a0828101519084015260c09182015116910152565b600060208284031215611a8057600080fd5b5051919050565b6000808335601e19843603018112611a9e57600080fd5b83018035915067ffffffffffffffff821115611ab957600080fd5b602001915036819003821315611ace57600080fd5b9250929050565b634e487b7160e01b600052601160045260246000fd5b8181038181111561136557611365611ad5565b60005b83811015611b19578181015183820152602001611b01565b50506000910152565b60008151608084528051806080860152611b438160a0870160208501611afe565b6020848101516001600160a01b03169086015260408085015190860152606093840151938501939093525050601f01601f19160160a00190565b6020815260006116586020830184611b22565b6001600160801b038116811461092c57600080fd5b600060208284031215611bb757600080fd5b813561165881611b90565b60008060408385031215611bd557600080fd5b505080516020909101519092909150565b8051611bf1816116c0565b919050565b600060208284031215611c0857600080fd5b8151611658816116c0565b634e487b7160e01b600052600160045260246000fd5b8051611bf1816116d5565b8060020b811461092c57600080fd5b8051611bf181611c34565b8051611bf181611b90565b6000806000806000806000806000806000806101808d8f031215611c7c57600080fd5b8c516bffffffffffffffffffffffff81168114611c9857600080fd5b9b50611ca660208e01611be6565b9a50611cb460408e01611be6565b9950611cc260608e01611be6565b9850611cd060808e01611c29565b9750611cde60a08e01611c43565b9650611cec60c08e01611c43565b9550611cfa60e08e01611c4e565b94506101008d015193506101208d01519250611d196101408e01611c4e565b9150611d286101608e01611c4e565b90509295989b509295989b509295989b565b600080600060608486031215611d4f57600080fd5b8351611d5a81611b90565b602085015160409095015190969495509392505050565b634e487b7160e01b600052603260045260246000fd5b85815260208082018690526080604083018190528201849052600090859060a08401835b87811015611dd9578335611dbe816116c0565b6001600160a01b031682529282019290820190600101611dab565b506001600160a01b03959095166060949094019390935250919695505050505050565b600060208284031215611e0e57600080fd5b813561165881611c34565b81516001600160a01b0316815261016081016020830151611e4560208401826001600160a01b03169052565b506040830151611e5c604084018262ffffff169052565b506060830151611e71606084018260020b9052565b506080830151611e86608084018260020b9052565b5060a083015160a083015260c083015160c083015260e083015160e083015261010080840151818401525061012080840151611ecc828501826001600160a01b03169052565b505061014092830151919092015290565b60008060008060808587031215611ef357600080fd5b845193506020850151611f0581611b90565b6040860151606090960151949790965092505050565b60008251611f2d818460208701611afe565b9190910192915050565b600060208284031215611f4957600080fd5b8151801515811461165857600080fd5b8082018082111561136557611365611ad5565b634e487b7160e01b600052604160045260246000fd5b60405160a0810167ffffffffffffffff81118282101715611fa557611fa5611f6c565b60405290565b600082601f830112611fbc57600080fd5b815167ffffffffffffffff80821115611fd757611fd7611f6c565b604051601f8301601f19908116603f01168101908282118183101715611fff57611fff611f6c565b8160405283815286602085880101111561201857600080fd5b612029846020830160208901611afe565b9695505050505050565b60006020828403121561204557600080fd5b815167ffffffffffffffff8082111561205d57600080fd5b9083019060a0828603121561207157600080fd5b612079611f82565b82518281111561208857600080fd5b61209487828601611fab565b8252506020830151828111156120a957600080fd5b6120b587828601611fab565b6020830152506040830151915060ff821682146120d157600080fd5b8160408201526120e360608401611be6565b60608201526120f460808401611be6565b60808201529594505050505056fea26469706673582212204f5cc4c8c487540df569ba9ad25fef8529aacbb3613118ab9fcf49f361c8c11164736f6c63430008110033",
+  "devdoc": {
+    "author": "Gabriele Rigo - <gab@rigoblock.com>",
+    "kind": "dev",
+    "methods": {
+      "burn(uint256)": {
+        "params": {
+          "tokenId": "The ID of the token that is being burned."
+        }
+      },
+      "collect((uint256,address,uint128,uint128))": {
+        "params": {
+          "params": "tokenId The ID of the NFT for which tokens are being collected, recipient The account that should receive the tokens, amount0Max The maximum amount of token0 to collect, amount1Max The maximum amount of token1 to collect."
+        },
+        "returns": {
+          "amount0": "The amount of fees collected in token0.",
+          "amount1": "The amount of fees collected in token1."
+        }
+      },
+      "createAndInitializePoolIfNecessary(address,address,uint24,uint160)": {
+        "details": "This method can be bundled with others via IMulticall for the first action (e.g. mint) performed against a pool.",
+        "params": {
+          "fee": "The fee amount of the v3 pool for the specified token pair.",
+          "sqrtPriceX96": "The initial square root price of the pool as a Q64.96 value.",
+          "token0": "The contract address of token0 of the pool.",
+          "token1": "The contract address of token1 of the pool."
+        },
+        "returns": {
+          "pool": "Returns the pool address based on the pair of tokens and fee, will return the newly created pool address if necessary."
+        }
+      },
+      "decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))": {
+        "params": {
+          "params": "tokenId The ID of the token for which liquidity is being decreased, amount The amount by which liquidity will be decreased, amount0Min The minimum amount of token0 that should be accounted for the burned liquidity, amount1Min The minimum amount of token1 that should be accounted for the burned liquidity, deadline The time by which the transaction must be included to effect the change."
+        },
+        "returns": {
+          "amount0": "The amount of token0 accounted to the position's tokens owed.",
+          "amount1": "The amount of token1 accounted to the position's tokens owed."
+        }
+      },
+      "exactInput((bytes,address,uint256,uint256))": {
+        "params": {
+          "params": "The parameters necessary for the multi-hop swap, encoded as `ExactInputParams` in calldata."
+        },
+        "returns": {
+          "amountOut": "The amount of the received token."
+        }
+      },
+      "exactInputSingle((address,address,uint24,address,uint256,uint256,uint160))": {
+        "params": {
+          "params": "The parameters necessary for the swap, encoded as `ExactInputSingleParams` in calldata."
+        },
+        "returns": {
+          "amountOut": "The amount of the received token."
+        }
+      },
+      "exactOutput((bytes,address,uint256,uint256))": {
+        "params": {
+          "params": "The parameters necessary for the multi-hop swap, encoded as `ExactOutputParams` in calldata."
+        },
+        "returns": {
+          "amountIn": "The amount of the input token."
+        }
+      },
+      "exactOutputSingle((address,address,uint24,address,uint256,uint256,uint160))": {
+        "params": {
+          "params": "The parameters necessary for the swap, encoded as `ExactOutputSingleParams` in calldata."
+        },
+        "returns": {
+          "amountIn": "The amount of the input token."
+        }
+      },
+      "increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))": {
+        "params": {
+          "params": "tokenId The ID of the token for which liquidity is being increased, amount0Desired The desired amount of token0 to be spent, amount1Desired The desired amount of token1 to be spent, amount0Min The minimum amount of token0 to spend, which serves as a slippage check, amount1Min The minimum amount of token1 to spend, which serves as a slippage check, deadline The time by which the transaction must be included to effect the change."
+        },
+        "returns": {
+          "amount0": "The amount of token0 to acheive resulting liquidity.",
+          "amount1": "The amount of token1 to acheive resulting liquidity.",
+          "liquidity": "The new liquidity amount as a result of the increase."
+        }
+      },
+      "mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))": {
+        "details": "Call this when the pool does exist and is initialized. Note that if the pool is created but not initialized a method does not exist, i.e. the pool is assumed to be initialized.",
+        "params": {
+          "params": "The params necessary to mint a position, encoded as `MintParams` in calldata."
+        },
+        "returns": {
+          "amount0": "The amount of token0.",
+          "amount1": "The amount of token1.",
+          "liquidity": "The amount of liquidity for this position.",
+          "tokenId": "The ID of the token that represents the minted position."
+        }
+      },
+      "refundETH()": {
+        "details": "Declared virtual as we never send ETH to Uniswap router contract."
+      },
+      "swapExactTokensForTokens(uint256,uint256,address[],address)": {
+        "details": "Setting `amountIn` to 0 will cause the contract to look up its own balance, and swap the entire amount, enabling contracts to send tokens before calling this function.",
+        "params": {
+          "amountIn": "The amount of token to swap.",
+          "amountOutMin": "The minimum amount of output that must be received.",
+          "path": "The ordered list of tokens to swap through.",
+          "to": "The recipient address."
+        },
+        "returns": {
+          "amountOut": "The amount of the received token."
+        }
+      },
+      "swapTokensForExactTokens(uint256,uint256,address[],address)": {
+        "params": {
+          "amountInMax": "The maximum amount of input that the caller will pay.",
+          "amountOut": "The amount of token to swap for.",
+          "path": "The ordered list of tokens to swap through.",
+          "to": "The recipient address."
+        },
+        "returns": {
+          "amountIn": "The amount of token to pay."
+        }
+      },
+      "sweepToken(address,uint256)": {
+        "details": "The amountMinimum parameter prevents malicious contracts from stealing the token from users.",
+        "params": {
+          "amountMinimum": "The minimum amount of token required for a transfer.",
+          "token": "The contract address of the token which will be transferred to `recipient`."
+        }
+      },
+      "sweepToken(address,uint256,address)": {
+        "details": "The amountMinimum parameter prevents malicious contracts from stealing the token from users.",
+        "params": {
+          "amountMinimum": "The minimum amount of token required for a transfer.",
+          "recipient": "The destination address of the token.",
+          "token": "The contract address of the token which will be transferred to `recipient`."
+        }
+      },
+      "sweepTokenWithFee(address,uint256,address,uint256,address)": {
+        "details": "The amountMinimum parameter prevents malicious contracts from stealing the token from users.",
+        "params": {
+          "amountMinimum": "The minimum amount of token required for a transfer.",
+          "feeBips": "The amount of fee in basis points.",
+          "feeRecipient": "The destination address of the token.",
+          "recipient": "The destination address of the token.",
+          "token": "The contract address of the token which will be transferred to `recipient`."
+        }
+      },
+      "sweepTokenWithFee(address,uint256,uint256,address)": {
+        "details": "The amountMinimum parameter prevents malicious contracts from stealing the token from users.",
+        "params": {
+          "amountMinimum": "The minimum amount of token required for a transfer.",
+          "feeBips": "The amount of fee in basis points.",
+          "feeRecipient": "The destination address of the token.",
+          "token": "The contract address of the token which will be transferred to `recipient`."
+        }
+      },
+      "unwrapWETH9(uint256)": {
+        "details": "The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.",
+        "params": {
+          "amountMinimum": "The minimum amount of WETH9 to unwrap."
+        }
+      },
+      "unwrapWETH9(uint256,address)": {
+        "params": {
+          "amountMinimum": "The minimum amount of WETH9 to unwrap.",
+          "recipient": "The address to keep same uniswap npm selector."
+        }
+      },
+      "unwrapWETH9WithFee(uint256,address,uint256,address)": {
+        "details": "The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.",
+        "params": {
+          "amountMinimum": "The minimum amount of token required for a transfer.",
+          "feeBips": "The amount of fee in basis points.",
+          "feeRecipient": "The destination address of the token.",
+          "recipient": "The destination address of the token."
+        }
+      },
+      "unwrapWETH9WithFee(uint256,uint256,address)": {
+        "details": "The amountMinimum parameter prevents malicious contracts from stealing WETH9 from users.",
+        "params": {
+          "amountMinimum": "The minimum amount of token required for a transfer.",
+          "feeBips": "The amount of fee in basis points.",
+          "feeRecipient": "The destination address of the token."
+        }
+      },
+      "wrapETH(uint256)": {
+        "details": "Client must wrap if input is native currency.",
+        "params": {
+          "value": "The ETH amount to be wrapped."
+        }
+      }
+    },
+    "stateVariables": {
+      "uniswapRouter02": {
+        "return": "Address of the uniswap router.",
+        "returns": {
+          "_0": "Address of the uniswap router."
+        }
+      },
+      "uniswapv3Npm": {
+        "return": "Address of the Uniswap NPM contract.",
+        "returns": {
+          "_0": "Address of the Uniswap NPM contract."
+        }
+      },
+      "weth": {
+        "return": "Address of the Weth contract.",
+        "returns": {
+          "_0": "Address of the Weth contract."
+        }
+      }
+    },
+    "title": "AUniswap - Allows interactions with the Uniswap contracts.",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "burn(uint256)": {
+        "notice": "Burns a token ID, which deletes it from the NFT contract. The token must have 0 liquidity and all tokens. must be collected first."
+      },
+      "collect((uint256,address,uint128,uint128))": {
+        "notice": "Collects up to a maximum amount of fees owed to a specific position to the recipient."
+      },
+      "createAndInitializePoolIfNecessary(address,address,uint24,uint160)": {
+        "notice": "Creates a new pool if it does not exist, then initializes if not initialized"
+      },
+      "decreaseLiquidity((uint256,uint128,uint256,uint256,uint256))": {
+        "notice": "Decreases the amount of liquidity in a position and accounts it to the position."
+      },
+      "exactInput((bytes,address,uint256,uint256))": {
+        "notice": "Swaps `amountIn` of one token for as much as possible of another along the specified path."
+      },
+      "exactInputSingle((address,address,uint24,address,uint256,uint256,uint160))": {
+        "notice": "Swaps `amountIn` of one token for as much as possible of another token."
+      },
+      "exactOutput((bytes,address,uint256,uint256))": {
+        "notice": "Swaps as little as possible of one token for `amountOut` of another along the specified path (reversed)."
+      },
+      "exactOutputSingle((address,address,uint24,address,uint256,uint256,uint160))": {
+        "notice": "Swaps as little as possible of one token for `amountOut` of another token."
+      },
+      "increaseLiquidity((uint256,uint256,uint256,uint256,uint256,uint256))": {
+        "notice": "Increases the amount of liquidity in a position, with tokens paid by the `msg.sender`."
+      },
+      "mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))": {
+        "notice": "Creates a new position wrapped in a NFT."
+      },
+      "refundETH()": {
+        "notice": "Allows sending pool transactions exactly as Uniswap original transactions."
+      },
+      "swapExactTokensForTokens(uint256,uint256,address[],address)": {
+        "notice": "Swaps `amountIn` of one token for as much as possible of another token."
+      },
+      "swapTokensForExactTokens(uint256,uint256,address[],address)": {
+        "notice": "Swaps as little as possible of one token for an exact amount of another token."
+      },
+      "sweepToken(address,uint256)": {
+        "notice": "Transfers the full amount of a token held by this contract to recipient."
+      },
+      "sweepToken(address,uint256,address)": {
+        "notice": "Transfers the full amount of a token held by this contract to recipient."
+      },
+      "sweepTokenWithFee(address,uint256,address,uint256,address)": {
+        "notice": "Transfers the full amount of a token held by this contract to recipient, with a percentage between 0 (exclusive) and 1 (inclusive) going to feeRecipient."
+      },
+      "sweepTokenWithFee(address,uint256,uint256,address)": {
+        "notice": "Transfers the full amount of a token held by this contract to recipient, with a percentage between 0 (exclusive) and 1 (inclusive) going to feeRecipient."
+      },
+      "uniswapRouter02()": {
+        "notice": "Returns the address of the Uniswap swap router contract."
+      },
+      "uniswapv3Npm()": {
+        "notice": "Returns the address of the Uniswap NPM contract."
+      },
+      "unwrapWETH9(uint256)": {
+        "notice": "Unwraps the contract's WETH9 balance and sends it to recipient as ETH."
+      },
+      "unwrapWETH9(uint256,address)": {
+        "notice": "Unwraps ETH from WETH9."
+      },
+      "unwrapWETH9WithFee(uint256,address,uint256,address)": {
+        "notice": "Unwraps the contract's WETH9 balance and sends it to recipient as ETH, with a percentage between 0 (exclusive), and 1 (inclusive) going to feeRecipient."
+      },
+      "unwrapWETH9WithFee(uint256,uint256,address)": {
+        "notice": "Unwraps the contract's WETH9 balance and sends it to recipient as ETH, with a percentage between 0 (exclusive), and 1 (inclusive) going to feeRecipient."
+      },
+      "weth()": {
+        "notice": "Returns the address of the Weth contract."
+      },
+      "wrapETH(uint256)": {
+        "notice": "Wraps ETH."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
